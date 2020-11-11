@@ -111,7 +111,8 @@ always_comb begin : MUXES
     d_mem_byte_en = 4'b1111;
 
     unique case (d_mem_byte) 
-        2'b00:
+        2'b00: d_mem_byte_en = 4'b1111;
+        2'b01: 
     endcase
 
     unique case (pcmux_sel)

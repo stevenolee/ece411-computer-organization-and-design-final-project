@@ -1,4 +1,4 @@
-module control_rom (
+module ctrl_IF_ID (
     
 );
 
