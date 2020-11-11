@@ -18,7 +18,7 @@ module cpu_datapath
     // No need for writing into i_cache
     output logic i_mem_read,
     output logic [3:0] i_mem_byte_en,
-    output rv32i_word i_mem_wdata,
+    // output rv32i_word i_mem_wdata,
     output rv32i_word i_mem_address,
     /* CPU --> D-Cache */
     output logic d_mem_read,
@@ -33,13 +33,14 @@ rv32i_word pcmux_out, alumux1_out, alumux2_out, regfilemux_out, marmux_out, cmp_
 rv32i_word pc_out, rs1_out, rs2_out, alu_out;
 rv32i_word d_mem_address_raw, mem_wdata_full;
 rv32i_word i_imm, s_imm, u_imm, j_imm, b_imm;
-logic [1:0] d_mem_byte;
+logic [1:0] i_mem_byte, d_mem_byte;
 
 /*****************************************************************************/
+/* * * NEED TO SET D MEM ADDRESS FROM STATE REGISTER (SUB CONTROL ROM) * * */
 assign d_mem_address = {{d_mem_address_raw[31:2]}, {2'b0}};
-assign d_mem_byte = {30'b0, d_mem_address_raw[1:0]};
+assign d_mem_byte = d_mem_address_raw[1:0];
 assign i_mem_address = {{pc_out[31:2]}, {2'b0}};
-assign i_mem_address = {30'b0, pc_out[1:0]};
+assign i_mem_byte = pc_out[1:0];
 
 /***************************** Registers *************************************/
 pc_register PC(
@@ -48,14 +49,6 @@ pc_register PC(
     .load 	(load_pc),
     .in   	(pcmux_out),
     .out  	(pc_out)
-);
-
-register MAR(
-    .clk  	(clk),
-    .rst 	(rst),
-    .load 	(load_mar),
-    .in   	(marmux_out),
-    .out  	(d_mem_address_raw)
 );
 
 register mem_data_out(
@@ -96,12 +89,6 @@ cmp CMP(
 
 /******************************** Muxes **************************************/
 always_comb begin : MUXES
-    // We provide one (incomplete) example of a mux instantiated using
-    // a case statement.  Using enumerated types rather than bit vectors
-    // provides compile time type safety.  Defensive programming is extremely
-    // useful in SystemVerilog.  In this case, we actually use
-    // Offensive programming --- making simulation halt with a fatal message
-    // warning when an unexpected mux select value occurs
 	pcmux_out = pc_out + 4; 
 	marmux_out = pc_out;
 	cmp_mux_out = rs2_out; 
@@ -196,7 +183,6 @@ always_comb begin : MUXES
 	unique case (mem_byte_enable) // mem_data_out
 		4'b1111: mem_wdata = mem_wdata_full;
 		4'b0011: mem_wdata = {16'b0, mem_wdata_full[15:0]};
-		// 4'b0110: mem_wdata = {8'b0, mem_wdata_full[23:8], 8'b0};
 		4'b1100: mem_wdata = {mem_wdata_full[31:16], 16'b0};
 		4'b0001: mem_wdata = {24'b0, mem_wdata_full[7:0]};
 		4'b0010: mem_wdata = {16'b0, mem_wdata_full[15:8], 8'b0};

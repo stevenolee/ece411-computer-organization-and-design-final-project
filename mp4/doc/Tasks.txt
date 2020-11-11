@@ -1,0 +1,30 @@
+TASKS
+    [ ] Implement the control ROM into separate state registers
+        [ ] ctrl_IF_ID ==> Steven
+        [ ] ctrl_ID_EX ==> Steven
+        [ ] ctrl_EX_MEM ==> Benoit
+        [ ] ctrl_MEM_WB ==> Scott
+    [ ] Link the state registers to the rest of cpu_datapath
+        [ ] Link ctrl_IF_ID to IF and ID ==> Steven
+        [ ] Link ctrl_ID_EX to ID and EX ==> Steven
+        [ ] Link ctrl_EX_MEM to EX and MEM ==> Benoit
+        [ ] Link ctrl_MEM_WB to MEM and WB ==> Scott
+    [ ] Run through the caches to make sure the logic is right ==> Scott
+    [x] Include the provided modules from MP3 (ALU, comp, regfile...)
+    [ ] Figure out whether I want to send a signal out indicating IDLE state for I-Cache ==> Scott
+    [ ] Progress report
+    [ ] Arbiter design
+
+QUESTIONS
+1.
+2.
+
+Things to Keep in Mind
+1. Before the host closes laptop / server, commit and push the code to github
+2. Before starting, message Discord chat, start up server, and share the server link
+3. When working, stay in voice chat, even if muted
+
+How to Share the server
+1. SSH first
+2. Open the Live Share server
+3. Select the folder to open
