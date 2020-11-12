@@ -3,6 +3,9 @@ TASKS
         [ ] ctrl_IF_ID ==> Steven
         [ ] ctrl_ID_EX ==> Steven
         [ ] ctrl_EX_MEM ==> Benoit
+            [ ] Read in ctrl for the opcode and load_funct3 = load_funct3_t'(funct3) or store_funct3
+            [ ] Set the mem_byte_enable, write, and read bits for data cache
+            [x] rs2_out is the data_wdata
         [ ] ctrl_MEM_WB ==> Scott
     [ ] Link the state registers to the rest of cpu_datapath
         [ ] Link ctrl_IF_ID to IF and ID ==> Steven
@@ -14,6 +17,11 @@ TASKS
     [ ] Figure out whether I want to send a signal out indicating IDLE state for I-Cache ==> Scott
     [ ] Progress report
     [ ] Arbiter design
+    [ ] Branch clear
+        [ ] Finish State Ex
+        [ ] Make the necessary connections EX --> EX_MEM
+        [ ] Lead br_en (1 if branch and comp, and 1 if jump instruction) coming out of EX_MEM into IF, which is also PC mux sel 
+        [ ] If br_en / pc_mux_sel == 1, then pass a variable to the first 3 state registers to reset them
 
 QUESTIONS
 1.
@@ -28,3 +36,13 @@ How to Share the server
 1. SSH first
 2. Open the Live Share server
 3. Select the folder to open
+
+Functionalities
+1. Branch static misprediction
+2. Pipeline state registers
+3. All the arithmetic mentioned in the spec
+3. Load and Stores
+
+Testing Strategies
+We utilized the dual port magic memory to test our pipeline, but we were not able to pass all the funcitonalities for we are still
+implementing the design.

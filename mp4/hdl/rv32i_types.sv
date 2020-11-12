@@ -14,6 +14,35 @@ typedef logic [31:0] rv32i_word;
 typedef logic [4:0] rv32i_reg;
 typedef logic [3:0] rv32i_mem_wmask;
 
+typedef struct packed {
+    rv32i_opcode opcode;
+    alu_ops aluop;
+    // rv32i_word pc;
+    // logic regfilemux_sel;
+    logic load_regfile;
+    rv32i_reg rd;
+    rv32i_reg rs1;
+    rv32i_reg rs2;
+    rv32i_word ir_out;
+    logic [2:0] funct3;
+    logic [6:0] funct7;
+    pcmux_sel_t pcmux_sel;
+    cmpmux_sel_t cmpmux_sel;
+    alumux1_sel_t alumux1_sel;
+    alumux2_sel_t alumux2_sel;
+    regfilemux regfilemux_sel;
+    // rv32i_mem_wmask mem_byte_enable;
+    rv32i_word i_imm;
+    rv32i_word s_imm;
+    rv32i_word b_imm;
+    rv32i_word u_imm;
+    rv32i_word j_imm;
+
+    // added after implementing opcode decoding
+    logic load_pc;
+    branch_funct3_t cmpop;
+} rv32i_control_word;
+
 typedef enum bit [6:0] {
     op_lui   = 7'b0110111, //load upper immediate (U type)
     op_auipc = 7'b0010111, //add upper immediate PC (U type)
