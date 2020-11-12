@@ -8,12 +8,13 @@ module sreg_EX_MEM (
     input ctrl_in,
     input rs2_in,
 
-    output alu_out,
-    output mem_byte_enable_out,
-    output write_data,
-    output br_en_out,
-    output ctrl_out,
-    output rs2_out
+    output logic [31:0] alu_out,
+    output logic [3:0] mem_byte_enable_out,
+    output logic [31:0] write_data,
+    output logic br_en_out,
+    output rv32i_control_word ctrl_out,
+    output logic [31:0] rs2_out,
+    output pcmux::pcmux_sel_t pcmux_sel,
 );
 /*** Variables ***/
 assign arith_funct3 = arith_funct3_t'(ctrl.funct3);
@@ -49,6 +50,8 @@ always_comb begin
     read = 1'b0;
     write = 1'b0;
     mem_byte_enable_out = 4'b1111;
+    pcmux_sel = pcmux::pc_plus4;
+    br_en_out = br_en_in;
 
     unique case (ctrl.opcode)
         op_load: begin
@@ -106,7 +109,19 @@ always_comb begin
         end
 
         op_br: begin
-            br_en_out = br_en_in;
+            pcmux_sel = pcmux::pc_plus4;
+            if(br_en_in)
+                pcmux_sel = pcmux::alu_out;
+        end
+
+        op_jal: begin
+            pcmux_sel = pcmux::alu_out;
+            br_en_out = 1'b1;
+        end
+
+        op_jalr: begin
+            pcmux_sel = pcmux::alu_mod2;
+            br_en_out = 1'b1;
         end
 
         default: begin

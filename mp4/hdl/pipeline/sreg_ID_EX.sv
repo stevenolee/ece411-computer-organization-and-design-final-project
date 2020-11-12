@@ -4,7 +4,7 @@ module sreg_ID_EX(
 	input rst,		
 	input rv32i_control_word ctrl_in,		
 	input logic [31:0] pc_in,	
-    input br_mispredict,
+    input logic br_mispredict,
     input logic [31:0] rs1_in,
 	input logic [31:0] rs2_in,
 	

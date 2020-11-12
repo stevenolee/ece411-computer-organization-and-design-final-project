@@ -21,7 +21,7 @@ module EX (
 );
 
 alu ALU(
-	.aluop	(aluop),
+	.aluop	(ctrl.aluop),
 	.a		(alumux1_out),
 	.b 		(alumux2_out),
 	.f		(alu_out)
@@ -56,9 +56,9 @@ always_comb begin
     endcase
 
     unique case (ctrl.cmpmux_sel)
-        rs2_out: 
+        cmpmux::rs2_out: 
             cmp_mux_out = rs2_out;
-        ctrl.i_imm:
+        cmpmux::i_imm:
             cmp_mux_out = ctrl.i_imm;
     default: `BAD_MUX_SEL;
 endcase

@@ -14,8 +14,8 @@ module cpu_datapath
     output [31:0] mem_wdata
 	
 	/* I Cache Ports */
-    input inst_read,
     input inst_resp,
+	output inst_read,
     input logic [31:0] inst_rdata,
     output logic [31:0] inst_addr,
 
@@ -62,6 +62,7 @@ logic [31:0] IF_ID_pc_out, IF_ID_inst_addr, ID_EX_pc_out;
 rv32i_reg ID_rs1_out, ID_rs2_out, ID_EX_rs1_out, ID_EX_rs2_out, EX_rs2_out, EX_MEM_rs2_out;
 logic [31:0] write_data, MEM_WB_data_out;
 rv32i_control_word ID_ctrl, ID_EX_ctrl, EX_MEM_ctrl, MEM_WB_ctrl;
+pcmux::pcmux_sel_t pcmux_sel;
 logic br_mispredict;
 
 /*****************************************************************************/
@@ -77,7 +78,8 @@ IF stage_IF (
 	// inputs
 	.clk			(clk),
 	.i_mem_address  (i_mem_address),
-	.pcmux_sel		(EX_MEM_br_en),
+	.pcmux_sel,
+	.br_take		(EX_MEM_br_en),
 	// outputs
 	.inst_addr		(IF_inst_addr),
 	.br_mispredict,
@@ -170,7 +172,8 @@ sreg_EX_MEM sreg_EX_MEM (
 	.mem_byte_enable_out (d_mem_byte),
 	.br_en_out	(EX_MEM_br_en),
 	.ctrl_out	(EX_MEM_ctrl),
-	.rs2_out	(EX_MEM_rs2_out)
+	.rs2_out	(EX_MEM_rs2_out),
+	.pcmux_sel
 );
 
 /*** MEM ***/
