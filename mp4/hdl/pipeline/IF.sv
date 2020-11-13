@@ -3,7 +3,7 @@ import rv32i_types::*;
 module IF (
     // inputs
     input clk,
-    input logic [31:0] i_mem_address,
+    input rst,
     input br_take,
     input pcmux::pcmux_sel_t pcmux_sel,
     input logic [31:0] alu_in,
@@ -13,7 +13,8 @@ module IF (
     output logic [31:0] pc_out
 );
 logic load_pc;
-assign inst_addr = i_mem_address;
+assign inst_addr = pc_out;
+logic [31:0] pcmux_out;
 
 /*** PC REGISTER ***/
 pc_register PC(

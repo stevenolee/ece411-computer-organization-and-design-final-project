@@ -55,10 +55,10 @@ rv32i_word regfilemux_out;
 rv32i_reg rd;
 rv32i_word rs1_out, rs2_out, EX_alu_out, MEM_WB_alu_out, EX_MEM_alu_out, EX_MEM_pc_out, MEM_WB_pc_out;
 logic [3:0] d_mem_byte, MEM_WB_mbe;
-logic [1:0] EX_br_en, EX_MEM_br_en;
-logic [31:0] IF_pc_out, IF_inst_addr;
+logic EX_br_en, EX_MEM_br_en;
+logic [31:0] IF_pc_out, IF_inst_addr, IF_ID_addr_out;
 logic [31:0] IF_ID_pc_out, IF_ID_inst_addr, ID_EX_pc_out;
-rv32i_reg ID_rs1_out, ID_rs2_out, ID_EX_rs1_out, ID_EX_rs2_out, EX_rs2_out, EX_MEM_rs2_out;
+rv32i_word ID_rs1_out, ID_rs2_out, ID_EX_rs1_out, ID_EX_rs2_out, EX_rs2_out, EX_MEM_rs2_out;
 logic [31:0] MEM_WB_data_out;
 rv32i_control_word ID_ctrl, ID_EX_ctrl, EX_MEM_ctrl, MEM_WB_ctrl;
 pcmux::pcmux_sel_t pcmux_sel;
@@ -73,7 +73,7 @@ assign inst_addr = IF_inst_addr;
 IF stage_IF (
 	// inputs
 	.clk			(clk),
-	.i_mem_address  (i_mem_address),
+	.rst			(rst),
 	.pcmux_sel		(EX_MEM_ctrl.pcmux_sel), // This is here b/c we need to implement branch
 	.br_take		(EX_MEM_br_en),
 	.alu_in			(EX_MEM_alu_out),
@@ -102,6 +102,7 @@ sreg_IF_ID sreg_IF_ID(
 ID stage_ID (
 	// inputs
 	.clk			(clk),
+	.rst			(rst),
 	.load_regfile, // From MEM_WB 
 	.regfilemux_in	(regfilemux_out),
 	.inst_read		(inst_read),
@@ -179,11 +180,13 @@ MEM stage_MEM (
 	.ctrl_in			(EX_MEM_ctrl),
 	.mem_byte			(d_mem_byte),
 	.pcmux_sel			(EX_MEM_ctrl.pcmux_sel),
+	.wdata_in			(EX_MEM_rs2_out),
 
 	// outputs, should be the same as inputs except addr_out
 	.addr_out			(data_addr),
 	.write_data			(data_write),
 	.read_data			(data_read),
+	.wdata_out			(data_wdata),
 	.data_mbe
 );
 

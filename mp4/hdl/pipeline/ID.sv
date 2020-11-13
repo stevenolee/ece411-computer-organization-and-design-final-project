@@ -3,6 +3,7 @@ import rv32i_types::*;
 module ID (
     // inputs
 	input clk,
+	input rst,
 	input load_regfile,
 	input logic [31:0] regfilemux_in,
     input rv32i_reg rd,

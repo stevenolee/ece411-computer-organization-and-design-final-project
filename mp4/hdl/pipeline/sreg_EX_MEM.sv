@@ -61,7 +61,8 @@ always_comb begin
             // read = 1'b1;
             // write = 1'b0;
 
-            case (load_funct3)
+            // case (load_funct3)
+            case (load_funct3_t'(ctrl.funct3))
                 lw: mem_byte_enable_out = 4'b1111;
                 lh, lhu: begin
                     case (alu_in[1:0])
@@ -88,7 +89,8 @@ always_comb begin
             // read = 1'b0;
             // write = 1'b1;
 
-            case (store_funct3)
+            // case (store_funct3)
+            case (store_funct3_t'(ctrl.funct3))
                 lw: mem_byte_enable_out = 4'b1111;
                 lh, lhu: begin
                     case (alu_in[1:0])

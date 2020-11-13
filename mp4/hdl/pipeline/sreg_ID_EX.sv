@@ -5,14 +5,14 @@ module sreg_ID_EX(
 	input rv32i_control_word ctrl_in,		
 	input logic [31:0] pc_in,	
     input logic br_mispredict,
-    input logic [31:0] rs1_in,
-	input logic [31:0] rs2_in,
+    input rv32i_word rs1_in,
+	input rv32i_word rs2_in,
 	
     // outputs
 	output rv32i_control_word ctrl_out,			
 	output logic [31:0] pc_out,
-    output logic [31:0] rs1_out,
-	output logic [31:0] rs2_out
+    output rv32i_word rs1_out,
+	output rv32i_word rs2_out
 );
 logic [31:0] rs1, rs2, pc;
 rv32i_control_word ctrl;

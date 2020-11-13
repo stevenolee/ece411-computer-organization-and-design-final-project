@@ -17,7 +17,7 @@ module WB (
 	output logic [31:0] regfilemux_o
 );
 
-assign rd = ctrl_in.rd;
+assign rd_reg = ctrl_in.rd;
 assign load_regfile = ctrl_in.load_regfile;
 
 always_comb begin

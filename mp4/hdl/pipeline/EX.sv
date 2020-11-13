@@ -4,16 +4,20 @@ module EX (
     // inputs
 	input clk,
     input rv32i_control_word ctrl_in,
-    input rv32i_reg rs1_in,
-    input rv32i_reg rs2_in,
+    input rv32i_word rs1_in,
+    input rv32i_word rs2_in,
     input logic [31:0] pc_in,
 	
 	// outputs
 	output rv32i_word alu_out,
 	output logic br_en,
-    output rv32i_reg rs2_out
+    output rv32i_word rs2_out
 );
 assign rs2_out = rs1_in;
+
+rv32i_word alumux1_out;
+rv32i_word alumux2_out;
+rv32i_word cmp_mux_out;
 
 alu ALU(
 	.aluop	(ctrl_in.aluop),

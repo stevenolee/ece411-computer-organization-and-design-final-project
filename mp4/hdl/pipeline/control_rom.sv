@@ -45,7 +45,7 @@ assign ctrl.j_imm = {{12{instruction[31]}}, instruction[19:12], instruction[20],
 assign ctrl.rs1 = instruction[19:15];
 assign ctrl.rs2 = instruction[24:20];
 assign ctrl.rd = instruction[11:7];
-assign ir_out = instruction;
+// assign ir_out = instruction;
 
 
 /*** Check opcode ***/ 
