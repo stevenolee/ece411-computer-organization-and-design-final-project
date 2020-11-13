@@ -5,12 +5,12 @@ module mp4(
     input rst,
     
     /* Burst Memory Ports */
-    input mem_resp,
-    input [63:0] mem_rdata,
-    output logic mem_read,
-    output logic mem_write,
-    output logic [31:0] mem_addr,
-    output logic [63:0] mem_wdata,
+//    input mem_resp,
+//    input [63:0] mem_rdata,
+//    output logic mem_read,
+//    output logic mem_write,
+//    output logic [31:0] mem_addr,
+//    output logic [63:0] mem_wdata,
 
     /* I Cache Ports */
     input inst_resp,
@@ -28,9 +28,9 @@ module mp4(
     output logic [31:0] data_wdata
 );
 /*** Variables ***/
-logic i_mem_resp, i_mem_read, d_mem_resp, d_mem_read, d_mem_write, d_cache_hit;
-logic [3:0] i_mem_byte_en, d_mem_byte_en;
-logic [31:0] i_mem_rdata, i_mem_address, d_mem_rdata, d_mem_wdata, d_mem_address;
+//logic i_mem_resp, i_mem_read, d_mem_resp, d_mem_read, d_mem_write, d_cache_hit;
+//logic [3:0] i_mem_byte_en, d_mem_byte_en;
+//logic [31:0] i_mem_rdata, i_mem_address, d_mem_rdata, d_mem_wdata, d_mem_address;
 
 cpu_datapath cpu_datapath
 (

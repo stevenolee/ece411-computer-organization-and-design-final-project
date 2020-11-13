@@ -56,7 +56,6 @@ set_global_assignment -name SYSTEMVERILOG_FILE hdl/pipeline/control_rom.sv
 set_global_assignment -name SYSTEMVERILOG_FILE hdl/rv32i_types.sv
 set_global_assignment -name SYSTEMVERILOG_FILE hdl/rv32i_mux_types.sv
 set_global_assignment -name SYSTEMVERILOG_FILE hdl/mp4.sv
-set_global_assignment -name SYSTEMVERILOG_FILE hdl/control_rom.sv
 set_global_assignment -name SYSTEMVERILOG_FILE hdl/pipeline/WB.sv
 set_global_assignment -name SYSTEMVERILOG_FILE hdl/pipeline/sreg_MEM_WB.sv
 set_global_assignment -name SYSTEMVERILOG_FILE hdl/pipeline/sreg_IF_ID.sv

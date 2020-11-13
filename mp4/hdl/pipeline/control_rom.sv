@@ -5,33 +5,8 @@ module control_rom (
     output rv32i_control_word ctrl
 );
 
-    /*** signals that i needa set in this bih ***/
-    // [x]  rv32i_opcode opcode;
-    // [x]  alu_ops aluop;
-    // [ ]  rv32i_word pc;
-    // [ ]  logic regfilemux_sel;
-    // [x]  logic load_regfile;
-    // [x]  rv32i_reg rd;
-    // [x]  rv32i_reg rs1;
-    // [x]  rv32i_reg rs2;
-    // [x]  rv32i_word ir_out;
-    // [x]  logic [2:0] funct3;
-    // [x]  logic [6:0] funct7;
-    // [ ]  pcmux pcmux_sel;
-    // [ ]  cmpmux cmpmux_sel;
-    // [ ]  alumux alumux_sel;
-    // [ ]  regfilemux regfilemux_sel;
-    // [ ]  rv32i_mem_wmask mem_byte_enable;
-    // [x]  rv32i_word i_imm;
-    // [x]  rv32i_word s_imm;
-    // [x]  rv32i_word b_imm;
-    // [x]  rv32i_word u_imm;
-    // [x]  rv32i_word j_imm;
-
-    // added after implementing opcode decoding
-    // [x]  load_pc;
-    // alumux_sel_t alumux2_sel;
-
+/***************************** Variables *****************************/
+branch_funct3_t branch_funct3;
 
 /***************************** Parse instruction *****************************/
 assign ctrl.funct3 = instruction[14:12];
@@ -45,8 +20,8 @@ assign ctrl.j_imm = {{12{instruction[31]}}, instruction[19:12], instruction[20],
 assign ctrl.rs1 = instruction[19:15];
 assign ctrl.rs2 = instruction[24:20];
 assign ctrl.rd = instruction[11:7];
-// assign ir_out = instruction;
-
+assign ctrl.ir_out = instruction;
+assign branch_funct3 = branch_funct3_t'(ctrl.funct3);
 
 /*** Check opcode ***/ 
 always_comb 
@@ -105,6 +80,16 @@ begin
             end
         op_br:
             begin
+                unique case (branch_funct3)
+                    beq: ctrl.cmpop = beq;
+                    bne: ctrl.cmpop = bne;
+                    blt: ctrl.cmpop = blt;
+                    bge: ctrl.cmpop = bge;
+                    bltu: ctrl.cmpop = bltu;
+                    bgeu: ctrl.cmpop = bgeu;
+                    default: $display("Invalid CMP opcode");
+                endcase
+                ctrl.cmpmux_sel = cmpmux::rs2_out;
 				ctrl.pcmux_sel = pcmux::pc_plus4;				
 				ctrl.load_pc = 1'b1;
 				ctrl.alumux1_sel = alumux::pc_out;
@@ -158,6 +143,7 @@ begin
     			ctrl.regfilemux_sel = regfilemux::pc_plus4;
 			end
         // op_csr
+        default: ;
     endcase
 
 

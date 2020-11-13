@@ -7,16 +7,16 @@ module ID (
 	input load_regfile,
 	input logic [31:0] regfilemux_in,
     input rv32i_reg rd,
-	input inst_read,
 	input inst_resp,
-	input inst_rdata,
+	input logic [31:0] inst_rdata,
 
     // output
+	output logic inst_read,
 	output rv32i_word rs1_out,
 	output rv32i_word rs2_out,
 	output rv32i_control_word ctrl_word
 );
-
+assign inst_read = 1'b1;
 
 control_rom control_rom
 (

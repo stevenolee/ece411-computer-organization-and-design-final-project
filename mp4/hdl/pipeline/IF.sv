@@ -1,3 +1,5 @@
+`define BAD_MUX_SEL $fatal("%0t %s %0d: Illegal mux select", $time, `__FILE__, `__LINE__)
+
 import rv32i_types::*;
 
 module IF (
@@ -5,6 +7,7 @@ module IF (
     input clk,
     input rst,
     input br_take,
+    input inst_resp,
     input pcmux::pcmux_sel_t pcmux_sel,
     input logic [31:0] alu_in,
     // output
@@ -29,7 +32,7 @@ pc_register PC(
 always_comb
 begin
     br_mispredict = br_take;
-    load_pc = 1'b1;
+    load_pc = inst_resp;
 
     unique case (pcmux_sel)
         pcmux::pc_plus4: pcmux_out = pc_out + 4;

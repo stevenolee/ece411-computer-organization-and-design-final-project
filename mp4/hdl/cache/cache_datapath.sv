@@ -1,7 +1,7 @@
 /* MODIFY. The cache datapath. It contains the data,
 valid, dirty, tag, and LRU arrays, comparators, muxes,
 logic gates and other supporting logic. */
-`define BAD_MUX_SEL $fatal("%0t %s %0d: Illegal mux select", $time, `__FILE__, `__LINE__)
+//`define BAD_MUX_SEL $fatal("%0t %s %0d: Illegal mux select", $time, `__FILE__, `__LINE__)
 
 import rv32i_types::*;
 

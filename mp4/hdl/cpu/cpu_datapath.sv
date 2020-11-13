@@ -1,5 +1,3 @@
-`define BAD_MUX_SEL $fatal("%0t %s %0d: Illegal mux select", $time, `__FILE__, `__LINE__)
-
 import rv32i_types::*;
 
 module cpu_datapath
@@ -15,8 +13,8 @@ module cpu_datapath
 	
 	/* I Cache Ports */
     input inst_resp,
-	output inst_read,
     input logic [31:0] inst_rdata,
+	output inst_read,
     output logic [31:0] inst_addr,
 
     /* D Cache Ports */
@@ -76,6 +74,7 @@ IF stage_IF (
 	.rst			(rst),
 	.pcmux_sel		(EX_MEM_ctrl.pcmux_sel), // This is here b/c we need to implement branch
 	.br_take		(EX_MEM_br_en),
+	.inst_resp,
 	.alu_in			(EX_MEM_alu_out),
 	// outputs
 	.inst_addr		(IF_inst_addr),
@@ -196,12 +195,13 @@ sreg_MEM_WB sreg_MEM_WB(
 	// inputs
 	.clk,
     .rst,
-    .alu_in			(mem_addr_out),
+    .alu_in			(EX_MEM_alu_out),
     .data_rdata_in	(data_rdata),
     .ctrl_in		(EX_MEM_ctrl),
 	.br_en_in 		(EX_MEM_br_en),
 	.pc_in 			(EX_MEM_pc_out),
 	.mem_byte_en_in	(d_mem_byte),
+	.data_resp,
 
 	// outputs
     .alu_out		(MEM_WB_alu_out),
@@ -217,7 +217,8 @@ WB stage_WB (
 	// inputs
 	.clk,
 	.rst,
-	.data_in		(mem_read_data),
+	// .data_in		(mem_read_data),
+	.data_in		(MEM_WB_data_out),	// there's no "mem_read_data" so i replaced it with data_rdata
 	.alu_in			(MEM_WB_alu_out),
 	.ctrl_in		(MEM_WB_ctrl),
 	.pc_in			(MEM_WB_pc_out),

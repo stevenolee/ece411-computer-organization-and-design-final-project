@@ -23,6 +23,11 @@ TASKS
         [ ] Lead br_en (1 if branch and comp, and 1 if jump instruction) coming out of EX_MEM into IF, which is also PC mux sel 
         [ ] If br_en / pc_mux_sel == 1, then pass a variable to the first 3 state registers to reset them
 
+SCOTT FOR TOMORROW
+    [ ] pc_out and inst_address are redundant, can be one signal
+    [ ] inst_rdata being pointed into id, should be in IF ID first
+    [ ] have to implement inst_resp logic in IF ID reg so it can properly read
+
 QUESTIONS
 1.
 2.
