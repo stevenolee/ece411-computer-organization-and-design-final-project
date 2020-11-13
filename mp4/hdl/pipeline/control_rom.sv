@@ -6,29 +6,41 @@ module control_rom (
 );
 
 /***************************** Variables *****************************/
-branch_funct3_t branch_funct3;
+
 
 /***************************** Parse instruction *****************************/
-assign ctrl.funct3 = instruction[14:12];
-assign ctrl.funct7 = instruction[31:25];
-assign ctrl.opcode = rv32i_opcode'(instruction[6:0]);
-assign ctrl.i_imm = {{21{instruction[31]}}, instruction[30:20]};
-assign ctrl.s_imm = {{21{instruction[31]}}, instruction[30:25], instruction[11:7]};
-assign ctrl.b_imm = {{20{instruction[31]}}, instruction[7], instruction[30:25], instruction[11:8], 1'b0};
-assign ctrl.u_imm = {instruction[31:12], 12'h000};
-assign ctrl.j_imm = {{12{instruction[31]}}, instruction[19:12], instruction[20], instruction[30:21], 1'b0};
-assign ctrl.rs1 = instruction[19:15];
-assign ctrl.rs2 = instruction[24:20];
-assign ctrl.rd = instruction[11:7];
-assign ctrl.ir_out = instruction;
-assign branch_funct3 = branch_funct3_t'(ctrl.funct3);
+function void set_defaults();
+    ctrl.funct3 = instruction[14:12];
+    ctrl.funct7 = instruction[31:25];
+    ctrl.opcode = rv32i_opcode'(instruction[6:0]);
+    ctrl.i_imm = {{21{instruction[31]}}, instruction[30:20]};
+    ctrl.s_imm = {{21{instruction[31]}}, instruction[30:25], instruction[11:7]};
+    ctrl.b_imm = {{20{instruction[31]}}, instruction[7], instruction[30:25], instruction[11:8], 1'b0};
+    ctrl.u_imm = {instruction[31:12], 12'h000};
+    ctrl.j_imm = {{12{instruction[31]}}, instruction[19:12], instruction[20], instruction[30:21], 1'b0};
+    ctrl.rs1 = instruction[19:15];
+    ctrl.rs2 = instruction[24:20];
+    ctrl.rd = instruction[11:7];
+    ctrl.ir_out = instruction;
+    ctrl.alumux1_sel = alumux::rs1_out;
+    ctrl.alumux2_sel = alumux::i_imm;
+    ctrl.pcmux_sel = pcmux::pc_plus4;
+    ctrl.regfilemux_sel = regfilemux::alu_out;
+    ctrl.cmpop = branch_funct3_t'(instruction[14:12]);
+    ctrl.cmpmux_sel = cmpmux::rs2_out;
+    ctrl.aluop = alu_ops'(instruction[14:12]);
+    ctrl.load_regfile = 1'b0;
+    ctrl.data_write = 1'b0;
+    ctrl.data_read = 1'b0;
+    ctrl.load_pc = 1'b1;
+
+endfunction
+
 
 /*** Check opcode ***/ 
 always_comb 
-begin
-    ctrl.load_pc = 1'b1;
-    ctrl.load_regfile = 1'b1;
-    ctrl.aluop = alu_ops'(ctrl.funct3);
+begin : state_actions
+    set_defaults();
     unique case (ctrl.opcode)
         op_imm:
             unique case (ctrl.funct3)	
@@ -80,7 +92,7 @@ begin
             end
         op_br:
             begin
-                unique case (branch_funct3)
+                unique case (branch_funct3_t'(instruction[14:12]))
                     beq: ctrl.cmpop = beq;
                     bne: ctrl.cmpop = bne;
                     blt: ctrl.cmpop = blt;
@@ -145,7 +157,6 @@ begin
         // op_csr
         default: ;
     endcase
-
 
 end
 
