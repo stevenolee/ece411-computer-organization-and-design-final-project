@@ -25,16 +25,16 @@ assign read_data = ctrl_in.data_read;
 assign data_mbe = mem_byte;
 
 always_comb begin
-    unique case (mem_byte_enable) // mem_data_out
-		4'b1111: mem_wdata = mem_wdata_full;
-		4'b0011: mem_wdata = {16'b0, mem_wdata_full[15:0]};
-		// 4'b0110: mem_wdata = {8'b0, mem_wdata_full[23:8], 8'b0};
-		4'b1100: mem_wdata = {mem_wdata_full[31:16], 16'b0};
-		4'b0001: mem_wdata = {24'b0, mem_wdata_full[7:0]};
-		4'b0010: mem_wdata = {16'b0, mem_wdata_full[15:8], 8'b0};
-		4'b0100: mem_wdata = {8'b0, mem_wdata_full[23:16], 16'b0};
-		4'b1000: mem_wdata = {mem_wdata_full[31:24], 24'b0};
-		default: mem_wdata = mem_wdata_full;
+    unique case (mem_byte) // mem_data_out
+		4'b1111: wdata_out = wdata_in;
+		4'b0011: wdata_out = {16'b0, wdata_in[15:0]};
+		// 4'b0110: wdata_out = {8'b0, wdata_in[23:8], 8'b0};
+		4'b1100: wdata_out = {wdata_in[31:16], 16'b0};
+		4'b0001: wdata_out = {24'b0, wdata_in[7:0]};
+		4'b0010: wdata_out = {16'b0, wdata_in[15:8], 8'b0};
+		4'b0100: wdata_out = {8'b0, wdata_in[23:16], 16'b0};
+		4'b1000: wdata_out = {wdata_in[31:24], 24'b0};
+		default: wdata_out = wdata_in;
 	endcase
 end
 

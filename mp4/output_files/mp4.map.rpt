@@ -1,5 +1,5 @@
 Analysis & Synthesis report for mp4
-Thu Nov 12 23:48:58 2020
+Fri Nov 13 00:04:29 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -27,10 +27,9 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
  19. Port Connectivity Checks: "cpu_datapath:cpu_datapath|ID:stage_ID"
  20. Port Connectivity Checks: "cpu_datapath:cpu_datapath|sreg_IF_ID:sreg_IF_ID"
  21. Port Connectivity Checks: "cpu_datapath:cpu_datapath|IF:stage_IF|pc_register:PC"
- 22. Port Connectivity Checks: "cpu_datapath:cpu_datapath|IF:stage_IF"
- 23. Post-Synthesis Netlist Statistics for Top Partition
- 24. Elapsed Time Per Partition
- 25. Analysis & Synthesis Messages
+ 22. Post-Synthesis Netlist Statistics for Top Partition
+ 23. Elapsed Time Per Partition
+ 24. Analysis & Synthesis Messages
 
 
 
@@ -56,13 +55,13 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +-----------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status       ; Successful - Thu Nov 12 23:48:58 2020           ;
+; Analysis & Synthesis Status       ; Successful - Fri Nov 13 00:04:29 2020           ;
 ; Quartus Prime Version             ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                     ; mp4                                             ;
 ; Top-level Entity Name             ; mp4                                             ;
 ; Family                            ; Arria II GX                                     ;
 ; Logic utilization                 ; N/A                                             ;
-;     Combinational ALUTs           ; 34                                              ;
+;     Combinational ALUTs           ; 35                                              ;
 ;     Memory ALUTs                  ; 0                                               ;
 ;     Dedicated logic registers     ; 124                                             ;
 ; Total registers                   ; 124                                             ;
@@ -214,8 +213,8 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------+-----------+
 ; Resource                                      ; Usage     ;
 +-----------------------------------------------+-----------+
-; Estimated ALUTs Used                          ; 34        ;
-;     -- Combinational ALUTs                    ; 34        ;
+; Estimated ALUTs Used                          ; 35        ;
+;     -- Combinational ALUTs                    ; 35        ;
 ;     -- Memory ALUTs                           ; 0         ;
 ;     -- LUT_REGs                               ; 0         ;
 ; Dedicated logic registers                     ; 124       ;
@@ -224,16 +223,16 @@ refer to the applicable agreement for further details.
 ;     -- Due to unpartnered combinational logic ; 0         ;
 ;     -- Due to Memory ALUTs                    ; 0         ;
 ;                                               ;           ;
-; Total combinational functions                 ; 34        ;
+; Total combinational functions                 ; 35        ;
 ; Combinational ALUT usage by number of inputs  ;           ;
 ;     -- 7 input functions                      ; 0         ;
 ;     -- 6 input functions                      ; 0         ;
 ;     -- 5 input functions                      ; 0         ;
 ;     -- 4 input functions                      ; 0         ;
-;     -- <=3 input functions                    ; 34        ;
+;     -- <=3 input functions                    ; 35        ;
 ;                                               ;           ;
 ; Combinational ALUTs by mode                   ;           ;
-;     -- normal mode                            ; 4         ;
+;     -- normal mode                            ; 5         ;
 ;     -- extended LUT mode                      ; 0         ;
 ;     -- arithmetic mode                        ; 30        ;
 ;     -- shared arithmetic mode                 ; 0         ;
@@ -252,8 +251,8 @@ refer to the applicable agreement for further details.
 ;                                               ;           ;
 ; Maximum fan-out node                          ; clk~input ;
 ; Maximum fan-out                               ; 124       ;
-; Total fan-out                                 ; 770       ;
-; Average fan-out                               ; 0.93      ;
+; Total fan-out                                 ; 865       ;
+; Average fan-out                               ; 1.05      ;
 +-----------------------------------------------+-----------+
 
 
@@ -262,7 +261,7 @@ refer to the applicable agreement for further details.
 +---------------------------------+---------------------+---------------------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+-----------------------------------------------------------+--------------+--------------+
 ; Compilation Hierarchy Node      ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 12x12 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                       ; Entity Name  ; Library Name ;
 +---------------------------------+---------------------+---------------------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+-----------------------------------------------------------+--------------+--------------+
-; |mp4                            ; 34 (0)              ; 124 (0)                   ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 334  ; 0            ; |mp4                                                      ; mp4          ; work         ;
+; |mp4                            ; 35 (1)              ; 124 (0)                   ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 334  ; 0            ; |mp4                                                      ; mp4          ; work         ;
 ;    |cpu_datapath:cpu_datapath|  ; 34 (0)              ; 124 (0)                   ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cpu_datapath:cpu_datapath                            ; cpu_datapath ; work         ;
 ;       |IF:stage_IF|             ; 30 (30)             ; 30 (0)                    ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cpu_datapath:cpu_datapath|IF:stage_IF                ; IF           ; work         ;
 ;          |pc_register:PC|       ; 0 (0)               ; 30 (30)                   ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cpu_datapath:cpu_datapath|IF:stage_IF|pc_register:PC ; pc_register  ; work         ;
@@ -300,8 +299,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|ctrl.u_imm[0..31]      ; Stuck at GND due to stuck port data_in                                       ;
 ; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|ctrl.regfilemux_sel[3] ; Stuck at GND due to stuck port data_in                                       ;
 ; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|ctrl.rd[0..4]          ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|rs2[0..8]              ; Stuck at GND due to stuck port data_in                                       ;
 ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.opcode[0]         ; Lost fanout                                                                  ;
 ; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.opcode[0]           ; Lost fanout                                                                  ;
+; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|rs2[12..31]            ; Stuck at GND due to stuck port data_in                                       ;
 ; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.alumux2_sel[0..2]   ; Lost fanout                                                                  ;
 ; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.cmpop[1]            ; Stuck at GND due to stuck port data_in                                       ;
 ; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.regfilemux_sel[1,2] ; Stuck at GND due to stuck port data_in                                       ;
@@ -383,6 +384,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|br_en                  ; Lost fanout                                                                  ;
 ; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|pc[0]                  ; Lost fanout                                                                  ;
 ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|pc[0]                  ; Lost fanout                                                                  ;
+; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|rs2[9..11]             ; Stuck at GND due to stuck port data_in                                       ;
 ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.pcmux_sel[0,1]    ; Stuck at GND due to stuck port data_in                                       ;
 ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|alu[0]                 ; Lost fanout                                                                  ;
 ; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[31][15]       ; Lost fanout                                                                  ;
@@ -1409,16 +1411,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][29]        ; Lost fanout                                                                  ;
 ; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][30]        ; Lost fanout                                                                  ;
 ; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][31]        ; Lost fanout                                                                  ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|pc[0]                    ; Lost fanout                                                                  ;
-; cpu_datapath:cpu_datapath|sreg_IF_ID:sreg_IF_ID|pc[0]                    ; Lost fanout                                                                  ;
-; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|alu[1]                 ; Lost fanout                                                                  ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|pc[1]                    ; Lost fanout                                                                  ;
-; cpu_datapath:cpu_datapath|sreg_IF_ID:sreg_IF_ID|pc[1]                    ; Lost fanout                                                                  ;
-; cpu_datapath:cpu_datapath|IF:stage_IF|pc_register:PC|data[0,1]           ; Lost fanout                                                                  ;
+; cpu_datapath:cpu_datapath|IF:stage_IF|pc_register:PC|data[0]             ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|sreg_IF_ID:sreg_IF_ID|pc[0]                    ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|pc[0]                    ; Stuck at GND due to stuck port data_in                                       ;
 ; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.cmpop[2]            ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.alumux1_sel ;
 ; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.data_read           ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.alumux1_sel ;
 ; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.data_write          ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.alumux1_sel ;
-; Total Number of Removed Registers = 1485                                 ;                                                                              ;
+; cpu_datapath:cpu_datapath|IF:stage_IF|pc_register:PC|data[1]             ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|sreg_IF_ID:sreg_IF_ID|pc[1]                    ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|pc[1]                    ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|alu[1]                 ; Stuck at GND due to stuck port data_in                                       ;
+; Total Number of Removed Registers = 1517                                 ;                                                                              ;
 +--------------------------------------------------------------------------+------------------------------------------------------------------------------+
 
 
@@ -1436,12 +1439,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;                                                                        ;                           ; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|ctrl.regfilemux_sel[0], ;
 ;                                                                        ;                           ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.regfilemux_sel[0], ;
 ;                                                                        ;                           ; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.regfilemux_sel[0]    ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.cmpop[0]          ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|alu[0],                 ;
+;                                                                        ; due to stuck port data_in ; cpu_datapath:cpu_datapath|IF:stage_IF|pc_register:PC|data[0],             ;
+;                                                                        ;                           ; cpu_datapath:cpu_datapath|sreg_IF_ID:sreg_IF_ID|pc[0],                    ;
+;                                                                        ;                           ; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|pc[0],                    ;
+;                                                                        ;                           ; cpu_datapath:cpu_datapath|IF:stage_IF|pc_register:PC|data[1],             ;
+;                                                                        ;                           ; cpu_datapath:cpu_datapath|sreg_IF_ID:sreg_IF_ID|pc[1],                    ;
+;                                                                        ;                           ; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|pc[1]                     ;
 ; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.j_imm[0]          ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.alumux2_sel[2],      ;
 ;                                                                        ; due to stuck port data_in ; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.alumux2_sel[1],      ;
-;                                                                        ;                           ; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.alumux2_sel[0],      ;
-;                                                                        ;                           ; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|pc[0],                    ;
-;                                                                        ;                           ; cpu_datapath:cpu_datapath|sreg_IF_ID:sreg_IF_ID|pc[0],                    ;
-;                                                                        ;                           ; cpu_datapath:cpu_datapath|IF:stage_IF|pc_register:PC|data[0]              ;
+;                                                                        ;                           ; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.alumux2_sel[0]       ;
 ; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|alu[0]               ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|ctrl.load_regfile,      ;
 ;                                                                        ; due to stuck port data_in ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.load_regfile,      ;
 ;                                                                        ;                           ; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.load_regfile         ;
@@ -1449,8 +1456,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;                                                                        ; due to stuck port data_in ; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|ctrl.u_imm[20]          ;
 ; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[19]         ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.u_imm[19],         ;
 ;                                                                        ; due to stuck port data_in ; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|ctrl.u_imm[19]          ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.cmpop[0]          ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|alu[0],                 ;
-;                                                                        ; due to stuck port data_in ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|alu[1]                  ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[26]         ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.u_imm[26],         ;
+;                                                                        ; due to stuck port data_in ; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|ctrl.u_imm[26]          ;
 ; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[21]         ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.u_imm[21],         ;
 ;                                                                        ; due to stuck port data_in ; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|ctrl.u_imm[21]          ;
 ; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[22]         ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.u_imm[22],         ;
@@ -1461,8 +1468,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;                                                                        ; due to stuck port data_in ; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|ctrl.u_imm[24]          ;
 ; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[25]         ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.u_imm[25],         ;
 ;                                                                        ; due to stuck port data_in ; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|ctrl.u_imm[25]          ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[26]         ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.u_imm[26],         ;
-;                                                                        ; due to stuck port data_in ; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|ctrl.u_imm[26]          ;
 ; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[27]         ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.u_imm[27],         ;
 ;                                                                        ; due to stuck port data_in ; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|ctrl.u_imm[27]          ;
 ; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[28]         ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.u_imm[28],         ;
@@ -1493,8 +1498,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;                                                                        ; due to stuck port data_in ; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|ctrl.u_imm[2]           ;
 ; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[3]          ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.u_imm[3],          ;
 ;                                                                        ; due to stuck port data_in ; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|ctrl.u_imm[3]           ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[18]         ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.u_imm[18],         ;
-;                                                                        ; due to stuck port data_in ; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|ctrl.u_imm[18]          ;
 ; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[4]          ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.u_imm[4],          ;
 ;                                                                        ; due to stuck port data_in ; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|ctrl.u_imm[4]           ;
 ; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[5]          ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.u_imm[5],          ;
@@ -1503,81 +1506,143 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;                                                                        ; due to stuck port data_in ; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|ctrl.u_imm[6]           ;
 ; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[7]          ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.u_imm[7],          ;
 ;                                                                        ; due to stuck port data_in ; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|ctrl.u_imm[7]           ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[9]          ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.u_imm[9],          ;
-;                                                                        ; due to stuck port data_in ; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|ctrl.u_imm[9]           ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[8]          ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.u_imm[8],          ;
+;                                                                        ; due to stuck port data_in ; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|ctrl.u_imm[8]           ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[10]         ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.u_imm[10],         ;
+;                                                                        ; due to stuck port data_in ; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|ctrl.u_imm[10]          ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[18]         ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.u_imm[18],         ;
+;                                                                        ; due to stuck port data_in ; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|ctrl.u_imm[18]          ;
 ; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[16]         ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.u_imm[16],         ;
 ;                                                                        ; due to stuck port data_in ; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|ctrl.u_imm[16]          ;
 ; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[15]         ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.u_imm[15],         ;
 ;                                                                        ; due to stuck port data_in ; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|ctrl.u_imm[15]          ;
 ; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[14]         ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.u_imm[14],         ;
 ;                                                                        ; due to stuck port data_in ; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|ctrl.u_imm[14]          ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[8]          ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.u_imm[8],          ;
-;                                                                        ; due to stuck port data_in ; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|ctrl.u_imm[8]           ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[9]          ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.u_imm[9],          ;
+;                                                                        ; due to stuck port data_in ; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|ctrl.u_imm[9]           ;
 ; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[13]         ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.u_imm[13],         ;
 ;                                                                        ; due to stuck port data_in ; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|ctrl.u_imm[13]          ;
 ; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[12]         ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.u_imm[12],         ;
 ;                                                                        ; due to stuck port data_in ; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|ctrl.u_imm[12]          ;
 ; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[11]         ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.u_imm[11],         ;
 ;                                                                        ; due to stuck port data_in ; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|ctrl.u_imm[11]          ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[10]         ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.u_imm[10],         ;
-;                                                                        ; due to stuck port data_in ; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|ctrl.u_imm[10]          ;
 ; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|pc[21]               ; Lost Fanouts              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|pc[21]                  ;
-; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|pc[20]               ; Lost Fanouts              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|pc[20]                  ;
 ; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|pc[19]               ; Lost Fanouts              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|pc[19]                  ;
-; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|pc[18]               ; Lost Fanouts              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|pc[18]                  ;
-; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|pc[17]               ; Lost Fanouts              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|pc[17]                  ;
-; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|pc[16]               ; Lost Fanouts              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|pc[16]                  ;
-; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|pc[15]               ; Lost Fanouts              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|pc[15]                  ;
-; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|pc[14]               ; Lost Fanouts              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|pc[14]                  ;
-; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|pc[13]               ; Lost Fanouts              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|pc[13]                  ;
-; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|pc[12]               ; Lost Fanouts              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|pc[12]                  ;
-; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|pc[11]               ; Lost Fanouts              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|pc[11]                  ;
-; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|pc[10]               ; Lost Fanouts              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|pc[10]                  ;
-; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|pc[9]                ; Lost Fanouts              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|pc[9]                   ;
-; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|pc[8]                ; Lost Fanouts              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|pc[8]                   ;
-; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|pc[7]                ; Lost Fanouts              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|pc[7]                   ;
-; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|pc[6]                ; Lost Fanouts              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|pc[6]                   ;
-; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|pc[5]                ; Lost Fanouts              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|pc[5]                   ;
-; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|pc[4]                ; Lost Fanouts              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|pc[4]                   ;
-; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|pc[3]                ; Lost Fanouts              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|pc[3]                   ;
-; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|pc[1]                ; Lost Fanouts              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|pc[1]                   ;
-; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|pc[2]                ; Lost Fanouts              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|pc[2]                   ;
-; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|pc[0]                ; Lost Fanouts              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|pc[0]                   ;
+; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|pc[20]               ; Lost Fanouts              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|pc[20]                  ;
+; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|pc[22]               ; Lost Fanouts              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|pc[22]                  ;
+; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|pc[23]               ; Lost Fanouts              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|pc[23]                  ;
+; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|pc[24]               ; Lost Fanouts              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|pc[24]                  ;
+; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|pc[25]               ; Lost Fanouts              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|pc[25]                  ;
+; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|pc[26]               ; Lost Fanouts              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|pc[26]                  ;
+; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|pc[27]               ; Lost Fanouts              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|pc[27]                  ;
+; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|pc[28]               ; Lost Fanouts              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|pc[28]                  ;
+; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|pc[29]               ; Lost Fanouts              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|pc[29]                  ;
+; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|pc[30]               ; Lost Fanouts              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|pc[30]                  ;
+; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|pc[31]               ; Lost Fanouts              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|pc[31]                  ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.pcmux_sel[1]      ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.pcmux_sel[1]       ;
+;                                                                        ; due to stuck port data_in ;                                                                           ;
 ; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.pcmux_sel[0]      ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.pcmux_sel[0]       ;
 ;                                                                        ; due to stuck port data_in ;                                                                           ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.i_imm[0]          ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.cmpmux_sel           ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|rs1[30]                ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|rs2[30]                 ;
 ;                                                                        ; due to stuck port data_in ;                                                                           ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.funct3[0]         ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.funct3[0]          ;
+; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.opcode[0]       ; Lost Fanouts              ; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.opcode[0]            ;
+; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|pc[1]                ; Lost Fanouts              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|pc[1]                   ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|rs1[31]                ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|rs2[31]                 ;
 ;                                                                        ; due to stuck port data_in ;                                                                           ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.funct3[1]         ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.funct3[1]          ;
-;                                                                        ; due to stuck port data_in ;                                                                           ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.j_imm[1]          ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|pc[1]                     ;
-;                                                                        ; due to stuck port data_in ;                                                                           ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.opcode[1]         ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.opcode[1]          ;
-;                                                                        ; due to stuck port data_in ;                                                                           ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.opcode[2]         ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.opcode[2]          ;
-;                                                                        ; due to stuck port data_in ;                                                                           ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.opcode[3]         ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.opcode[3]          ;
-;                                                                        ; due to stuck port data_in ;                                                                           ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.opcode[4]         ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.opcode[4]          ;
-;                                                                        ; due to stuck port data_in ;                                                                           ;
+; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|pc[9]                ; Lost Fanouts              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|pc[9]                   ;
+; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|pc[0]                ; Lost Fanouts              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|pc[0]                   ;
+; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|pc[2]                ; Lost Fanouts              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|pc[2]                   ;
+; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|pc[3]                ; Lost Fanouts              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|pc[3]                   ;
+; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|pc[4]                ; Lost Fanouts              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|pc[4]                   ;
+; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|pc[5]                ; Lost Fanouts              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|pc[5]                   ;
+; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|pc[6]                ; Lost Fanouts              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|pc[6]                   ;
+; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|pc[7]                ; Lost Fanouts              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|pc[7]                   ;
+; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|pc[8]                ; Lost Fanouts              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|pc[8]                   ;
+; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|pc[18]               ; Lost Fanouts              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|pc[18]                  ;
+; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|pc[10]               ; Lost Fanouts              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|pc[10]                  ;
+; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|pc[11]               ; Lost Fanouts              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|pc[11]                  ;
+; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|pc[12]               ; Lost Fanouts              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|pc[12]                  ;
+; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|pc[13]               ; Lost Fanouts              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|pc[13]                  ;
+; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|pc[14]               ; Lost Fanouts              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|pc[14]                  ;
+; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|pc[15]               ; Lost Fanouts              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|pc[15]                  ;
+; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|pc[16]               ; Lost Fanouts              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|pc[16]                  ;
+; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|pc[17]               ; Lost Fanouts              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|pc[17]                  ;
 ; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.opcode[5]         ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.opcode[5]          ;
+;                                                                        ; due to stuck port data_in ;                                                                           ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|rs1[9]                 ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|rs2[9]                  ;
+;                                                                        ; due to stuck port data_in ;                                                                           ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|rs1[8]                 ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|rs2[8]                  ;
+;                                                                        ; due to stuck port data_in ;                                                                           ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|rs1[7]                 ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|rs2[7]                  ;
+;                                                                        ; due to stuck port data_in ;                                                                           ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|rs1[6]                 ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|rs2[6]                  ;
+;                                                                        ; due to stuck port data_in ;                                                                           ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|rs1[5]                 ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|rs2[5]                  ;
+;                                                                        ; due to stuck port data_in ;                                                                           ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|rs1[4]                 ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|rs2[4]                  ;
+;                                                                        ; due to stuck port data_in ;                                                                           ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|rs1[3]                 ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|rs2[3]                  ;
+;                                                                        ; due to stuck port data_in ;                                                                           ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|rs1[2]                 ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|rs2[2]                  ;
 ;                                                                        ; due to stuck port data_in ;                                                                           ;
 ; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.opcode[6]         ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.opcode[6]          ;
 ;                                                                        ; due to stuck port data_in ;                                                                           ;
-; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.opcode[0]       ; Lost Fanouts              ; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.opcode[0]            ;
-; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|pc[22]               ; Lost Fanouts              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|pc[22]                  ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.pcmux_sel[1]      ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.pcmux_sel[1]       ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|rs1[10]                ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|rs2[10]                 ;
 ;                                                                        ; due to stuck port data_in ;                                                                           ;
-; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|pc[31]               ; Lost Fanouts              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|pc[31]                  ;
-; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|pc[30]               ; Lost Fanouts              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|pc[30]                  ;
-; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|pc[29]               ; Lost Fanouts              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|pc[29]                  ;
-; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|pc[28]               ; Lost Fanouts              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|pc[28]                  ;
-; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|pc[27]               ; Lost Fanouts              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|pc[27]                  ;
-; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|pc[26]               ; Lost Fanouts              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|pc[26]                  ;
-; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|pc[25]               ; Lost Fanouts              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|pc[25]                  ;
-; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|pc[24]               ; Lost Fanouts              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|pc[24]                  ;
-; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|pc[23]               ; Lost Fanouts              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|pc[23]                  ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.opcode[4]         ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.opcode[4]          ;
+;                                                                        ; due to stuck port data_in ;                                                                           ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.opcode[3]         ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.opcode[3]          ;
+;                                                                        ; due to stuck port data_in ;                                                                           ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.opcode[2]         ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.opcode[2]          ;
+;                                                                        ; due to stuck port data_in ;                                                                           ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.opcode[1]         ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.opcode[1]          ;
+;                                                                        ; due to stuck port data_in ;                                                                           ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.funct3[1]         ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.funct3[1]          ;
+;                                                                        ; due to stuck port data_in ;                                                                           ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.funct3[0]         ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.funct3[0]          ;
+;                                                                        ; due to stuck port data_in ;                                                                           ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.i_imm[0]          ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.cmpmux_sel           ;
+;                                                                        ; due to stuck port data_in ;                                                                           ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.j_imm[1]          ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|alu[1]                  ;
+;                                                                        ; due to stuck port data_in ;                                                                           ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|rs1[19]                ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|rs2[19]                 ;
+;                                                                        ; due to stuck port data_in ;                                                                           ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|rs1[28]                ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|rs2[28]                 ;
+;                                                                        ; due to stuck port data_in ;                                                                           ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|rs1[27]                ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|rs2[27]                 ;
+;                                                                        ; due to stuck port data_in ;                                                                           ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|rs1[26]                ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|rs2[26]                 ;
+;                                                                        ; due to stuck port data_in ;                                                                           ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|rs1[25]                ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|rs2[25]                 ;
+;                                                                        ; due to stuck port data_in ;                                                                           ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|rs1[24]                ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|rs2[24]                 ;
+;                                                                        ; due to stuck port data_in ;                                                                           ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|rs1[23]                ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|rs2[23]                 ;
+;                                                                        ; due to stuck port data_in ;                                                                           ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|rs1[22]                ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|rs2[22]                 ;
+;                                                                        ; due to stuck port data_in ;                                                                           ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|rs1[21]                ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|rs2[21]                 ;
+;                                                                        ; due to stuck port data_in ;                                                                           ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|rs1[20]                ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|rs2[20]                 ;
+;                                                                        ; due to stuck port data_in ;                                                                           ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|rs1[29]                ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|rs2[29]                 ;
+;                                                                        ; due to stuck port data_in ;                                                                           ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|rs1[18]                ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|rs2[18]                 ;
+;                                                                        ; due to stuck port data_in ;                                                                           ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|rs1[17]                ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|rs2[17]                 ;
+;                                                                        ; due to stuck port data_in ;                                                                           ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|rs1[16]                ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|rs2[16]                 ;
+;                                                                        ; due to stuck port data_in ;                                                                           ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|rs1[15]                ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|rs2[15]                 ;
+;                                                                        ; due to stuck port data_in ;                                                                           ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|rs1[14]                ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|rs2[14]                 ;
+;                                                                        ; due to stuck port data_in ;                                                                           ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|rs1[13]                ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|rs2[13]                 ;
+;                                                                        ; due to stuck port data_in ;                                                                           ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|rs1[12]                ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|rs2[12]                 ;
+;                                                                        ; due to stuck port data_in ;                                                                           ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|rs1[11]                ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|rs2[11]                 ;
+;                                                                        ; due to stuck port data_in ;                                                                           ;
 +------------------------------------------------------------------------+---------------------------+---------------------------------------------------------------------------+
 
 
@@ -1588,7 +1653,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Total registers                              ; 124   ;
 ; Number of registers using Synchronous Clear  ; 90    ;
-; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Synchronous Load   ; 34    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
@@ -1648,7 +1713,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------+--------+----------+----------------------------------------------------------------------------------------------------------+
 ; Port       ; Type   ; Severity ; Details                                                                                                  ;
 +------------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; rs2_out    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
 ; write_data ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
 +------------+--------+----------+----------------------------------------------------------------------------------------------------------+
 
@@ -1698,15 +1762,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+--------------------------------------------------------+
 
 
-+-------------------------------------------------------------------+
-; Port Connectivity Checks: "cpu_datapath:cpu_datapath|IF:stage_IF" ;
-+---------------+-------+----------+--------------------------------+
-; Port          ; Type  ; Severity ; Details                        ;
-+---------------+-------+----------+--------------------------------+
-; i_mem_address ; Input ; Info     ; Stuck at GND                   ;
-+---------------+-------+----------+--------------------------------+
-
-
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
@@ -1714,18 +1769,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; arriaii_ff            ; 124                         ;
 ;     SCLR              ; 90                          ;
-;     plain             ; 34                          ;
+;     SLD               ; 34                          ;
 ; boundary_port         ; 334                         ;
 ; stratixiv_lcell_comb  ; 36                          ;
 ;     arith             ; 30                          ;
 ;         1 data inputs ; 30                          ;
 ;     normal            ; 6                           ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 1                           ;
-;         2 data inputs ; 3                           ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 2                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 3.90                        ;
-; Average LUT depth     ; 1.42                        ;
+; Average LUT depth     ; 1.40                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1744,7 +1799,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
-    Info: Processing started: Thu Nov 12 23:48:37 2020
+    Info: Processing started: Fri Nov 13 00:04:09 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mp4 -c mp4
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -1808,13 +1863,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file hdl/cac
     Info (12023): Found entity 1: bus_adapter File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/cache/bus_adapter.sv Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file hdl/cache/array.sv
     Info (12023): Found entity 1: array File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/cache/array.sv Line: 3
-Warning (10236): Verilog HDL Implicit Net warning at control_rom.sv(48): created implicit net for "ir_out" File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/pipeline/control_rom.sv Line: 48
-Warning (10236): Verilog HDL Implicit Net warning at IF.sv(22): created implicit net for "rst" File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/pipeline/IF.sv Line: 22
-Warning (10236): Verilog HDL Implicit Net warning at ID.sv(29): created implicit net for "rst" File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/pipeline/ID.sv Line: 29
-Warning (10236): Verilog HDL Implicit Net warning at cpu_datapath.sv(76): created implicit net for "i_mem_address" File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/cpu/cpu_datapath.sv Line: 76
-Warning (10236): Verilog HDL Implicit Net warning at cpu_datapath.sv(97): created implicit net for "IF_ID_addr_out" File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/cpu/cpu_datapath.sv Line: 97
-Warning (10236): Verilog HDL Implicit Net warning at cpu_datapath.sv(196): created implicit net for "mem_addr_out" File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/cpu/cpu_datapath.sv Line: 196
-Warning (10236): Verilog HDL Implicit Net warning at cpu_datapath.sv(217): created implicit net for "mem_read_data" File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/cpu/cpu_datapath.sv Line: 217
+Warning (10236): Verilog HDL Implicit Net warning at cpu_datapath.sv(199): created implicit net for "mem_addr_out" File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/cpu/cpu_datapath.sv Line: 199
+Warning (10236): Verilog HDL Implicit Net warning at cpu_datapath.sv(220): created implicit net for "mem_read_data" File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/cpu/cpu_datapath.sv Line: 220
 Info (12127): Elaborating entity "mp4" for the top level hierarchy
 Warning (10034): Output port "mem_addr" at mp4.sv(12) has no driver File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/mp4.sv Line: 12
 Warning (10034): Output port "mem_wdata" at mp4.sv(13) has no driver File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/mp4.sv Line: 13
@@ -1822,17 +1872,13 @@ Warning (10034): Output port "mem_read" at mp4.sv(10) has no driver File: /home/
 Warning (10034): Output port "mem_write" at mp4.sv(11) has no driver File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/mp4.sv Line: 11
 Info (12128): Elaborating entity "cpu_datapath" for hierarchy "cpu_datapath:cpu_datapath" File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/mp4.sv Line: 76
 Warning (10030): Net "inst_read" at cpu_datapath.sv(18) has no driver or initial value, using a default initial value '0' File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/cpu/cpu_datapath.sv Line: 18
-Warning (10030): Net "i_mem_address" at cpu_datapath.sv(76) has no driver or initial value, using a default initial value '0' File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/cpu/cpu_datapath.sv Line: 76
-Warning (10030): Net "mem_addr_out" at cpu_datapath.sv(196) has no driver or initial value, using a default initial value '0' File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/cpu/cpu_datapath.sv Line: 196
-Warning (10030): Net "mem_read_data" at cpu_datapath.sv(217) has no driver or initial value, using a default initial value '0' File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/cpu/cpu_datapath.sv Line: 217
-Warning (10034): Output port "data_wdata" at cpu_datapath.sv(51) has no driver File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/cpu/cpu_datapath.sv Line: 51
+Warning (10030): Net "mem_addr_out" at cpu_datapath.sv(199) has no driver or initial value, using a default initial value '0' File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/cpu/cpu_datapath.sv Line: 199
+Warning (10030): Net "mem_read_data" at cpu_datapath.sv(220) has no driver or initial value, using a default initial value '0' File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/cpu/cpu_datapath.sv Line: 220
 Info (12128): Elaborating entity "IF" for hierarchy "cpu_datapath:cpu_datapath|IF:stage_IF" File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/cpu/cpu_datapath.sv Line: 84
 Info (12128): Elaborating entity "pc_register" for hierarchy "cpu_datapath:cpu_datapath|IF:stage_IF|pc_register:PC" File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/pipeline/IF.sv Line: 26
 Info (12128): Elaborating entity "sreg_IF_ID" for hierarchy "cpu_datapath:cpu_datapath|sreg_IF_ID:sreg_IF_ID" File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/cpu/cpu_datapath.sv Line: 99
-Info (12128): Elaborating entity "ID" for hierarchy "cpu_datapath:cpu_datapath|ID:stage_ID" File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/cpu/cpu_datapath.sv Line: 116
-Info (12128): Elaborating entity "control_rom" for hierarchy "cpu_datapath:cpu_datapath|ID:stage_ID|control_rom:control_rom" File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/pipeline/ID.sv Line: 24
-Warning (10036): Verilog HDL or VHDL warning at control_rom.sv(48): object "ir_out" assigned a value but never read File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/pipeline/control_rom.sv Line: 48
-Warning (10230): Verilog HDL assignment warning at control_rom.sv(48): truncated value with size 32 to match size of target (1) File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/pipeline/control_rom.sv Line: 48
+Info (12128): Elaborating entity "ID" for hierarchy "cpu_datapath:cpu_datapath|ID:stage_ID" File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/cpu/cpu_datapath.sv Line: 117
+Info (12128): Elaborating entity "control_rom" for hierarchy "cpu_datapath:cpu_datapath|ID:stage_ID|control_rom:control_rom" File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/pipeline/ID.sv Line: 25
 Warning (10958): SystemVerilog warning at control_rom.sv(57): unique or priority keyword makes case statement complete File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/pipeline/control_rom.sv Line: 57
 Warning (10034): Output port "ctrl.ir_out" at control_rom.sv(6) has no driver File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/pipeline/control_rom.sv Line: 6
 Info (10041): Inferred latch for "ctrl.cmpop[0]" at control_rom.sv(54) File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/pipeline/control_rom.sv Line: 54
@@ -1851,15 +1897,15 @@ Info (10041): Inferred latch for "ctrl.pcmux_sel[0]" at control_rom.sv(54) File:
 Info (10041): Inferred latch for "ctrl.pcmux_sel[1]" at control_rom.sv(54) File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/pipeline/control_rom.sv Line: 54
 Info (10041): Inferred latch for "ctrl.data_read" at control_rom.sv(54) File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/pipeline/control_rom.sv Line: 54
 Info (10041): Inferred latch for "ctrl.data_write" at control_rom.sv(54) File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/pipeline/control_rom.sv Line: 54
-Info (12128): Elaborating entity "regfile" for hierarchy "cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile" File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/pipeline/ID.sv Line: 37
-Info (12128): Elaborating entity "sreg_ID_EX" for hierarchy "cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX" File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/cpu/cpu_datapath.sv Line: 134
-Info (12128): Elaborating entity "EX" for hierarchy "cpu_datapath:cpu_datapath|EX:stage_EX" File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/cpu/cpu_datapath.sv Line: 149
+Info (12128): Elaborating entity "regfile" for hierarchy "cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile" File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/pipeline/ID.sv Line: 38
+Info (12128): Elaborating entity "sreg_ID_EX" for hierarchy "cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX" File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/cpu/cpu_datapath.sv Line: 135
+Info (12128): Elaborating entity "EX" for hierarchy "cpu_datapath:cpu_datapath|EX:stage_EX" File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/cpu/cpu_datapath.sv Line: 150
 Info (12128): Elaborating entity "alu" for hierarchy "cpu_datapath:cpu_datapath|EX:stage_EX|alu:ALU" File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/pipeline/EX.sv Line: 27
 Info (12128): Elaborating entity "cmp" for hierarchy "cpu_datapath:cpu_datapath|EX:stage_EX|cmp:CMP" File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/pipeline/EX.sv Line: 36
-Info (12128): Elaborating entity "sreg_EX_MEM" for hierarchy "cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM" File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/cpu/cpu_datapath.sv Line: 169
-Info (12128): Elaborating entity "MEM" for hierarchy "cpu_datapath:cpu_datapath|MEM:stage_MEM" File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/cpu/cpu_datapath.sv Line: 188
-Info (12128): Elaborating entity "sreg_MEM_WB" for hierarchy "cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB" File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/cpu/cpu_datapath.sv Line: 210
-Info (12128): Elaborating entity "WB" for hierarchy "cpu_datapath:cpu_datapath|WB:stage_WB" File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/cpu/cpu_datapath.sv Line: 228
+Info (12128): Elaborating entity "sreg_EX_MEM" for hierarchy "cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM" File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/cpu/cpu_datapath.sv Line: 170
+Info (12128): Elaborating entity "MEM" for hierarchy "cpu_datapath:cpu_datapath|MEM:stage_MEM" File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/cpu/cpu_datapath.sv Line: 191
+Info (12128): Elaborating entity "sreg_MEM_WB" for hierarchy "cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB" File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/cpu/cpu_datapath.sv Line: 213
+Info (12128): Elaborating entity "WB" for hierarchy "cpu_datapath:cpu_datapath|WB:stage_WB" File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/cpu/cpu_datapath.sv Line: 231
 Info (10264): Verilog HDL Case Statement information at WB.sv(33): all case item expressions in this case statement are onehot File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/pipeline/WB.sv Line: 33
 Info (10264): Verilog HDL Case Statement information at WB.sv(42): all case item expressions in this case statement are onehot File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/pipeline/WB.sv Line: 42
 Warning (14025): LATCH primitive "cpu_datapath:cpu_datapath|ID:stage_ID|control_rom:control_rom|ctrl.cmpop[1]" is permanently disabled File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/pipeline/control_rom.sv Line: 6
@@ -1966,36 +2012,6 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "inst_read" is stuck at GND File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/mp4.sv Line: 18
     Warning (13410): Pin "inst_addr[0]" is stuck at GND File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/mp4.sv Line: 19
     Warning (13410): Pin "inst_addr[1]" is stuck at GND File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/mp4.sv Line: 19
-    Warning (13410): Pin "inst_addr[2]" is stuck at GND File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/mp4.sv Line: 19
-    Warning (13410): Pin "inst_addr[3]" is stuck at GND File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/mp4.sv Line: 19
-    Warning (13410): Pin "inst_addr[4]" is stuck at GND File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/mp4.sv Line: 19
-    Warning (13410): Pin "inst_addr[5]" is stuck at GND File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/mp4.sv Line: 19
-    Warning (13410): Pin "inst_addr[6]" is stuck at GND File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/mp4.sv Line: 19
-    Warning (13410): Pin "inst_addr[7]" is stuck at GND File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/mp4.sv Line: 19
-    Warning (13410): Pin "inst_addr[8]" is stuck at GND File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/mp4.sv Line: 19
-    Warning (13410): Pin "inst_addr[9]" is stuck at GND File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/mp4.sv Line: 19
-    Warning (13410): Pin "inst_addr[10]" is stuck at GND File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/mp4.sv Line: 19
-    Warning (13410): Pin "inst_addr[11]" is stuck at GND File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/mp4.sv Line: 19
-    Warning (13410): Pin "inst_addr[12]" is stuck at GND File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/mp4.sv Line: 19
-    Warning (13410): Pin "inst_addr[13]" is stuck at GND File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/mp4.sv Line: 19
-    Warning (13410): Pin "inst_addr[14]" is stuck at GND File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/mp4.sv Line: 19
-    Warning (13410): Pin "inst_addr[15]" is stuck at GND File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/mp4.sv Line: 19
-    Warning (13410): Pin "inst_addr[16]" is stuck at GND File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/mp4.sv Line: 19
-    Warning (13410): Pin "inst_addr[17]" is stuck at GND File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/mp4.sv Line: 19
-    Warning (13410): Pin "inst_addr[18]" is stuck at GND File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/mp4.sv Line: 19
-    Warning (13410): Pin "inst_addr[19]" is stuck at GND File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/mp4.sv Line: 19
-    Warning (13410): Pin "inst_addr[20]" is stuck at GND File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/mp4.sv Line: 19
-    Warning (13410): Pin "inst_addr[21]" is stuck at GND File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/mp4.sv Line: 19
-    Warning (13410): Pin "inst_addr[22]" is stuck at GND File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/mp4.sv Line: 19
-    Warning (13410): Pin "inst_addr[23]" is stuck at GND File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/mp4.sv Line: 19
-    Warning (13410): Pin "inst_addr[24]" is stuck at GND File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/mp4.sv Line: 19
-    Warning (13410): Pin "inst_addr[25]" is stuck at GND File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/mp4.sv Line: 19
-    Warning (13410): Pin "inst_addr[26]" is stuck at GND File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/mp4.sv Line: 19
-    Warning (13410): Pin "inst_addr[27]" is stuck at GND File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/mp4.sv Line: 19
-    Warning (13410): Pin "inst_addr[28]" is stuck at GND File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/mp4.sv Line: 19
-    Warning (13410): Pin "inst_addr[29]" is stuck at GND File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/mp4.sv Line: 19
-    Warning (13410): Pin "inst_addr[30]" is stuck at GND File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/mp4.sv Line: 19
-    Warning (13410): Pin "inst_addr[31]" is stuck at GND File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/mp4.sv Line: 19
     Warning (13410): Pin "data_mbe[0]" is stuck at VCC File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/mp4.sv Line: 26
     Warning (13410): Pin "data_mbe[1]" is stuck at VCC File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/mp4.sv Line: 26
     Warning (13410): Pin "data_mbe[2]" is stuck at VCC File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/mp4.sv Line: 26
@@ -2035,7 +2051,7 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "data_wdata[30]" is stuck at GND File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/mp4.sv Line: 29
     Warning (13410): Pin "data_wdata[31]" is stuck at GND File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/mp4.sv Line: 29
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 1117 registers lost all their fanouts during netlist optimizations.
+Info (17049): 1110 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 131 input pin(s) that do not drive logic
@@ -2170,13 +2186,13 @@ Warning (21074): Design contains 131 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "data_rdata[29]" File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/mp4.sv Line: 23
     Warning (15610): No output dependent on input pin "data_rdata[30]" File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/mp4.sv Line: 23
     Warning (15610): No output dependent on input pin "data_rdata[31]" File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/mp4.sv Line: 23
-Info (21057): Implemented 460 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 461 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 133 input pins
     Info (21059): Implemented 201 output pins
-    Info (21061): Implemented 126 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 329 warnings
-    Info: Peak virtual memory: 1195 megabytes
-    Info: Processing ended: Thu Nov 12 23:48:58 2020
+    Info (21061): Implemented 127 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 290 warnings
+    Info: Peak virtual memory: 1196 megabytes
+    Info: Processing ended: Fri Nov 13 00:04:30 2020
     Info: Elapsed time: 00:00:21
     Info: Total CPU time (on all processors): 00:00:31
 
