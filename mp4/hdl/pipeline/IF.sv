@@ -12,11 +12,9 @@ module IF (
     input logic [31:0] alu_in,
     // output
     output logic br_mispredict,
-    output logic [31:0] inst_addr,
     output logic [31:0] pc_out
 );
 logic load_pc;
-assign inst_addr = pc_out;
 logic [31:0] pcmux_out;
 
 /*** PC REGISTER ***/
@@ -33,6 +31,10 @@ always_comb
 begin
     br_mispredict = br_take;
     load_pc = inst_resp;
+
+    if(!inst_resp) begin
+        if(br_take) load_pc = 1'b1;
+    end
 
     unique case (pcmux_sel)
         pcmux::pc_plus4: pcmux_out = pc_out + 4;

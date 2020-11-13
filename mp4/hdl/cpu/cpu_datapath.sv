@@ -54,7 +54,7 @@ rv32i_reg rd;
 rv32i_word rs1_out, rs2_out, EX_alu_out, MEM_WB_alu_out, EX_MEM_alu_out, EX_MEM_pc_out, MEM_WB_pc_out;
 logic [3:0] d_mem_byte, MEM_WB_mbe;
 logic EX_br_en, EX_MEM_br_en;
-logic [31:0] IF_pc_out, IF_inst_addr, IF_ID_addr_out;
+logic [31:0] IF_pc_out, IF_ID_addr_out, IF_ID_data_out;
 logic [31:0] IF_ID_pc_out, IF_ID_inst_addr, ID_EX_pc_out;
 rv32i_word ID_rs1_out, ID_rs2_out, ID_EX_rs1_out, ID_EX_rs2_out, EX_rs2_out, EX_MEM_rs2_out;
 logic [31:0] MEM_WB_data_out;
@@ -64,7 +64,7 @@ logic br_mispredict, MEM_BW_br_en, load_regfile;
 
 /*****************************************************************************/
 /* * * NEED TO SET D MEM ADDRESS FROM STATE REGISTER (SUB CONTROL ROM) * * */
-assign inst_addr = IF_inst_addr;
+assign inst_addr = IF_pc_out;
 
 /************************* Stages/Stage Registers ********************************/
 /*** IF ***/
@@ -77,7 +77,6 @@ IF stage_IF (
 	.inst_resp,
 	.alu_in			(EX_MEM_alu_out),
 	// outputs
-	.inst_addr		(IF_inst_addr),
 	.br_mispredict,
 	.pc_out			(IF_pc_out)
 );
@@ -88,13 +87,16 @@ sreg_IF_ID sreg_IF_ID(
 	// inputs 
 	.clk			(clk),
 	.rst			(rst),
-	.inst_addr		(IF_inst_addr),
+	.inst_addr		(IF_pc_out),
 	.pc_in			(IF_pc_out),
+	.inst_rdata,
+	.inst_resp,
 	.br_mispredict,
 
 	// outputs
 	.addr_out		(IF_ID_addr_out),
-	.pc_out			(IF_ID_pc_out)
+	.pc_out			(IF_ID_pc_out),
+	.data_out		(IF_ID_data_out)
 );
 
 /*** ID ***/
@@ -104,12 +106,12 @@ ID stage_ID (
 	.rst			(rst),
 	.load_regfile, // From MEM_WB 
 	.regfilemux_in	(regfilemux_out),
-	.inst_read		(inst_read),
     .inst_resp		(inst_resp),
-    .inst_rdata		(inst_rdata),
+    .inst_rdata		(IF_ID_data_out),
 	.rd,
 	
 	// outputs
+	.inst_read		(inst_read),
 	.ctrl_word		(ID_ctrl),
 	.rs1_out		(ID_rs1_out),
 	.rs2_out		(ID_rs2_out)
