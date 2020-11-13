@@ -14,7 +14,7 @@ always_ff @(posedge clk)
 begin
     addr <= inst_addr;
     pc <= pc_in; 
-    if (reset || br_mispredict) 
+    if (rst || br_mispredict) 
     begin
         addr <= 32'b0;
         pc <= 32'b0;

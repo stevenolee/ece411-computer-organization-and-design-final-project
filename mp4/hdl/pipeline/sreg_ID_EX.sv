@@ -19,7 +19,7 @@ rv32i_control_word ctrl;
 
 always_ff @(posedge clk)
 begin
-    if (reset || br_mispredict)
+    if (rst || br_mispredict)
     begin
         ctrl <= 0;
         pc <= 0;

@@ -17,9 +17,9 @@ typedef logic [3:0] rv32i_mem_wmask;
 typedef struct packed {
     rv32i_opcode opcode;
     alu_ops aluop;
-    // rv32i_word pc;
-    // logic regfilemux_sel;
     logic load_regfile;
+    logic data_write;
+    logic data_read;
     rv32i_reg rd;
     rv32i_reg rs1;
     rv32i_reg rs2;
@@ -30,7 +30,7 @@ typedef struct packed {
     cmpmux_sel_t cmpmux_sel;
     alumux1_sel_t alumux1_sel;
     alumux2_sel_t alumux2_sel;
-    regfilemux regfilemux_sel;
+    regfilemux_sel_t regfilemux_sel;
     // rv32i_mem_wmask mem_byte_enable;
     rv32i_word i_imm;
     rv32i_word s_imm;

@@ -13,9 +13,9 @@ module mp4(
     output logic [63:0] mem_wdata,
 
     /* I Cache Ports */
-    input inst_read,
     input inst_resp,
     input logic [31:0] inst_rdata,
+    output logic inst_read,
     output logic [31:0] inst_addr,
 
     /* D Cache Ports */
@@ -32,21 +32,16 @@ logic i_mem_resp, i_mem_read, d_mem_resp, d_mem_read, d_mem_write, d_cache_hit;
 logic [3:0] i_mem_byte_en, d_mem_byte_en;
 logic [31:0] i_mem_rdata, i_mem_address, d_mem_rdata, d_mem_wdata, d_mem_address;
 
-/*** SIGNALS STILL TO CONNECT TO THE Arbiter ***/
-logic i_mem_resp, i_mem_read, i_mem_write, d_mem_resp, d_mem_read, d_mem_write;
-logic [31:0] i_mem_rdata, i_mem_wdata, i_mem_address, d_mem_rdata, d_mem_wdata, d_mem_address;
-/*** END OF SIGNALS TO CONNECT TO WITH Arbiter ***/
-
 cpu_datapath cpu_datapath
 (
     .clk,
     .rst,
-    .mem_resp,
-    .mem_rdata,
-    .mem_read,
-    .mem_write,
-    .mem_address,
-    .mem_wdata,
+    // .mem_resp,
+    // .mem_rdata,
+    // .mem_read,
+    // .mem_write,
+    // .mem_address,
+    // .mem_wdata,
     /*** I-cache magic memory ports ***/
     .inst_read,
     .inst_resp,

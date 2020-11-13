@@ -71,7 +71,7 @@ interface tb_itf();
     endclocking
 
     modport mem(clocking mcb, ref path_mb);
-    modport magic_mem(clocking mmcb, ref path_mb);
+    modport magic_mem(clocking mmcb, ref path_mb); // This is the dual port, the same one autograder uses
     modport sm(clocking smcb, ref path_mb);
     modport tb(input clk, registers, output rst, ref path_mb);
 

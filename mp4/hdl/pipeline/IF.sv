@@ -1,5 +1,4 @@
 import rv32i_types::*;
-import rv32i_mux_types::*;
 
 module IF (
     // inputs
@@ -7,6 +6,7 @@ module IF (
     input logic [31:0] i_mem_address,
     input br_take,
     input pcmux::pcmux_sel_t pcmux_sel,
+    input logic [31:0] alu_in,
     // output
     output logic br_mispredict,
     output logic [31:0] inst_addr,
@@ -32,8 +32,8 @@ begin
 
     unique case (pcmux_sel)
         pcmux::pc_plus4: pcmux_out = pc_out + 4;
-        pcmux::alu_out:	pcmux_out = alu_out;
-		pcmux::alu_mod2: pcmux_out = {alu_out[31:1], 1'b0}; // ~(alu_out[0] && 1'b0); // 
+        pcmux::alu_out:	pcmux_out = alu_in;
+		pcmux::alu_mod2: pcmux_out = {alu_in[31:1], 1'b0}; // ~(alu_out[0] && 1'b0); // 
         default: `BAD_MUX_SEL;
     endcase
 end

@@ -1,0 +1,2 @@
+Warning (10268): Verilog HDL information at rvfimon.v(405): always construct contains both blocking and non-blocking assignments File: /home/scottl4/hydrationiskey/mp4/hvl/rvfimon.v Line: 405
+Warning (10268): Verilog HDL information at magic_dual_port.sv(23): always construct contains both blocking and non-blocking assignments File: /home/scottl4/hydrationiskey/mp4/hvl/magic_dual_port.sv Line: 23

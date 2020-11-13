@@ -4,10 +4,8 @@ module ID (
     // inputs
 	input clk,
 	input load_regfile,
-	input logic [31:0] regfilemux_out,
+	input logic [31:0] regfilemux_in,
     input rv32i_reg rd,
-	input rv32i_reg rs1, 
-	input rv32i_reg rs2
 	input inst_read,
 	input inst_resp,
 	input inst_rdata,
@@ -30,9 +28,9 @@ regfile regfile(
 	.clk	(clk),
     .rst	(rst),
     .load	(load_regfile),
-	.in		(regfilemux_out),
-	.src_a	(rs1),
-	.src_b	(rs2),
+	.in		(regfilemux_in),
+	.src_a	(ctrl_word.rs1),
+	.src_b	(ctrl_word.rs2),
 	.dest	(rd),
 	.reg_a	(rs1_out),
 	.reg_b	(rs2_out)
