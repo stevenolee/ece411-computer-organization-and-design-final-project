@@ -11,7 +11,6 @@ module sreg_EX_MEM (
 
     output logic [31:0] alu_out,
     output logic [3:0] mem_byte_enable_out,
-    output logic [31:0] write_data,
     output logic br_en_out,
     output rv32i_control_word ctrl_out,
     output logic [31:0] rs2_out,
@@ -32,14 +31,12 @@ logic [31:0] rs2;
 always_ff @(posedge clk) begin
     if (rst == 1'b1) begin
         alu <= 0;
-        write_data <= 0;
         br_en <= 0;
         ctrl <= 0;
         rs2 <= 0;
         pc <= 0;
     end else begin
         alu <= alu_in;
-        write_data <= rs2_in;
         br_en <= br_en_in;
         ctrl <= ctrl_in;
         rs2 <= rs2_in;

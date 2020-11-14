@@ -7,7 +7,7 @@ module MEM (
     input rv32i_control_word ctrl_in,
     input pcmux::pcmux_sel_t pcmux_sel,
     input [31:0] addr_in,
-    input [31:0] pc_in,
+    // input [31:0] pc_in,
     input [31:0] wdata_in,
     input [3:0] mem_byte,
 

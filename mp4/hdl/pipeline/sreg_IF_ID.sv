@@ -7,7 +7,6 @@ module sreg_IF_ID(
     input logic inst_resp,
     input br_mispredict,
 
-    output logic [31:0] addr_out,
     output logic [31:0] pc_out,
     output logic [31:0] data_out
 );
