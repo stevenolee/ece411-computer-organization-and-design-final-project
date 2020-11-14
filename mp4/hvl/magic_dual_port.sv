@@ -18,7 +18,7 @@ begin
     string s;
     itf.path_mb.peek(s);
     $readmemh(s, mem);
-end
+end 
 
 always @(itf.mmcb)
 begin : response
