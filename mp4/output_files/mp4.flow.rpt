@@ -1,5 +1,9 @@
 Flow report for mp4
+<<<<<<< HEAD
 Fri Nov 13 17:49:00 2020
+=======
+Sat Nov 14 00:34:56 2020
+>>>>>>> a5dc7d3925256a2f5e61d53db619f7797c0a764a
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -40,7 +44,11 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------------+
 ; Flow Summary                                                                        ;
 +-----------------------------------+-------------------------------------------------+
+<<<<<<< HEAD
 ; Flow Status                       ; Successful - Fri Nov 13 17:49:00 2020           ;
+=======
+; Flow Status                       ; Successful - Sat Nov 14 00:34:56 2020           ;
+>>>>>>> a5dc7d3925256a2f5e61d53db619f7797c0a764a
 ; Quartus Prime Version             ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                     ; mp4                                             ;
 ; Top-level Entity Name             ; mp4                                             ;
@@ -48,7 +56,7 @@ refer to the applicable agreement for further details.
 ; Device                            ; EP2AGX45DF25I3                                  ;
 ; Timing Models                     ; Final                                           ;
 ; Logic utilization                 ; 7 %                                             ;
-;     Combinational ALUTs           ; 1,356 / 36,100 ( 4 % )                          ;
+;     Combinational ALUTs           ; 1,361 / 36,100 ( 4 % )                          ;
 ;     Memory ALUTs                  ; 0 / 18,050 ( 0 % )                              ;
 ;     Dedicated logic registers     ; 1,501 / 36,100 ( 4 % )                          ;
 ; Total registers                   ; 1501                                            ;
@@ -70,7 +78,11 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
+<<<<<<< HEAD
 ; Start date & time ; 11/13/2020 17:47:19 ;
+=======
+; Start date & time ; 11/14/2020 00:33:08 ;
+>>>>>>> a5dc7d3925256a2f5e61d53db619f7797c0a764a
 ; Main task         ; Compilation         ;
 ; Revision Name     ; mp4                 ;
 +-------------------+---------------------+
@@ -81,12 +93,20 @@ refer to the applicable agreement for further details.
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
+<<<<<<< HEAD
 ; COMPILER_SIGNATURE_ID                ; 233845176318067.160531123900796        ; --            ; --          ; --             ;
+=======
+; COMPILER_SIGNATURE_ID                ; 233845176327143.160533558837213        ; --            ; --          ; --             ;
+>>>>>>> a5dc7d3925256a2f5e61d53db619f7797c0a764a
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; mp3_tb         ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; mp3_tb                                 ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Systemverilog Hdl                      ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (SystemVerilog)        ; <None>        ; --          ; --             ;
 ; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                        ; --            ; --          ; eda_simulation ;
+<<<<<<< HEAD
+=======
+; EDA_TEST_BENCH_FILE                  ; hvl/top.sv                             ; --            ; --          ; mp3_tb         ;
+>>>>>>> a5dc7d3925256a2f5e61d53db619f7797c0a764a
 ; EDA_TEST_BENCH_FILE                  ; hvl/magic_dual_port.sv                 ; --            ; --          ; mp3_tb         ;
 ; EDA_TEST_BENCH_FILE                  ; hvl/param_memory.sv                    ; --            ; --          ; mp3_tb         ;
 ; EDA_TEST_BENCH_FILE                  ; hvl/rvfi_itf.sv                        ; --            ; --          ; mp3_tb         ;
@@ -94,7 +114,10 @@ refer to the applicable agreement for further details.
 ; EDA_TEST_BENCH_FILE                  ; hvl/shadow_memory.sv                   ; --            ; --          ; mp3_tb         ;
 ; EDA_TEST_BENCH_FILE                  ; hvl/source_tb.sv                       ; --            ; --          ; mp3_tb         ;
 ; EDA_TEST_BENCH_FILE                  ; hvl/tb_itf.sv                          ; --            ; --          ; mp3_tb         ;
+<<<<<<< HEAD
 ; EDA_TEST_BENCH_FILE                  ; hvl/top.sv                             ; --            ; --          ; mp3_tb         ;
+=======
+>>>>>>> a5dc7d3925256a2f5e61d53db619f7797c0a764a
 ; EDA_TEST_BENCH_MODULE_NAME           ; mp3_tb                                 ; --            ; --          ; mp3_tb         ;
 ; EDA_TEST_BENCH_NAME                  ; mp3_tb                                 ; --            ; --          ; eda_simulation ;
 ; EDA_TIME_SCALE                       ; 1 ps                                   ; --            ; --          ; eda_simulation ;
@@ -114,12 +137,21 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
+<<<<<<< HEAD
 ; Analysis & Synthesis ; 00:00:27     ; 1.0                     ; 1257 MB             ; 00:00:47                           ;
 ; Fitter               ; 00:00:48     ; 1.2                     ; 2462 MB             ; 00:01:24                           ;
 ; Assembler            ; 00:00:05     ; 1.0                     ; 1049 MB             ; 00:00:05                           ;
 ; Timing Analyzer      ; 00:00:07     ; 1.4                     ; 1221 MB             ; 00:00:07                           ;
 ; EDA Netlist Writer   ; 00:00:07     ; 1.0                     ; 1276 MB             ; 00:00:06                           ;
 ; Total                ; 00:01:34     ; --                      ; --                  ; 00:02:29                           ;
+=======
+; Analysis & Synthesis ; 00:00:27     ; 1.0                     ; 1255 MB             ; 00:00:46                           ;
+; Fitter               ; 00:00:50     ; 1.2                     ; 2502 MB             ; 00:01:20                           ;
+; Assembler            ; 00:00:06     ; 1.0                     ; 1050 MB             ; 00:00:05                           ;
+; Timing Analyzer      ; 00:00:08     ; 1.3                     ; 1215 MB             ; 00:00:06                           ;
+; EDA Netlist Writer   ; 00:00:09     ; 1.0                     ; 1279 MB             ; 00:00:07                           ;
+; Total                ; 00:01:40     ; --                      ; --                  ; 00:02:24                           ;
+>>>>>>> a5dc7d3925256a2f5e61d53db619f7797c0a764a
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

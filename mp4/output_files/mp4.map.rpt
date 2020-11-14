@@ -1,5 +1,9 @@
 Analysis & Synthesis report for mp4
+<<<<<<< HEAD
 Fri Nov 13 17:47:46 2020
+=======
+Sat Nov 14 00:33:35 2020
+>>>>>>> a5dc7d3925256a2f5e61d53db619f7797c0a764a
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -18,14 +22,11 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
  10. General Register Statistics
  11. Multiplexer Restructuring Statistics (Restructuring Performed)
  12. Parameter Settings for User Entity Instance: cpu_datapath:cpu_datapath|IF:stage_IF|pc_register:PC
- 13. Port Connectivity Checks: "cpu_datapath:cpu_datapath|MEM:stage_MEM"
- 14. Port Connectivity Checks: "cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM"
- 15. Port Connectivity Checks: "cpu_datapath:cpu_datapath|EX:stage_EX|cmp:CMP"
- 16. Port Connectivity Checks: "cpu_datapath:cpu_datapath|sreg_IF_ID:sreg_IF_ID"
- 17. Post-Synthesis Netlist Statistics for Top Partition
- 18. Elapsed Time Per Partition
- 19. Analysis & Synthesis Messages
- 20. Analysis & Synthesis Suppressed Messages
+ 13. Port Connectivity Checks: "cpu_datapath:cpu_datapath|EX:stage_EX|cmp:CMP"
+ 14. Post-Synthesis Netlist Statistics for Top Partition
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
+ 17. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -51,7 +52,11 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +-----------------------------------+-------------------------------------------------+
+<<<<<<< HEAD
 ; Analysis & Synthesis Status       ; Successful - Fri Nov 13 17:47:46 2020           ;
+=======
+; Analysis & Synthesis Status       ; Successful - Sat Nov 14 00:33:35 2020           ;
+>>>>>>> a5dc7d3925256a2f5e61d53db619f7797c0a764a
 ; Quartus Prime Version             ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                     ; mp4                                             ;
 ; Top-level Entity Name             ; mp4                                             ;
@@ -557,24 +562,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "cpu_datapath:cpu_datapath|MEM:stage_MEM"                                                                                                     ;
-+-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port  ; Type  ; Severity ; Details                                                                                                                                      ;
-+-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; pc_in ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM"                                                             ;
-+------------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; Port       ; Type   ; Severity ; Details                                                                                                  ;
-+------------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; write_data ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-+------------+--------+----------+----------------------------------------------------------------------------------------------------------+
-
-
 +---------------------------------------------------------------------------+
 ; Port Connectivity Checks: "cpu_datapath:cpu_datapath|EX:stage_EX|cmp:CMP" ;
 +------+-------+----------+-------------------------------------------------+
@@ -582,15 +569,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+-------------------------------------------------+
 ; rst  ; Input ; Info     ; Stuck at GND                                    ;
 +------+-------+----------+-------------------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "cpu_datapath:cpu_datapath|sreg_IF_ID:sreg_IF_ID"                                                             ;
-+----------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                                                  ;
-+----------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; addr_out ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-+----------+--------+----------+----------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -641,7 +619,11 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+<<<<<<< HEAD
     Info: Processing started: Fri Nov 13 17:47:18 2020
+=======
+    Info: Processing started: Sat Nov 14 00:33:07 2020
+>>>>>>> a5dc7d3925256a2f5e61d53db619f7797c0a764a
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mp4 -c mp4
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -664,7 +646,11 @@ Info (12021): Found 1 design units, including 1 entities, in source file hdl/pip
 Info (12021): Found 1 design units, including 1 entities, in source file hdl/pipeline/sreg_IF_ID.sv
     Info (12023): Found entity 1: sreg_IF_ID File: /home/scottl4/hydrationiskey/mp4/hdl/pipeline/sreg_IF_ID.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file hdl/pipeline/sreg_ID_EX.sv
+<<<<<<< HEAD
     Info (12023): Found entity 1: sreg_ID_EX File: /home/scottl4/hydrationiskey/mp4/hdl/pipeline/sreg_ID_EX.sv Line: 3
+=======
+    Info (12023): Found entity 1: sreg_ID_EX File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/pipeline/sreg_ID_EX.sv Line: 3
+>>>>>>> a5dc7d3925256a2f5e61d53db619f7797c0a764a
 Info (12021): Found 1 design units, including 1 entities, in source file hdl/pipeline/sreg_EX_MEM.sv
     Info (12023): Found entity 1: sreg_EX_MEM File: /home/scottl4/hydrationiskey/mp4/hdl/pipeline/sreg_EX_MEM.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file hdl/pipeline/MEM.sv
@@ -700,6 +686,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file hdl/cac
 Info (12021): Found 1 design units, including 1 entities, in source file hdl/cache/bus_adapter.sv
     Info (12023): Found entity 1: bus_adapter File: /home/scottl4/hydrationiskey/mp4/hdl/cache/bus_adapter.sv Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file hdl/cache/array.sv
+<<<<<<< HEAD
     Info (12023): Found entity 1: array File: /home/scottl4/hydrationiskey/mp4/hdl/cache/array.sv Line: 3
 Info (12127): Elaborating entity "mp4" for the top level hierarchy
 Info (12128): Elaborating entity "cpu_datapath" for hierarchy "cpu_datapath:cpu_datapath" File: /home/scottl4/hydrationiskey/mp4/hdl/mp4.sv Line: 76
@@ -720,6 +707,30 @@ Info (12128): Elaborating entity "WB" for hierarchy "cpu_datapath:cpu_datapath|W
 Info (10264): Verilog HDL Case Statement information at WB.sv(35): all case item expressions in this case statement are onehot File: /home/scottl4/hydrationiskey/mp4/hdl/pipeline/WB.sv Line: 35
 Info (10264): Verilog HDL Case Statement information at WB.sv(44): all case item expressions in this case statement are onehot File: /home/scottl4/hydrationiskey/mp4/hdl/pipeline/WB.sv Line: 44
 Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+=======
+    Info (12023): Found entity 1: array File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/cache/array.sv Line: 3
+Warning (10236): Verilog HDL Implicit Net warning at sreg_IF_ID.sv(29): created implicit net for "addr_out" File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/pipeline/sreg_IF_ID.sv Line: 29
+Info (12127): Elaborating entity "mp4" for the top level hierarchy
+Info (12128): Elaborating entity "cpu_datapath" for hierarchy "cpu_datapath:cpu_datapath" File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/mp4.sv Line: 76
+Info (12128): Elaborating entity "IF" for hierarchy "cpu_datapath:cpu_datapath|IF:stage_IF" File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/cpu/cpu_datapath.sv Line: 84
+Info (12128): Elaborating entity "pc_register" for hierarchy "cpu_datapath:cpu_datapath|IF:stage_IF|pc_register:PC" File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/pipeline/IF.sv Line: 27
+Info (12128): Elaborating entity "sreg_IF_ID" for hierarchy "cpu_datapath:cpu_datapath|sreg_IF_ID:sreg_IF_ID" File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/cpu/cpu_datapath.sv Line: 101
+Warning (10036): Verilog HDL or VHDL warning at sreg_IF_ID.sv(29): object "addr_out" assigned a value but never read File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/pipeline/sreg_IF_ID.sv Line: 29
+Warning (10230): Verilog HDL assignment warning at sreg_IF_ID.sv(29): truncated value with size 32 to match size of target (1) File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/pipeline/sreg_IF_ID.sv Line: 29
+Info (12128): Elaborating entity "ID" for hierarchy "cpu_datapath:cpu_datapath|ID:stage_ID" File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/cpu/cpu_datapath.sv Line: 119
+Info (12128): Elaborating entity "control_rom" for hierarchy "cpu_datapath:cpu_datapath|ID:stage_ID|control_rom:control_rom" File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/pipeline/ID.sv Line: 25
+Info (12128): Elaborating entity "regfile" for hierarchy "cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile" File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/pipeline/ID.sv Line: 38
+Info (12128): Elaborating entity "sreg_ID_EX" for hierarchy "cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX" File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/cpu/cpu_datapath.sv Line: 137
+Info (12128): Elaborating entity "EX" for hierarchy "cpu_datapath:cpu_datapath|EX:stage_EX" File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/cpu/cpu_datapath.sv Line: 152
+Info (12128): Elaborating entity "alu" for hierarchy "cpu_datapath:cpu_datapath|EX:stage_EX|alu:ALU" File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/pipeline/EX.sv Line: 29
+Info (12128): Elaborating entity "cmp" for hierarchy "cpu_datapath:cpu_datapath|EX:stage_EX|cmp:CMP" File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/pipeline/EX.sv Line: 38
+Info (12128): Elaborating entity "sreg_EX_MEM" for hierarchy "cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM" File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/cpu/cpu_datapath.sv Line: 172
+Info (12128): Elaborating entity "MEM" for hierarchy "cpu_datapath:cpu_datapath|MEM:stage_MEM" File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/cpu/cpu_datapath.sv Line: 193
+Info (12128): Elaborating entity "sreg_MEM_WB" for hierarchy "cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB" File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/cpu/cpu_datapath.sv Line: 216
+Info (12128): Elaborating entity "WB" for hierarchy "cpu_datapath:cpu_datapath|WB:stage_WB" File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/cpu/cpu_datapath.sv Line: 235
+Info (10264): Verilog HDL Case Statement information at WB.sv(35): all case item expressions in this case statement are onehot File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/pipeline/WB.sv Line: 35
+Info (10264): Verilog HDL Case Statement information at WB.sv(44): all case item expressions in this case statement are onehot File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/pipeline/WB.sv Line: 44
+>>>>>>> a5dc7d3925256a2f5e61d53db619f7797c0a764a
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "inst_read" is stuck at VCC File: /home/scottl4/hydrationiskey/mp4/hdl/mp4.sv Line: 18
     Warning (13410): Pin "data_addr[0]" is stuck at GND File: /home/scottl4/hydrationiskey/mp4/hdl/mp4.sv Line: 27
@@ -732,11 +743,19 @@ Info (21057): Implemented 2885 device resources after synthesis - the final reso
     Info (21058): Implemented 68 input pins
     Info (21059): Implemented 103 output pins
     Info (21061): Implemented 2714 logic cells
+<<<<<<< HEAD
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
     Info: Peak virtual memory: 1262 megabytes
     Info: Processing ended: Fri Nov 13 17:47:46 2020
     Info: Elapsed time: 00:00:28
     Info: Total CPU time (on all processors): 00:00:48
+=======
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 8 warnings
+    Info: Peak virtual memory: 1265 megabytes
+    Info: Processing ended: Sat Nov 14 00:33:35 2020
+    Info: Elapsed time: 00:00:28
+    Info: Total CPU time (on all processors): 00:00:47
+>>>>>>> a5dc7d3925256a2f5e61d53db619f7797c0a764a
 
 
 +------------------------------------------+

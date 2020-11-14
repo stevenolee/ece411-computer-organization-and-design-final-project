@@ -24,6 +24,7 @@ vlog -sv -work work +incdir+/home/scottl4/hydrationiskey/mp4/hdl/pipeline {/home
 vlog -sv -work work +incdir+/home/scottl4/hydrationiskey/mp4/hdl/cpu {/home/scottl4/hydrationiskey/mp4/hdl/cpu/cpu_datapath.sv}
 vlog -sv -work work +incdir+/home/scottl4/hydrationiskey/mp4/hdl {/home/scottl4/hydrationiskey/mp4/hdl/mp4.sv}
 
+<<<<<<< HEAD
 vlog -sv -work work +incdir+/home/scottl4/hydrationiskey/mp4/hvl {/home/scottl4/hydrationiskey/mp4/hvl/magic_dual_port.sv}
 vlog -sv -work work +incdir+/home/scottl4/hydrationiskey/mp4/hvl {/home/scottl4/hydrationiskey/mp4/hvl/param_memory.sv}
 vlog -sv -work work +incdir+/home/scottl4/hydrationiskey/mp4/hvl {/home/scottl4/hydrationiskey/mp4/hvl/rvfi_itf.sv}
@@ -32,6 +33,16 @@ vlog -sv -work work +incdir+/home/scottl4/hydrationiskey/mp4/hvl {/home/scottl4/
 vlog -sv -work work +incdir+/home/scottl4/hydrationiskey/mp4/hvl {/home/scottl4/hydrationiskey/mp4/hvl/source_tb.sv}
 vlog -sv -work work +incdir+/home/scottl4/hydrationiskey/mp4/hvl {/home/scottl4/hydrationiskey/mp4/hvl/tb_itf.sv}
 vlog -sv -work work +incdir+/home/scottl4/hydrationiskey/mp4/hvl {/home/scottl4/hydrationiskey/mp4/hvl/top.sv}
+=======
+vlog -sv -work work +incdir+/home/beo2/ece411/Hydration_is_Key/mp4/hvl {/home/beo2/ece411/Hydration_is_Key/mp4/hvl/top.sv}
+vlog -sv -work work +incdir+/home/beo2/ece411/Hydration_is_Key/mp4/hvl {/home/beo2/ece411/Hydration_is_Key/mp4/hvl/magic_dual_port.sv}
+vlog -sv -work work +incdir+/home/beo2/ece411/Hydration_is_Key/mp4/hvl {/home/beo2/ece411/Hydration_is_Key/mp4/hvl/param_memory.sv}
+vlog -sv -work work +incdir+/home/beo2/ece411/Hydration_is_Key/mp4/hvl {/home/beo2/ece411/Hydration_is_Key/mp4/hvl/rvfi_itf.sv}
+vlog -vlog01compat -work work +incdir+/home/beo2/ece411/Hydration_is_Key/mp4/hvl {/home/beo2/ece411/Hydration_is_Key/mp4/hvl/rvfimon.v}
+vlog -sv -work work +incdir+/home/beo2/ece411/Hydration_is_Key/mp4/hvl {/home/beo2/ece411/Hydration_is_Key/mp4/hvl/shadow_memory.sv}
+vlog -sv -work work +incdir+/home/beo2/ece411/Hydration_is_Key/mp4/hvl {/home/beo2/ece411/Hydration_is_Key/mp4/hvl/source_tb.sv}
+vlog -sv -work work +incdir+/home/beo2/ece411/Hydration_is_Key/mp4/hvl {/home/beo2/ece411/Hydration_is_Key/mp4/hvl/tb_itf.sv}
+>>>>>>> a5dc7d3925256a2f5e61d53db619f7797c0a764a
 
 vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L arriaii_hssi_ver -L arriaii_pcie_hip_ver -L arriaii_ver -L rtl_work -L work -voptargs="+acc"  mp3_tb
 

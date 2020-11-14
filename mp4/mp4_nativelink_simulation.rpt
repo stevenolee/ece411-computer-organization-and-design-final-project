@@ -18,6 +18,10 @@ Sim dir               :  simulation/modelsim
 
 Info: Starting NativeLink simulation with ModelSim-Altera software
 Sourced NativeLink script /software/quartus-std-18.1/quartus/common/tcl/internal/nativelink/modelsim.tcl
+<<<<<<< HEAD
 Warning: File mp4_run_msim_rtl_verilog.do already exists - backing up current file as mp4_run_msim_rtl_verilog.do.bak4
+=======
+Warning: File mp4_run_msim_rtl_verilog.do already exists - backing up current file as mp4_run_msim_rtl_verilog.do.bak11
+>>>>>>> a5dc7d3925256a2f5e61d53db619f7797c0a764a
 Info: Spawning ModelSim-Altera Simulation software 
 Info: NativeLink simulation flow was successful

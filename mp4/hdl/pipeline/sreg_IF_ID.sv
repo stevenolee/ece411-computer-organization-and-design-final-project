@@ -3,11 +3,10 @@ module sreg_IF_ID(
     input rst,
     input logic [31:0] inst_addr,
     input logic [31:0] pc_in,
-    input logic [31:0] inst_rdata,
+    input logic [31:0] inst_rdata, 
     input logic inst_resp,
     input br_mispredict,
 
-    output logic [31:0] addr_out,
     output logic [31:0] pc_out,
     output logic [31:0] data_out
 );
