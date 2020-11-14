@@ -1,5 +1,5 @@
 Analysis & Synthesis report for mp4
-Fri Nov 13 17:18:23 2020
+Fri Nov 13 17:47:46 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -51,7 +51,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +-----------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status       ; Successful - Fri Nov 13 17:18:23 2020           ;
+; Analysis & Synthesis Status       ; Successful - Fri Nov 13 17:47:46 2020           ;
 ; Quartus Prime Version             ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                     ; mp4                                             ;
 ; Top-level Entity Name             ; mp4                                             ;
@@ -174,14 +174,15 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
+;     Processor 2            ;   0.1%      ;
 ;     Processor 3            ;   0.0%      ;
 ;     Processor 4            ;   0.0%      ;
 ;     Processor 5            ;   0.0%      ;
 ;     Processor 6            ;   0.0%      ;
 ;     Processor 7            ;   0.0%      ;
 ;     Processor 8            ;   0.0%      ;
-;     Processors 9-12        ;   0.0%      ;
+;     Processor 9            ;   0.0%      ;
+;     Processors 10-12       ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -640,7 +641,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
-    Info: Processing started: Fri Nov 13 17:17:44 2020
+    Info: Processing started: Fri Nov 13 17:47:18 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mp4 -c mp4
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -663,7 +664,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file hdl/pip
 Info (12021): Found 1 design units, including 1 entities, in source file hdl/pipeline/sreg_IF_ID.sv
     Info (12023): Found entity 1: sreg_IF_ID File: /home/scottl4/hydrationiskey/mp4/hdl/pipeline/sreg_IF_ID.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file hdl/pipeline/sreg_ID_EX.sv
-    Info (12023): Found entity 1: sreg_ID_EX File: /home/scottl4/hydrationiskey/mp4/hdl/pipeline/sreg_ID_EX.sv Line: 1
+    Info (12023): Found entity 1: sreg_ID_EX File: /home/scottl4/hydrationiskey/mp4/hdl/pipeline/sreg_ID_EX.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file hdl/pipeline/sreg_EX_MEM.sv
     Info (12023): Found entity 1: sreg_EX_MEM File: /home/scottl4/hydrationiskey/mp4/hdl/pipeline/sreg_EX_MEM.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file hdl/pipeline/MEM.sv
@@ -732,10 +733,10 @@ Info (21057): Implemented 2885 device resources after synthesis - the final reso
     Info (21059): Implemented 103 output pins
     Info (21061): Implemented 2714 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 1209 megabytes
-    Info: Processing ended: Fri Nov 13 17:18:23 2020
-    Info: Elapsed time: 00:00:39
-    Info: Total CPU time (on all processors): 00:00:49
+    Info: Peak virtual memory: 1262 megabytes
+    Info: Processing ended: Fri Nov 13 17:47:46 2020
+    Info: Elapsed time: 00:00:28
+    Info: Total CPU time (on all processors): 00:00:48
 
 
 +------------------------------------------+

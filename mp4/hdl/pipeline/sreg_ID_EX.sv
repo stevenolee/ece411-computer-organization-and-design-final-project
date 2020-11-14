@@ -1,14 +1,14 @@
+import rv32i_types::*;
+
 module sreg_ID_EX(
-	// inputs
 	input clk,		
 	input rst,		
-	input rv32i_control_word ctrl_in,		
-	input logic [31:0] pc_in,	
+	input rv32i_control_word ctrl_in,
+	input [31:0] pc_in,	
     input logic br_mispredict,
     input rv32i_word rs1_in,
 	input rv32i_word rs2_in,
-	
-    // outputs
+
 	output rv32i_control_word ctrl_out,			
 	output logic [31:0] pc_out,
     output rv32i_word rs1_out,

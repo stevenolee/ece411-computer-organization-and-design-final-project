@@ -33,7 +33,7 @@ vlog -sv -work work +incdir+/home/scottl4/hydrationiskey/mp4/hvl {/home/scottl4/
 vlog -sv -work work +incdir+/home/scottl4/hydrationiskey/mp4/hvl {/home/scottl4/hydrationiskey/mp4/hvl/tb_itf.sv}
 vlog -sv -work work +incdir+/home/scottl4/hydrationiskey/mp4/hvl {/home/scottl4/hydrationiskey/mp4/hvl/top.sv}
 
-vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L arriaii_hssi_ver -L arriaii_pcie_hip_ver -L arriaii_ver -L rtl_work -L work -voptargs="+acc"  mp4_tb
+vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L arriaii_hssi_ver -L arriaii_pcie_hip_ver -L arriaii_ver -L rtl_work -L work -voptargs="+acc"  mp3_tb
 
 add wave *
 view structure
