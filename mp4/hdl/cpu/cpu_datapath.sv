@@ -50,12 +50,13 @@ module cpu_datapath
     // output rv32i_word d_mem_wdata
 );
 
+
 /***************************** Variables *************************************/
 rv32i_word regfilemux_out;
 rv32i_reg rd;
 rv32i_word rs1_out, rs2_out, EX_alu_out, MEM_WB_alu_out, EX_MEM_alu_out, EX_MEM_pc_out, MEM_WB_pc_out;
 logic [3:0] d_mem_byte, MEM_WB_mbe;
-logic EX_br_en, EX_MEM_br_en;
+logic EX_cmp_out, EX_MEM_br_en;
 logic [31:0] IF_pc_out, IF_ID_data_out;
 logic [31:0] IF_ID_pc_out, IF_ID_inst_addr, ID_EX_pc_out;
 rv32i_word ID_rs1_out, ID_rs2_out, ID_EX_rs1_out, ID_EX_rs2_out, EX_rs2_out, EX_MEM_rs2_out;
@@ -147,7 +148,7 @@ EX stage_EX (
 
 	// outputs
 	.alu_out		(EX_alu_out),
-	.br_en			(EX_br_en),
+	.cmp_out		(EX_cmp_out),
 	.rs2_out		(EX_rs2_out)
 );
 
@@ -157,7 +158,7 @@ sreg_EX_MEM sreg_EX_MEM (
 	.clk			(clk),
 	.rst			(rst),
 	.alu_in			(EX_alu_out),
-	.br_en_in		(EX_br_en),
+	.cmp_in			(EX_cmp_out),
 	.ctrl_in		(ID_EX_ctrl),
 	.rs2_in			(EX_rs2_out),
 	.pc_in			(ID_EX_pc_out),

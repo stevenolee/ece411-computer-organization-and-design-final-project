@@ -1,1 +1,1 @@
-Warning (10268): Verilog HDL information at sreg_IF_ID.sv(15): always construct contains both blocking and non-blocking assignments File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/pipeline/sreg_IF_ID.sv Line: 15
+Warning (10268): Verilog HDL information at sreg_IF_ID.sv(15): always construct contains both blocking and non-blocking assignments File: /home/solee2/hydration_is_key/Hydration_is_Key/mp4/hdl/pipeline/sreg_IF_ID.sv Line: 15

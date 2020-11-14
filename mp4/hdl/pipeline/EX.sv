@@ -12,10 +12,10 @@ module EX (
 	
 	// outputs
 	output rv32i_word alu_out,
-	output logic br_en,
+	output logic cmp_out,
     output rv32i_word rs2_out
 );
-assign rs2_out = rs1_in;
+assign rs2_out = rs2_in;
 
 rv32i_word alumux1_out;
 rv32i_word alumux2_out;
@@ -34,7 +34,7 @@ cmp CMP(
 	.cmpop	(ctrl_in.cmpop),
 	.a		(rs1_in),
 	.b		(cmp_mux_out),
-    .br_en	(br_en)
+    .br_en	(cmp_out)
 );
 
 /*** MUXES ***/
