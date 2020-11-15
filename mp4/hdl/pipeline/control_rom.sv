@@ -51,7 +51,7 @@ function void set_defaults();
     ctrl.cmpop = branch_funct3_t'(instruction[14:12]);
     ctrl.cmpmux_sel = cmpmux::rs2_out;
     ctrl.aluop = alu_ops'(instruction[14:12]);
-    ctrl.load_regfile = 1'b0;
+    ctrl.load_regfile = 1'b1;
     ctrl.data_write = 1'b0;
     ctrl.data_read = 1'b0;
     ctrl.load_pc = 1'b1;
