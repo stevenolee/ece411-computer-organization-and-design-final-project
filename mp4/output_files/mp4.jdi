@@ -1,6 +1,10 @@
 <sld_project_info>
   <project>
+<<<<<<< HEAD
     <hash md5_digest_80b="c1f05b1186cc2bd35e8d"/>
+=======
+    <hash md5_digest_80b="1a112a87f627a4736388"/>
+>>>>>>> f45f0df760d8cb0c91b563f82057c29fcf54ae29
   </project>
   <file_info>
     <file device="EP2AGX45DF25I3" path="mp4.sof" usercode="0xFFFFFFFF"/>

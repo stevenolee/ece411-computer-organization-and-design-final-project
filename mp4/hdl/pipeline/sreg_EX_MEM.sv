@@ -3,7 +3,7 @@ import rv32i_types::*;
 module sreg_EX_MEM (
     input clk,
     input rst,
-    input br_en_in,
+    input cmp_in,
     input [31:0] rs2_in,
     input [31:0] alu_in,
     input [31:0] pc_in,
@@ -23,21 +23,16 @@ logic br_en;
 rv32i_control_word ctrl;
 logic [31:0] rs2;
 
-// assign arith_funct3 = arith_funct3_t'(ctrl.funct3);
-// assign branch_funct3 = branch_funct3_t'(ctrl.funct3);
-// assign load_funct3 = load_funct3_t'(ctrl.funct3);
-// assign store_funct3 = store_funct3_t'(ctrl.funct3);
-
 always_ff @(posedge clk) begin
     if (rst == 1'b1) begin
         alu <= 0;
-        br_en <= 0;
+        // br_en <= 0;
         ctrl <= 0;
         rs2 <= 0;
         pc <= 0;
     end else begin
         alu <= alu_in;
-        br_en <= br_en_in;
+        // br_en <= cmp_in;
         ctrl <= ctrl_in;
         rs2 <= rs2_in;
         pc <= pc_in;
@@ -50,15 +45,11 @@ always_comb begin
     // write = 1'b0;
     mem_byte_enable_out = 4'b1111;
     // ctrl_out.pcmux_sel = pcmux::pc_plus4;
-    br_en_out = br_en;
+    br_en_out = 0;
     ctrl_out = ctrl;
 
     unique case (ctrl.opcode)
         op_load: begin
-            // read = 1'b1;
-            // write = 1'b0;
-
-            // case (load_funct3)
             case (load_funct3_t'(ctrl.funct3))
                 lw: mem_byte_enable_out = 4'b1111;
                 lh, lhu: begin
@@ -83,10 +74,6 @@ always_comb begin
         end
 
         op_store: begin
-            // read = 1'b0;
-            // write = 1'b1;
-
-            // case (store_funct3)
             case (store_funct3_t'(ctrl.funct3))
                 lw: mem_byte_enable_out = 4'b1111;
                 lh, lhu: begin
@@ -111,8 +98,9 @@ always_comb begin
         end
 
         op_br: begin
+            br_en_out = cmp_in;
             ctrl_out.pcmux_sel = pcmux::pc_plus4;
-            if(br_en_in)
+            if(cmp_in)
                 ctrl_out.pcmux_sel = pcmux::alu_out;
         end
 

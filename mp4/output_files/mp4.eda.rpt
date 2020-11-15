@@ -1,9 +1,13 @@
 EDA Netlist Writer report for mp4
 <<<<<<< HEAD
+<<<<<<< HEAD
 Fri Nov 13 17:49:00 2020
 =======
 Sat Nov 14 00:34:56 2020
 >>>>>>> a5dc7d3925256a2f5e61d53db619f7797c0a764a
+=======
+Sat Nov 14 03:53:58 2020
+>>>>>>> f45f0df760d8cb0c91b563f82057c29fcf54ae29
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -41,10 +45,14 @@ refer to the applicable agreement for further details.
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
 <<<<<<< HEAD
+<<<<<<< HEAD
 ; EDA Netlist Writer Status ; Successful - Fri Nov 13 17:49:00 2020 ;
 =======
 ; EDA Netlist Writer Status ; Successful - Sat Nov 14 00:34:56 2020 ;
 >>>>>>> a5dc7d3925256a2f5e61d53db619f7797c0a764a
+=======
+; EDA Netlist Writer Status ; Successful - Sat Nov 14 03:53:58 2020 ;
+>>>>>>> f45f0df760d8cb0c91b563f82057c29fcf54ae29
 ; Revision Name             ; mp4                                   ;
 ; Top-level Entity Name     ; mp4                                   ;
 ; Family                    ; Arria II GX                           ;
@@ -74,6 +82,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------------------------------+---------------------------------+
 
 
+<<<<<<< HEAD
 +------------------------------------------------------------------------------------+
 ; Simulation Generated Files                                                         ;
 +------------------------------------------------------------------------------------+
@@ -88,6 +97,22 @@ refer to the applicable agreement for further details.
 ; /home/scottl4/hydrationiskey/mp4/simulation/modelsim/mp4_min_900mv_-40c_v_fast.sdo ;
 ; /home/scottl4/hydrationiskey/mp4/simulation/modelsim/mp4_v.sdo                     ;
 +------------------------------------------------------------------------------------+
+=======
++------------------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                           ;
++------------------------------------------------------------------------------------------------------+
+; Generated Files                                                                                      ;
++------------------------------------------------------------------------------------------------------+
+; /home/solee2/hydration_is_key/Hydration_is_Key/mp4/simulation/modelsim/mp4_3_900mv_100c_slow.svo     ;
+; /home/solee2/hydration_is_key/Hydration_is_Key/mp4/simulation/modelsim/mp4_3_900mv_-40c_slow.svo     ;
+; /home/solee2/hydration_is_key/Hydration_is_Key/mp4/simulation/modelsim/mp4_min_900mv_-40c_fast.svo   ;
+; /home/solee2/hydration_is_key/Hydration_is_Key/mp4/simulation/modelsim/mp4.svo                       ;
+; /home/solee2/hydration_is_key/Hydration_is_Key/mp4/simulation/modelsim/mp4_3_900mv_100c_v_slow.sdo   ;
+; /home/solee2/hydration_is_key/Hydration_is_Key/mp4/simulation/modelsim/mp4_3_900mv_-40c_v_slow.sdo   ;
+; /home/solee2/hydration_is_key/Hydration_is_Key/mp4/simulation/modelsim/mp4_min_900mv_-40c_v_fast.sdo ;
+; /home/solee2/hydration_is_key/Hydration_is_Key/mp4/simulation/modelsim/mp4_v.sdo                     ;
++------------------------------------------------------------------------------------------------------+
+>>>>>>> f45f0df760d8cb0c91b563f82057c29fcf54ae29
 
 
 +-----------------------------+
@@ -96,6 +121,7 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+<<<<<<< HEAD
 <<<<<<< HEAD
     Info: Processing started: Fri Nov 13 17:48:53 2020
 =======
@@ -111,6 +137,19 @@ Info (204019): Generated file mp4_3_900mv_100c_v_slow.sdo in folder "/home/scott
 Info (204019): Generated file mp4_3_900mv_-40c_v_slow.sdo in folder "/home/scottl4/hydrationiskey/mp4/simulation/modelsim/" for EDA simulation tool
 Info (204019): Generated file mp4_min_900mv_-40c_v_fast.sdo in folder "/home/scottl4/hydrationiskey/mp4/simulation/modelsim/" for EDA simulation tool
 Info (204019): Generated file mp4_v.sdo in folder "/home/scottl4/hydrationiskey/mp4/simulation/modelsim/" for EDA simulation tool
+=======
+    Info: Processing started: Sat Nov 14 03:53:53 2020
+Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off mp4 -c mp4
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (204019): Generated file mp4_3_900mv_100c_slow.svo in folder "/home/solee2/hydration_is_key/Hydration_is_Key/mp4/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file mp4_3_900mv_-40c_slow.svo in folder "/home/solee2/hydration_is_key/Hydration_is_Key/mp4/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file mp4_min_900mv_-40c_fast.svo in folder "/home/solee2/hydration_is_key/Hydration_is_Key/mp4/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file mp4.svo in folder "/home/solee2/hydration_is_key/Hydration_is_Key/mp4/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file mp4_3_900mv_100c_v_slow.sdo in folder "/home/solee2/hydration_is_key/Hydration_is_Key/mp4/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file mp4_3_900mv_-40c_v_slow.sdo in folder "/home/solee2/hydration_is_key/Hydration_is_Key/mp4/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file mp4_min_900mv_-40c_v_fast.sdo in folder "/home/solee2/hydration_is_key/Hydration_is_Key/mp4/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file mp4_v.sdo in folder "/home/solee2/hydration_is_key/Hydration_is_Key/mp4/simulation/modelsim/" for EDA simulation tool
+>>>>>>> f45f0df760d8cb0c91b563f82057c29fcf54ae29
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
 <<<<<<< HEAD
     Info: Peak virtual memory: 1276 megabytes
@@ -119,9 +158,15 @@ Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
     Info: Total CPU time (on all processors): 00:00:06
 =======
     Info: Peak virtual memory: 1279 megabytes
+<<<<<<< HEAD
     Info: Processing ended: Sat Nov 14 00:34:56 2020
     Info: Elapsed time: 00:00:09
     Info: Total CPU time (on all processors): 00:00:07
 >>>>>>> a5dc7d3925256a2f5e61d53db619f7797c0a764a
+=======
+    Info: Processing ended: Sat Nov 14 03:53:58 2020
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:05
+>>>>>>> f45f0df760d8cb0c91b563f82057c29fcf54ae29
 
 
