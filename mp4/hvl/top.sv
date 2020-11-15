@@ -25,7 +25,7 @@ bit f;
 // This section not required until CP2
 
 assign rvfi.commit = 0; // Set high when a valid instruction is modifying regfile or PC
-assign rvfi.halt = 0;   // Set high when you detect an infinite loop
+assign rvfi.halt = (dut.cpu_datapath.EX_MEM_ctrl.pcmux_sel == 2'b01) && (dut.cpu_datapath.EX_MEM_alu_out == dut.cpu_datapath.EX_MEM_pc_out);   // Set high when you detect an infinite loop
 initial rvfi.order = 0;
 always @(posedge itf.clk iff rvfi.commit) rvfi.order <= rvfi.order + 1; // Modify for OoO
 

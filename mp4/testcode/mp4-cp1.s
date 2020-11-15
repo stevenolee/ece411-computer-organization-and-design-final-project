@@ -23,6 +23,7 @@ pcrel_ONE: auipc x12, %pcrel_hi(ONE)
     nop
     nop
     nop
+    beq x0, x0, HALT
 #     beq x0, x0, LD_ST_TEST
 #     nop
 #     nop
@@ -134,15 +135,15 @@ pcrel_ONE: auipc x12, %pcrel_hi(ONE)
 #     nop
 # 
 #     lw x1, %pcrel_lo(pcrel_BADD)(x15)
-# HALT:
-#     beq x0, x0, HALT
-#     nop
-#     nop
-#     nop
-#     nop
-#     nop
-#     nop
-#     nop
+HALT:
+    beq x0, x0, HALT
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
 # 
 # DONEa:
 # pcrel_GOOD: auipc x16, %pcrel_hi(GOOD)

@@ -39,7 +39,7 @@ begin
     unique case (pcmux_sel)
         pcmux::pc_plus4: pcmux_out = pc_out + 4;
         pcmux::alu_out:	pcmux_out = alu_in;
-		pcmux::alu_mod2: pcmux_out = {alu_in[31:1], 1'b0}; // ~(alu_out[0] && 1'b0); // 
+		pcmux::alu_mod2: pcmux_out = {alu_in[31:1], 1'b0};
         default: `BAD_MUX_SEL;
     endcase
 end

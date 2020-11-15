@@ -16,7 +16,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition"
 
-// DATE "11/14/2020 20:46:26"
+// DATE "11/15/2020 01:24:02"
 
 // 
 // Device: Altera EP2AGX45DF25I3 Package FBGA572
@@ -42,19 +42,19 @@ module mp4 (
 	data_mbe,
 	data_addr,
 	data_wdata);
-input 	reg clk ;
-input 	reg rst ;
-input 	reg inst_resp ;
-input 	logic [31:0] inst_rdata ;
-output 	logic inst_read ;
-output 	logic [31:0] inst_addr ;
-input 	reg data_resp ;
-input 	logic [31:0] data_rdata ;
-output 	logic data_read ;
-output 	logic data_write ;
-output 	logic [3:0] data_mbe ;
-output 	logic [31:0] data_addr ;
-output 	logic [31:0] data_wdata ;
+input 	clk;
+input 	rst;
+input 	inst_resp;
+input 	[31:0] inst_rdata;
+output 	inst_read;
+output 	[31:0] inst_addr;
+input 	data_resp;
+input 	[31:0] data_rdata;
+output 	data_read;
+output 	data_write;
+output 	[3:0] data_mbe;
+output 	[31:0] data_addr;
+output 	[31:0] data_wdata;
 
 // Design Ports Information
 // inst_read	=>  Location: PIN_W9,	 I/O Standard: 2.5 V,	 Current Strength: Default

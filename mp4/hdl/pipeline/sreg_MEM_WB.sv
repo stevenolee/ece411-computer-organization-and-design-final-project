@@ -24,15 +24,6 @@ rv32i_word data;
 logic br_en;
 logic [3:0] mem_byte_en;
 
-// initial begin
-//     ctrl <= 0;
-//     alu <= 0;
-//     pc <= 0;
-//     data <= 0;
-//     br_en <= 0;
-//     mem_byte_en <= 0;
-// end
-
 always_ff @(posedge clk) begin
     if (rst) begin
         ctrl <= 0;

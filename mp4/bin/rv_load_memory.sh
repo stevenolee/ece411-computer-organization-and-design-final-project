@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Settings
-ECE411DIR=$HOME/hydration_is_key/Hydration_is_Key/
+ECE411DIR=$HOME/hydration_is_key
 DEFAULT_TARGET=$ECE411DIR/mp4/simulation/modelsim/memory.lst
 ASSEMBLER=/class/ece411/software/riscv-tools/bin/riscv32-unknown-elf-gcc
 OBJCOPY=/class/ece411/software/riscv-tools/bin/riscv32-unknown-elf-objcopy
