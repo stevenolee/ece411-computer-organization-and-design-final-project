@@ -1,5 +1,5 @@
 Flow report for mp4
-Sat Nov 14 03:53:58 2020
+Sat Nov 14 20:46:33 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------------+
 ; Flow Summary                                                                        ;
 +-----------------------------------+-------------------------------------------------+
-; Flow Status                       ; Successful - Sat Nov 14 03:53:58 2020           ;
+; Flow Status                       ; Successful - Sat Nov 14 20:46:33 2020           ;
 ; Quartus Prime Version             ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                     ; mp4                                             ;
 ; Top-level Entity Name             ; mp4                                             ;
@@ -48,7 +48,7 @@ refer to the applicable agreement for further details.
 ; Device                            ; EP2AGX45DF25I3                                  ;
 ; Timing Models                     ; Final                                           ;
 ; Logic utilization                 ; 7 %                                             ;
-;     Combinational ALUTs           ; 1,385 / 36,100 ( 4 % )                          ;
+;     Combinational ALUTs           ; 1,386 / 36,100 ( 4 % )                          ;
 ;     Memory ALUTs                  ; 0 / 18,050 ( 0 % )                              ;
 ;     Dedicated logic registers     ; 1,500 / 36,100 ( 4 % )                          ;
 ; Total registers                   ; 1500                                            ;
@@ -70,7 +70,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/14/2020 03:52:40 ;
+; Start date & time ; 11/14/2020 20:44:41 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; mp4                 ;
 +-------------------+---------------------+
@@ -81,7 +81,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 345052676702.160534756007861           ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 233845176327143.160540828115926        ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; mp3_tb         ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; mp3_tb                                 ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Systemverilog Hdl                      ; --            ; --          ; eda_simulation ;
@@ -114,12 +114,12 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:22     ; 1.0                     ; 1201 MB             ; 00:00:33                           ;
-; Fitter               ; 00:00:37     ; 1.3                     ; 2453 MB             ; 00:00:54                           ;
-; Assembler            ; 00:00:04     ; 1.0                     ; 1052 MB             ; 00:00:04                           ;
-; Timing Analyzer      ; 00:00:05     ; 1.6                     ; 1218 MB             ; 00:00:05                           ;
-; EDA Netlist Writer   ; 00:00:05     ; 1.0                     ; 1279 MB             ; 00:00:05                           ;
-; Total                ; 00:01:13     ; --                      ; --                  ; 00:01:41                           ;
+; Analysis & Synthesis ; 00:00:29     ; 1.0                     ; 1255 MB             ; 00:00:51                           ;
+; Fitter               ; 00:00:51     ; 1.2                     ; 2454 MB             ; 00:01:26                           ;
+; Assembler            ; 00:00:06     ; 1.0                     ; 1050 MB             ; 00:00:05                           ;
+; Timing Analyzer      ; 00:00:08     ; 1.5                     ; 1224 MB             ; 00:00:07                           ;
+; EDA Netlist Writer   ; 00:00:09     ; 1.0                     ; 1279 MB             ; 00:00:07                           ;
+; Total                ; 00:01:43     ; --                      ; --                  ; 00:02:36                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -128,11 +128,11 @@ refer to the applicable agreement for further details.
 +----------------------+---------------------------+--------------+--------------+----------------+
 ; Module Name          ; Machine Hostname          ; OS Name      ; OS Version   ; Processor type ;
 +----------------------+---------------------------+--------------+--------------+----------------+
-; Analysis & Synthesis ; linux-04.ews.illinois.edu ; CentOS Linux ; CentOS Linux ; x86_64         ;
-; Fitter               ; linux-04.ews.illinois.edu ; CentOS Linux ; CentOS Linux ; x86_64         ;
-; Assembler            ; linux-04.ews.illinois.edu ; CentOS Linux ; CentOS Linux ; x86_64         ;
-; Timing Analyzer      ; linux-04.ews.illinois.edu ; CentOS Linux ; CentOS Linux ; x86_64         ;
-; EDA Netlist Writer   ; linux-04.ews.illinois.edu ; CentOS Linux ; CentOS Linux ; x86_64         ;
+; Analysis & Synthesis ; linux-a2.ews.illinois.edu ; CentOS Linux ; CentOS Linux ; x86_64         ;
+; Fitter               ; linux-a2.ews.illinois.edu ; CentOS Linux ; CentOS Linux ; x86_64         ;
+; Assembler            ; linux-a2.ews.illinois.edu ; CentOS Linux ; CentOS Linux ; x86_64         ;
+; Timing Analyzer      ; linux-a2.ews.illinois.edu ; CentOS Linux ; CentOS Linux ; x86_64         ;
+; EDA Netlist Writer   ; linux-a2.ews.illinois.edu ; CentOS Linux ; CentOS Linux ; x86_64         ;
 +----------------------+---------------------------+--------------+--------------+----------------+
 
 

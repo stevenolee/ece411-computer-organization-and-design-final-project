@@ -6,22 +6,44 @@ module control_rom (
 );
 
 /***************************** Variables *****************************/
+rv32i_word i_imm, s_imm, b_imm, u_imm, j_imm, ir_out;
+rv32i_reg rd, rs1, rs2;
+branch_funct3_t cmpop;
+alu_ops aluop;
+rv32i_opcode opcode;
+logic [2:0] funct3;
+logic [6:0] funct7;
 
+/***************************** Assign is Necessary *****************************/
+assign funct3 = instruction[14:12];
+assign funct7 = instruction[31:25];
+assign opcode = rv32i_opcode'(instruction[6:0]);
+assign i_imm = {{21{instruction[31]}}, instruction[30:20]};
+assign s_imm = {{21{instruction[31]}}, instruction[30:25], instruction[11:7]};
+assign b_imm = {{20{instruction[31]}}, instruction[7], instruction[30:25], instruction[11:8], 1'b0};
+assign u_imm = {instruction[31:12], 12'h000};
+assign j_imm = {{12{instruction[31]}}, instruction[19:12], instruction[20], instruction[30:21], 1'b0};
+assign rs1 = instruction[19:15];
+assign rs2 = instruction[24:20];
+assign rd = instruction[11:7];
+assign ir_out = instruction;
+assign cmpop = branch_funct3_t'(instruction[14:12]);
+assign aluop = alu_ops'(instruction[14:12]);
 
 /***************************** Parse instruction *****************************/
 function void set_defaults();
-    ctrl.funct3 = instruction[14:12];
-    ctrl.funct7 = instruction[31:25];
-    ctrl.opcode = rv32i_opcode'(instruction[6:0]);
-    ctrl.i_imm = {{21{instruction[31]}}, instruction[30:20]};
-    ctrl.s_imm = {{21{instruction[31]}}, instruction[30:25], instruction[11:7]};
-    ctrl.b_imm = {{20{instruction[31]}}, instruction[7], instruction[30:25], instruction[11:8], 1'b0};
-    ctrl.u_imm = {instruction[31:12], 12'h000};
-    ctrl.j_imm = {{12{instruction[31]}}, instruction[19:12], instruction[20], instruction[30:21], 1'b0};
-    ctrl.rs1 = instruction[19:15];
-    ctrl.rs2 = instruction[24:20];
-    ctrl.rd = instruction[11:7];
-    ctrl.ir_out = instruction;
+    ctrl.funct3 = funct3;
+    ctrl.funct7 = funct7;
+    ctrl.opcode = opcode;
+    ctrl.i_imm = i_imm;
+    ctrl.s_imm = s_imm;
+    ctrl.b_imm = b_imm;
+    ctrl.u_imm = u_imm;
+    ctrl.j_imm = j_imm;
+    ctrl.rs1 = rs1;
+    ctrl.rs2 = rs2;
+    ctrl.rd = rd;
+    ctrl.ir_out = ir_out;
     ctrl.alumux1_sel = alumux::rs1_out;
     ctrl.alumux2_sel = alumux::i_imm;
     ctrl.pcmux_sel = pcmux::pc_plus4;
@@ -29,7 +51,7 @@ function void set_defaults();
     ctrl.cmpop = branch_funct3_t'(instruction[14:12]);
     ctrl.cmpmux_sel = cmpmux::rs2_out;
     ctrl.aluop = alu_ops'(instruction[14:12]);
-    ctrl.load_regfile = 1'b0;
+    ctrl.load_regfile = 1'b1;
     ctrl.data_write = 1'b0;
     ctrl.data_read = 1'b0;
     ctrl.load_pc = 1'b1;
@@ -71,16 +93,15 @@ begin : state_actions
             end
         op_load:
             begin
+                ctrl.load_regfile = 1'b1;
                 ctrl.aluop = alu_add;
                 ctrl.data_read = 1'b1;
-                // marmux_sel = marmux::alu_out;
             end
         op_store:
             begin 
                 ctrl.alumux2_sel = alumux::s_imm;
                 ctrl.aluop = alu_add;
                 ctrl.data_write = 1'b1;
-                // marmux_sel = marmux::alu_out;
             end
         op_auipc:
             begin

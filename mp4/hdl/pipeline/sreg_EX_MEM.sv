@@ -23,11 +23,6 @@ logic br_en;
 rv32i_control_word ctrl;
 logic [31:0] rs2;
 
-// assign arith_funct3 = arith_funct3_t'(ctrl.funct3);
-// assign branch_funct3 = branch_funct3_t'(ctrl.funct3);
-// assign load_funct3 = load_funct3_t'(ctrl.funct3);
-// assign store_funct3 = store_funct3_t'(ctrl.funct3);
-
 always_ff @(posedge clk) begin
     if (rst == 1'b1) begin
         alu <= 0;
@@ -55,10 +50,6 @@ always_comb begin
 
     unique case (ctrl.opcode)
         op_load: begin
-            // read = 1'b1;
-            // write = 1'b0;
-
-            // case (load_funct3)
             case (load_funct3_t'(ctrl.funct3))
                 lw: mem_byte_enable_out = 4'b1111;
                 lh, lhu: begin
@@ -83,10 +74,6 @@ always_comb begin
         end
 
         op_store: begin
-            // read = 1'b0;
-            // write = 1'b1;
-
-            // case (store_funct3)
             case (store_funct3_t'(ctrl.funct3))
                 lw: mem_byte_enable_out = 4'b1111;
                 lh, lhu: begin
