@@ -235,4 +235,13 @@ WB stage_WB (
 	.rd_reg			(rd)	
 );
 
+
+always_comb
+begin: hazard_detection
+// need ID_EX_ctrl, EX_MEM_ctrl, MEM_WB_ctrl
+
+end
+
+
+
 endmodule : cpu_datapath

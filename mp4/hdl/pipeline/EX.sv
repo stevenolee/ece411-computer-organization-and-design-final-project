@@ -9,7 +9,15 @@ module EX (
     input rv32i_word rs1_in,
     input rv32i_word rs2_in,
     input logic [31:0] pc_in,
-	
+    input logic hazard_ID_EX_rs1,
+	input logic hazard_ID_EX_rs2,
+	input logic hazard_ID_MEM_rs1,
+	input logic hazard_ID_MEM_rs2,
+	input logic hazard_load,
+    input logic [31:0] hazard_MEM_data,
+	input logic [31:0] hazard_WB_data,
+
+
 	// outputs
 	output rv32i_word alu_out,
 	output logic cmp_out,
@@ -41,7 +49,14 @@ cmp CMP(
 
 always_comb begin
     unique case (ctrl_in.alumux1_sel)
-        alumux::rs1_out: alumux1_out = rs1_in;
+        alumux::rs1_out: begin
+            if (hazard_ID_EX_rs1 == 1'b1):
+                alumux1_out = hazard_MEM_data;
+            else if (hazard_ID_MEM_rs1 == 1'b1):
+                alumux1_out = hazard_WB_data;
+            else:
+                alumux1_out = rs1_in;
+        end
         alumux::pc_out: alumux1_out = pc_in;
         default: `BAD_MUX_SEL;
     endcase

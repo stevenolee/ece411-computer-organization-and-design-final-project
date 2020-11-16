@@ -23,7 +23,7 @@ assign rd_reg = ctrl_in.rd;
 assign load_regfile = ctrl_in.load_regfile;
 
 always_comb begin
-    regfilemux_o = alu_in; 
+    regfilemux_o = alu_in;
 
     unique case (ctrl_in.regfilemux_sel) // regfilemux
 		regfilemux::alu_out: regfilemux_o = alu_in;
