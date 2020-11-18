@@ -50,11 +50,11 @@ cmp CMP(
 always_comb begin
     unique case (ctrl_in.alumux1_sel)
         alumux::rs1_out: begin
-            if (hazard_ID_EX_rs1 == 1'b1):
+            if (hazard_ID_EX_rs1 == 1'b1)
                 alumux1_out = hazard_MEM_data;
-            else if (hazard_ID_MEM_rs1 == 1'b1):
+            else if (hazard_ID_MEM_rs1 == 1'b1)
                 alumux1_out = hazard_WB_data;
-            else:
+            else
                 alumux1_out = rs1_in;
         end
         alumux::pc_out: alumux1_out = pc_in;

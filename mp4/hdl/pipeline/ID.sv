@@ -15,7 +15,7 @@ module ID (
 	output rv32i_word rs1_out,
 	output rv32i_word rs2_out,
 	output rv32i_control_word ctrl_word
-);
+); 
 assign inst_read = 1'b1;
 
 control_rom control_rom

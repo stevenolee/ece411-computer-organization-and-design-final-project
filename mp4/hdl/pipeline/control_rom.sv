@@ -96,6 +96,14 @@ begin : state_actions
                 ctrl.load_regfile = 1'b1;
                 ctrl.aluop = alu_add;
                 ctrl.data_read = 1'b1;
+                unique case(load_funct3_t'(funct3))
+                    lw: ctrl.regfilemux_sel = regfilemux::lw;
+                    lh: ctrl.regfilemux_sel = regfilemux::lh;
+                    lhu: ctrl.regfilemux_sel = regfilemux::lhu;
+                    lb: ctrl.regfilemux_sel = regfilemux::lb;
+                    lbu: ctrl.regfilemux_sel = regfilemux::lbu;
+                    default: ctrl.regfilemux_sel = regfilemux::lw;
+                endcase
             end
         op_store:
             begin 

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for mp4
-Sun Nov 15 01:22:52 2020
+Wed Nov 18 02:20:56 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -19,10 +19,11 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
  11. Multiplexer Restructuring Statistics (Restructuring Performed)
  12. Parameter Settings for User Entity Instance: cpu_datapath:cpu_datapath|IF:stage_IF|pc_register:PC
  13. Port Connectivity Checks: "cpu_datapath:cpu_datapath|EX:stage_EX|cmp:CMP"
- 14. Post-Synthesis Netlist Statistics for Top Partition
- 15. Elapsed Time Per Partition
- 16. Analysis & Synthesis Messages
- 17. Analysis & Synthesis Suppressed Messages
+ 14. Port Connectivity Checks: "cpu_datapath:cpu_datapath|EX:stage_EX"
+ 15. Post-Synthesis Netlist Statistics for Top Partition
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
+ 18. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -48,16 +49,16 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +-----------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status       ; Successful - Sun Nov 15 01:22:52 2020           ;
+; Analysis & Synthesis Status       ; Successful - Wed Nov 18 02:20:55 2020           ;
 ; Quartus Prime Version             ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                     ; mp4                                             ;
 ; Top-level Entity Name             ; mp4                                             ;
 ; Family                            ; Arria II GX                                     ;
 ; Logic utilization                 ; N/A                                             ;
-;     Combinational ALUTs           ; 1,380                                           ;
+;     Combinational ALUTs           ; 1,384                                           ;
 ;     Memory ALUTs                  ; 0                                               ;
-;     Dedicated logic registers     ; 1,500                                           ;
-; Total registers                   ; 1500                                            ;
+;     Dedicated logic registers     ; 1,505                                           ;
+; Total registers                   ; 1505                                            ;
 ; Total pins                        ; 171                                             ;
 ; Total virtual pins                ; 0                                               ;
 ; Total block memory bits           ; 0                                               ;
@@ -163,7 +164,7 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 24          ;
+; Number detected on machine ; 12          ;
 ; Maximum allowed            ; 12          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
@@ -171,42 +172,41 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.1%      ;
+;     Processor 2            ;   0.0%      ;
 ;     Processor 3            ;   0.0%      ;
 ;     Processor 4            ;   0.0%      ;
 ;     Processor 5            ;   0.0%      ;
 ;     Processor 6            ;   0.0%      ;
 ;     Processor 7            ;   0.0%      ;
 ;     Processor 8            ;   0.0%      ;
-;     Processor 9            ;   0.0%      ;
-;     Processors 10-12       ;   0.0%      ;
+;     Processors 9-12        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                       ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                   ; Library ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------+---------+
-; hdl/pipeline/control_rom.sv      ; yes             ; User SystemVerilog HDL File  ; /home/scottl4/hydration_is_key/mp4/hdl/pipeline/control_rom.sv ;         ;
-; hdl/rv32i_types.sv               ; yes             ; User SystemVerilog HDL File  ; /home/scottl4/hydration_is_key/mp4/hdl/rv32i_types.sv          ;         ;
-; hdl/rv32i_mux_types.sv           ; yes             ; User SystemVerilog HDL File  ; /home/scottl4/hydration_is_key/mp4/hdl/rv32i_mux_types.sv      ;         ;
-; hdl/mp4.sv                       ; yes             ; User SystemVerilog HDL File  ; /home/scottl4/hydration_is_key/mp4/hdl/mp4.sv                  ;         ;
-; hdl/pipeline/WB.sv               ; yes             ; User SystemVerilog HDL File  ; /home/scottl4/hydration_is_key/mp4/hdl/pipeline/WB.sv          ;         ;
-; hdl/pipeline/sreg_MEM_WB.sv      ; yes             ; User SystemVerilog HDL File  ; /home/scottl4/hydration_is_key/mp4/hdl/pipeline/sreg_MEM_WB.sv ;         ;
-; hdl/pipeline/sreg_IF_ID.sv       ; yes             ; User SystemVerilog HDL File  ; /home/scottl4/hydration_is_key/mp4/hdl/pipeline/sreg_IF_ID.sv  ;         ;
-; hdl/pipeline/sreg_ID_EX.sv       ; yes             ; User SystemVerilog HDL File  ; /home/scottl4/hydration_is_key/mp4/hdl/pipeline/sreg_ID_EX.sv  ;         ;
-; hdl/pipeline/sreg_EX_MEM.sv      ; yes             ; User SystemVerilog HDL File  ; /home/scottl4/hydration_is_key/mp4/hdl/pipeline/sreg_EX_MEM.sv ;         ;
-; hdl/pipeline/MEM.sv              ; yes             ; User SystemVerilog HDL File  ; /home/scottl4/hydration_is_key/mp4/hdl/pipeline/MEM.sv         ;         ;
-; hdl/pipeline/IF.sv               ; yes             ; User SystemVerilog HDL File  ; /home/scottl4/hydration_is_key/mp4/hdl/pipeline/IF.sv          ;         ;
-; hdl/pipeline/ID.sv               ; yes             ; User SystemVerilog HDL File  ; /home/scottl4/hydration_is_key/mp4/hdl/pipeline/ID.sv          ;         ;
-; hdl/pipeline/EX.sv               ; yes             ; User SystemVerilog HDL File  ; /home/scottl4/hydration_is_key/mp4/hdl/pipeline/EX.sv          ;         ;
-; hdl/cpu/regfile.sv               ; yes             ; User SystemVerilog HDL File  ; /home/scottl4/hydration_is_key/mp4/hdl/cpu/regfile.sv          ;         ;
-; hdl/cpu/pc_reg.sv                ; yes             ; User SystemVerilog HDL File  ; /home/scottl4/hydration_is_key/mp4/hdl/cpu/pc_reg.sv           ;         ;
-; hdl/cpu/cpu_datapath.sv          ; yes             ; User SystemVerilog HDL File  ; /home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv     ;         ;
-; hdl/cpu/cmp.sv                   ; yes             ; User SystemVerilog HDL File  ; /home/scottl4/hydration_is_key/mp4/hdl/cpu/cmp.sv              ;         ;
-; hdl/cpu/alu.sv                   ; yes             ; User SystemVerilog HDL File  ; /home/scottl4/hydration_is_key/mp4/hdl/cpu/alu.sv              ;         ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                      ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                  ; Library ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------+---------+
+; hdl/pipeline/control_rom.sv      ; yes             ; User SystemVerilog HDL File  ; /home/solee2/Hydration_is_Key/mp4/hdl/pipeline/control_rom.sv ;         ;
+; hdl/rv32i_types.sv               ; yes             ; User SystemVerilog HDL File  ; /home/solee2/Hydration_is_Key/mp4/hdl/rv32i_types.sv          ;         ;
+; hdl/rv32i_mux_types.sv           ; yes             ; User SystemVerilog HDL File  ; /home/solee2/Hydration_is_Key/mp4/hdl/rv32i_mux_types.sv      ;         ;
+; hdl/mp4.sv                       ; yes             ; User SystemVerilog HDL File  ; /home/solee2/Hydration_is_Key/mp4/hdl/mp4.sv                  ;         ;
+; hdl/pipeline/WB.sv               ; yes             ; User SystemVerilog HDL File  ; /home/solee2/Hydration_is_Key/mp4/hdl/pipeline/WB.sv          ;         ;
+; hdl/pipeline/sreg_MEM_WB.sv      ; yes             ; User SystemVerilog HDL File  ; /home/solee2/Hydration_is_Key/mp4/hdl/pipeline/sreg_MEM_WB.sv ;         ;
+; hdl/pipeline/sreg_IF_ID.sv       ; yes             ; User SystemVerilog HDL File  ; /home/solee2/Hydration_is_Key/mp4/hdl/pipeline/sreg_IF_ID.sv  ;         ;
+; hdl/pipeline/sreg_ID_EX.sv       ; yes             ; User SystemVerilog HDL File  ; /home/solee2/Hydration_is_Key/mp4/hdl/pipeline/sreg_ID_EX.sv  ;         ;
+; hdl/pipeline/sreg_EX_MEM.sv      ; yes             ; User SystemVerilog HDL File  ; /home/solee2/Hydration_is_Key/mp4/hdl/pipeline/sreg_EX_MEM.sv ;         ;
+; hdl/pipeline/MEM.sv              ; yes             ; User SystemVerilog HDL File  ; /home/solee2/Hydration_is_Key/mp4/hdl/pipeline/MEM.sv         ;         ;
+; hdl/pipeline/IF.sv               ; yes             ; User SystemVerilog HDL File  ; /home/solee2/Hydration_is_Key/mp4/hdl/pipeline/IF.sv          ;         ;
+; hdl/pipeline/ID.sv               ; yes             ; User SystemVerilog HDL File  ; /home/solee2/Hydration_is_Key/mp4/hdl/pipeline/ID.sv          ;         ;
+; hdl/pipeline/EX.sv               ; yes             ; User SystemVerilog HDL File  ; /home/solee2/Hydration_is_Key/mp4/hdl/pipeline/EX.sv          ;         ;
+; hdl/cpu/regfile.sv               ; yes             ; User SystemVerilog HDL File  ; /home/solee2/Hydration_is_Key/mp4/hdl/cpu/regfile.sv          ;         ;
+; hdl/cpu/pc_reg.sv                ; yes             ; User SystemVerilog HDL File  ; /home/solee2/Hydration_is_Key/mp4/hdl/cpu/pc_reg.sv           ;         ;
+; hdl/cpu/cpu_datapath.sv          ; yes             ; User SystemVerilog HDL File  ; /home/solee2/Hydration_is_Key/mp4/hdl/cpu/cpu_datapath.sv     ;         ;
+; hdl/cpu/cmp.sv                   ; yes             ; User SystemVerilog HDL File  ; /home/solee2/Hydration_is_Key/mp4/hdl/cpu/cmp.sv              ;         ;
+; hdl/cpu/alu.sv                   ; yes             ; User SystemVerilog HDL File  ; /home/solee2/Hydration_is_Key/mp4/hdl/cpu/alu.sv              ;         ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------+
@@ -214,34 +214,34 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------+-----------+
 ; Resource                                      ; Usage     ;
 +-----------------------------------------------+-----------+
-; Estimated ALUTs Used                          ; 1380      ;
-;     -- Combinational ALUTs                    ; 1380      ;
+; Estimated ALUTs Used                          ; 1384      ;
+;     -- Combinational ALUTs                    ; 1384      ;
 ;     -- Memory ALUTs                           ; 0         ;
 ;     -- LUT_REGs                               ; 0         ;
-; Dedicated logic registers                     ; 1500      ;
+; Dedicated logic registers                     ; 1505      ;
 ;                                               ;           ;
-; Estimated ALUTs Unavailable                   ; 21        ;
-;     -- Due to unpartnered combinational logic ; 21        ;
+; Estimated ALUTs Unavailable                   ; 34        ;
+;     -- Due to unpartnered combinational logic ; 34        ;
 ;     -- Due to Memory ALUTs                    ; 0         ;
 ;                                               ;           ;
-; Total combinational functions                 ; 1380      ;
+; Total combinational functions                 ; 1384      ;
 ; Combinational ALUT usage by number of inputs  ;           ;
-;     -- 7 input functions                      ; 21        ;
-;     -- 6 input functions                      ; 876       ;
-;     -- 5 input functions                      ; 162       ;
-;     -- 4 input functions                      ; 92        ;
-;     -- <=3 input functions                    ; 229       ;
+;     -- 7 input functions                      ; 26        ;
+;     -- 6 input functions                      ; 887       ;
+;     -- 5 input functions                      ; 151       ;
+;     -- 4 input functions                      ; 111       ;
+;     -- <=3 input functions                    ; 209       ;
 ;                                               ;           ;
 ; Combinational ALUTs by mode                   ;           ;
-;     -- normal mode                            ; 1266      ;
-;     -- extended LUT mode                      ; 21        ;
+;     -- normal mode                            ; 1265      ;
+;     -- extended LUT mode                      ; 26        ;
 ;     -- arithmetic mode                        ; 93        ;
 ;     -- shared arithmetic mode                 ; 0         ;
 ;                                               ;           ;
-; Estimated ALUT/register pairs used            ; 2532      ;
+; Estimated ALUT/register pairs used            ; 2553      ;
 ;                                               ;           ;
-; Total registers                               ; 1500      ;
-;     -- Dedicated logic registers              ; 1500      ;
+; Total registers                               ; 1505      ;
+;     -- Dedicated logic registers              ; 1505      ;
 ;     -- I/O registers                          ; 0         ;
 ;     -- LUT_REGs                               ; 0         ;
 ;                                               ;           ;
@@ -251,9 +251,9 @@ refer to the applicable agreement for further details.
 ; DSP block 18-bit elements                     ; 0         ;
 ;                                               ;           ;
 ; Maximum fan-out node                          ; clk~input ;
-; Maximum fan-out                               ; 1500      ;
-; Total fan-out                                 ; 13042     ;
-; Average fan-out                               ; 4.05      ;
+; Maximum fan-out                               ; 1505      ;
+; Total fan-out                                 ; 13120     ;
+; Average fan-out                               ; 4.06      ;
 +-----------------------------------------------+-----------+
 
 
@@ -262,201 +262,175 @@ refer to the applicable agreement for further details.
 +------------------------------------+---------------------+---------------------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+--------------------------------------------------------------------+--------------+--------------+
 ; Compilation Hierarchy Node         ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 12x12 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                ; Entity Name  ; Library Name ;
 +------------------------------------+---------------------+---------------------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+--------------------------------------------------------------------+--------------+--------------+
-; |mp4                               ; 1380 (0)            ; 1500 (0)                  ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 171  ; 0            ; |mp4                                                               ; mp4          ; work         ;
-;    |cpu_datapath:cpu_datapath|     ; 1380 (0)            ; 1500 (0)                  ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cpu_datapath:cpu_datapath                                     ; cpu_datapath ; work         ;
-;       |EX:stage_EX|                ; 330 (79)            ; 0 (0)                     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cpu_datapath:cpu_datapath|EX:stage_EX                         ; EX           ; work         ;
-;          |alu:ALU|                 ; 187 (187)           ; 0 (0)                     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cpu_datapath:cpu_datapath|EX:stage_EX|alu:ALU                 ; alu          ; work         ;
-;          |cmp:CMP|                 ; 64 (64)             ; 0 (0)                     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cpu_datapath:cpu_datapath|EX:stage_EX|cmp:CMP                 ; cmp          ; work         ;
-;       |ID:stage_ID|                ; 58 (0)              ; 992 (0)                   ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID                         ; ID           ; work         ;
-;          |control_rom:control_rom| ; 19 (19)             ; 0 (0)                     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|control_rom:control_rom ; control_rom  ; work         ;
+; |mp4                               ; 1384 (0)            ; 1505 (0)                  ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 171  ; 0            ; |mp4                                                               ; mp4          ; work         ;
+;    |cpu_datapath:cpu_datapath|     ; 1384 (0)            ; 1505 (0)                  ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cpu_datapath:cpu_datapath                                     ; cpu_datapath ; work         ;
+;       |EX:stage_EX|                ; 316 (78)            ; 0 (0)                     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cpu_datapath:cpu_datapath|EX:stage_EX                         ; EX           ; work         ;
+;          |alu:ALU|                 ; 184 (184)           ; 0 (0)                     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cpu_datapath:cpu_datapath|EX:stage_EX|alu:ALU                 ; alu          ; work         ;
+;          |cmp:CMP|                 ; 54 (54)             ; 0 (0)                     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cpu_datapath:cpu_datapath|EX:stage_EX|cmp:CMP                 ; cmp          ; work         ;
+;       |ID:stage_ID|                ; 59 (0)              ; 992 (0)                   ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID                         ; ID           ; work         ;
+;          |control_rom:control_rom| ; 20 (20)             ; 0 (0)                     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|control_rom:control_rom ; control_rom  ; work         ;
 ;          |regfile:regfile|         ; 39 (39)             ; 992 (992)                 ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile         ; regfile      ; work         ;
 ;       |IF:stage_IF|                ; 38 (32)             ; 32 (0)                    ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cpu_datapath:cpu_datapath|IF:stage_IF                         ; IF           ; work         ;
 ;          |pc_register:PC|          ; 6 (6)               ; 32 (32)                   ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cpu_datapath:cpu_datapath|IF:stage_IF|pc_register:PC          ; pc_register  ; work         ;
 ;       |MEM:stage_MEM|              ; 36 (36)             ; 0 (0)                     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cpu_datapath:cpu_datapath|MEM:stage_MEM                       ; MEM          ; work         ;
-;       |WB:stage_WB|                ; 112 (112)           ; 0 (0)                     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cpu_datapath:cpu_datapath|WB:stage_WB                         ; WB           ; work         ;
-;       |sreg_EX_MEM:sreg_EX_MEM|    ; 142 (142)           ; 136 (136)                 ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM             ; sreg_EX_MEM  ; work         ;
-;       |sreg_ID_EX:sreg_ID_EX|      ; 663 (663)           ; 146 (146)                 ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX               ; sreg_ID_EX   ; work         ;
+;       |WB:stage_WB|                ; 128 (128)           ; 0 (0)                     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cpu_datapath:cpu_datapath|WB:stage_WB                         ; WB           ; work         ;
+;       |sreg_EX_MEM:sreg_EX_MEM|    ; 140 (140)           ; 138 (138)                 ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM             ; sreg_EX_MEM  ; work         ;
+;       |sreg_ID_EX:sreg_ID_EX|      ; 666 (666)           ; 148 (148)                 ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX               ; sreg_ID_EX   ; work         ;
 ;       |sreg_IF_ID:sreg_IF_ID|      ; 0 (0)               ; 64 (64)                   ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cpu_datapath:cpu_datapath|sreg_IF_ID:sreg_IF_ID               ; sreg_IF_ID   ; work         ;
-;       |sreg_MEM_WB:sreg_MEM_WB|    ; 1 (1)               ; 130 (130)                 ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB             ; sreg_MEM_WB  ; work         ;
+;       |sreg_MEM_WB:sreg_MEM_WB|    ; 1 (1)               ; 131 (131)                 ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB             ; sreg_MEM_WB  ; work         ;
 +------------------------------------+---------------------+---------------------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+--------------------------------------------------------------------+--------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                                                      ;
-+--------------------------------------------------------------------------+------------------------------------------------------------------------------+
-; Register name                                                            ; Reason for Removal                                                           ;
-+--------------------------------------------------------------------------+------------------------------------------------------------------------------+
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.j_imm[0]            ; Stuck at GND due to stuck port data_in                                       ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[0..11]        ; Stuck at GND due to stuck port data_in                                       ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[0]            ; Stuck at GND due to stuck port data_in                                       ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.regfilemux_sel[3]   ; Stuck at GND due to stuck port data_in                                       ;
-; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.u_imm[0..11]      ; Stuck at GND due to stuck port data_in                                       ;
-; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.regfilemux_sel[3] ; Stuck at GND due to stuck port data_in                                       ;
-; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|ctrl.u_imm[0..11]      ; Stuck at GND due to stuck port data_in                                       ;
-; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|ctrl.regfilemux_sel[3] ; Stuck at GND due to stuck port data_in                                       ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[13..31]       ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[12]   ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.i_imm[11..31]       ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[12]   ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.j_imm[20..31]       ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[12]   ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.s_imm[11..31]       ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[12]   ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[31]           ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[12]   ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.i_imm[10]           ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[10]   ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.j_imm[10]           ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[10]   ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.s_imm[10]           ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[10]   ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[30]           ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[10]   ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.i_imm[9]            ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[9]    ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.j_imm[9]            ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[9]    ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.s_imm[9]            ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[9]    ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[29]           ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[9]    ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.i_imm[8]            ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[8]    ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.j_imm[8]            ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[8]    ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.s_imm[8]            ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[8]    ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[28]           ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[8]    ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.i_imm[7]            ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[7]    ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.j_imm[7]            ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[7]    ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.s_imm[7]            ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[7]    ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[27]           ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[7]    ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.i_imm[6]            ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[6]    ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.j_imm[6]            ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[6]    ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.s_imm[6]            ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[6]    ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[26]           ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[6]    ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.i_imm[5]            ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[5]    ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.j_imm[5]            ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[5]    ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.s_imm[5]            ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[5]    ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[25]           ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[5]    ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.j_imm[4]            ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.i_imm[4]    ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[24]           ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.i_imm[4]    ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.j_imm[3]            ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.i_imm[3]    ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[23]           ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.i_imm[3]    ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.j_imm[2]            ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.i_imm[2]    ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[22]           ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.i_imm[2]    ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.j_imm[1]            ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.i_imm[1]    ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[21]           ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.i_imm[1]    ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.j_imm[11]           ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.i_imm[0]    ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[20]           ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.i_imm[0]    ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[19]           ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.j_imm[19]   ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[18]           ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.j_imm[18]   ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[17]           ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.j_imm[17]   ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[16]           ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.j_imm[16]   ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[15]           ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.j_imm[15]   ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[14]           ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.j_imm[14]   ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.j_imm[13]           ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.funct3[1]   ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[13]           ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.funct3[1]   ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.j_imm[12]           ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.funct3[0]   ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[12]           ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.funct3[0]   ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.rd[0]               ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[11]   ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.s_imm[0]            ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[11]   ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.rd[4]               ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[4]    ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.s_imm[4]            ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[4]    ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.rd[3]               ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[3]    ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.s_imm[3]            ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[3]    ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.rd[2]               ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[2]    ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.s_imm[2]            ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[2]    ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.rd[1]               ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[1]    ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.s_imm[1]            ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[1]    ;
-; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.u_imm[13]         ; Merged with cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.funct3[1] ;
-; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.u_imm[12]         ; Merged with cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.funct3[0] ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.regfilemux_sel[0]   ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.cmpmux_sel  ;
-; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][0]         ; Stuck at GND due to stuck port data_in                                       ;
-; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][1]         ; Stuck at GND due to stuck port data_in                                       ;
-; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][2]         ; Stuck at GND due to stuck port data_in                                       ;
-; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][3]         ; Stuck at GND due to stuck port data_in                                       ;
-; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][4]         ; Stuck at GND due to stuck port data_in                                       ;
-; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][5]         ; Stuck at GND due to stuck port data_in                                       ;
-; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][6]         ; Stuck at GND due to stuck port data_in                                       ;
-; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][7]         ; Stuck at GND due to stuck port data_in                                       ;
-; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][8]         ; Stuck at GND due to stuck port data_in                                       ;
-; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][9]         ; Stuck at GND due to stuck port data_in                                       ;
-; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][10]        ; Stuck at GND due to stuck port data_in                                       ;
-; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][11]        ; Stuck at GND due to stuck port data_in                                       ;
-; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][12]        ; Stuck at GND due to stuck port data_in                                       ;
-; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][13]        ; Stuck at GND due to stuck port data_in                                       ;
-; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][14]        ; Stuck at GND due to stuck port data_in                                       ;
-; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][15]        ; Stuck at GND due to stuck port data_in                                       ;
-; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][16]        ; Stuck at GND due to stuck port data_in                                       ;
-; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][17]        ; Stuck at GND due to stuck port data_in                                       ;
-; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][18]        ; Stuck at GND due to stuck port data_in                                       ;
-; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][19]        ; Stuck at GND due to stuck port data_in                                       ;
-; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][20]        ; Stuck at GND due to stuck port data_in                                       ;
-; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][21]        ; Stuck at GND due to stuck port data_in                                       ;
-; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][22]        ; Stuck at GND due to stuck port data_in                                       ;
-; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][23]        ; Stuck at GND due to stuck port data_in                                       ;
-; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][24]        ; Stuck at GND due to stuck port data_in                                       ;
-; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][25]        ; Stuck at GND due to stuck port data_in                                       ;
-; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][26]        ; Stuck at GND due to stuck port data_in                                       ;
-; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][27]        ; Stuck at GND due to stuck port data_in                                       ;
-; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][28]        ; Stuck at GND due to stuck port data_in                                       ;
-; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][29]        ; Stuck at GND due to stuck port data_in                                       ;
-; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][30]        ; Stuck at GND due to stuck port data_in                                       ;
-; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][31]        ; Stuck at GND due to stuck port data_in                                       ;
-; Total Number of Removed Registers = 204                                  ;                                                                              ;
-+--------------------------------------------------------------------------+------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                 ;
++---------------------------------------------------------------------+------------------------------------------------------------------------------+
+; Register name                                                       ; Reason for Removal                                                           ;
++---------------------------------------------------------------------+------------------------------------------------------------------------------+
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.j_imm[0]       ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[0..11]   ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[0]       ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.u_imm[0..11] ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|ctrl.u_imm[0..11] ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.u_imm[13]    ; Merged with cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.funct3[1] ;
+; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.u_imm[12]    ; Merged with cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.funct3[0] ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[13..31]  ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[12]   ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.i_imm[11..31]  ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[12]   ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.j_imm[20..31]  ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[12]   ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.s_imm[11..31]  ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[12]   ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[31]      ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[12]   ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.i_imm[10]      ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[10]   ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.j_imm[10]      ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[10]   ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.s_imm[10]      ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[10]   ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[30]      ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[10]   ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.i_imm[9]       ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[9]    ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.j_imm[9]       ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[9]    ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.s_imm[9]       ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[9]    ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[29]      ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[9]    ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.i_imm[8]       ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[8]    ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.j_imm[8]       ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[8]    ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.s_imm[8]       ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[8]    ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[28]      ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[8]    ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.i_imm[7]       ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[7]    ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.j_imm[7]       ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[7]    ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.s_imm[7]       ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[7]    ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[27]      ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[7]    ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.i_imm[6]       ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[6]    ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.j_imm[6]       ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[6]    ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.s_imm[6]       ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[6]    ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[26]      ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[6]    ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.i_imm[5]       ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[5]    ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.j_imm[5]       ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[5]    ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.s_imm[5]       ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[5]    ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[25]      ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[5]    ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.j_imm[4]       ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.i_imm[4]    ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[24]      ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.i_imm[4]    ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.j_imm[3]       ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.i_imm[3]    ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[23]      ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.i_imm[3]    ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.j_imm[2]       ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.i_imm[2]    ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[22]      ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.i_imm[2]    ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.j_imm[1]       ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.i_imm[1]    ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[21]      ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.i_imm[1]    ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.j_imm[11]      ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.i_imm[0]    ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[20]      ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.i_imm[0]    ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[19]      ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.j_imm[19]   ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[18]      ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.j_imm[18]   ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[17]      ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.j_imm[17]   ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[16]      ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.j_imm[16]   ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[15]      ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.j_imm[15]   ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[14]      ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.j_imm[14]   ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.j_imm[13]      ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.funct3[1]   ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[13]      ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.funct3[1]   ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.j_imm[12]      ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.funct3[0]   ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[12]      ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.funct3[0]   ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.rd[0]          ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[11]   ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.s_imm[0]       ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[11]   ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.rd[4]          ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[4]    ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.s_imm[4]       ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[4]    ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.rd[3]          ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[3]    ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.s_imm[3]       ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[3]    ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.rd[2]          ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[2]    ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.s_imm[2]       ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[2]    ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.rd[1]          ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[1]    ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.s_imm[1]       ; Merged with cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[1]    ;
+; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][0]    ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][1]    ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][2]    ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][3]    ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][4]    ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][5]    ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][6]    ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][7]    ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][8]    ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][9]    ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][10]   ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][11]   ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][12]   ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][13]   ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][14]   ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][15]   ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][16]   ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][17]   ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][18]   ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][19]   ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][20]   ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][21]   ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][22]   ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][23]   ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][24]   ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][25]   ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][26]   ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][27]   ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][28]   ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][29]   ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][30]   ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][31]   ; Stuck at GND due to stuck port data_in                                       ;
+; Total Number of Removed Registers = 200                             ;                                                                              ;
++---------------------------------------------------------------------+------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                                                    ;
-+------------------------------------------------------------------------+---------------------------+---------------------------------------------------------------------------+
-; Register name                                                          ; Reason for Removal        ; Registers Removed due to This Register                                    ;
-+------------------------------------------------------------------------+---------------------------+---------------------------------------------------------------------------+
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.regfilemux_sel[3] ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.regfilemux_sel[3], ;
-;                                                                        ; due to stuck port data_in ; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|ctrl.regfilemux_sel[3], ;
-;                                                                        ;                           ; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][12],        ;
-;                                                                        ;                           ; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][13],        ;
-;                                                                        ;                           ; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][14],        ;
-;                                                                        ;                           ; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][15],        ;
-;                                                                        ;                           ; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][16],        ;
-;                                                                        ;                           ; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][17],        ;
-;                                                                        ;                           ; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][18],        ;
-;                                                                        ;                           ; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][19],        ;
-;                                                                        ;                           ; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][20],        ;
-;                                                                        ;                           ; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][21],        ;
-;                                                                        ;                           ; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][22],        ;
-;                                                                        ;                           ; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][23],        ;
-;                                                                        ;                           ; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][24],        ;
-;                                                                        ;                           ; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][25],        ;
-;                                                                        ;                           ; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][26],        ;
-;                                                                        ;                           ; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][27],        ;
-;                                                                        ;                           ; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][28],        ;
-;                                                                        ;                           ; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][29],        ;
-;                                                                        ;                           ; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][30],        ;
-;                                                                        ;                           ; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][31]         ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[0]          ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.u_imm[0],          ;
-;                                                                        ; due to stuck port data_in ; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|ctrl.u_imm[0],          ;
-;                                                                        ;                           ; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][0]          ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[1]          ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.u_imm[1],          ;
-;                                                                        ; due to stuck port data_in ; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|ctrl.u_imm[1],          ;
-;                                                                        ;                           ; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][1]          ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[2]          ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.u_imm[2],          ;
-;                                                                        ; due to stuck port data_in ; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|ctrl.u_imm[2],          ;
-;                                                                        ;                           ; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][2]          ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[3]          ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.u_imm[3],          ;
-;                                                                        ; due to stuck port data_in ; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|ctrl.u_imm[3],          ;
-;                                                                        ;                           ; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][3]          ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[4]          ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.u_imm[4],          ;
-;                                                                        ; due to stuck port data_in ; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|ctrl.u_imm[4],          ;
-;                                                                        ;                           ; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][4]          ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[5]          ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.u_imm[5],          ;
-;                                                                        ; due to stuck port data_in ; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|ctrl.u_imm[5],          ;
-;                                                                        ;                           ; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][5]          ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[6]          ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.u_imm[6],          ;
-;                                                                        ; due to stuck port data_in ; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|ctrl.u_imm[6],          ;
-;                                                                        ;                           ; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][6]          ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[7]          ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.u_imm[7],          ;
-;                                                                        ; due to stuck port data_in ; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|ctrl.u_imm[7],          ;
-;                                                                        ;                           ; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][7]          ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[8]          ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.u_imm[8],          ;
-;                                                                        ; due to stuck port data_in ; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|ctrl.u_imm[8],          ;
-;                                                                        ;                           ; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][8]          ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[9]          ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.u_imm[9],          ;
-;                                                                        ; due to stuck port data_in ; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|ctrl.u_imm[9],          ;
-;                                                                        ;                           ; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][9]          ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[10]         ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.u_imm[10],         ;
-;                                                                        ; due to stuck port data_in ; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|ctrl.u_imm[10],         ;
-;                                                                        ;                           ; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][10]         ;
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[11]         ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.u_imm[11],         ;
-;                                                                        ; due to stuck port data_in ; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|ctrl.u_imm[11],         ;
-;                                                                        ;                           ; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][11]         ;
-+------------------------------------------------------------------------+---------------------------+---------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                    ;
++----------------------------------------------------------------+---------------------------+-------------------------------------------------------------------+
+; Register name                                                  ; Reason for Removal        ; Registers Removed due to This Register                            ;
++----------------------------------------------------------------+---------------------------+-------------------------------------------------------------------+
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[0]  ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.u_imm[0],  ;
+;                                                                ; due to stuck port data_in ; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|ctrl.u_imm[0],  ;
+;                                                                ;                           ; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][0]  ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[1]  ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.u_imm[1],  ;
+;                                                                ; due to stuck port data_in ; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|ctrl.u_imm[1],  ;
+;                                                                ;                           ; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][1]  ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[2]  ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.u_imm[2],  ;
+;                                                                ; due to stuck port data_in ; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|ctrl.u_imm[2],  ;
+;                                                                ;                           ; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][2]  ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[3]  ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.u_imm[3],  ;
+;                                                                ; due to stuck port data_in ; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|ctrl.u_imm[3],  ;
+;                                                                ;                           ; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][3]  ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[4]  ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.u_imm[4],  ;
+;                                                                ; due to stuck port data_in ; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|ctrl.u_imm[4],  ;
+;                                                                ;                           ; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][4]  ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[5]  ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.u_imm[5],  ;
+;                                                                ; due to stuck port data_in ; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|ctrl.u_imm[5],  ;
+;                                                                ;                           ; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][5]  ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[6]  ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.u_imm[6],  ;
+;                                                                ; due to stuck port data_in ; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|ctrl.u_imm[6],  ;
+;                                                                ;                           ; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][6]  ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[7]  ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.u_imm[7],  ;
+;                                                                ; due to stuck port data_in ; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|ctrl.u_imm[7],  ;
+;                                                                ;                           ; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][7]  ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[8]  ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.u_imm[8],  ;
+;                                                                ; due to stuck port data_in ; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|ctrl.u_imm[8],  ;
+;                                                                ;                           ; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][8]  ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[9]  ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.u_imm[9],  ;
+;                                                                ; due to stuck port data_in ; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|ctrl.u_imm[9],  ;
+;                                                                ;                           ; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][9]  ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[10] ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.u_imm[10], ;
+;                                                                ; due to stuck port data_in ; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|ctrl.u_imm[10], ;
+;                                                                ;                           ; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][10] ;
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.u_imm[11] ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.u_imm[11], ;
+;                                                                ; due to stuck port data_in ; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|ctrl.u_imm[11], ;
+;                                                                ;                           ; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][11] ;
++----------------------------------------------------------------+---------------------------+-------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -464,8 +438,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1500  ;
-; Number of registers using Synchronous Clear  ; 1452  ;
+; Total registers                              ; 1505  ;
+; Number of registers using Synchronous Clear  ; 1456  ;
 ; Number of registers using Synchronous Load   ; 30    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
@@ -479,51 +453,53 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------+
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[16][30] ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[8][17]  ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[24][29] ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[4][9]   ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[20][10] ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[12][24] ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[28][9]  ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[2][19]  ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[18][8]  ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[10][27] ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[26][10] ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[6][11]  ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[22][1]  ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[14][3]  ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[30][18] ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[1][16]  ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[17][30] ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[9][4]   ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[25][19] ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[5][26]  ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[21][29] ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[13][5]  ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[29][25] ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[3][2]   ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[19][0]  ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[11][6]  ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[27][3]  ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[7][29]  ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[23][3]  ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[15][30] ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[31][30] ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|data[16]         ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[16][0]  ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[8][6]   ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[24][24] ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[4][3]   ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[20][8]  ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[12][13] ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[28][24] ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[2][31]  ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[18][7]  ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[10][21] ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[26][24] ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[6][16]  ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[22][16] ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[14][23] ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[30][20] ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[1][20]  ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[17][19] ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[9][14]  ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[25][3]  ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[5][22]  ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[21][13] ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[13][2]  ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[29][6]  ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[3][23]  ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[19][2]  ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[11][4]  ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[27][21] ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[7][14]  ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[23][2]  ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[15][15] ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[31][31] ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|data[24]         ;
 ; 4:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.cmpop[0]      ;
-; 4:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; Yes        ; |mp4|cpu_datapath:cpu_datapath|IF:stage_IF|pc_register:PC|data[5]       ;
-; 4:1                ; 28 bits   ; 56 ALUTs      ; 0 ALUTs              ; 56 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|IF:stage_IF|pc_register:PC|data[15]      ;
-; 34:1               ; 32 bits   ; 704 ALUTs     ; 640 ALUTs            ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|rs2[25]            ;
-; 34:1               ; 32 bits   ; 704 ALUTs     ; 640 ALUTs            ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|rs1[25]            ;
+; 4:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; Yes        ; |mp4|cpu_datapath:cpu_datapath|IF:stage_IF|pc_register:PC|data[6]       ;
+; 4:1                ; 28 bits   ; 56 ALUTs      ; 0 ALUTs              ; 56 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|IF:stage_IF|pc_register:PC|data[20]      ;
+; 34:1               ; 32 bits   ; 704 ALUTs     ; 640 ALUTs            ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|rs2[31]            ;
+; 34:1               ; 32 bits   ; 704 ALUTs     ; 640 ALUTs            ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|rs1[20]            ;
 ; 9:1                ; 2 bits    ; 12 ALUTs      ; 10 ALUTs             ; 2 ALUTs                ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.aluop[0]      ;
-; 14:1               ; 5 bits    ; 45 ALUTs      ; 40 ALUTs             ; 5 ALUTs                ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|alu[4]           ;
-; 15:1               ; 8 bits    ; 80 ALUTs      ; 64 ALUTs             ; 16 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|alu[24]          ;
+; 14:1               ; 5 bits    ; 45 ALUTs      ; 40 ALUTs             ; 5 ALUTs                ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|alu[7]           ;
+; 15:1               ; 8 bits    ; 80 ALUTs      ; 64 ALUTs             ; 16 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|alu[23]          ;
 ; 14:1               ; 3 bits    ; 27 ALUTs      ; 24 ALUTs             ; 3 ALUTs                ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|alu[14]          ;
 ; 16:1               ; 2 bits    ; 20 ALUTs      ; 18 ALUTs             ; 2 ALUTs                ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|alu[10]          ;
-; 17:1               ; 2 bits    ; 22 ALUTs      ; 20 ALUTs             ; 2 ALUTs                ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|alu[2]           ;
+; 17:1               ; 3 bits    ; 33 ALUTs      ; 30 ALUTs             ; 3 ALUTs                ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|alu[3]           ;
 ; 17:1               ; 2 bits    ; 22 ALUTs      ; 20 ALUTs             ; 2 ALUTs                ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|alu[26]          ;
 ; 18:1               ; 3 bits    ; 36 ALUTs      ; 33 ALUTs             ; 3 ALUTs                ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|alu[30]          ;
+; 3:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; No         ; |mp4|cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|Mux1             ;
+; 4:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; No         ; |mp4|cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|Mux2             ;
 ; 4:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; No         ; |mp4|cpu_datapath:cpu_datapath|EX:stage_EX|alu:ALU|ShiftLeft0           ;
 ; 4:1                ; 49 bits   ; 98 ALUTs      ; 98 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cpu_datapath:cpu_datapath|EX:stage_EX|alu:ALU|ShiftRight1          ;
 ; 4:1                ; 4 bits    ; 8 ALUTs       ; 8 ALUTs              ; 0 ALUTs                ; No         ; |mp4|cpu_datapath:cpu_datapath|EX:stage_EX|alu:ALU|ShiftRight1          ;
@@ -531,16 +507,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 4:1                ; 4 bits    ; 8 ALUTs       ; 8 ALUTs              ; 0 ALUTs                ; No         ; |mp4|cpu_datapath:cpu_datapath|EX:stage_EX|alu:ALU|ShiftLeft0           ;
 ; 4:1                ; 4 bits    ; 8 ALUTs       ; 8 ALUTs              ; 0 ALUTs                ; No         ; |mp4|cpu_datapath:cpu_datapath|EX:stage_EX|alu:ALU|ShiftLeft0           ;
 ; 4:1                ; 4 bits    ; 8 ALUTs       ; 8 ALUTs              ; 0 ALUTs                ; No         ; |mp4|cpu_datapath:cpu_datapath|EX:stage_EX|alu:ALU|ShiftLeft0           ;
-; 3:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; No         ; |mp4|cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|Mux1             ;
-; 4:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; No         ; |mp4|cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|Mux3             ;
-; 7:1                ; 17 bits   ; 68 ALUTs      ; 68 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cpu_datapath:cpu_datapath|WB:stage_WB|Selector3                    ;
-; 7:1                ; 4 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cpu_datapath:cpu_datapath|WB:stage_WB|Selector23                   ;
-; 6:1                ; 6 bits    ; 24 ALUTs      ; 12 ALUTs             ; 12 ALUTs               ; No         ; |mp4|cpu_datapath:cpu_datapath|EX:stage_EX|Selector24                   ;
-; 6:1                ; 11 bits   ; 44 ALUTs      ; 22 ALUTs             ; 22 ALUTs               ; No         ; |mp4|cpu_datapath:cpu_datapath|EX:stage_EX|Selector8                    ;
-; 6:1                ; 4 bits    ; 16 ALUTs      ; 8 ALUTs              ; 8 ALUTs                ; No         ; |mp4|cpu_datapath:cpu_datapath|EX:stage_EX|Selector27                   ;
-; 6:1                ; 8 bits    ; 32 ALUTs      ; 16 ALUTs             ; 16 ALUTs               ; No         ; |mp4|cpu_datapath:cpu_datapath|EX:stage_EX|Selector12                   ;
-; 8:1                ; 3 bits    ; 15 ALUTs      ; 12 ALUTs             ; 3 ALUTs                ; No         ; |mp4|cpu_datapath:cpu_datapath|WB:stage_WB|Selector19                   ;
-; 23:1               ; 6 bits    ; 90 ALUTs      ; 30 ALUTs             ; 60 ALUTs               ; No         ; |mp4|cpu_datapath:cpu_datapath|WB:stage_WB|Selector27                   ;
+; 6:1                ; 6 bits    ; 24 ALUTs      ; 12 ALUTs             ; 12 ALUTs               ; No         ; |mp4|cpu_datapath:cpu_datapath|EX:stage_EX|Selector23                   ;
+; 6:1                ; 11 bits   ; 44 ALUTs      ; 22 ALUTs             ; 22 ALUTs               ; No         ; |mp4|cpu_datapath:cpu_datapath|EX:stage_EX|Selector4                    ;
+; 6:1                ; 4 bits    ; 16 ALUTs      ; 8 ALUTs              ; 8 ALUTs                ; No         ; |mp4|cpu_datapath:cpu_datapath|EX:stage_EX|Selector30                   ;
+; 6:1                ; 8 bits    ; 32 ALUTs      ; 16 ALUTs             ; 16 ALUTs               ; No         ; |mp4|cpu_datapath:cpu_datapath|EX:stage_EX|Selector19                   ;
+; 7:1                ; 16 bits   ; 64 ALUTs      ; 64 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cpu_datapath:cpu_datapath|WB:stage_WB|Selector13                   ;
+; 8:1                ; 4 bits    ; 20 ALUTs      ; 16 ALUTs             ; 4 ALUTs                ; No         ; |mp4|cpu_datapath:cpu_datapath|WB:stage_WB|Selector20                   ;
+; 8:1                ; 3 bits    ; 15 ALUTs      ; 12 ALUTs             ; 3 ALUTs                ; No         ; |mp4|cpu_datapath:cpu_datapath|WB:stage_WB|Selector17                   ;
+; 23:1               ; 6 bits    ; 90 ALUTs      ; 30 ALUTs             ; 60 ALUTs               ; No         ; |mp4|cpu_datapath:cpu_datapath|WB:stage_WB|Selector25                   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------+
 
 
@@ -563,37 +537,52 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+-------------------------------------------------+
 
 
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "cpu_datapath:cpu_datapath|EX:stage_EX"                                                                                                                   ;
++-------------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port              ; Type  ; Severity ; Details                                                                                                                                      ;
++-------------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; hazard_ID_EX_rs1  ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; hazard_ID_EX_rs2  ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; hazard_ID_MEM_rs1 ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; hazard_ID_MEM_rs2 ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; hazard_load       ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; hazard_MEM_data   ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; hazard_WB_data    ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriaii_ff            ; 1500                        ;
+; arriaii_ff            ; 1505                        ;
 ;     ENA               ; 32                          ;
 ;     ENA SCLR          ; 1024                        ;
 ;     ENA SCLR SLD      ; 28                          ;
 ;     ENA SLD           ; 2                           ;
-;     SCLR              ; 400                         ;
-;     plain             ; 14                          ;
+;     SCLR              ; 404                         ;
+;     plain             ; 15                          ;
 ; boundary_port         ; 171                         ;
-; stratixiv_lcell_comb  ; 1382                        ;
+; stratixiv_lcell_comb  ; 1386                        ;
 ;     arith             ; 93                          ;
 ;         1 data inputs ; 61                          ;
 ;         4 data inputs ; 6                           ;
 ;         5 data inputs ; 26                          ;
-;     extend            ; 21                          ;
-;         7 data inputs ; 21                          ;
-;     normal            ; 1268                        ;
+;     extend            ; 26                          ;
+;         7 data inputs ; 26                          ;
+;     normal            ; 1267                        ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 1                           ;
-;         2 data inputs ; 59                          ;
-;         3 data inputs ; 108                         ;
-;         4 data inputs ; 86                          ;
-;         5 data inputs ; 136                         ;
-;         6 data inputs ; 876                         ;
+;         2 data inputs ; 57                          ;
+;         3 data inputs ; 90                          ;
+;         4 data inputs ; 105                         ;
+;         5 data inputs ; 125                         ;
+;         6 data inputs ; 887                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 8.00                        ;
-; Average LUT depth     ; 3.39                        ;
+; Max LUT depth         ; 6.20                        ;
+; Average LUT depth     ; 3.06                        ;
 +-----------------------+-----------------------------+
 
 
@@ -602,7 +591,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:07     ;
+; Top            ; 00:00:05     ;
 +----------------+--------------+
 
 
@@ -612,123 +601,123 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
-    Info: Processing started: Sun Nov 15 01:22:24 2020
+    Info: Processing started: Wed Nov 18 02:20:31 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mp4 -c mp4
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file hdl/pipeline/control_rom.sv
-    Info (12023): Found entity 1: control_rom File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/control_rom.sv Line: 3
+    Info (12023): Found entity 1: control_rom File: /home/solee2/Hydration_is_Key/mp4/hdl/pipeline/control_rom.sv Line: 3
 Info (12021): Found 1 design units, including 0 entities, in source file hdl/rv32i_types.sv
-    Info (12022): Found design unit 1: rv32i_types (SystemVerilog) File: /home/scottl4/hydration_is_key/mp4/hdl/rv32i_types.sv Line: 3
+    Info (12022): Found design unit 1: rv32i_types (SystemVerilog) File: /home/solee2/Hydration_is_Key/mp4/hdl/rv32i_types.sv Line: 3
 Info (12021): Found 5 design units, including 0 entities, in source file hdl/rv32i_mux_types.sv
-    Info (12022): Found design unit 1: pcmux (SystemVerilog) File: /home/scottl4/hydration_is_key/mp4/hdl/rv32i_mux_types.sv Line: 3
-    Info (12022): Found design unit 2: marmux (SystemVerilog) File: /home/scottl4/hydration_is_key/mp4/hdl/rv32i_mux_types.sv Line: 11
-    Info (12022): Found design unit 3: cmpmux (SystemVerilog) File: /home/scottl4/hydration_is_key/mp4/hdl/rv32i_mux_types.sv Line: 18
-    Info (12022): Found design unit 4: alumux (SystemVerilog) File: /home/scottl4/hydration_is_key/mp4/hdl/rv32i_mux_types.sv Line: 25
-    Info (12022): Found design unit 5: regfilemux (SystemVerilog) File: /home/scottl4/hydration_is_key/mp4/hdl/rv32i_mux_types.sv Line: 41
+    Info (12022): Found design unit 1: pcmux (SystemVerilog) File: /home/solee2/Hydration_is_Key/mp4/hdl/rv32i_mux_types.sv Line: 3
+    Info (12022): Found design unit 2: marmux (SystemVerilog) File: /home/solee2/Hydration_is_Key/mp4/hdl/rv32i_mux_types.sv Line: 11
+    Info (12022): Found design unit 3: cmpmux (SystemVerilog) File: /home/solee2/Hydration_is_Key/mp4/hdl/rv32i_mux_types.sv Line: 18
+    Info (12022): Found design unit 4: alumux (SystemVerilog) File: /home/solee2/Hydration_is_Key/mp4/hdl/rv32i_mux_types.sv Line: 25
+    Info (12022): Found design unit 5: regfilemux (SystemVerilog) File: /home/solee2/Hydration_is_Key/mp4/hdl/rv32i_mux_types.sv Line: 41
 Info (12021): Found 1 design units, including 1 entities, in source file hdl/mp4.sv
-    Info (12023): Found entity 1: mp4 File: /home/scottl4/hydration_is_key/mp4/hdl/mp4.sv Line: 3
+    Info (12023): Found entity 1: mp4 File: /home/solee2/Hydration_is_Key/mp4/hdl/mp4.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file hdl/pipeline/WB.sv
-    Info (12023): Found entity 1: WB File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/WB.sv Line: 5
+    Info (12023): Found entity 1: WB File: /home/solee2/Hydration_is_Key/mp4/hdl/pipeline/WB.sv Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file hdl/pipeline/sreg_MEM_WB.sv
-    Info (12023): Found entity 1: sreg_MEM_WB File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/sreg_MEM_WB.sv Line: 3
+    Info (12023): Found entity 1: sreg_MEM_WB File: /home/solee2/Hydration_is_Key/mp4/hdl/pipeline/sreg_MEM_WB.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file hdl/pipeline/sreg_IF_ID.sv
-    Info (12023): Found entity 1: sreg_IF_ID File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/sreg_IF_ID.sv Line: 1
+    Info (12023): Found entity 1: sreg_IF_ID File: /home/solee2/Hydration_is_Key/mp4/hdl/pipeline/sreg_IF_ID.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file hdl/pipeline/sreg_ID_EX.sv
-    Info (12023): Found entity 1: sreg_ID_EX File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/sreg_ID_EX.sv Line: 3
+    Info (12023): Found entity 1: sreg_ID_EX File: /home/solee2/Hydration_is_Key/mp4/hdl/pipeline/sreg_ID_EX.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file hdl/pipeline/sreg_EX_MEM.sv
-    Info (12023): Found entity 1: sreg_EX_MEM File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/sreg_EX_MEM.sv Line: 3
+    Info (12023): Found entity 1: sreg_EX_MEM File: /home/solee2/Hydration_is_Key/mp4/hdl/pipeline/sreg_EX_MEM.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file hdl/pipeline/MEM.sv
-    Info (12023): Found entity 1: MEM File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/MEM.sv Line: 3
+    Info (12023): Found entity 1: MEM File: /home/solee2/Hydration_is_Key/mp4/hdl/pipeline/MEM.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file hdl/pipeline/IF.sv
-    Info (12023): Found entity 1: IF File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/IF.sv Line: 5
+    Info (12023): Found entity 1: IF File: /home/solee2/Hydration_is_Key/mp4/hdl/pipeline/IF.sv Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file hdl/pipeline/ID.sv
-    Info (12023): Found entity 1: ID File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/ID.sv Line: 3
+    Info (12023): Found entity 1: ID File: /home/solee2/Hydration_is_Key/mp4/hdl/pipeline/ID.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file hdl/pipeline/EX.sv
-    Info (12023): Found entity 1: EX File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/EX.sv Line: 5
+    Info (12023): Found entity 1: EX File: /home/solee2/Hydration_is_Key/mp4/hdl/pipeline/EX.sv Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file hdl/cpu/register.sv
-    Info (12023): Found entity 1: register File: /home/scottl4/hydration_is_key/mp4/hdl/cpu/register.sv Line: 3
+    Info (12023): Found entity 1: register File: /home/solee2/Hydration_is_Key/mp4/hdl/cpu/register.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file hdl/cpu/regfile.sv
-    Info (12023): Found entity 1: regfile File: /home/scottl4/hydration_is_key/mp4/hdl/cpu/regfile.sv Line: 3
+    Info (12023): Found entity 1: regfile File: /home/solee2/Hydration_is_Key/mp4/hdl/cpu/regfile.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file hdl/cpu/pc_reg.sv
-    Info (12023): Found entity 1: pc_register File: /home/scottl4/hydration_is_key/mp4/hdl/cpu/pc_reg.sv Line: 3
+    Info (12023): Found entity 1: pc_register File: /home/solee2/Hydration_is_Key/mp4/hdl/cpu/pc_reg.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file hdl/cpu/cpu_datapath.sv
-    Info (12023): Found entity 1: cpu_datapath File: /home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv Line: 5
+    Info (12023): Found entity 1: cpu_datapath File: /home/solee2/Hydration_is_Key/mp4/hdl/cpu/cpu_datapath.sv Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file hdl/cpu/cmp.sv
-    Info (12023): Found entity 1: cmp File: /home/scottl4/hydration_is_key/mp4/hdl/cpu/cmp.sv Line: 3
+    Info (12023): Found entity 1: cmp File: /home/solee2/Hydration_is_Key/mp4/hdl/cpu/cmp.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file hdl/cpu/alu.sv
-    Info (12023): Found entity 1: alu File: /home/scottl4/hydration_is_key/mp4/hdl/cpu/alu.sv Line: 5
+    Info (12023): Found entity 1: alu File: /home/solee2/Hydration_is_Key/mp4/hdl/cpu/alu.sv Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file hdl/cache/data_array.sv
-    Info (12023): Found entity 1: data_array File: /home/scottl4/hydration_is_key/mp4/hdl/cache/data_array.sv Line: 5
+    Info (12023): Found entity 1: data_array File: /home/solee2/Hydration_is_Key/mp4/hdl/cache/data_array.sv Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file hdl/cache/cache_way.sv
-    Info (12023): Found entity 1: cache_way File: /home/scottl4/hydration_is_key/mp4/hdl/cache/cache_way.sv Line: 3
+    Info (12023): Found entity 1: cache_way File: /home/solee2/Hydration_is_Key/mp4/hdl/cache/cache_way.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file hdl/cache/cache_datapath.sv
-    Info (12023): Found entity 1: cache_datapath File: /home/scottl4/hydration_is_key/mp4/hdl/cache/cache_datapath.sv Line: 8
+    Info (12023): Found entity 1: cache_datapath File: /home/solee2/Hydration_is_Key/mp4/hdl/cache/cache_datapath.sv Line: 8
 Info (12021): Found 1 design units, including 1 entities, in source file hdl/cache/cache_control.sv
-    Info (12023): Found entity 1: cache_control File: /home/scottl4/hydration_is_key/mp4/hdl/cache/cache_control.sv Line: 4
+    Info (12023): Found entity 1: cache_control File: /home/solee2/Hydration_is_Key/mp4/hdl/cache/cache_control.sv Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file hdl/cache/cache.sv
-    Info (12023): Found entity 1: cache File: /home/scottl4/hydration_is_key/mp4/hdl/cache/cache.sv Line: 5
+    Info (12023): Found entity 1: cache File: /home/solee2/Hydration_is_Key/mp4/hdl/cache/cache.sv Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file hdl/cache/bus_adapter.sv
-    Info (12023): Found entity 1: bus_adapter File: /home/scottl4/hydration_is_key/mp4/hdl/cache/bus_adapter.sv Line: 6
+    Info (12023): Found entity 1: bus_adapter File: /home/solee2/Hydration_is_Key/mp4/hdl/cache/bus_adapter.sv Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file hdl/cache/array.sv
-    Info (12023): Found entity 1: array File: /home/scottl4/hydration_is_key/mp4/hdl/cache/array.sv Line: 3
-Warning (10236): Verilog HDL Implicit Net warning at sreg_IF_ID.sv(29): created implicit net for "addr_out" File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/sreg_IF_ID.sv Line: 29
+    Info (12023): Found entity 1: array File: /home/solee2/Hydration_is_Key/mp4/hdl/cache/array.sv Line: 3
+Warning (10236): Verilog HDL Implicit Net warning at sreg_IF_ID.sv(29): created implicit net for "addr_out" File: /home/solee2/Hydration_is_Key/mp4/hdl/pipeline/sreg_IF_ID.sv Line: 29
 Info (12127): Elaborating entity "mp4" for the top level hierarchy
-Info (12128): Elaborating entity "cpu_datapath" for hierarchy "cpu_datapath:cpu_datapath" File: /home/scottl4/hydration_is_key/mp4/hdl/mp4.sv Line: 76
-Info (12128): Elaborating entity "IF" for hierarchy "cpu_datapath:cpu_datapath|IF:stage_IF" File: /home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv Line: 85
-Info (12128): Elaborating entity "pc_register" for hierarchy "cpu_datapath:cpu_datapath|IF:stage_IF|pc_register:PC" File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/IF.sv Line: 27
-Info (12128): Elaborating entity "sreg_IF_ID" for hierarchy "cpu_datapath:cpu_datapath|sreg_IF_ID:sreg_IF_ID" File: /home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv Line: 102
-Warning (10036): Verilog HDL or VHDL warning at sreg_IF_ID.sv(29): object "addr_out" assigned a value but never read File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/sreg_IF_ID.sv Line: 29
-Warning (10230): Verilog HDL assignment warning at sreg_IF_ID.sv(29): truncated value with size 32 to match size of target (1) File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/sreg_IF_ID.sv Line: 29
-Info (12128): Elaborating entity "ID" for hierarchy "cpu_datapath:cpu_datapath|ID:stage_ID" File: /home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv Line: 120
-Info (12128): Elaborating entity "control_rom" for hierarchy "cpu_datapath:cpu_datapath|ID:stage_ID|control_rom:control_rom" File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/ID.sv Line: 25
-Warning (10036): Verilog HDL or VHDL warning at control_rom.sv(9): object "i_imm" assigned a value but never read File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/control_rom.sv Line: 9
-Warning (10036): Verilog HDL or VHDL warning at control_rom.sv(9): object "s_imm" assigned a value but never read File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/control_rom.sv Line: 9
-Warning (10036): Verilog HDL or VHDL warning at control_rom.sv(9): object "b_imm" assigned a value but never read File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/control_rom.sv Line: 9
-Warning (10036): Verilog HDL or VHDL warning at control_rom.sv(9): object "u_imm" assigned a value but never read File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/control_rom.sv Line: 9
-Warning (10036): Verilog HDL or VHDL warning at control_rom.sv(9): object "j_imm" assigned a value but never read File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/control_rom.sv Line: 9
-Warning (10036): Verilog HDL or VHDL warning at control_rom.sv(9): object "ir_out" assigned a value but never read File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/control_rom.sv Line: 9
-Warning (10036): Verilog HDL or VHDL warning at control_rom.sv(10): object "rd" assigned a value but never read File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/control_rom.sv Line: 10
-Warning (10036): Verilog HDL or VHDL warning at control_rom.sv(10): object "rs1" assigned a value but never read File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/control_rom.sv Line: 10
-Warning (10036): Verilog HDL or VHDL warning at control_rom.sv(10): object "rs2" assigned a value but never read File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/control_rom.sv Line: 10
-Warning (10036): Verilog HDL or VHDL warning at control_rom.sv(11): object "cmpop" assigned a value but never read File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/control_rom.sv Line: 11
-Warning (10036): Verilog HDL or VHDL warning at control_rom.sv(12): object "aluop" assigned a value but never read File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/control_rom.sv Line: 12
-Warning (10036): Verilog HDL or VHDL warning at control_rom.sv(13): object "opcode" assigned a value but never read File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/control_rom.sv Line: 13
-Warning (10036): Verilog HDL or VHDL warning at control_rom.sv(14): object "funct3" assigned a value but never read File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/control_rom.sv Line: 14
-Warning (10036): Verilog HDL or VHDL warning at control_rom.sv(15): object "funct7" assigned a value but never read File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/control_rom.sv Line: 15
-Info (12128): Elaborating entity "regfile" for hierarchy "cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile" File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/ID.sv Line: 38
-Info (12128): Elaborating entity "sreg_ID_EX" for hierarchy "cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX" File: /home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv Line: 138
-Info (12128): Elaborating entity "EX" for hierarchy "cpu_datapath:cpu_datapath|EX:stage_EX" File: /home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv Line: 153
-Info (12128): Elaborating entity "alu" for hierarchy "cpu_datapath:cpu_datapath|EX:stage_EX|alu:ALU" File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/EX.sv Line: 29
-Info (12128): Elaborating entity "cmp" for hierarchy "cpu_datapath:cpu_datapath|EX:stage_EX|cmp:CMP" File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/EX.sv Line: 38
-Info (12128): Elaborating entity "sreg_EX_MEM" for hierarchy "cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM" File: /home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv Line: 173
-Info (12128): Elaborating entity "MEM" for hierarchy "cpu_datapath:cpu_datapath|MEM:stage_MEM" File: /home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv Line: 194
-Info (12128): Elaborating entity "sreg_MEM_WB" for hierarchy "cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB" File: /home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv Line: 217
-Info (12128): Elaborating entity "WB" for hierarchy "cpu_datapath:cpu_datapath|WB:stage_WB" File: /home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv Line: 236
-Info (10264): Verilog HDL Case Statement information at WB.sv(35): all case item expressions in this case statement are onehot File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/WB.sv Line: 35
-Info (10264): Verilog HDL Case Statement information at WB.sv(44): all case item expressions in this case statement are onehot File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/WB.sv Line: 44
+Info (12128): Elaborating entity "cpu_datapath" for hierarchy "cpu_datapath:cpu_datapath" File: /home/solee2/Hydration_is_Key/mp4/hdl/mp4.sv Line: 76
+Info (12128): Elaborating entity "IF" for hierarchy "cpu_datapath:cpu_datapath|IF:stage_IF" File: /home/solee2/Hydration_is_Key/mp4/hdl/cpu/cpu_datapath.sv Line: 85
+Info (12128): Elaborating entity "pc_register" for hierarchy "cpu_datapath:cpu_datapath|IF:stage_IF|pc_register:PC" File: /home/solee2/Hydration_is_Key/mp4/hdl/pipeline/IF.sv Line: 27
+Info (12128): Elaborating entity "sreg_IF_ID" for hierarchy "cpu_datapath:cpu_datapath|sreg_IF_ID:sreg_IF_ID" File: /home/solee2/Hydration_is_Key/mp4/hdl/cpu/cpu_datapath.sv Line: 102
+Warning (10036): Verilog HDL or VHDL warning at sreg_IF_ID.sv(29): object "addr_out" assigned a value but never read File: /home/solee2/Hydration_is_Key/mp4/hdl/pipeline/sreg_IF_ID.sv Line: 29
+Warning (10230): Verilog HDL assignment warning at sreg_IF_ID.sv(29): truncated value with size 32 to match size of target (1) File: /home/solee2/Hydration_is_Key/mp4/hdl/pipeline/sreg_IF_ID.sv Line: 29
+Info (12128): Elaborating entity "ID" for hierarchy "cpu_datapath:cpu_datapath|ID:stage_ID" File: /home/solee2/Hydration_is_Key/mp4/hdl/cpu/cpu_datapath.sv Line: 120
+Info (12128): Elaborating entity "control_rom" for hierarchy "cpu_datapath:cpu_datapath|ID:stage_ID|control_rom:control_rom" File: /home/solee2/Hydration_is_Key/mp4/hdl/pipeline/ID.sv Line: 25
+Warning (10036): Verilog HDL or VHDL warning at control_rom.sv(9): object "i_imm" assigned a value but never read File: /home/solee2/Hydration_is_Key/mp4/hdl/pipeline/control_rom.sv Line: 9
+Warning (10036): Verilog HDL or VHDL warning at control_rom.sv(9): object "s_imm" assigned a value but never read File: /home/solee2/Hydration_is_Key/mp4/hdl/pipeline/control_rom.sv Line: 9
+Warning (10036): Verilog HDL or VHDL warning at control_rom.sv(9): object "b_imm" assigned a value but never read File: /home/solee2/Hydration_is_Key/mp4/hdl/pipeline/control_rom.sv Line: 9
+Warning (10036): Verilog HDL or VHDL warning at control_rom.sv(9): object "u_imm" assigned a value but never read File: /home/solee2/Hydration_is_Key/mp4/hdl/pipeline/control_rom.sv Line: 9
+Warning (10036): Verilog HDL or VHDL warning at control_rom.sv(9): object "j_imm" assigned a value but never read File: /home/solee2/Hydration_is_Key/mp4/hdl/pipeline/control_rom.sv Line: 9
+Warning (10036): Verilog HDL or VHDL warning at control_rom.sv(9): object "ir_out" assigned a value but never read File: /home/solee2/Hydration_is_Key/mp4/hdl/pipeline/control_rom.sv Line: 9
+Warning (10036): Verilog HDL or VHDL warning at control_rom.sv(10): object "rd" assigned a value but never read File: /home/solee2/Hydration_is_Key/mp4/hdl/pipeline/control_rom.sv Line: 10
+Warning (10036): Verilog HDL or VHDL warning at control_rom.sv(10): object "rs1" assigned a value but never read File: /home/solee2/Hydration_is_Key/mp4/hdl/pipeline/control_rom.sv Line: 10
+Warning (10036): Verilog HDL or VHDL warning at control_rom.sv(10): object "rs2" assigned a value but never read File: /home/solee2/Hydration_is_Key/mp4/hdl/pipeline/control_rom.sv Line: 10
+Warning (10036): Verilog HDL or VHDL warning at control_rom.sv(11): object "cmpop" assigned a value but never read File: /home/solee2/Hydration_is_Key/mp4/hdl/pipeline/control_rom.sv Line: 11
+Warning (10036): Verilog HDL or VHDL warning at control_rom.sv(12): object "aluop" assigned a value but never read File: /home/solee2/Hydration_is_Key/mp4/hdl/pipeline/control_rom.sv Line: 12
+Warning (10036): Verilog HDL or VHDL warning at control_rom.sv(13): object "opcode" assigned a value but never read File: /home/solee2/Hydration_is_Key/mp4/hdl/pipeline/control_rom.sv Line: 13
+Warning (10036): Verilog HDL or VHDL warning at control_rom.sv(15): object "funct7" assigned a value but never read File: /home/solee2/Hydration_is_Key/mp4/hdl/pipeline/control_rom.sv Line: 15
+Info (12128): Elaborating entity "regfile" for hierarchy "cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile" File: /home/solee2/Hydration_is_Key/mp4/hdl/pipeline/ID.sv Line: 38
+Info (12128): Elaborating entity "sreg_ID_EX" for hierarchy "cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX" File: /home/solee2/Hydration_is_Key/mp4/hdl/cpu/cpu_datapath.sv Line: 138
+Info (12128): Elaborating entity "EX" for hierarchy "cpu_datapath:cpu_datapath|EX:stage_EX" File: /home/solee2/Hydration_is_Key/mp4/hdl/cpu/cpu_datapath.sv Line: 153
+Info (12128): Elaborating entity "alu" for hierarchy "cpu_datapath:cpu_datapath|EX:stage_EX|alu:ALU" File: /home/solee2/Hydration_is_Key/mp4/hdl/pipeline/EX.sv Line: 37
+Info (12128): Elaborating entity "cmp" for hierarchy "cpu_datapath:cpu_datapath|EX:stage_EX|cmp:CMP" File: /home/solee2/Hydration_is_Key/mp4/hdl/pipeline/EX.sv Line: 46
+Info (12128): Elaborating entity "sreg_EX_MEM" for hierarchy "cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM" File: /home/solee2/Hydration_is_Key/mp4/hdl/cpu/cpu_datapath.sv Line: 173
+Info (12128): Elaborating entity "MEM" for hierarchy "cpu_datapath:cpu_datapath|MEM:stage_MEM" File: /home/solee2/Hydration_is_Key/mp4/hdl/cpu/cpu_datapath.sv Line: 194
+Info (12128): Elaborating entity "sreg_MEM_WB" for hierarchy "cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB" File: /home/solee2/Hydration_is_Key/mp4/hdl/cpu/cpu_datapath.sv Line: 217
+Info (12128): Elaborating entity "WB" for hierarchy "cpu_datapath:cpu_datapath|WB:stage_WB" File: /home/solee2/Hydration_is_Key/mp4/hdl/cpu/cpu_datapath.sv Line: 236
+Info (10264): Verilog HDL Case Statement information at WB.sv(35): all case item expressions in this case statement are onehot File: /home/solee2/Hydration_is_Key/mp4/hdl/pipeline/WB.sv Line: 35
+Info (10264): Verilog HDL Case Statement information at WB.sv(44): all case item expressions in this case statement are onehot File: /home/solee2/Hydration_is_Key/mp4/hdl/pipeline/WB.sv Line: 44
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "inst_read" is stuck at VCC File: /home/scottl4/hydration_is_key/mp4/hdl/mp4.sv Line: 18
-    Warning (13410): Pin "data_addr[0]" is stuck at GND File: /home/scottl4/hydration_is_key/mp4/hdl/mp4.sv Line: 27
-    Warning (13410): Pin "data_addr[1]" is stuck at GND File: /home/scottl4/hydration_is_key/mp4/hdl/mp4.sv Line: 27
+    Warning (13410): Pin "inst_read" is stuck at VCC File: /home/solee2/Hydration_is_Key/mp4/hdl/mp4.sv Line: 18
+    Warning (13410): Pin "data_addr[0]" is stuck at GND File: /home/solee2/Hydration_is_Key/mp4/hdl/mp4.sv Line: 27
+    Warning (13410): Pin "data_addr[1]" is stuck at GND File: /home/solee2/Hydration_is_Key/mp4/hdl/mp4.sv Line: 27
 Info (286030): Timing-Driven Synthesis is running
-Info (144001): Generated suppressed messages file /home/scottl4/hydration_is_key/mp4/output_files/mp4.map.smsg
+Info (144001): Generated suppressed messages file /home/solee2/Hydration_is_Key/mp4/output_files/mp4.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 2913 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2915 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 68 input pins
     Info (21059): Implemented 103 output pins
-    Info (21061): Implemented 2742 logic cells
+    Info (21061): Implemented 2744 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 22 warnings
-    Info: Peak virtual memory: 1262 megabytes
-    Info: Processing ended: Sun Nov 15 01:22:52 2020
-    Info: Elapsed time: 00:00:28
-    Info: Total CPU time (on all processors): 00:00:48
+    Info: Peak virtual memory: 1209 megabytes
+    Info: Processing ended: Wed Nov 18 02:20:56 2020
+    Info: Elapsed time: 00:00:25
+    Info: Total CPU time (on all processors): 00:00:34
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in /home/scottl4/hydration_is_key/mp4/output_files/mp4.map.smsg.
+The suppressed messages can be found in /home/solee2/Hydration_is_Key/mp4/output_files/mp4.map.smsg.
 
 
