@@ -30,17 +30,11 @@ begin: hazard_detection
     if(ID_EX_ctrl.rs1 == EX_MEM_ctrl.rd && ID_EX_ctrl.rs1 != 0) begin
         unique case (ID_EX_ctrl.opcode)
             op_imm: hazard_ID_EX_rs1 = 1'b1;
-
             op_load: hazard_ID_EX_rs1 = 1'b1;
-
             op_store: hazard_ID_EX_rs1 = 1'b1;
-            
             op_jalr: hazard_ID_EX_rs1 = 1'b1;
-
             op_reg: hazard_ID_EX_rs1 = 1'b1;
-
             op_br: hazard_ID_EX_rs1 = 1'b1;
-
             default: ;
         endcase
     end
@@ -48,12 +42,8 @@ begin: hazard_detection
     // hazard_ID_EX_rs1 = (ID_EX_ctrl.rs1 == EX_MEM_ctrl.rd && ID_EX_ctrl.rs1 != 0) ? 1'b1 : 1'b0;
     if(ID_EX_ctrl.rs2 == EX_MEM_ctrl.rd && ID_EX_ctrl.rs2 != 0) begin
         unique case (ID_EX_ctrl.opcode)
-            // op_imm: ;
-
             op_reg: hazard_ID_EX_rs2 = 1'b1;
-
             op_br: hazard_ID_EX_rs2 = 1'b1;
-
             default: ;
         endcase
     end
@@ -62,17 +52,11 @@ begin: hazard_detection
     if(ID_EX_ctrl.rs1 == MEM_WB_ctrl.rd && ID_EX_ctrl.rs1 != 0) begin
         unique case (ID_EX_ctrl.opcode)
             op_imm: hazard_ID_MEM_rs1 = 1'b1;
-
             op_load: hazard_ID_MEM_rs1 = 1'b1;
-
             op_store: hazard_ID_MEM_rs1 = 1'b1;
-            
             op_jalr: hazard_ID_MEM_rs1 = 1'b1;
-
             op_reg: hazard_ID_MEM_rs1 = 1'b1;
-
             op_br: hazard_ID_MEM_rs1 = 1'b1;
-
             default: ;
         endcase
     end
@@ -80,12 +64,8 @@ begin: hazard_detection
     // hazard_ID_MEM_rs2 = (ID_EX_ctrl.rs2 == MEM_WB_ctrl.rd) ? 1'b1 : 1'b0;
     if(ID_EX_ctrl.rs2 == MEM_WB_ctrl.rd && ID_EX_ctrl.rs2 != 0) begin
         unique case (ID_EX_ctrl.opcode)
-            // op_imm: ;
-
             op_reg: hazard_ID_MEM_rs2 = 1'b1;
-
             op_br: hazard_ID_MEM_rs2 = 1'b1;
-
             default: ;
         endcase
     end

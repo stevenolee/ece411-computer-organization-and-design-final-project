@@ -6,12 +6,6 @@ module cpu_datapath
 (
     input clk,
     input rst,
-	// input mem_resp,
-    // input [31:0] mem_rdata,
-    // output logic mem_read,
-    // output logic mem_write,
-    // output rv32i_word mem_address,
-    // output [31:0] mem_wdata,
 	
 	/* I Cache Ports */
     input inst_resp,
@@ -64,6 +58,7 @@ logic [31:0] MEM_WB_data_out;
 rv32i_control_word ID_ctrl, ID_EX_ctrl, EX_MEM_ctrl, MEM_WB_ctrl;
 pcmux::pcmux_sel_t pcmux_sel;
 logic br_mispredict, MEM_BW_br_en, load_regfile;
+logic hazard_ID_EX_rs1, hazard_ID_EX_rs2, hazard_ID_MEM_rs1, hazard_ID_MEM_rs2, hazard_load;
 
 /*****************************************************************************/
 /* * * NEED TO SET D MEM ADDRESS FROM STATE REGISTER (SUB CONTROL ROM) * * */
@@ -145,6 +140,14 @@ EX stage_EX (
 	.rs1_in			(ID_EX_rs1_out),
 	.rs2_in			(ID_EX_rs2_out),
 	.pc_in			(ID_EX_pc_out),
+
+	.hazard_ID_EX_rs1,
+	.hazard_ID_EX_rs2,
+	.hazard_ID_MEM_rs1,
+	.hazard_ID_MEM_rs2,
+	.hazard_load,
+	.hazard_MEM_data	(data_addr),
+	.hazard_WB_data	(regfilemux_out),
 
 	// outputs
 	.alu_out		(EX_alu_out),
@@ -235,13 +238,18 @@ WB stage_WB (
 	.rd_reg			(rd)	
 );
 
-
-always_comb
-begin: hazard_detection
-// need ID_EX_ctrl, EX_MEM_ctrl, MEM_WB_ctrl
-
-end
-
-
+hazard_detection hazard_detection(
+	// inputs
+	.ID_EX_ctrl,
+	.EX_MEM_ctrl,
+	.MEM_WB_ctrl,
+	
+	// outputs
+	.hazard_ID_EX_rs1,
+	.hazard_ID_EX_rs2,
+	.hazard_ID_MEM_rs1,
+	.hazard_ID_MEM_rs2,
+	.hazard_load
+);
 
 endmodule : cpu_datapath
