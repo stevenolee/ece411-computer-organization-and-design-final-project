@@ -10,7 +10,7 @@ module mp4(
    output logic mem_read,
    output logic mem_write,
    output logic [31:0] mem_addr,
-   output logic [63:0] mem_wdata,
+   output logic [63:0] mem_wdata
 
     // /* I Cache Ports */
     // input inst_resp,
@@ -34,7 +34,8 @@ logic [3:0] data_mbe;
 /*** Cache <--> Arbiter Variables ***/
 logic i_mem_resp, i_mem_read, d_mem_resp, d_mem_read, d_mem_write;
 logic [3:0] i_mem_byte_en, d_mem_byte_en;
-logic [31:0] i_mem_rdata, i_mem_address, d_mem_rdata, d_mem_wdata, d_mem_address;
+logic [31:0] i_mem_address, d_mem_address;
+logic [255:0] i_mem_rdata, i_mem_wdata, d_mem_rdata, d_mem_wdata;
 /*** CPU <--> Arbiter Variables ***/
 logic stall;
 
@@ -42,6 +43,10 @@ cpu_datapath cpu_datapath
 (
     .clk,
     .rst,
+
+    /* Arbiter Ports */
+    .stall,
+
     /*** I-cache magic memory ports ***/
     .inst_read,
     .inst_resp,
@@ -94,7 +99,25 @@ cache d_cache
 );
 
 arbiter arbiter(
-    .
+    .clk,
+    .reset_n    (rst),
+    .d_line_i   (d_mem_wdata),
+    .d_line_o   (d_mem_rdata),
+    .d_address  (d_mem_address),
+    .d_read_i   (d_mem_read),
+    .d_write_i  (d_mem_write),
+    .d_resp_o   (d_mem_resp),
+    .i_line_o   (i_mem_rdata),
+    .i_address  (i_mem_address),
+    .i_read_i   (i_mem_read),
+    .i_resp_o   (i_mem_resp),
+    .resp_i     (mem_resp),
+    .burst_i    (mem_rdata),
+    .burst_o    (mem_wdata),
+    .address_o  (mem_addr),
+    .read_o     (mem_read),
+    .write_o    (mem_write),
+    .stall
 );
 
 endmodule : mp4

@@ -13,7 +13,7 @@ module EX (
 	input logic hazard_ID_EX_rs2,
 	input logic hazard_ID_MEM_rs1,
 	input logic hazard_ID_MEM_rs2,
-	input logic hazard_load,
+	input logic stall,
     input logic [31:0] hazard_MEM_data,
 	input logic [31:0] hazard_WB_data,
 

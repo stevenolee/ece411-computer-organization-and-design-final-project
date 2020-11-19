@@ -12,7 +12,7 @@ module hazard_detection
     output logic hazard_ID_EX_rs2,
     output logic hazard_ID_MEM_rs1,
     output logic hazard_ID_MEM_rs2,
-    output logic hazard_load
+    output logic stall
 );
 
 function void set_defaults();
@@ -20,7 +20,7 @@ function void set_defaults();
     hazard_ID_EX_rs2 = 1'b0;
     hazard_ID_MEM_rs1 = 1'b0;
     hazard_ID_MEM_rs2 = 1'b0;
-    hazard_load = 1'b0;
+    stall = 1'b0;
 endfunction
 
 always_comb
@@ -70,7 +70,7 @@ begin: hazard_detection
         endcase
     end
 
-    hazard_load = (ID_EX_ctrl.opcode == op_load && (hazard_ID_EX_rs1 || hazard_ID_EX_rs2)) ? 1'b1 : 1'b0;
+    stall = (ID_EX_ctrl.opcode == op_load && (hazard_ID_EX_rs1 || hazard_ID_EX_rs2)) ? 1'b1 : 1'b0;
 end
 
 endmodule

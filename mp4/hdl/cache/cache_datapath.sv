@@ -68,6 +68,7 @@ always_comb begin
         end
         2'b01: load_1 = load;
         2'b10: load_0 = load;
+        default: ;
     endcase
 
     /* * * LRU array * * */
@@ -83,6 +84,7 @@ always_comb begin
     unique case(lru)
         1'b0: dirty = dirty_0;
         1'b1: dirty = dirty_1;
+        default: ; 
     endcase
 
     /* * * Mem_address_o MUX * * */
@@ -100,6 +102,7 @@ always_comb begin
                 end
             endcase
         end
+        default: ;
     endcase
 
     /* * * DATA OUT MUX * * */

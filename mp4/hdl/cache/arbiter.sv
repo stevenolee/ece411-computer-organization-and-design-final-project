@@ -18,12 +18,12 @@ module arbiter
     output logic i_resp_o,
 
     // Port to memory
+	input resp_i,
     input logic [63:0] burst_i,
     output logic [63:0] burst_o,
     output logic [31:0] address_o,
     output logic read_o,
     output logic write_o,
-    input resp_i,
 
     // Port to CPU
     output logic stall
@@ -56,126 +56,116 @@ end
 assign line_o = read_out;
 
 always_comb begin
-	if(~reset_n) begin
+	if(reset_n) begin
 		read_o = 0;
 		write_o = 0;
 		address_o = 0;
 		burst_o = 0;
         d_resp_o = 0;
         i_resp_o = 0;
-		next = IDLE;
 	end
 
 	/* Initialize Values */
 	read_o = 1'b0;
 	write_o = 1'b0;
-	address_o = address_i;
+	address_o = i_address;
 	burst_o = 0;
 	d_resp_o = 0;
 	i_resp_o = 0;
     stall = 0;
-	next = state;
 	next_read_out = read_out;
 
 	case(state)
 		IDLE :	begin
-                    if (d_read_i || i_read_i || d_write_i)
-                        stall = 1'b1;
-                    
+				if (d_read_i || i_read_i || d_write_i)
+					stall = 1'b1;
 
-					d_resp_o = 1'b0;
-					i_resp_o = 1'b0;
-					write_o = 1'b0;
-					if(read_i) begin
-                        address_o = address_i;
-						read_o = 1'b1;
-					end
-					else if(write_i) begin
-						address_o = address_i;
-						write_o = 1'b0;
-					end
+				if(d_read_i) begin
+					address_o = i_address;
+					read_o = 1'b1;
 				end
+				else if(d_write_i) begin
+					address_o = d_address;
+					write_o = 1'b0;
+				end
+				else if(i_read_i) begin
+					address_o = i_address;
+					read_o = 1'b1;
+				end
+			end
 		READ0 :	begin
                     stall = 1'b1;
+					read_o = 1'b1;
 					if(resp_i) begin
-						read_o = 1'b1;
 						next_read_out[63:0] = burst_i;
-					end
-					else begin
-						read_o = 1'b1;
 					end
 				end
 		READ1 :	begin
                     stall = 1'b1;
+					read_o = 1'b1;
 					if(resp_i) begin
-						read_o = 1'b1;
 						next_read_out[127:64] = burst_i;
-					end
-					else begin
-						read_o = 1'b1;
 					end
 				end
 		READ2 :	begin
                     stall = 1'b1;
+					read_o = 1'b1;
 					if(resp_i) begin
-						read_o = 1'b1;
 						next_read_out[191:128] = burst_i;
-					end
-					else begin
-						read_o = 1'b1;
 					end
 				end
 		READ3 :	begin
+					read_o = 1'b1;
 					if(resp_i) begin
-						read_o = 1'b0;
 						next_read_out[255:192] = burst_i;
-					end
-					else begin
-						read_o = 1'b1;
 					end
 				end
 		READ4 :	begin
                     stall = 1'b1;
                     if(d_read_i)
-                        d_resp_o = 1'b1
+                        d_resp_o = 1'b1;
                     else if (i_read_i)
-                        i_mem_resp  = 1'b1;
-					read_o = 1'b0;
-					resp_o = 1'b1;
+                        i_resp_o  = 1'b1;
 				end
 		WRITE0: begin
                     stall = 1'b1;
 					write_o = 1'b1;
-					burst_o = line_i[63:0];
+					burst_o = d_line_i[63:0];
 				end
 		WRITE1: begin
                     stall = 1'b1;
 					write_o = 1'b1;
-					burst_o = line_i[127:64];
+					burst_o = d_line_i[127:64];
 				end
 		WRITE2: begin
                     stall = 1'b1;
 					write_o = 1'b1;
-					burst_o = line_i[191:128];
+					burst_o = d_line_i[191:128];
 				end
 		WRITE3: begin
                     stall = 1'b1;
 					write_o = 1'b1;
-					burst_o = line_i[255:192];
+					burst_o = d_line_i[255:192];
 				end
 		WRITE4: begin
                     stall = 1'b1;
-					write_o = 1'b0;
-					resp_o = 1'b1;
+					d_resp_o = 1'b1;
 				end
 		default: begin
-			next = IDLE;
+			
 		end
 	endcase
 end
 
 always_comb 
 begin: next_state_logic
+	if(reset_n) begin
+		next = IDLE;
+	end
+	
+	/* Initialize values */
+	next = state;
+
     case(state)
 		IDLE :	begin
                 if(d_write_i) begin
@@ -259,7 +249,7 @@ begin: next_state_logic
                     if(i_read_i)
                         next = READ0;
                     else
-					        next = IDLE;
+					    next = IDLE;
 				end
 		default: begin
 			next = IDLE;
@@ -269,4 +259,4 @@ begin: next_state_logic
 
 end
 
-endmodule : cacheline_adaptor
+endmodule : arbiter

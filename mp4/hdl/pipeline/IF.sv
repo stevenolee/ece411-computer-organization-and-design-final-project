@@ -10,6 +10,7 @@ module IF (
     input inst_resp,
     input pcmux::pcmux_sel_t pcmux_sel,
     input logic [31:0] alu_in,
+    input logic stall,
     // output
     output logic br_mispredict,
     output logic [31:0] pc_out
@@ -30,12 +31,12 @@ pc_register PC(
 always_comb
 begin
     br_mispredict = br_take;
-    load_pc = inst_resp;
+    load_pc = inst_resp & !stall;
 
-    if(!inst_resp) begin
+    if(!(inst_resp & !stall)) begin
         if(br_take) load_pc = 1'b1;
     end
-
+    
     unique case (pcmux_sel)
         pcmux::pc_plus4: pcmux_out = pc_out + 4;
         pcmux::alu_out:	pcmux_out = alu_in;

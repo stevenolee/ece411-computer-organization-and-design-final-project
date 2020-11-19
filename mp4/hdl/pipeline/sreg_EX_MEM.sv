@@ -8,6 +8,7 @@ module sreg_EX_MEM (
     input [31:0] alu_in,
     input [31:0] pc_in,
     input rv32i_control_word ctrl_in,
+    input stall,
 
     output logic [31:0] alu_out,
     output logic [3:0] mem_byte_enable_out,
@@ -23,14 +24,14 @@ logic br_en;
 rv32i_control_word ctrl;
 logic [31:0] rs2;
 
-always_ff @(posedge clk) begin
+always_ff @(posedge clk && !stall) begin
     if (rst == 1'b1) begin
         alu <= 0;
         br_en <= 0;
         ctrl <= 0;
         rs2 <= 0;
         pc <= 0;
-    end else begin
+    end else if (!stall) begin
         alu <= alu_in;
         br_en <= cmp_in;
         ctrl <= ctrl_in;
@@ -41,12 +42,13 @@ end
 
 always_comb begin
     /*** Set Defaults ***/
-    // read = 1'b0;
-    // write = 1'b0;
     mem_byte_enable_out = 4'b1111;
-    // ctrl_out.pcmux_sel = pcmux::pc_plus4;
     br_en_out = 0;
     ctrl_out = ctrl;
+    
+    alu_out = alu;
+    rs2_out = rs2;
+    pc_out = pc;
 
     unique case (ctrl.opcode)
         op_load: begin
@@ -118,15 +120,6 @@ always_comb begin
             mem_byte_enable_out = 4'b1111;
         end
     endcase
-end
-
-always_comb begin
-    alu_out = alu;
-    // Put this in the always_comb above because there's additional logic to this
-    // ctrl_out = ctrl;
-    // br_en_out = br_en;
-    rs2_out = rs2;
-    pc_out = pc;
 end
 
 endmodule
