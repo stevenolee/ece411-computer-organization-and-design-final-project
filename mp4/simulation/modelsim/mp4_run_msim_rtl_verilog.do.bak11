@@ -5,11 +5,18 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
+vlog -sv -work work +incdir+/home/solee2/Hydration_is_Key/mp4/hdl/cache {/home/solee2/Hydration_is_Key/mp4/hdl/cache/arbiter.sv}
 vlog -sv -work work +incdir+/home/solee2/Hydration_is_Key/mp4/hdl {/home/solee2/Hydration_is_Key/mp4/hdl/rv32i_mux_types.sv}
 vlog -sv -work work +incdir+/home/solee2/Hydration_is_Key/mp4/hdl/pipeline {/home/solee2/Hydration_is_Key/mp4/hdl/pipeline/sreg_IF_ID.sv}
 vlog -sv -work work +incdir+/home/solee2/Hydration_is_Key/mp4/hdl/cpu {/home/solee2/Hydration_is_Key/mp4/hdl/cpu/regfile.sv}
 vlog -sv -work work +incdir+/home/solee2/Hydration_is_Key/mp4/hdl/cpu {/home/solee2/Hydration_is_Key/mp4/hdl/cpu/pc_reg.sv}
+vlog -sv -work work +incdir+/home/solee2/Hydration_is_Key/mp4/hdl/cache {/home/solee2/Hydration_is_Key/mp4/hdl/cache/data_array.sv}
+vlog -sv -work work +incdir+/home/solee2/Hydration_is_Key/mp4/hdl/cache {/home/solee2/Hydration_is_Key/mp4/hdl/cache/cache_control.sv}
+vlog -sv -work work +incdir+/home/solee2/Hydration_is_Key/mp4/hdl/cache {/home/solee2/Hydration_is_Key/mp4/hdl/cache/bus_adapter.sv}
+vlog -sv -work work +incdir+/home/solee2/Hydration_is_Key/mp4/hdl/cache {/home/solee2/Hydration_is_Key/mp4/hdl/cache/array.sv}
 vlog -sv -work work +incdir+/home/solee2/Hydration_is_Key/mp4/hdl {/home/solee2/Hydration_is_Key/mp4/hdl/rv32i_types.sv}
+vlog -sv -work work +incdir+/home/solee2/Hydration_is_Key/mp4/hdl/cache {/home/solee2/Hydration_is_Key/mp4/hdl/cache/cache_way.sv}
+vlog -sv -work work +incdir+/home/solee2/Hydration_is_Key/mp4/hdl/pipeline {/home/solee2/Hydration_is_Key/mp4/hdl/pipeline/hazard_detection.sv}
 vlog -sv -work work +incdir+/home/solee2/Hydration_is_Key/mp4/hdl/pipeline {/home/solee2/Hydration_is_Key/mp4/hdl/pipeline/control_rom.sv}
 vlog -sv -work work +incdir+/home/solee2/Hydration_is_Key/mp4/hdl/pipeline {/home/solee2/Hydration_is_Key/mp4/hdl/pipeline/WB.sv}
 vlog -sv -work work +incdir+/home/solee2/Hydration_is_Key/mp4/hdl/pipeline {/home/solee2/Hydration_is_Key/mp4/hdl/pipeline/sreg_MEM_WB.sv}
@@ -19,8 +26,10 @@ vlog -sv -work work +incdir+/home/solee2/Hydration_is_Key/mp4/hdl/pipeline {/hom
 vlog -sv -work work +incdir+/home/solee2/Hydration_is_Key/mp4/hdl/pipeline {/home/solee2/Hydration_is_Key/mp4/hdl/pipeline/ID.sv}
 vlog -sv -work work +incdir+/home/solee2/Hydration_is_Key/mp4/hdl/cpu {/home/solee2/Hydration_is_Key/mp4/hdl/cpu/cmp.sv}
 vlog -sv -work work +incdir+/home/solee2/Hydration_is_Key/mp4/hdl/cpu {/home/solee2/Hydration_is_Key/mp4/hdl/cpu/alu.sv}
+vlog -sv -work work +incdir+/home/solee2/Hydration_is_Key/mp4/hdl/cache {/home/solee2/Hydration_is_Key/mp4/hdl/cache/cache_datapath.sv}
 vlog -sv -work work +incdir+/home/solee2/Hydration_is_Key/mp4/hdl/pipeline {/home/solee2/Hydration_is_Key/mp4/hdl/pipeline/IF.sv}
 vlog -sv -work work +incdir+/home/solee2/Hydration_is_Key/mp4/hdl/pipeline {/home/solee2/Hydration_is_Key/mp4/hdl/pipeline/EX.sv}
+vlog -sv -work work +incdir+/home/solee2/Hydration_is_Key/mp4/hdl/cache {/home/solee2/Hydration_is_Key/mp4/hdl/cache/cache.sv}
 vlog -sv -work work +incdir+/home/solee2/Hydration_is_Key/mp4/hdl/cpu {/home/solee2/Hydration_is_Key/mp4/hdl/cpu/cpu_datapath.sv}
 vlog -sv -work work +incdir+/home/solee2/Hydration_is_Key/mp4/hdl {/home/solee2/Hydration_is_Key/mp4/hdl/mp4.sv}
 

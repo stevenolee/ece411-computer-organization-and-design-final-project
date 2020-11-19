@@ -9,6 +9,7 @@ module ID (
     input rv32i_reg rd,
 	input inst_resp,
 	input logic [31:0] inst_rdata,
+	input logic stall,
 
     // output
 	output logic inst_read,
@@ -17,6 +18,7 @@ module ID (
 	output rv32i_control_word ctrl_word
 ); 
 assign inst_read = 1'b1;
+assign load_regfile_h = load_regfile & !stall;
 
 control_rom control_rom
 (
@@ -28,7 +30,7 @@ control_rom control_rom
 regfile regfile(
 	.clk	(clk),
     .rst	(rst),
-    .load	(load_regfile),
+    .load	(load_regfile_h),
 	.in		(regfilemux_in),
 	.src_a	(ctrl_word.rs1),
 	.src_b	(ctrl_word.rs2),

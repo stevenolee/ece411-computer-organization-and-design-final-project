@@ -13,7 +13,7 @@ module EX (
 	input logic hazard_ID_EX_rs2,
 	input logic hazard_ID_MEM_rs1,
 	input logic hazard_ID_MEM_rs2,
-	input logic hazard_load,
+	input logic stall,
     input logic [31:0] hazard_MEM_data,
 	input logic [31:0] hazard_WB_data,
 
@@ -62,12 +62,19 @@ always_comb begin
     endcase
 
     unique case (ctrl_in.alumux2_sel)
+        alumux::rs2_out: begin
+            if (hazard_ID_EX_rs2 == 1'b1)
+                alumux2_out = hazard_MEM_data;
+            else if (hazard_ID_MEM_rs2 == 1'b1)
+                alumux2_out = hazard_WB_data;
+            else
+                alumux2_out = rs2_in;
+        end
         alumux::i_imm: alumux2_out = ctrl_in.i_imm;
         alumux::u_imm: alumux2_out = ctrl_in.u_imm;
         alumux::b_imm: alumux2_out = ctrl_in.b_imm;
         alumux::s_imm: alumux2_out = ctrl_in.s_imm;
         alumux::j_imm: alumux2_out = ctrl_in.j_imm;
-        alumux::rs2_out: alumux2_out = rs2_in;
         default: `BAD_MUX_SEL;
     endcase
 

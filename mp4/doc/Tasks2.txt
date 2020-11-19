@@ -5,13 +5,14 @@ TASKS FOR CHECKPOINT 2
         [ ] Finish linking links for data_load
             [ ] Put data_rdata into the respective rs_reg in EX 
                 (add an input to the mux, add a bit to the mux_sel, which is just hazard_load)
-    [ ] Stalls for data fowarding
+    [ ] Stalls for data fowarding - Benoit
         [ ] Should only happen when data_loads are being executed
         [ ] Input stall variable into all state reg's before the data_load, have additional
             logic in those registers that will hold off from reading the next input, and also
             prevent PC from updating (load_pc = 0)
     [ ] Arbiter
-        [ ] Priority between d_cache and i_cache when both want to use it
+        [x] Priority between d_cache and i_cache when both want to use it
+        [ ] Finish implementing Arbiter - Scott
 
 
 

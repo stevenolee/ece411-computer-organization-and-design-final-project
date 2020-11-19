@@ -6,13 +6,10 @@ module cpu_datapath
 (
     input clk,
     input rst,
-	// input mem_resp,
-    // input [31:0] mem_rdata,
-    // output logic mem_read,
-    // output logic mem_write,
-    // output rv32i_word mem_address,
-    // output [31:0] mem_wdata,
 	
+	/* Arbiter ports */
+	input stall,
+
 	/* I Cache Ports */
     input inst_resp,
     input logic [31:0] inst_rdata,
@@ -64,6 +61,7 @@ logic [31:0] MEM_WB_data_out;
 rv32i_control_word ID_ctrl, ID_EX_ctrl, EX_MEM_ctrl, MEM_WB_ctrl;
 pcmux::pcmux_sel_t pcmux_sel;
 logic br_mispredict, MEM_BW_br_en, load_regfile;
+logic hazard_ID_EX_rs1, hazard_ID_EX_rs2, hazard_ID_MEM_rs1, hazard_ID_MEM_rs2;
 
 /*****************************************************************************/
 /* * * NEED TO SET D MEM ADDRESS FROM STATE REGISTER (SUB CONTROL ROM) * * */
@@ -95,6 +93,7 @@ sreg_IF_ID sreg_IF_ID(
 	.inst_rdata,
 	.inst_resp,
 	.br_mispredict,
+	.stall,
 
 	// outputs
 	.pc_out			(IF_ID_pc_out),
@@ -111,6 +110,7 @@ ID stage_ID (
     .inst_resp		(inst_resp),
     .inst_rdata		(IF_ID_data_out),
 	.rd,
+	.stall,
 	
 	// outputs
 	.inst_read		(inst_read),
@@ -129,6 +129,7 @@ sreg_ID_EX sreg_ID_EX(
 	.br_mispredict,
 	.rs1_in			(ID_rs1_out),
 	.rs2_in			(ID_rs2_out),
+	.stall,
 
 	// outputs
 	.ctrl_out		(ID_EX_ctrl),
@@ -146,6 +147,14 @@ EX stage_EX (
 	.rs2_in			(ID_EX_rs2_out),
 	.pc_in			(ID_EX_pc_out),
 
+	.hazard_ID_EX_rs1,
+	.hazard_ID_EX_rs2,
+	.hazard_ID_MEM_rs1,
+	.hazard_ID_MEM_rs2,
+	.stall,
+	.hazard_MEM_data	(data_addr),
+	.hazard_WB_data	(regfilemux_out),
+
 	// outputs
 	.alu_out		(EX_alu_out),
 	.cmp_out		(EX_cmp_out),
@@ -162,6 +171,7 @@ sreg_EX_MEM sreg_EX_MEM (
 	.ctrl_in		(ID_EX_ctrl),
 	.rs2_in			(EX_rs2_out),
 	.pc_in			(ID_EX_pc_out),
+	.stall,
 
     //outputs
 	.alu_out			(EX_MEM_alu_out),
@@ -206,6 +216,7 @@ sreg_MEM_WB sreg_MEM_WB(
 	.pc_in 			(EX_MEM_pc_out),
 	.mem_byte_en_in	(d_mem_byte),
 	.data_resp,
+	.stall,
 
 	// outputs
     .alu_out		(MEM_WB_alu_out),
@@ -235,13 +246,18 @@ WB stage_WB (
 	.rd_reg			(rd)	
 );
 
-
-always_comb
-begin: hazard_detection
-// need ID_EX_ctrl, EX_MEM_ctrl, MEM_WB_ctrl
-
-end
-
-
+hazard_detection hazard(
+	// inputs
+	.ID_EX_ctrl,
+	.EX_MEM_ctrl,
+	.MEM_WB_ctrl,
+	
+	// outputs
+	.hazard_ID_EX_rs1,
+	.hazard_ID_EX_rs2,
+	.hazard_ID_MEM_rs1,
+	.hazard_ID_MEM_rs2
+//	.stall
+);
 
 endmodule : cpu_datapath

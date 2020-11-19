@@ -6,13 +6,14 @@ module sreg_IF_ID(
     input logic [31:0] inst_rdata, 
     input logic inst_resp,
     input br_mispredict,
+    input logic stall,
 
     output logic [31:0] pc_out,
     output logic [31:0] data_out
 );
 logic [31:0] addr, pc, rdata;
 
-always_ff @(posedge clk)
+always_ff @(posedge clk && !stall)
 begin
     addr <= inst_addr;
     pc <= pc_in; 

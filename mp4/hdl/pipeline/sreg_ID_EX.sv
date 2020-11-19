@@ -8,6 +8,7 @@ module sreg_ID_EX(
     input logic br_mispredict,
     input rv32i_word rs1_in,
 	input rv32i_word rs2_in,
+    input logic stall,
 
 	output rv32i_control_word ctrl_out,			
 	output logic [31:0] pc_out,
@@ -17,7 +18,7 @@ module sreg_ID_EX(
 logic [31:0] rs1, rs2, pc;
 rv32i_control_word ctrl;
 
-always_ff @(posedge clk)
+always_ff @(posedge clk && !stall)
 begin
     if (rst || br_mispredict)
     begin
@@ -26,7 +27,7 @@ begin
         rs1 <= 0;
         rs2 <= 0;
     end
-    else begin
+    else if (!stall) begin
         ctrl <= ctrl_in;
         pc <= pc_in;
         rs1 <= rs1_in;
@@ -34,11 +35,13 @@ begin
     end
 end
 
-always_comb begin
-    ctrl_out = ctrl;
-    pc_out = pc;
-    rs1_out = rs1;
-    rs2_out = rs2;
-end
+//always_comb begin
+//    if (!stall) begin
+//        ctrl_out = ctrl;
+//        pc_out = pc;
+//        rs1_out = rs1;
+//        rs2_out = rs2;
+//    end
+//end
 
 endmodule

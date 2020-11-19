@@ -10,6 +10,7 @@ module sreg_MEM_WB (
     input br_en_in,
     input data_resp,
     input [3:0] mem_byte_en_in,
+    input logic stall,
 
     output logic [31:0] alu_out,
     output logic [31:0] pc_out,
@@ -24,7 +25,7 @@ rv32i_word data;
 logic br_en;
 logic [3:0] mem_byte_en;
 
-always_ff @(posedge clk) begin
+always_ff @(posedge clk && !stall) begin
     if (rst) begin
         ctrl <= 0;
         alu <= 0;
@@ -33,7 +34,7 @@ always_ff @(posedge clk) begin
         br_en <= 0;
         mem_byte_en <= 0;
     end
-    else begin
+    else if (!stall) begin
         ctrl <= ctrl_in;
         alu <= alu_in;
         pc <= pc_in;
@@ -44,13 +45,15 @@ always_ff @(posedge clk) begin
     end
 end
 
-always_comb begin
-    ctrl_out = ctrl;
-    pc_out = pc;
-    alu_out = alu;
-    br_en_out = br_en;
-    mem_byte_en_o = mem_byte_en;
-    data_rdata_out = data;
-end
+// always_comb begin
+//     if (!stall) begin
+//         ctrl_out = ctrl;
+//         pc_out = pc;
+//         alu_out = alu;
+//         br_en_out = br_en;
+//         mem_byte_en_o = mem_byte_en;
+//         data_rdata_out = data;
+//     end
+// end
 
 endmodule
