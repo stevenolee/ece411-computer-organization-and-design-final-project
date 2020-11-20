@@ -33,8 +33,10 @@ begin
     br_mispredict = br_take;
     load_pc = inst_resp & !stall;
 
-    if(!(inst_resp & !stall)) begin
-        if(br_take) load_pc = 1'b1;
+    if(!stall) begin
+        if(!inst_resp) begin
+            if(br_take) load_pc = 1'b1;
+        end
     end
     
     unique case (pcmux_sel)
