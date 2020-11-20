@@ -18,7 +18,7 @@ module sreg_ID_EX(
 logic [31:0] rs1, rs2, pc;
 rv32i_control_word ctrl;
 
-always_ff @(posedge clk && !stall)
+always_ff @(posedge clk)
 begin
     if (rst || br_mispredict)
     begin
@@ -35,13 +35,11 @@ begin
     end
 end
 
-//always_comb begin
-//    if (!stall) begin
-//        ctrl_out = ctrl;
-//        pc_out = pc;
-//        rs1_out = rs1;
-//        rs2_out = rs2;
-//    end
-//end
+always_comb begin
+    ctrl_out = ctrl;
+    pc_out = pc;
+    rs1_out = rs1;
+    rs2_out = rs2;
+end
 
 endmodule

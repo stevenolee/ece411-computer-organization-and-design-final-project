@@ -5,12 +5,12 @@ module mp4(
     input rst,
     
     /* Burst Memory Ports */
-   input mem_resp,
-   input [63:0] mem_rdata,
-   output logic mem_read,
-   output logic mem_write,
-   output logic [31:0] mem_addr,
-   output logic [63:0] mem_wdata
+    input mem_resp,
+    input [63:0] mem_rdata,
+    output logic mem_read,
+    output logic mem_write,
+    output logic [31:0] mem_addr,
+    output logic [63:0] mem_wdata
 
     // /* I Cache Ports */
     // input inst_resp,

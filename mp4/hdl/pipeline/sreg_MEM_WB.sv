@@ -25,7 +25,7 @@ rv32i_word data;
 logic br_en;
 logic [3:0] mem_byte_en;
 
-always_ff @(posedge clk && !stall) begin
+always_ff @(posedge clk) begin
     if (rst) begin
         ctrl <= 0;
         alu <= 0;
@@ -45,15 +45,13 @@ always_ff @(posedge clk && !stall) begin
     end
 end
 
-// always_comb begin
-//     if (!stall) begin
-//         ctrl_out = ctrl;
-//         pc_out = pc;
-//         alu_out = alu;
-//         br_en_out = br_en;
-//         mem_byte_en_o = mem_byte_en;
-//         data_rdata_out = data;
-//     end
-// end
+always_comb begin
+    ctrl_out = ctrl;
+    pc_out = pc;
+    alu_out = alu;
+    br_en_out = br_en;
+    mem_byte_en_o = mem_byte_en;
+    data_rdata_out = data;
+end
 
 endmodule

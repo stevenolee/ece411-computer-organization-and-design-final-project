@@ -11,9 +11,9 @@ module hazard_detection
     output logic hazard_ID_EX_rs1,
     output logic hazard_ID_EX_rs2,
     output logic hazard_ID_MEM_rs1,
-    output logic hazard_ID_MEM_rs2,
-    output logic stall
+    output logic hazard_ID_MEM_rs2
 );
+logic stall;
 
 function void set_defaults();
     hazard_ID_EX_rs1 = 1'b0;

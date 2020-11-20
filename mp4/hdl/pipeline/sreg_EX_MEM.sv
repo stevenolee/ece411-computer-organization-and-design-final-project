@@ -24,14 +24,15 @@ logic br_en;
 rv32i_control_word ctrl;
 logic [31:0] rs2;
 
-always_ff @(posedge clk && !stall) begin
+always_ff @(posedge clk) begin
     if (rst == 1'b1) begin
         alu <= 0;
         br_en <= 0;
         ctrl <= 0;
         rs2 <= 0;
         pc <= 0;
-    end else if (!stall) begin
+    end 
+    else if (!stall) begin
         alu <= alu_in;
         br_en <= cmp_in;
         ctrl <= ctrl_in;

@@ -29,18 +29,22 @@ module arbiter
     output logic stall
 );
 logic [255:0] read_out, next_read_out;
-reg [3:0] state, next;
-parameter	IDLE = 4'b0000,
-			READ0 = 4'b0001,
-			READ1 = 4'b0010,
-			READ2 = 4'b0011,
-			READ3 = 4'b0100,
-			READ4 = 4'b1001,
-			WRITE0 = 4'b0101,
-			WRITE1 = 4'b0110,
-			WRITE2 = 4'b0111,
-			WRITE3 = 4'b1000,
-			WRITE4 = 4'b1010;
+
+/***** States *****/
+enum int unsigned {
+    /* List of states */
+    IDLE,
+	READ0, 
+	READ1, 
+	READ2,  
+	READ3, 
+	READ4, 
+	WRITE0,
+	WRITE1,
+	WRITE2,
+	WRITE3,
+	WRITE4
+} state, next;
 
 always_ff @(posedge clk, posedge reset_n) begin
 	if (reset_n) begin
@@ -52,8 +56,6 @@ always_ff @(posedge clk, posedge reset_n) begin
 		read_out <= next_read_out;
 	end
 end
-
-assign line_o = read_out;
 
 always_comb begin
 	if(reset_n) begin
@@ -74,6 +76,8 @@ always_comb begin
 	i_resp_o = 0;
     stall = 0;
 	next_read_out = read_out;
+	i_line_o = read_out;
+	d_line_o = read_out;
 
 	case(state)
 		IDLE :	begin
@@ -122,10 +126,14 @@ always_comb begin
 				end
 		READ4 :	begin
                     stall = 1'b1;
-                    if(d_read_i)
+                    if(d_read_i) begin
+						d_line_o = read_out;
                         d_resp_o = 1'b1;
-                    else if (i_read_i)
+					end
+                    else if (i_read_i) begin
+						i_line_o = read_out;
                         i_resp_o  = 1'b1;
+					end
 				end
 		WRITE0: begin
                     stall = 1'b1;
@@ -175,7 +183,7 @@ begin: next_state_logic
                     next = READ0;
                 end
                 else if(i_read_i) begin
-                    next = WRITE0;
+                    next = READ0;
                 end
                 else
                     next = IDLE;
@@ -246,10 +254,7 @@ begin: next_state_logic
 					end
 				end
 		WRITE4: begin
-                    if(i_read_i)
-                        next = READ0;
-                    else
-					    next = IDLE;
+                    next = IDLE;
 				end
 		default: begin
 			next = IDLE;

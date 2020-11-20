@@ -1,4 +1,4 @@
-Fitter Status : Successful - Thu Nov 19 00:54:32 2020
+Fitter Status : Successful - Thu Nov 19 13:13:29 2020
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 Revision Name : mp4
 Top-level Entity Name : mp4
@@ -6,7 +6,7 @@ Family : Arria II GX
 Device : EP2AGX45DF25I3
 Timing Models : Final
 Logic utilization : 2 %
-    Combinational ALUTs : 310 / 36,100 ( < 1 % )
+    Combinational ALUTs : 309 / 36,100 ( < 1 % )
     Memory ALUTs : 0 / 18,050 ( 0 % )
     Dedicated logic registers : 523 / 36,100 ( 1 % )
 Total registers : 523

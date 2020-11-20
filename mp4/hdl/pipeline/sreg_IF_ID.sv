@@ -13,12 +13,14 @@ module sreg_IF_ID(
 );
 logic [31:0] addr, pc, rdata;
 
-always_ff @(posedge clk && !stall)
+always_ff @(posedge clk)
 begin
-    addr <= inst_addr;
-    pc <= pc_in; 
-    if(inst_resp) begin
-        rdata = inst_rdata;
+    if(!stall) begin
+        addr <= inst_addr;
+        pc <= pc_in;
+        if(inst_resp) begin
+            rdata = inst_rdata;
+        end
     end
     if (rst || br_mispredict) 
     begin

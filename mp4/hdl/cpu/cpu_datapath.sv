@@ -77,6 +77,7 @@ IF stage_IF (
 	.br_take		(EX_MEM_br_en),
 	.inst_resp,
 	.alu_in			(EX_MEM_alu_out),
+	.stall, 
 	// outputs
 	.br_mispredict,
 	.pc_out			(IF_pc_out)
