@@ -1,130 +1,108 @@
-/* MODIFY. The cache controller. It is a state machine
-that controls the behavior of the cache. */
-
 module cache_control (
-    input clk,
-    input rst,
-    input mem_resp,
-    input mem_read,
-    input mem_write,
-    input dirty,
-    input hit,
-    output logic load,
-    output logic read,
-    output logic access_sel,
-    output logic load_lru,
-    output logic mem_read_o,
-    output logic mem_write_o,
-    output logic address_sel, // If 0, then use CPU address, if 1, use cache_address
-    output logic mem_resp_o
+  input clk,
+
+  /* CPU memory data signals */
+  input  logic mem_read,
+	input  logic mem_write,
+	output logic mem_resp,
+
+  /* Physical memory data signals */
+  input  logic pmem_resp,
+	output logic pmem_read,
+	output logic pmem_write,
+
+  /* Control signals */
+  output logic tag_load,
+  output logic valid_load,
+  output logic dirty_load,
+  output logic dirty_in,
+  input logic dirty_out,
+
+  input logic hit,
+  output logic [1:0] writing
 );
 
-/***** States *****/
-enum int unsigned {
-    /* List of states */
-    IDLE,
-    WRITE_BACK,
-    CHECK_HIT,
-    MISS,
-    BUFFER
+/* State Enumeration */
+enum int unsigned
+{
+  check_hit,
+	read_mem
 } state, next_state;
 
-always_ff @(posedge clk)
-begin
-    /* Assignment of next state on clock edge */
-    if(rst)
-        state <= IDLE;
-    else
-        state <= next_state;
+/* State Control Signals */
+always_comb begin : state_actions
+
+	/* Defaults */
+  tag_load = 1'b0;
+  valid_load = 1'b0;
+  dirty_load = 1'b0;
+  dirty_in = 1'b0;
+  writing = 2'b11;
+
+	mem_resp = 1'b0;
+	pmem_write = 1'b0;
+	pmem_read = 1'b0;
+
+	case(state)
+    check_hit: begin
+      if (mem_read || mem_write) begin
+        if (hit) begin
+          mem_resp = 1'b1;
+          if (mem_write) begin
+            dirty_load = 1'b1;
+            dirty_in = 1'b1;
+            writing = 2'b01;
+          end
+        end else begin
+          if (dirty_out)
+            pmem_write = 1'b1;
+        end
+      end
+    end
+
+    read_mem: begin
+      pmem_read = 1'b1;
+      writing = 2'b00;
+      if (pmem_resp) begin
+        tag_load = 1'b1;
+        valid_load = 1'b1;
+        dirty_load = 1'b1;
+        dirty_in = 1'b0;
+      end
+    end
+
+	endcase
 end
 
-always_comb begin: state_execute
-    load_lru = 1'b0;
-    read = 1'b1;
-    load = 1'b0;
-    mem_read_o = 1'b0;
-    mem_write_o = 1'b0;
-    access_sel = 1'b0;
-    mem_resp_o = 1'b0;
-    address_sel = 1'b0;
+/* Next State Logic */
+always_comb begin : next_state_logic
 
-    unique case (state)
-        IDLE: begin
-        end
+	/* Default state transition */
+	next_state = state;
 
-        WRITE_BACK: begin
-            address_sel = 1'b1;
-            mem_write_o = 1'b1;
-        end
+	case(state)
+    check_hit: begin
+      if ((mem_read || mem_write) && !hit) begin
+        if (dirty_out) begin
+          if (pmem_resp)
+            next_state = read_mem;
+        end else begin
+          next_state = read_mem;
+		  end
+      end
+    end
 
-        CHECK_HIT: begin
-            if(hit) begin
-                if(mem_read) // If read, set data_in to memory
-                    access_sel = 1'b1;
-                if(mem_write) begin // If write, set data_in to CPU
-                    access_sel = 1'b0;
-                    load = 1'b1;
-                end
-                mem_resp_o = 1'b1;
-                load_lru = 1'b1;
-            end
-        end
-        
-        MISS: begin
-            access_sel = 1'b1;
-            mem_read_o = 1'b1;
-            load = 1'b1;
-            read = 1'b0;
-        end
+    read_mem: begin
+      if (pmem_resp)
+        next_state = check_hit;
+    end
 
-        BUFFER: begin
-            if(mem_read) begin
-                access_sel = 1'b1; // Now accessing cache from memory
-            end
-            else if(mem_write) begin
-                access_sel = 1'b0;
-            end
-            // read = 1'b0;
-            load = 1'b1;
-            mem_resp_o = 1'b1;
-            load_lru = 1'b1;
-        end
-    endcase
+	endcase
 end
 
-always_comb begin: next_state_assignment
-    next_state = state;
-
-    unique case (state)
-        IDLE: begin
-            if (mem_read || mem_write)
-                next_state = CHECK_HIT;
-        end
-
-        WRITE_BACK: begin
-            if(mem_resp)
-                next_state = MISS;
-        end
-
-        CHECK_HIT: begin
-            if(hit) 
-                next_state = IDLE;
-            else if (dirty)
-                next_state = WRITE_BACK;
-            else
-                next_state = MISS;
-        end
-
-        MISS: begin
-            if(mem_resp)
-                next_state = BUFFER;
-        end
-
-        BUFFER: begin
-            if(~mem_resp)
-                next_state = IDLE;
-        end
-    endcase
+/* Next State Assignment */
+always_ff @(posedge clk) begin: next_state_assignment
+	 state <= next_state;
 end
 
 endmodule : cache_control

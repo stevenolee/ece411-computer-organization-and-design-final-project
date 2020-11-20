@@ -173,6 +173,7 @@ sreg_EX_MEM sreg_EX_MEM (
 	.rs2_in			(EX_rs2_out),
 	.pc_in			(ID_EX_pc_out),
 	.stall,
+	.br_mispredict,
 
     //outputs
 	.alu_out			(EX_MEM_alu_out),
@@ -238,7 +239,7 @@ WB stage_WB (
 	.alu_in			(MEM_WB_alu_out),
 	.ctrl_in		(MEM_WB_ctrl),
 	.pc_in			(MEM_WB_pc_out),
-	.br_en			(MEM_BW_br_en),
+	.br_en			(MEM_BW_br_en),	
 	.mem_byte_enable(MEM_WB_mbe),
 
 	// outputs 

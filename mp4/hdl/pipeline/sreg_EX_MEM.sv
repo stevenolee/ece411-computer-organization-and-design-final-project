@@ -9,6 +9,7 @@ module sreg_EX_MEM (
     input [31:0] pc_in,
     input rv32i_control_word ctrl_in,
     input stall,
+    input br_mispredict,
 
     output logic [31:0] alu_out,
     output logic [3:0] mem_byte_enable_out,
@@ -25,7 +26,7 @@ rv32i_control_word ctrl;
 logic [31:0] rs2;
 
 always_ff @(posedge clk) begin
-    if (rst == 1'b1) begin
+    if (rst || br_mispredict) begin
         alu <= 0;
         br_en <= 0;
         ctrl <= 0;

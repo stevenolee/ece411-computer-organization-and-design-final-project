@@ -26,6 +26,7 @@ begin
     begin
         addr <= 32'b0;
         pc <= 32'b0;
+        rdata <= 32'b0;
     end
 end 
 

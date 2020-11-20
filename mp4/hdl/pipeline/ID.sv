@@ -17,9 +17,12 @@ module ID (
 	output rv32i_word rs2_out,
 	output rv32i_control_word ctrl_word
 ); 
+/***************************** Variables *****************************/
+rv32i_control_word ctrl;
 assign inst_read = 1'b1;
 assign load_regfile_h = load_regfile & !stall;
 
+/***************************** Control ROM *****************************/
 control_rom control_rom
 (
 	.instruction	(inst_rdata),
@@ -39,5 +42,9 @@ regfile regfile(
 	.reg_b	(rs2_out)
 );
 
+/***************************** Branch Logic *****************************/
+always_comb begin
+	
+end
 
 endmodule : ID

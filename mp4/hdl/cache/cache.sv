@@ -1,91 +1,48 @@
-/* MODIFY. Your cache design. It contains the cache
-controller, cache datapath, and bus adapter. */
-import rv32i_types::*;
+module cache (
+  input clk,
 
-module cache #(
-    parameter s_offset = 5,
-    parameter s_index  = 3,
-    parameter s_tag    = 32 - s_offset - s_index,
-    parameter s_mask   = 2**s_offset,
-    parameter s_line   = 8*s_mask,
-    parameter num_sets = 2**s_index
-)
-(
-    input clk,
-    input rst,
+  /* Physical memory signals */
+  input logic pmem_resp,
+  input logic [255:0] pmem_rdata,
+  output logic [31:0] pmem_address,
+  output logic [255:0] pmem_wdata,
+  output logic pmem_read,
+  output logic pmem_write,
 
-    /***** CPU *****/
-    input mem_read,
-    input mem_write,
-    input rv32i_word mem_address,
-    input [31:0] mem_wdata,
-    input [3:0] mem_byte_enable,
-    output [31:0] mem_rdata,
-    output logic mem_resp,
-
-    /***** CACHE ADAPTER *****/
-    input pmem_resp,
-    input logic [255:0] pmem_rdata,
-    output logic pmem_read, // Maybe connect directly to cacheline adapter
-    output logic pmem_write,
-    output logic [255:0] pmem_wdata,
-    output rv32i_word pmem_address // You could also connect the CPU address directly to the cacheline_adapter
+  /* CPU memory signals */
+  input logic mem_read,
+  input logic mem_write,
+  input logic [3:0] mem_byte_enable_cpu,
+  input logic [31:0] mem_address,
+  input logic [31:0] mem_wdata_cpu,
+  output logic mem_resp,
+  output logic [31:0] mem_rdata_cpu
 );
 
-/***** Variables *****/
-logic dirty, hit, access_sel, load, read, load_lru, address_sel;
-logic [31:0] mem_byte_enable256;
-logic [255:0] cpu_data_i, mem_data_i;
-logic [255:0] cache_data_o;
+logic tag_load;
+logic valid_load;
+logic dirty_load;
+logic dirty_in;
+logic dirty_out;
 
-cache_control control
-(
-    .clk(clk),
-    .rst(rst),
-    .dirty,
-    .hit,
-    .access_sel,
-    .load,
-    .load_lru,
-    .read,
-    .mem_resp(pmem_resp),
-    .mem_read(mem_read),
-    .mem_write(mem_write),
-    .mem_resp_o(mem_resp),
-    .mem_read_o(pmem_read),
-    .address_sel,
-    .mem_write_o(pmem_write)
-);
+logic hit;
+logic [1:0] writing;
 
-cache_datapath datapath
-(
-    .clk,
-    .rst,
-    .dirty,
-    .hit,
-    .access_sel,
-    .address_sel,
-    .load,
-    .load_lru,
-    .read,
-    .cpu_data_in(mem_data_i),
-    .cpu_data_out(cache_data_o),
-    .mem_rdata(pmem_rdata),
-    .mem_address_i(mem_address),
-    .mem_address_o(pmem_address),
-    .mem_wdata(pmem_wdata),
-    .mem_byte_sel(mem_byte_enable256)
-);
- 
-bus_adapter bus_adapter 
-(
-    .mem_wdata256(mem_data_i), // Out of bus
-    .mem_rdata256(cache_data_o), // Into bus
-    .mem_wdata, // Goes into the bus
-    .mem_rdata, // Comes out of the bus
-    .mem_byte_enable,
-    .mem_byte_enable256,
+logic [255:0] mem_wdata;
+logic [255:0] mem_rdata;
+logic [31:0] mem_byte_enable;
+
+cache_control control(.*);
+cache_datapath datapath(.*);
+
+line_adapter bus (
+    .mem_wdata_line(mem_wdata),
+    .mem_rdata_line(mem_rdata),
+    .mem_wdata(mem_wdata_cpu),
+    .mem_rdata(mem_rdata_cpu),
+    .mem_byte_enable(mem_byte_enable_cpu),
+    .mem_byte_enable_line(mem_byte_enable),
     .address(mem_address)
-); 
+);
 
 endmodule : cache

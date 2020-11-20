@@ -119,6 +119,7 @@ always_comb begin
 					end
 				end
 		READ3 :	begin
+					stall = 1'b1;
 					read_o = 1'b1;
 					if(resp_i) begin
 						next_read_out[255:192] = burst_i;
