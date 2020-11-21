@@ -64,7 +64,7 @@ begin: hazard_detection
 
     // Determine to set mem_hazard_data
     if(hazard_ID_EX_rs1 || hazard_ID_EX_rs2) begin
-        unique case (ID_EX_ctrl.regfilemux_sel)
+        unique case (EX_MEM_ctrl.regfilemux_sel)
             regfilemux::alu_out: hazard_MEM_data = EX_MEM_alu_out;
             regfilemux::br_en: hazard_MEM_data = {31'b0000000000000000000000000000000, EX_MEM_br_en};
             regfilemux::u_imm: hazard_MEM_data = EX_MEM_ctrl.u_imm;
