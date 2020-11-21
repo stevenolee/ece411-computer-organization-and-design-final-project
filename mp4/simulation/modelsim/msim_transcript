@@ -608,3 +608,6 @@ restart -f; run 5000ns
 #    Time: 4145 ns  Iteration: 1  Instance: /mp3_tb/tb
 # 1
 # Break in Module source_tb at /home/scottl4/hydration_is_key/mp4/hvl/source_tb.sv line 33
+# FATAL ERROR: Unable to read lock file necessary for use of uncounted nodelocked license. Exiting.
+# End time: 23:05:16 on Nov 20,2020, Elapsed time: 0:05:00
+# Errors: 0, Warnings: 0
