@@ -16,13 +16,21 @@ module hazard_detection
     input [3:0] data_mbe,
     input [31:0] WB_data,
 
+    input [31:0] data_addr,
+    input [31:0] MEM_WB_wdata,
+    input [31:0] MEM_WB_alu_out,
+    input data_read_in,
+
     // outputs
     output logic hazard_ID_EX_rs1,
     output logic hazard_ID_EX_rs2,
     output logic hazard_ID_MEM_rs1,
     output logic hazard_ID_MEM_rs2,
+    output logic hazard_MEM_WB,
     output rv32i_word hazard_MEM_data,
-    output rv32i_word hazard_WB_data
+    output rv32i_word hazard_WB_data,
+    output rv32i_word MEM_WB_data,
+    output logic data_read
 );
 
 logic stall;
@@ -35,6 +43,9 @@ function void set_defaults();
     hazard_MEM_data = 32'b0;
     hazard_WB_data = 32'b0;
     stall = 1'b0;
+    data_read = data_read_in;
+    MEM_WB_data = MEM_WB_wdata;
+    hazard_MEM_WB = 1'b0;
 endfunction
 
 always_comb
@@ -132,7 +143,15 @@ begin: hazard_detection
     if(hazard_ID_MEM_rs1 || hazard_ID_MEM_rs2) begin
         hazard_WB_data = WB_data;
     end
-    stall = (EX_MEM_ctrl.opcode == op_load && (hazard_ID_EX_rs1 || hazard_ID_EX_rs2)) ? 1'b1 : 1'b0;
+
+    if(data_read_in) begin
+        if((MEM_WB_ctrl.data_read || MEM_WB_ctrl.data_write) && data_addr == MEM_WB_alu_out) begin
+            data_read = 1'b0;
+            hazard_MEM_WB = 1'b1;
+        end
+    end
+    
+    // stall = (EX_MEM_ctrl.opcode == op_load && (hazard_ID_EX_rs1 || hazard_ID_EX_rs2)) ? 1'b1 : 1'b0;
 end
 
 endmodule

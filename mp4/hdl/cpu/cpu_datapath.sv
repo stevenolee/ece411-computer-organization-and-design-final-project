@@ -55,15 +55,15 @@ rv32i_word regfilemux_out;
 rv32i_reg rd;
 rv32i_word rs1_out, rs2_out, EX_alu_out, MEM_WB_alu_out, EX_MEM_alu_out, EX_MEM_pc_out, MEM_WB_pc_out;
 logic [3:0] d_mem_byte, MEM_WB_mbe;
-logic EX_cmp_out, EX_MEM_br_en;
+logic EX_cmp_out, EX_MEM_br_en, EX_MEM_data_read;
 logic [31:0] IF_pc_out, IF_ID_data_out;
 logic [31:0] IF_ID_pc_out, IF_ID_inst_addr, ID_EX_pc_out;
 rv32i_word ID_rs1_out, ID_rs2_out, ID_EX_rs1_out, ID_EX_rs2_out, EX_rs2_out, EX_MEM_rs2_out;
-logic [31:0] MEM_WB_data_out;
+logic [31:0] MEM_WB_data_out, MEM_WB_wdata, MEM_WB_data;
 rv32i_control_word ID_ctrl, ID_EX_ctrl, EX_MEM_ctrl, MEM_WB_ctrl;
 pcmux::pcmux_sel_t pcmux_sel;
 logic br_mispredict, MEM_BW_br_en, load_regfile;
-logic hazard_ID_EX_rs1, hazard_ID_EX_rs2, hazard_ID_MEM_rs1, hazard_ID_MEM_rs2;
+logic hazard_ID_EX_rs1, hazard_ID_EX_rs2, hazard_ID_MEM_rs1, hazard_ID_MEM_rs2, hazard_MEM_WB;
 rv32i_word hazard_MEM_data, hazard_WB_data;
 
 /*****************************************************************************/
@@ -80,7 +80,7 @@ IF stage_IF (
 	.br_take		(EX_MEM_br_en),
 	.inst_resp,
 	.alu_in			(EX_MEM_alu_out),
-	.stall, 
+	.stall			(stall_c), 
 	// outputs
 	.br_mispredict,
 	.pc_out			(IF_pc_out)
@@ -203,7 +203,7 @@ MEM stage_MEM (
 	// outputs, should be the same as inputs except addr_out
 	.addr_out			(data_addr),
 	.write_data			(data_write),
-	.read_data			(data_read),
+	.read_data			(EX_MEM_data_read),
 	.wdata_out			(data_wdata),
 	.data_mbe
 );
@@ -222,6 +222,9 @@ sreg_MEM_WB sreg_MEM_WB(
 	.mem_byte_en_in	(d_mem_byte),
 	.data_resp,
 	.stall			(stall_c),
+	.wdata_in		(data_wdata),
+	.hazard_MEM_WB,
+	.MEM_WB_data,
 
 	// outputs
     .alu_out		(MEM_WB_alu_out),
@@ -229,7 +232,8 @@ sreg_MEM_WB sreg_MEM_WB(
     .ctrl_out		(MEM_WB_ctrl),
 	.br_en_out		(MEM_BW_br_en),
 	.pc_out			(MEM_WB_pc_out),
-	.mem_byte_en_o	(MEM_WB_mbe)
+	.mem_byte_en_o	(MEM_WB_mbe),
+	.wdata_out		(MEM_WB_wdata)
 );
 
 /*** WB ***/
@@ -262,15 +266,19 @@ hazard_detection hazard(
 	.EX_MEM_pc_out,
 	.data_mbe,
 	.WB_data		(regfilemux_out),
+	.data_read_in	(EX_MEM_data_read),
+	.data_addr,
 	
 	// outputs
 	.hazard_ID_EX_rs1,
 	.hazard_ID_EX_rs2,
 	.hazard_ID_MEM_rs1,
 	.hazard_ID_MEM_rs2,
-
+	.hazard_MEM_WB,
 	.hazard_MEM_data,
-	.hazard_WB_data
+	.hazard_WB_data,
+	.data_read,
+	.MEM_WB_data
 	// .stall			(stall_c)
 );
 

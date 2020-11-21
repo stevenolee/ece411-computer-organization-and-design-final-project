@@ -19,6 +19,7 @@ module ID (
 ); 
 /***************************** Variables *****************************/
 rv32i_control_word ctrl;
+rv32i_word rs1, rs2;
 assign inst_read = 1'b1;
 assign load_regfile_h = load_regfile & !stall;
 
@@ -38,13 +39,19 @@ regfile regfile(
 	.src_a	(ctrl_word.rs1),
 	.src_b	(ctrl_word.rs2),
 	.dest	(rd),
-	.reg_a	(rs1_out),
-	.reg_b	(rs2_out)
+	.reg_a	(rs1),
+	.reg_b	(rs2)
 );
 
-/***************************** Branch Logic *****************************/
+/***************************** Hazard Detection Logic *****************************/
 always_comb begin
-	
+	rs1_out = rs1;
+	rs2_out = rs2;
+	if (ctrl_word.rs1 == rd)
+		rs1_out = regfilemux_in;
+	if (ctrl_word.rs2 == rd)
+		rs2_out = regfilemux_in;
+
 end
 
 endmodule : ID
