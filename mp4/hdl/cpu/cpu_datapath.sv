@@ -62,6 +62,7 @@ rv32i_control_word ID_ctrl, ID_EX_ctrl, EX_MEM_ctrl, MEM_WB_ctrl;
 pcmux::pcmux_sel_t pcmux_sel;
 logic br_mispredict, MEM_BW_br_en, load_regfile;
 logic hazard_ID_EX_rs1, hazard_ID_EX_rs2, hazard_ID_MEM_rs1, hazard_ID_MEM_rs2;
+rv32i_word hazard_MEM_data, hazard_WB_data;
 
 /*****************************************************************************/
 /* * * NEED TO SET D MEM ADDRESS FROM STATE REGISTER (SUB CONTROL ROM) * * */
@@ -153,8 +154,8 @@ EX stage_EX (
 	.hazard_ID_MEM_rs1,
 	.hazard_ID_MEM_rs2,
 	.stall,
-	.hazard_MEM_data	(data_addr),
-	.hazard_WB_data	(regfilemux_out),
+	.hazard_MEM_data,
+	.hazard_WB_data,
 
 	// outputs
 	.alu_out		(EX_alu_out),
@@ -253,12 +254,21 @@ hazard_detection hazard(
 	.ID_EX_ctrl,
 	.EX_MEM_ctrl,
 	.MEM_WB_ctrl,
+	.data_in		(data_rdata),
+	.EX_MEM_br_en,
+	.EX_MEM_alu_out,
+	.EX_MEM_pc_out,
+	.data_mbe,
+	.WB_data		(regfilemux_out),
 	
 	// outputs
 	.hazard_ID_EX_rs1,
 	.hazard_ID_EX_rs2,
 	.hazard_ID_MEM_rs1,
-	.hazard_ID_MEM_rs2
+	.hazard_ID_MEM_rs2,
+
+	.hazard_MEM_data,
+	.hazard_WB_data
 //	.stall
 );
 

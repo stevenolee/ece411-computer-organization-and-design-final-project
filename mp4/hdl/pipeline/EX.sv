@@ -25,6 +25,7 @@ module EX (
 );
 assign rs2_out = rs2_in;
 
+rv32i_word rs1;
 rv32i_word alumux1_out;
 rv32i_word alumux2_out;
 rv32i_word cmp_mux_out;
@@ -40,7 +41,7 @@ cmp CMP(
 	.clk	(clk),
     .rst	(1'b0),     // do we need to reset?
 	.cmpop	(ctrl_in.cmpop),
-	.a		(rs1_in),
+	.a		(rs1),
 	.b		(cmp_mux_out),
     .br_en	(cmp_out)
 );
@@ -48,15 +49,16 @@ cmp CMP(
 /*** MUXES ***/
 
 always_comb begin
+
+    if (hazard_ID_EX_rs1 == 1'b1)
+        rs1 = hazard_MEM_data;
+    else if (hazard_ID_MEM_rs1 == 1'b1)
+        rs1 = hazard_WB_data;
+    else
+        rs1 = rs1_in;
+
     unique case (ctrl_in.alumux1_sel)
-        alumux::rs1_out: begin
-            if (hazard_ID_EX_rs1 == 1'b1)
-                alumux1_out = hazard_MEM_data;
-            else if (hazard_ID_MEM_rs1 == 1'b1)
-                alumux1_out = hazard_WB_data;
-            else
-                alumux1_out = rs1_in;
-        end
+        alumux::rs1_out: alumux1_out = rs1;
         alumux::pc_out: alumux1_out = pc_in;
         default: `BAD_MUX_SEL;
     endcase
@@ -79,12 +81,18 @@ always_comb begin
     endcase
 
     unique case (ctrl_in.cmpmux_sel)
-        cmpmux::rs2_out: 
-            cmp_mux_out = rs2_in;
+        cmpmux::rs2_out: begin
+            if (hazard_ID_EX_rs2 == 1'b1)
+                cmp_mux_out = hazard_MEM_data;
+            else if (hazard_ID_MEM_rs2 == 1'b1)
+                cmp_mux_out = hazard_WB_data;
+            else
+                cmp_mux_out = rs2_in;
+        end
         cmpmux::i_imm:
             cmp_mux_out = ctrl_in.i_imm;
-    default: `BAD_MUX_SEL;
-endcase
+        default: `BAD_MUX_SEL;
+    endcase
 end
 
 
