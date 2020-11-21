@@ -4,17 +4,17 @@ module arbiter
     input reset_n,
  
     // Port to DATA CACHE (Lowest Level Cache)
-    input logic [255:0] d_line_i,
-    output logic [255:0] d_line_o,
-    input logic [31:0] d_address,
-    input d_read_i,
+	input d_read_i,
     input d_write_i,
+    input logic [255:0] d_line_i,
+    input logic [31:0] d_address,
     output logic d_resp_o,
+	output logic [255:0] d_line_o,
 
     // Port to INSTRUCTION CACHE (Lowest Level Cache)
+	input i_read_i,
+	input logic [31:0] i_address,
     output logic [255:0] i_line_o,
-    input logic [31:0] i_address,
-    input i_read_i,
     output logic i_resp_o,
 
     // Port to memory

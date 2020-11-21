@@ -132,7 +132,7 @@ begin: hazard_detection
     if(hazard_ID_MEM_rs1 || hazard_ID_MEM_rs2) begin
         hazard_WB_data = WB_data;
     end
-    stall = (ID_EX_ctrl.opcode == op_load && (hazard_ID_EX_rs1 || hazard_ID_EX_rs2)) ? 1'b1 : 1'b0;
+    stall = (EX_MEM_ctrl.opcode == op_load && (hazard_ID_EX_rs1 || hazard_ID_EX_rs2)) ? 1'b1 : 1'b0;
 end
 
 endmodule

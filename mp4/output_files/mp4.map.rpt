@@ -1,5 +1,5 @@
 Analysis & Synthesis report for mp4
-Fri Nov 20 19:13:25 2020
+Fri Nov 20 22:50:37 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -67,13 +67,13 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +-----------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status       ; Successful - Fri Nov 20 19:13:25 2020           ;
+; Analysis & Synthesis Status       ; Successful - Fri Nov 20 22:50:37 2020           ;
 ; Quartus Prime Version             ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                     ; mp4                                             ;
 ; Top-level Entity Name             ; mp4                                             ;
 ; Family                            ; Arria II GX                                     ;
 ; Logic utilization                 ; N/A                                             ;
-;     Combinational ALUTs           ; 3,950                                           ;
+;     Combinational ALUTs           ; 3,961                                           ;
 ;     Memory ALUTs                  ; 0                                               ;
 ;     Dedicated logic registers     ; 6,004                                           ;
 ; Total registers                   ; 6004                                            ;
@@ -206,32 +206,32 @@ refer to the applicable agreement for further details.
 +------------------------------------+-----------------+-------------------------------------------------------+----------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path   ; Used in Netlist ; File Type                                             ; File Name with Absolute Path                                                     ; Library ;
 +------------------------------------+-----------------+-------------------------------------------------------+----------------------------------------------------------------------------------+---------+
-; hdl/cache/line_adaptor.sv          ; yes             ; User SystemVerilog HDL File                           ; /home/beo2/ece411/Hydration_is_Key/mp4/hdl/cache/line_adaptor.sv                 ;         ;
-; hdl/rv32i_types.sv                 ; yes             ; User SystemVerilog HDL File                           ; /home/beo2/ece411/Hydration_is_Key/mp4/hdl/rv32i_types.sv                        ;         ;
-; hdl/rv32i_mux_types.sv             ; yes             ; User SystemVerilog HDL File                           ; /home/beo2/ece411/Hydration_is_Key/mp4/hdl/rv32i_mux_types.sv                    ;         ;
-; hdl/mp4.sv                         ; yes             ; User SystemVerilog HDL File                           ; /home/beo2/ece411/Hydration_is_Key/mp4/hdl/mp4.sv                                ;         ;
-; hdl/pipeline/WB.sv                 ; yes             ; User SystemVerilog HDL File                           ; /home/beo2/ece411/Hydration_is_Key/mp4/hdl/pipeline/WB.sv                        ;         ;
-; hdl/pipeline/sreg_MEM_WB.sv        ; yes             ; User SystemVerilog HDL File                           ; /home/beo2/ece411/Hydration_is_Key/mp4/hdl/pipeline/sreg_MEM_WB.sv               ;         ;
-; hdl/pipeline/sreg_IF_ID.sv         ; yes             ; User SystemVerilog HDL File                           ; /home/beo2/ece411/Hydration_is_Key/mp4/hdl/pipeline/sreg_IF_ID.sv                ;         ;
-; hdl/pipeline/sreg_ID_EX.sv         ; yes             ; User SystemVerilog HDL File                           ; /home/beo2/ece411/Hydration_is_Key/mp4/hdl/pipeline/sreg_ID_EX.sv                ;         ;
-; hdl/pipeline/sreg_EX_MEM.sv        ; yes             ; User SystemVerilog HDL File                           ; /home/beo2/ece411/Hydration_is_Key/mp4/hdl/pipeline/sreg_EX_MEM.sv               ;         ;
-; hdl/pipeline/MEM.sv                ; yes             ; User SystemVerilog HDL File                           ; /home/beo2/ece411/Hydration_is_Key/mp4/hdl/pipeline/MEM.sv                       ;         ;
-; hdl/pipeline/IF.sv                 ; yes             ; User SystemVerilog HDL File                           ; /home/beo2/ece411/Hydration_is_Key/mp4/hdl/pipeline/IF.sv                        ;         ;
-; hdl/pipeline/ID.sv                 ; yes             ; User SystemVerilog HDL File                           ; /home/beo2/ece411/Hydration_is_Key/mp4/hdl/pipeline/ID.sv                        ;         ;
-; hdl/pipeline/hazard_detection.sv   ; yes             ; User SystemVerilog HDL File                           ; /home/beo2/ece411/Hydration_is_Key/mp4/hdl/pipeline/hazard_detection.sv          ;         ;
-; hdl/pipeline/EX.sv                 ; yes             ; User SystemVerilog HDL File                           ; /home/beo2/ece411/Hydration_is_Key/mp4/hdl/pipeline/EX.sv                        ;         ;
-; hdl/pipeline/control_rom.sv        ; yes             ; User SystemVerilog HDL File                           ; /home/beo2/ece411/Hydration_is_Key/mp4/hdl/pipeline/control_rom.sv               ;         ;
-; hdl/cpu/regfile.sv                 ; yes             ; User SystemVerilog HDL File                           ; /home/beo2/ece411/Hydration_is_Key/mp4/hdl/cpu/regfile.sv                        ;         ;
-; hdl/cpu/pc_reg.sv                  ; yes             ; User SystemVerilog HDL File                           ; /home/beo2/ece411/Hydration_is_Key/mp4/hdl/cpu/pc_reg.sv                         ;         ;
-; hdl/cpu/cpu_datapath.sv            ; yes             ; User SystemVerilog HDL File                           ; /home/beo2/ece411/Hydration_is_Key/mp4/hdl/cpu/cpu_datapath.sv                   ;         ;
-; hdl/cpu/cmp.sv                     ; yes             ; User SystemVerilog HDL File                           ; /home/beo2/ece411/Hydration_is_Key/mp4/hdl/cpu/cmp.sv                            ;         ;
-; hdl/cpu/alu.sv                     ; yes             ; User SystemVerilog HDL File                           ; /home/beo2/ece411/Hydration_is_Key/mp4/hdl/cpu/alu.sv                            ;         ;
-; hdl/cache/data_array.sv            ; yes             ; User SystemVerilog HDL File                           ; /home/beo2/ece411/Hydration_is_Key/mp4/hdl/cache/data_array.sv                   ;         ;
-; hdl/cache/cache_datapath.sv        ; yes             ; User SystemVerilog HDL File                           ; /home/beo2/ece411/Hydration_is_Key/mp4/hdl/cache/cache_datapath.sv               ;         ;
-; hdl/cache/cache_control.sv         ; yes             ; User SystemVerilog HDL File                           ; /home/beo2/ece411/Hydration_is_Key/mp4/hdl/cache/cache_control.sv                ;         ;
-; hdl/cache/cache.sv                 ; yes             ; User SystemVerilog HDL File                           ; /home/beo2/ece411/Hydration_is_Key/mp4/hdl/cache/cache.sv                        ;         ;
-; hdl/cache/array.sv                 ; yes             ; User SystemVerilog HDL File                           ; /home/beo2/ece411/Hydration_is_Key/mp4/hdl/cache/array.sv                        ;         ;
-; hdl/cache/arbiter.sv               ; yes             ; User SystemVerilog HDL File                           ; /home/beo2/ece411/Hydration_is_Key/mp4/hdl/cache/arbiter.sv                      ;         ;
+; hdl/cache/arbiter.sv               ; yes             ; User SystemVerilog HDL File                           ; /home/scottl4/hydration_is_key/mp4/hdl/cache/arbiter.sv                          ;         ;
+; hdl/cache/line_adapter.sv          ; yes             ; User SystemVerilog HDL File                           ; /home/scottl4/hydration_is_key/mp4/hdl/cache/line_adapter.sv                     ;         ;
+; hdl/rv32i_types.sv                 ; yes             ; User SystemVerilog HDL File                           ; /home/scottl4/hydration_is_key/mp4/hdl/rv32i_types.sv                            ;         ;
+; hdl/rv32i_mux_types.sv             ; yes             ; User SystemVerilog HDL File                           ; /home/scottl4/hydration_is_key/mp4/hdl/rv32i_mux_types.sv                        ;         ;
+; hdl/mp4.sv                         ; yes             ; User SystemVerilog HDL File                           ; /home/scottl4/hydration_is_key/mp4/hdl/mp4.sv                                    ;         ;
+; hdl/pipeline/WB.sv                 ; yes             ; User SystemVerilog HDL File                           ; /home/scottl4/hydration_is_key/mp4/hdl/pipeline/WB.sv                            ;         ;
+; hdl/pipeline/sreg_MEM_WB.sv        ; yes             ; User SystemVerilog HDL File                           ; /home/scottl4/hydration_is_key/mp4/hdl/pipeline/sreg_MEM_WB.sv                   ;         ;
+; hdl/pipeline/sreg_IF_ID.sv         ; yes             ; User SystemVerilog HDL File                           ; /home/scottl4/hydration_is_key/mp4/hdl/pipeline/sreg_IF_ID.sv                    ;         ;
+; hdl/pipeline/sreg_ID_EX.sv         ; yes             ; User SystemVerilog HDL File                           ; /home/scottl4/hydration_is_key/mp4/hdl/pipeline/sreg_ID_EX.sv                    ;         ;
+; hdl/pipeline/sreg_EX_MEM.sv        ; yes             ; User SystemVerilog HDL File                           ; /home/scottl4/hydration_is_key/mp4/hdl/pipeline/sreg_EX_MEM.sv                   ;         ;
+; hdl/pipeline/MEM.sv                ; yes             ; User SystemVerilog HDL File                           ; /home/scottl4/hydration_is_key/mp4/hdl/pipeline/MEM.sv                           ;         ;
+; hdl/pipeline/IF.sv                 ; yes             ; User SystemVerilog HDL File                           ; /home/scottl4/hydration_is_key/mp4/hdl/pipeline/IF.sv                            ;         ;
+; hdl/pipeline/ID.sv                 ; yes             ; User SystemVerilog HDL File                           ; /home/scottl4/hydration_is_key/mp4/hdl/pipeline/ID.sv                            ;         ;
+; hdl/pipeline/hazard_detection.sv   ; yes             ; User SystemVerilog HDL File                           ; /home/scottl4/hydration_is_key/mp4/hdl/pipeline/hazard_detection.sv              ;         ;
+; hdl/pipeline/EX.sv                 ; yes             ; User SystemVerilog HDL File                           ; /home/scottl4/hydration_is_key/mp4/hdl/pipeline/EX.sv                            ;         ;
+; hdl/pipeline/control_rom.sv        ; yes             ; User SystemVerilog HDL File                           ; /home/scottl4/hydration_is_key/mp4/hdl/pipeline/control_rom.sv                   ;         ;
+; hdl/cpu/regfile.sv                 ; yes             ; User SystemVerilog HDL File                           ; /home/scottl4/hydration_is_key/mp4/hdl/cpu/regfile.sv                            ;         ;
+; hdl/cpu/pc_reg.sv                  ; yes             ; User SystemVerilog HDL File                           ; /home/scottl4/hydration_is_key/mp4/hdl/cpu/pc_reg.sv                             ;         ;
+; hdl/cpu/cpu_datapath.sv            ; yes             ; User SystemVerilog HDL File                           ; /home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv                       ;         ;
+; hdl/cpu/cmp.sv                     ; yes             ; User SystemVerilog HDL File                           ; /home/scottl4/hydration_is_key/mp4/hdl/cpu/cmp.sv                                ;         ;
+; hdl/cpu/alu.sv                     ; yes             ; User SystemVerilog HDL File                           ; /home/scottl4/hydration_is_key/mp4/hdl/cpu/alu.sv                                ;         ;
+; hdl/cache/data_array.sv            ; yes             ; User SystemVerilog HDL File                           ; /home/scottl4/hydration_is_key/mp4/hdl/cache/data_array.sv                       ;         ;
+; hdl/cache/cache_datapath.sv        ; yes             ; User SystemVerilog HDL File                           ; /home/scottl4/hydration_is_key/mp4/hdl/cache/cache_datapath.sv                   ;         ;
+; hdl/cache/cache_control.sv         ; yes             ; User SystemVerilog HDL File                           ; /home/scottl4/hydration_is_key/mp4/hdl/cache/cache_control.sv                    ;         ;
+; hdl/cache/cache.sv                 ; yes             ; User SystemVerilog HDL File                           ; /home/scottl4/hydration_is_key/mp4/hdl/cache/cache.sv                            ;         ;
+; hdl/cache/array.sv                 ; yes             ; User SystemVerilog HDL File                           ; /home/scottl4/hydration_is_key/mp4/hdl/cache/array.sv                            ;         ;
 ; altsyncram.tdf                     ; yes             ; Megafunction                                          ; /software/quartus-std-18.1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
 ; stratix_ram_block.inc              ; yes             ; Megafunction                                          ; /software/quartus-std-18.1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
 ; lpm_mux.inc                        ; yes             ; Megafunction                                          ; /software/quartus-std-18.1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
@@ -241,8 +241,8 @@ refer to the applicable agreement for further details.
 ; altrom.inc                         ; yes             ; Megafunction                                          ; /software/quartus-std-18.1/quartus/libraries/megafunctions/altrom.inc            ;         ;
 ; altram.inc                         ; yes             ; Megafunction                                          ; /software/quartus-std-18.1/quartus/libraries/megafunctions/altram.inc            ;         ;
 ; altdpram.inc                       ; yes             ; Megafunction                                          ; /software/quartus-std-18.1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
-; db/altsyncram_5km1.tdf             ; yes             ; Auto-Generated Megafunction                           ; /home/beo2/ece411/Hydration_is_Key/mp4/db/altsyncram_5km1.tdf                    ;         ;
-; db/mp4.ram0_array_32a7bb4d.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; /home/beo2/ece411/Hydration_is_Key/mp4/db/mp4.ram0_array_32a7bb4d.hdl.mif        ;         ;
+; db/altsyncram_5km1.tdf             ; yes             ; Auto-Generated Megafunction                           ; /home/scottl4/hydration_is_key/mp4/db/altsyncram_5km1.tdf                        ;         ;
+; db/mp4.ram0_array_32a7bb4d.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; /home/scottl4/hydration_is_key/mp4/db/mp4.ram0_array_32a7bb4d.hdl.mif            ;         ;
 +------------------------------------+-----------------+-------------------------------------------------------+----------------------------------------------------------------------------------+---------+
 
 
@@ -251,31 +251,31 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------+-----------+
 ; Resource                                      ; Usage     ;
 +-----------------------------------------------+-----------+
-; Estimated ALUTs Used                          ; 3950      ;
-;     -- Combinational ALUTs                    ; 3950      ;
+; Estimated ALUTs Used                          ; 3961      ;
+;     -- Combinational ALUTs                    ; 3961      ;
 ;     -- Memory ALUTs                           ; 0         ;
 ;     -- LUT_REGs                               ; 0         ;
 ; Dedicated logic registers                     ; 6004      ;
 ;                                               ;           ;
-; Estimated ALUTs Unavailable                   ; 39        ;
-;     -- Due to unpartnered combinational logic ; 39        ;
+; Estimated ALUTs Unavailable                   ; 40        ;
+;     -- Due to unpartnered combinational logic ; 40        ;
 ;     -- Due to Memory ALUTs                    ; 0         ;
 ;                                               ;           ;
-; Total combinational functions                 ; 3950      ;
+; Total combinational functions                 ; 3961      ;
 ; Combinational ALUT usage by number of inputs  ;           ;
-;     -- 7 input functions                      ; 39        ;
-;     -- 6 input functions                      ; 2388      ;
-;     -- 5 input functions                      ; 793       ;
-;     -- 4 input functions                      ; 294       ;
-;     -- <=3 input functions                    ; 436       ;
+;     -- 7 input functions                      ; 40        ;
+;     -- 6 input functions                      ; 2415      ;
+;     -- 5 input functions                      ; 796       ;
+;     -- 4 input functions                      ; 271       ;
+;     -- <=3 input functions                    ; 439       ;
 ;                                               ;           ;
 ; Combinational ALUTs by mode                   ;           ;
-;     -- normal mode                            ; 3788      ;
-;     -- extended LUT mode                      ; 39        ;
+;     -- normal mode                            ; 3798      ;
+;     -- extended LUT mode                      ; 40        ;
 ;     -- arithmetic mode                        ; 123       ;
 ;     -- shared arithmetic mode                 ; 0         ;
 ;                                               ;           ;
-; Estimated ALUT/register pairs used            ; 8824      ;
+; Estimated ALUT/register pairs used            ; 8850      ;
 ;                                               ;           ;
 ; Total registers                               ; 6004      ;
 ;     -- Dedicated logic registers              ; 6004      ;
@@ -291,7 +291,7 @@ refer to the applicable agreement for further details.
 ;                                               ;           ;
 ; Maximum fan-out node                          ; clk~input ;
 ; Maximum fan-out                               ; 6052      ;
-; Total fan-out                                 ; 41194     ;
+; Total fan-out                                 ; 41292     ;
 ; Average fan-out                               ; 3.99      ;
 +-----------------------------------------------+-----------+
 
@@ -301,11 +301,11 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------+---------------------+---------------------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------+------------------+--------------+
 ; Compilation Hierarchy Node                      ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 12x12 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                       ; Entity Name      ; Library Name ;
 +-------------------------------------------------+---------------------+---------------------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------+------------------+--------------+
-; |mp4                                            ; 3950 (0)            ; 6004 (0)                  ; 384               ; 0            ; 0       ; 0         ; 0         ; 0         ; 165  ; 0            ; |mp4                                                                                                      ; mp4              ; work         ;
+; |mp4                                            ; 3961 (0)            ; 6004 (0)                  ; 384               ; 0            ; 0       ; 0         ; 0         ; 0         ; 165  ; 0            ; |mp4                                                                                                      ; mp4              ; work         ;
 ;    |arbiter:arbiter|                            ; 174 (174)           ; 267 (267)                 ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|arbiter:arbiter                                                                                      ; arbiter          ; work         ;
 ;    |cache:d_cache|                              ; 1059 (0)            ; 2120 (0)                  ; 192               ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cache:d_cache                                                                                        ; cache            ; work         ;
-;       |cache_control:control|                   ; 13 (13)             ; 1 (1)                     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cache:d_cache|cache_control:control                                                                  ; cache_control    ; work         ;
-;       |cache_datapath:datapath|                 ; 927 (73)            ; 2119 (0)                  ; 192               ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cache:d_cache|cache_datapath:datapath                                                                ; cache_datapath   ; work         ;
+;       |cache_control:control|                   ; 27 (27)             ; 1 (1)                     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cache:d_cache|cache_control:control                                                                  ; cache_control    ; work         ;
+;       |cache_datapath:datapath|                 ; 913 (59)            ; 2119 (0)                  ; 192               ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cache:d_cache|cache_datapath:datapath                                                                ; cache_datapath   ; work         ;
 ;          |array:dirty|                          ; 18 (18)             ; 8 (8)                     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cache:d_cache|cache_datapath:datapath|array:dirty                                                    ; array            ; work         ;
 ;          |array:tag|                            ; 26 (26)             ; 55 (55)                   ; 192               ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cache:d_cache|cache_datapath:datapath|array:tag                                                      ; array            ; work         ;
 ;             |altsyncram:data_rtl_0|             ; 0 (0)               ; 0 (0)                     ; 192               ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cache:d_cache|cache_datapath:datapath|array:tag|altsyncram:data_rtl_0                                ; altsyncram       ; work         ;
@@ -313,31 +313,31 @@ refer to the applicable agreement for further details.
 ;          |array:valid|                          ; 10 (10)             ; 8 (8)                     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cache:d_cache|cache_datapath:datapath|array:valid                                                    ; array            ; work         ;
 ;          |data_array:DM_cache|                  ; 800 (800)           ; 2048 (2048)               ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache                                            ; data_array       ; work         ;
 ;       |line_adapter:bus|                        ; 119 (119)           ; 0 (0)                     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cache:d_cache|line_adapter:bus                                                                       ; line_adapter     ; work         ;
-;    |cache:i_cache|                              ; 830 (0)             ; 2112 (0)                  ; 192               ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cache:i_cache                                                                                        ; cache            ; work         ;
-;       |cache_control:control|                   ; 2 (2)               ; 1 (1)                     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cache:i_cache|cache_control:control                                                                  ; cache_control    ; work         ;
-;       |cache_datapath:datapath|                 ; 828 (16)            ; 2111 (0)                  ; 192               ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cache:i_cache|cache_datapath:datapath                                                                ; cache_datapath   ; work         ;
+;    |cache:i_cache|                              ; 840 (0)             ; 2112 (0)                  ; 192               ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cache:i_cache                                                                                        ; cache            ; work         ;
+;       |cache_control:control|                   ; 16 (16)             ; 1 (1)                     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cache:i_cache|cache_control:control                                                                  ; cache_control    ; work         ;
+;       |cache_datapath:datapath|                 ; 824 (13)            ; 2111 (0)                  ; 192               ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cache:i_cache|cache_datapath:datapath                                                                ; cache_datapath   ; work         ;
 ;          |array:dirty|                          ; 8 (8)               ; 0 (0)                     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cache:i_cache|cache_datapath:datapath|array:dirty                                                    ; array            ; work         ;
-;          |array:tag|                            ; 26 (26)             ; 55 (55)                   ; 192               ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cache:i_cache|cache_datapath:datapath|array:tag                                                      ; array            ; work         ;
+;          |array:tag|                            ; 25 (25)             ; 55 (55)                   ; 192               ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cache:i_cache|cache_datapath:datapath|array:tag                                                      ; array            ; work         ;
 ;             |altsyncram:data_rtl_0|             ; 0 (0)               ; 0 (0)                     ; 192               ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cache:i_cache|cache_datapath:datapath|array:tag|altsyncram:data_rtl_0                                ; altsyncram       ; work         ;
 ;                |altsyncram_5km1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 192               ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cache:i_cache|cache_datapath:datapath|array:tag|altsyncram:data_rtl_0|altsyncram_5km1:auto_generated ; altsyncram_5km1  ; work         ;
 ;          |array:valid|                          ; 10 (10)             ; 8 (8)                     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cache:i_cache|cache_datapath:datapath|array:valid                                                    ; array            ; work         ;
 ;          |data_array:DM_cache|                  ; 768 (768)           ; 2048 (2048)               ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cache:i_cache|cache_datapath:datapath|data_array:DM_cache                                            ; data_array       ; work         ;
-;    |cpu_datapath:cpu_datapath|                  ; 1887 (0)            ; 1505 (0)                  ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cpu_datapath:cpu_datapath                                                                            ; cpu_datapath     ; work         ;
+;    |cpu_datapath:cpu_datapath|                  ; 1888 (0)            ; 1505 (0)                  ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cpu_datapath:cpu_datapath                                                                            ; cpu_datapath     ; work         ;
 ;       |EX:stage_EX|                             ; 432 (196)           ; 0 (0)                     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cpu_datapath:cpu_datapath|EX:stage_EX                                                                ; EX               ; work         ;
 ;          |alu:ALU|                              ; 180 (180)           ; 0 (0)                     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cpu_datapath:cpu_datapath|EX:stage_EX|alu:ALU                                                        ; alu              ; work         ;
 ;          |cmp:CMP|                              ; 56 (56)             ; 0 (0)                     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cpu_datapath:cpu_datapath|EX:stage_EX|cmp:CMP                                                        ; cmp              ; work         ;
 ;       |ID:stage_ID|                             ; 86 (0)              ; 992 (0)                   ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID                                                                ; ID               ; work         ;
 ;          |control_rom:control_rom|              ; 20 (20)             ; 0 (0)                     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|control_rom:control_rom                                        ; control_rom      ; work         ;
 ;          |regfile:regfile|                      ; 66 (66)             ; 992 (992)                 ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile                                                ; regfile          ; work         ;
-;       |IF:stage_IF|                             ; 40 (33)             ; 32 (0)                    ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cpu_datapath:cpu_datapath|IF:stage_IF                                                                ; IF               ; work         ;
+;       |IF:stage_IF|                             ; 43 (36)             ; 32 (0)                    ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cpu_datapath:cpu_datapath|IF:stage_IF                                                                ; IF               ; work         ;
 ;          |pc_register:PC|                       ; 7 (7)               ; 32 (32)                   ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cpu_datapath:cpu_datapath|IF:stage_IF|pc_register:PC                                                 ; pc_register      ; work         ;
 ;       |MEM:stage_MEM|                           ; 36 (36)             ; 0 (0)                     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cpu_datapath:cpu_datapath|MEM:stage_MEM                                                              ; MEM              ; work         ;
 ;       |WB:stage_WB|                             ; 132 (132)           ; 0 (0)                     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cpu_datapath:cpu_datapath|WB:stage_WB                                                                ; WB               ; work         ;
 ;       |hazard_detection:hazard|                 ; 193 (193)           ; 0 (0)                     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cpu_datapath:cpu_datapath|hazard_detection:hazard                                                    ; hazard_detection ; work         ;
 ;       |sreg_EX_MEM:sreg_EX_MEM|                 ; 148 (148)           ; 138 (138)                 ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM                                                    ; sreg_EX_MEM      ; work         ;
 ;       |sreg_ID_EX:sreg_ID_EX|                   ; 718 (718)           ; 148 (148)                 ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX                                                      ; sreg_ID_EX       ; work         ;
-;       |sreg_IF_ID:sreg_IF_ID|                   ; 99 (99)             ; 64 (64)                   ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cpu_datapath:cpu_datapath|sreg_IF_ID:sreg_IF_ID                                                      ; sreg_IF_ID       ; work         ;
-;       |sreg_MEM_WB:sreg_MEM_WB|                 ; 3 (3)               ; 131 (131)                 ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB                                                    ; sreg_MEM_WB      ; work         ;
+;       |sreg_IF_ID:sreg_IF_ID|                   ; 98 (98)             ; 64 (64)                   ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cpu_datapath:cpu_datapath|sreg_IF_ID:sreg_IF_ID                                                      ; sreg_IF_ID       ; work         ;
+;       |sreg_MEM_WB:sreg_MEM_WB|                 ; 2 (2)               ; 131 (131)                 ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB                                                    ; sreg_MEM_WB      ; work         ;
 +-------------------------------------------------+---------------------+---------------------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------+------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -681,30 +681,30 @@ Encoding Type:  One-Hot
 ; cache:d_cache|cache_datapath:datapath|array:tag|data_rtl_0_bypass[24] ; 2       ;
 ; cache:d_cache|cache_datapath:datapath|array:tag|data_rtl_0_bypass[26] ; 2       ;
 ; cache:d_cache|cache_datapath:datapath|array:tag|data_rtl_0_bypass[28] ; 2       ;
-; cache:i_cache|cache_datapath:datapath|array:tag|data_rtl_0_bypass[28] ; 1       ;
-; cache:i_cache|cache_datapath:datapath|array:tag|data_rtl_0_bypass[30] ; 1       ;
-; cache:i_cache|cache_datapath:datapath|array:tag|data_rtl_0_bypass[24] ; 1       ;
+; cache:i_cache|cache_datapath:datapath|array:tag|data_rtl_0_bypass[54] ; 2       ;
 ; cache:i_cache|cache_datapath:datapath|array:tag|data_rtl_0_bypass[26] ; 1       ;
-; cache:i_cache|cache_datapath:datapath|array:tag|data_rtl_0_bypass[20] ; 1       ;
+; cache:i_cache|cache_datapath:datapath|array:tag|data_rtl_0_bypass[28] ; 1       ;
 ; cache:i_cache|cache_datapath:datapath|array:tag|data_rtl_0_bypass[22] ; 1       ;
-; cache:i_cache|cache_datapath:datapath|array:tag|data_rtl_0_bypass[16] ; 1       ;
+; cache:i_cache|cache_datapath:datapath|array:tag|data_rtl_0_bypass[24] ; 1       ;
 ; cache:i_cache|cache_datapath:datapath|array:tag|data_rtl_0_bypass[18] ; 1       ;
+; cache:i_cache|cache_datapath:datapath|array:tag|data_rtl_0_bypass[20] ; 1       ;
+; cache:i_cache|cache_datapath:datapath|array:tag|data_rtl_0_bypass[14] ; 1       ;
+; cache:i_cache|cache_datapath:datapath|array:tag|data_rtl_0_bypass[16] ; 1       ;
 ; cache:i_cache|cache_datapath:datapath|array:tag|data_rtl_0_bypass[8]  ; 1       ;
 ; cache:i_cache|cache_datapath:datapath|array:tag|data_rtl_0_bypass[10] ; 1       ;
 ; cache:i_cache|cache_datapath:datapath|array:tag|data_rtl_0_bypass[12] ; 1       ;
-; cache:i_cache|cache_datapath:datapath|array:tag|data_rtl_0_bypass[14] ; 1       ;
-; cache:i_cache|cache_datapath:datapath|array:tag|data_rtl_0_bypass[52] ; 1       ;
-; cache:i_cache|cache_datapath:datapath|array:tag|data_rtl_0_bypass[54] ; 1       ;
-; cache:i_cache|cache_datapath:datapath|array:tag|data_rtl_0_bypass[48] ; 1       ;
 ; cache:i_cache|cache_datapath:datapath|array:tag|data_rtl_0_bypass[50] ; 1       ;
-; cache:i_cache|cache_datapath:datapath|array:tag|data_rtl_0_bypass[44] ; 1       ;
+; cache:i_cache|cache_datapath:datapath|array:tag|data_rtl_0_bypass[52] ; 1       ;
 ; cache:i_cache|cache_datapath:datapath|array:tag|data_rtl_0_bypass[46] ; 1       ;
-; cache:i_cache|cache_datapath:datapath|array:tag|data_rtl_0_bypass[40] ; 1       ;
+; cache:i_cache|cache_datapath:datapath|array:tag|data_rtl_0_bypass[48] ; 1       ;
 ; cache:i_cache|cache_datapath:datapath|array:tag|data_rtl_0_bypass[42] ; 1       ;
+; cache:i_cache|cache_datapath:datapath|array:tag|data_rtl_0_bypass[44] ; 1       ;
+; cache:i_cache|cache_datapath:datapath|array:tag|data_rtl_0_bypass[38] ; 1       ;
+; cache:i_cache|cache_datapath:datapath|array:tag|data_rtl_0_bypass[40] ; 1       ;
+; cache:i_cache|cache_datapath:datapath|array:tag|data_rtl_0_bypass[30] ; 1       ;
 ; cache:i_cache|cache_datapath:datapath|array:tag|data_rtl_0_bypass[32] ; 1       ;
 ; cache:i_cache|cache_datapath:datapath|array:tag|data_rtl_0_bypass[34] ; 1       ;
 ; cache:i_cache|cache_datapath:datapath|array:tag|data_rtl_0_bypass[36] ; 1       ;
-; cache:i_cache|cache_datapath:datapath|array:tag|data_rtl_0_bypass[38] ; 1       ;
 ; Total number of inverted registers = 48                               ;         ;
 +-----------------------------------------------------------------------+---------+
 
@@ -832,57 +832,58 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------+
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|data[0]              ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][16]      ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[1][21]      ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[2][7]       ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[3][0]       ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[4][15]      ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[5][22]      ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[6][15]      ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[7][16]      ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[8][27]      ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[9][16]      ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[10][0]      ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[11][4]      ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[12][12]     ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[13][6]      ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[14][18]     ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[15][29]     ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[16][15]     ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[17][9]      ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[18][6]      ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[19][15]     ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[20][22]     ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[21][19]     ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|data[10]             ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][0]       ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[1][10]      ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[2][12]      ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[3][4]       ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[4][16]      ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[5][26]      ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[6][20]      ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[7][19]      ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[8][17]      ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[9][28]      ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[10][15]     ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[11][2]      ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[12][13]     ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[13][18]     ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[14][24]     ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[15][20]     ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[16][0]      ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[17][24]     ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[18][2]      ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[19][0]      ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[20][12]     ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[21][13]     ;
 ; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[22][14]     ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[23][11]     ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[24][26]     ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[25][0]      ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[26][23]     ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[27][16]     ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[28][20]     ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[29][18]     ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[30][17]     ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[31][12]     ;
-; 3:1                ; 99 bits   ; 198 ALUTs     ; 0 ALUTs              ; 198 ALUTs              ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|alu[9]               ;
-; 3:1                ; 212 bits  ; 424 ALUTs     ; 0 ALUTs              ; 424 ALUTs              ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_IF_ID:sreg_IF_ID|pc[17]                 ;
-; 4:1                ; 27 bits   ; 54 ALUTs      ; 0 ALUTs              ; 54 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|IF:stage_IF|pc_register:PC|data[4]           ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[23][29]     ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[24][23]     ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[25][15]     ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[26][4]      ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[27][28]     ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[28][3]      ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[29][11]     ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[30][19]     ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[31][27]     ;
+; 3:1                ; 99 bits   ; 198 ALUTs     ; 0 ALUTs              ; 198 ALUTs              ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|pc[5]                ;
+; 3:1                ; 212 bits  ; 424 ALUTs     ; 0 ALUTs              ; 424 ALUTs              ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_IF_ID:sreg_IF_ID|pc[1]                  ;
+; 4:1                ; 27 bits   ; 54 ALUTs      ; 0 ALUTs              ; 54 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|IF:stage_IF|pc_register:PC|data[24]          ;
 ; 5:1                ; 2 bits    ; 6 ALUTs       ; 4 ALUTs              ; 2 ALUTs                ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.cmpop[0]          ;
-; 10:1               ; 32 bits   ; 192 ALUTs     ; 160 ALUTs            ; 32 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_IF_ID:sreg_IF_ID|rdata[14]              ;
-; 35:1               ; 32 bits   ; 736 ALUTs     ; 672 ALUTs            ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|rs2[10]                ;
-; 35:1               ; 32 bits   ; 736 ALUTs     ; 672 ALUTs            ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|rs1[10]                ;
+; 10:1               ; 32 bits   ; 192 ALUTs     ; 160 ALUTs            ; 32 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_IF_ID:sreg_IF_ID|rdata[8]               ;
+; 35:1               ; 32 bits   ; 736 ALUTs     ; 672 ALUTs            ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|rs2[2]                 ;
+; 35:1               ; 32 bits   ; 736 ALUTs     ; 672 ALUTs            ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|rs1[29]                ;
 ; 10:1               ; 2 bits    ; 12 ALUTs      ; 10 ALUTs             ; 2 ALUTs                ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.aluop[0]          ;
-; 15:1               ; 2 bits    ; 20 ALUTs      ; 16 ALUTs             ; 4 ALUTs                ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|alu[8]               ;
-; 16:1               ; 8 bits    ; 80 ALUTs      ; 64 ALUTs             ; 16 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|alu[19]              ;
-; 15:1               ; 3 bits    ; 30 ALUTs      ; 24 ALUTs             ; 6 ALUTs                ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|alu[13]              ;
+; 15:1               ; 2 bits    ; 20 ALUTs      ; 16 ALUTs             ; 4 ALUTs                ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|alu[4]               ;
+; 16:1               ; 8 bits    ; 80 ALUTs      ; 64 ALUTs             ; 16 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|alu[22]              ;
+; 15:1               ; 3 bits    ; 30 ALUTs      ; 24 ALUTs             ; 6 ALUTs                ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|alu[12]              ;
 ; 17:1               ; 2 bits    ; 22 ALUTs      ; 18 ALUTs             ; 4 ALUTs                ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|alu[9]               ;
-; 18:1               ; 3 bits    ; 36 ALUTs      ; 30 ALUTs             ; 6 ALUTs                ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|alu[1]               ;
+; 18:1               ; 3 bits    ; 36 ALUTs      ; 30 ALUTs             ; 6 ALUTs                ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|alu[3]               ;
 ; 18:1               ; 2 bits    ; 24 ALUTs      ; 20 ALUTs             ; 4 ALUTs                ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|alu[26]              ;
-; 19:1               ; 3 bits    ; 36 ALUTs      ; 33 ALUTs             ; 3 ALUTs                ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|alu[29]              ;
-; 3:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; No         ; |mp4|cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|Mux1                 ;
+; 19:1               ; 3 bits    ; 36 ALUTs      ; 33 ALUTs             ; 3 ALUTs                ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|alu[30]              ;
+; 3:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_control:control|mem_resp                           ;
+; 3:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; No         ; |mp4|cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|Mux0                 ;
 ; 4:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; No         ; |mp4|cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|Mux2                 ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 64 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cpu_datapath:cpu_datapath|EX:stage_EX|rs1[17]                          ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 64 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cpu_datapath:cpu_datapath|EX:stage_EX|rs1[0]                           ;
 ; 3:1                ; 32 bits   ; 64 ALUTs      ; 64 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cpu_datapath:cpu_datapath|EX:stage_EX|alumux2_out                      ;
 ; 4:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; No         ; |mp4|cpu_datapath:cpu_datapath|EX:stage_EX|alu:ALU|ShiftRight1              ;
 ; 4:1                ; 49 bits   ; 98 ALUTs      ; 98 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cpu_datapath:cpu_datapath|EX:stage_EX|alu:ALU|ShiftRight1              ;
@@ -892,58 +893,58 @@ Encoding Type:  One-Hot
 ; 4:1                ; 4 bits    ; 8 ALUTs       ; 8 ALUTs              ; 0 ALUTs                ; No         ; |mp4|cpu_datapath:cpu_datapath|EX:stage_EX|alu:ALU|ShiftLeft0               ;
 ; 4:1                ; 4 bits    ; 8 ALUTs       ; 8 ALUTs              ; 0 ALUTs                ; No         ; |mp4|cpu_datapath:cpu_datapath|EX:stage_EX|alu:ALU|ShiftLeft0               ;
 ; 3:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; No         ; |mp4|arbiter:arbiter|next                                                   ;
-; 8:1                ; 32 bits   ; 160 ALUTs     ; 160 ALUTs            ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|line_adapter:bus|Mux28                                   ;
+; 8:1                ; 32 bits   ; 160 ALUTs     ; 160 ALUTs            ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|line_adapter:bus|Mux17                                   ;
 ; 4:1                ; 24 bits   ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|arbiter:arbiter|address_o[21]                                          ;
 ; 4:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; No         ; |mp4|cpu_datapath:cpu_datapath|IF:stage_IF|pc_register:PC|data              ;
 ; 5:1                ; 2 bits    ; 6 ALUTs       ; 4 ALUTs              ; 2 ALUTs                ; No         ; |mp4|cache:d_cache|cache_control:control|next_state.check_hit               ;
 ; 9:1                ; 256 bits  ; 1536 ALUTs    ; 1536 ALUTs           ; 0 ALUTs                ; No         ; |mp4|cache:i_cache|cache_datapath:datapath|data_array:DM_cache|dataout[132] ;
-; 5:1                ; 2 bits    ; 6 ALUTs       ; 4 ALUTs              ; 2 ALUTs                ; No         ; |mp4|cache:i_cache|cache_control:control|next_state.check_hit               ;
+; 5:1                ; 2 bits    ; 6 ALUTs       ; 4 ALUTs              ; 2 ALUTs                ; No         ; |mp4|cache:i_cache|cache_control:control|next_state.read_mem                ;
 ; 5:1                ; 64 bits   ; 192 ALUTs     ; 192 ALUTs            ; 0 ALUTs                ; No         ; |mp4|arbiter:arbiter|Selector16                                             ;
-; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[197] ;
-; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[134] ;
-; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[65]  ;
-; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[7]   ;
-; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[204] ;
-; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[139] ;
-; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[74]  ;
-; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[9]   ;
-; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[209] ;
-; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[144] ;
-; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[80]  ;
-; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[16]  ;
-; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[217] ;
-; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[153] ;
-; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[90]  ;
-; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[27]  ;
-; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[226] ;
-; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[165] ;
-; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[98]  ;
-; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[34]  ;
-; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[232] ;
-; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[169] ;
-; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[104] ;
-; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[41]  ;
-; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[240] ;
-; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[177] ;
-; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[114] ;
+; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[195] ;
+; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[135] ;
+; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[69]  ;
+; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[1]   ;
+; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[206] ;
+; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[138] ;
+; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[75]  ;
+; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[15]  ;
+; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[210] ;
+; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[146] ;
+; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[81]  ;
+; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[22]  ;
+; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[218] ;
+; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[158] ;
+; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[88]  ;
+; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[26]  ;
+; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[230] ;
+; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[161] ;
+; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[100] ;
+; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[36]  ;
+; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[235] ;
+; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[175] ;
+; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[111] ;
+; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[45]  ;
+; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[244] ;
+; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[176] ;
+; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[113] ;
 ; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[55]  ;
-; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[249] ;
+; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[252] ;
 ; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[191] ;
-; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[126] ;
-; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[59]  ;
-; 6:1                ; 6 bits    ; 24 ALUTs      ; 12 ALUTs             ; 12 ALUTs               ; No         ; |mp4|cpu_datapath:cpu_datapath|EX:stage_EX|Selector23                       ;
-; 6:1                ; 11 bits   ; 44 ALUTs      ; 22 ALUTs             ; 22 ALUTs               ; No         ; |mp4|cpu_datapath:cpu_datapath|EX:stage_EX|Selector5                        ;
-; 6:1                ; 4 bits    ; 16 ALUTs      ; 8 ALUTs              ; 8 ALUTs                ; No         ; |mp4|cpu_datapath:cpu_datapath|EX:stage_EX|Selector28                       ;
-; 6:1                ; 8 bits    ; 32 ALUTs      ; 16 ALUTs             ; 16 ALUTs               ; No         ; |mp4|cpu_datapath:cpu_datapath|EX:stage_EX|Selector13                       ;
-; 7:1                ; 16 bits   ; 64 ALUTs      ; 64 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cpu_datapath:cpu_datapath|WB:stage_WB|Selector15                       ;
-; 8:1                ; 16 bits   ; 80 ALUTs      ; 80 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cpu_datapath:cpu_datapath|hazard_detection:hazard|hazard_MEM_data[25]  ;
-; 8:1                ; 4 bits    ; 20 ALUTs      ; 16 ALUTs             ; 4 ALUTs                ; No         ; |mp4|cpu_datapath:cpu_datapath|WB:stage_WB|Selector23                       ;
+; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[122] ;
+; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[60]  ;
+; 6:1                ; 6 bits    ; 24 ALUTs      ; 12 ALUTs             ; 12 ALUTs               ; No         ; |mp4|cpu_datapath:cpu_datapath|EX:stage_EX|Selector25                       ;
+; 6:1                ; 11 bits   ; 44 ALUTs      ; 22 ALUTs             ; 22 ALUTs               ; No         ; |mp4|cpu_datapath:cpu_datapath|EX:stage_EX|Selector11                       ;
+; 6:1                ; 4 bits    ; 16 ALUTs      ; 8 ALUTs              ; 8 ALUTs                ; No         ; |mp4|cpu_datapath:cpu_datapath|EX:stage_EX|Selector27                       ;
+; 6:1                ; 8 bits    ; 32 ALUTs      ; 16 ALUTs             ; 16 ALUTs               ; No         ; |mp4|cpu_datapath:cpu_datapath|EX:stage_EX|Selector17                       ;
+; 7:1                ; 16 bits   ; 64 ALUTs      ; 64 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cpu_datapath:cpu_datapath|WB:stage_WB|Selector7                        ;
+; 8:1                ; 16 bits   ; 80 ALUTs      ; 80 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cpu_datapath:cpu_datapath|hazard_detection:hazard|hazard_MEM_data[26]  ;
+; 8:1                ; 4 bits    ; 20 ALUTs      ; 16 ALUTs             ; 4 ALUTs                ; No         ; |mp4|cpu_datapath:cpu_datapath|WB:stage_WB|Selector20                       ;
 ; 8:1                ; 3 bits    ; 15 ALUTs      ; 12 ALUTs             ; 3 ALUTs                ; No         ; |mp4|cpu_datapath:cpu_datapath|WB:stage_WB|Selector19                       ;
-; 9:1                ; 4 bits    ; 24 ALUTs      ; 20 ALUTs             ; 4 ALUTs                ; No         ; |mp4|cpu_datapath:cpu_datapath|hazard_detection:hazard|hazard_MEM_data[8]   ;
-; 9:1                ; 3 bits    ; 18 ALUTs      ; 15 ALUTs             ; 3 ALUTs                ; No         ; |mp4|cpu_datapath:cpu_datapath|hazard_detection:hazard|hazard_MEM_data[14]  ;
+; 9:1                ; 4 bits    ; 24 ALUTs      ; 20 ALUTs             ; 4 ALUTs                ; No         ; |mp4|cpu_datapath:cpu_datapath|hazard_detection:hazard|hazard_MEM_data[9]   ;
+; 9:1                ; 3 bits    ; 18 ALUTs      ; 15 ALUTs             ; 3 ALUTs                ; No         ; |mp4|cpu_datapath:cpu_datapath|hazard_detection:hazard|hazard_MEM_data[12]  ;
 ; 15:1               ; 3 bits    ; 30 ALUTs      ; 27 ALUTs             ; 3 ALUTs                ; No         ; |mp4|cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|alu                  ;
 ; 23:1               ; 6 bits    ; 90 ALUTs      ; 30 ALUTs             ; 60 ALUTs               ; No         ; |mp4|cpu_datapath:cpu_datapath|WB:stage_WB|Selector26                       ;
-; 24:1               ; 6 bits    ; 96 ALUTs      ; 36 ALUTs             ; 60 ALUTs               ; No         ; |mp4|cpu_datapath:cpu_datapath|hazard_detection:hazard|hazard_MEM_data[3]   ;
+; 24:1               ; 6 bits    ; 96 ALUTs      ; 36 ALUTs             ; 60 ALUTs               ; No         ; |mp4|cpu_datapath:cpu_datapath|hazard_detection:hazard|hazard_MEM_data[6]   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------+
 
 
@@ -1233,23 +1234,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     SCLR              ; 3                           ;
 ;     plain             ; 143                         ;
 ; boundary_port         ; 165                         ;
-; stratixiv_lcell_comb  ; 3950                        ;
+; stratixiv_lcell_comb  ; 3961                        ;
 ;     arith             ; 123                         ;
 ;         1 data inputs ; 91                          ;
 ;         4 data inputs ; 6                           ;
 ;         5 data inputs ; 26                          ;
-;     extend            ; 39                          ;
-;         7 data inputs ; 39                          ;
-;     normal            ; 3788                        ;
-;         2 data inputs ; 108                         ;
-;         3 data inputs ; 237                         ;
-;         4 data inputs ; 288                         ;
-;         5 data inputs ; 767                         ;
-;         6 data inputs ; 2388                        ;
+;     extend            ; 40                          ;
+;         7 data inputs ; 40                          ;
+;     normal            ; 3798                        ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 109                         ;
+;         3 data inputs ; 238                         ;
+;         4 data inputs ; 265                         ;
+;         5 data inputs ; 770                         ;
+;         6 data inputs ; 2415                        ;
 ; stratixiv_ram_block   ; 48                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 16.00                       ;
-; Average LUT depth     ; 7.87                        ;
+; Average LUT depth     ; 7.88                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1268,123 +1270,123 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
-    Info: Processing started: Fri Nov 20 19:12:45 2020
+    Info: Processing started: Fri Nov 20 22:49:57 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mp4 -c mp4
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file hdl/cache/line_adaptor.sv
-    Info (12023): Found entity 1: line_adapter File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/cache/line_adaptor.sv Line: 1
-Info (12021): Found 1 design units, including 0 entities, in source file hdl/rv32i_types.sv
-    Info (12022): Found design unit 1: rv32i_types (SystemVerilog) File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/rv32i_types.sv Line: 3
-Info (12021): Found 5 design units, including 0 entities, in source file hdl/rv32i_mux_types.sv
-    Info (12022): Found design unit 1: pcmux (SystemVerilog) File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/rv32i_mux_types.sv Line: 3
-    Info (12022): Found design unit 2: marmux (SystemVerilog) File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/rv32i_mux_types.sv Line: 11
-    Info (12022): Found design unit 3: cmpmux (SystemVerilog) File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/rv32i_mux_types.sv Line: 18
-    Info (12022): Found design unit 4: alumux (SystemVerilog) File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/rv32i_mux_types.sv Line: 25
-    Info (12022): Found design unit 5: regfilemux (SystemVerilog) File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/rv32i_mux_types.sv Line: 41
-Info (12021): Found 1 design units, including 1 entities, in source file hdl/mp4.sv
-    Info (12023): Found entity 1: mp4 File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/mp4.sv Line: 3
-Info (12021): Found 1 design units, including 1 entities, in source file hdl/pipeline/WB.sv
-    Info (12023): Found entity 1: WB File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/pipeline/WB.sv Line: 5
-Info (12021): Found 1 design units, including 1 entities, in source file hdl/pipeline/sreg_MEM_WB.sv
-    Info (12023): Found entity 1: sreg_MEM_WB File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/pipeline/sreg_MEM_WB.sv Line: 3
-Info (12021): Found 1 design units, including 1 entities, in source file hdl/pipeline/sreg_IF_ID.sv
-    Info (12023): Found entity 1: sreg_IF_ID File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/pipeline/sreg_IF_ID.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file hdl/pipeline/sreg_ID_EX.sv
-    Info (12023): Found entity 1: sreg_ID_EX File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/pipeline/sreg_ID_EX.sv Line: 3
-Info (12021): Found 1 design units, including 1 entities, in source file hdl/pipeline/sreg_EX_MEM.sv
-    Info (12023): Found entity 1: sreg_EX_MEM File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/pipeline/sreg_EX_MEM.sv Line: 3
-Info (12021): Found 1 design units, including 1 entities, in source file hdl/pipeline/MEM.sv
-    Info (12023): Found entity 1: MEM File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/pipeline/MEM.sv Line: 3
-Info (12021): Found 1 design units, including 1 entities, in source file hdl/pipeline/IF.sv
-    Info (12023): Found entity 1: IF File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/pipeline/IF.sv Line: 5
-Info (12021): Found 1 design units, including 1 entities, in source file hdl/pipeline/ID.sv
-    Info (12023): Found entity 1: ID File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/pipeline/ID.sv Line: 3
-Info (12021): Found 1 design units, including 1 entities, in source file hdl/pipeline/hazard_detection.sv
-    Info (12023): Found entity 1: hazard_detection File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/pipeline/hazard_detection.sv Line: 3
-Info (12021): Found 1 design units, including 1 entities, in source file hdl/pipeline/EX.sv
-    Info (12023): Found entity 1: EX File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/pipeline/EX.sv Line: 5
-Info (12021): Found 1 design units, including 1 entities, in source file hdl/pipeline/control_rom.sv
-    Info (12023): Found entity 1: control_rom File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/pipeline/control_rom.sv Line: 3
-Info (12021): Found 1 design units, including 1 entities, in source file hdl/cpu/register.sv
-    Info (12023): Found entity 1: register File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/cpu/register.sv Line: 3
-Info (12021): Found 1 design units, including 1 entities, in source file hdl/cpu/regfile.sv
-    Info (12023): Found entity 1: regfile File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/cpu/regfile.sv Line: 3
-Info (12021): Found 1 design units, including 1 entities, in source file hdl/cpu/pc_reg.sv
-    Info (12023): Found entity 1: pc_register File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/cpu/pc_reg.sv Line: 3
-Info (12021): Found 1 design units, including 1 entities, in source file hdl/cpu/cpu_datapath.sv
-    Info (12023): Found entity 1: cpu_datapath File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/cpu/cpu_datapath.sv Line: 5
-Info (12021): Found 1 design units, including 1 entities, in source file hdl/cpu/cmp.sv
-    Info (12023): Found entity 1: cmp File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/cpu/cmp.sv Line: 3
-Info (12021): Found 1 design units, including 1 entities, in source file hdl/cpu/alu.sv
-    Info (12023): Found entity 1: alu File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/cpu/alu.sv Line: 5
-Info (12021): Found 1 design units, including 1 entities, in source file hdl/cache/data_array.sv
-    Info (12023): Found entity 1: data_array File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/cache/data_array.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file hdl/cache/cache_datapath.sv
-    Info (12023): Found entity 1: cache_datapath File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/cache/cache_datapath.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file hdl/cache/cache_control.sv
-    Info (12023): Found entity 1: cache_control File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/cache/cache_control.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file hdl/cache/cache.sv
-    Info (12023): Found entity 1: cache File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/cache/cache.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file hdl/cache/array.sv
-    Info (12023): Found entity 1: array File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/cache/array.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file hdl/cache/arbiter.sv
-    Info (12023): Found entity 1: arbiter File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/cache/arbiter.sv Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at mp4.sv(79): created implicit net for "i_mem_write" File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/mp4.sv Line: 79
-Warning (10236): Verilog HDL Implicit Net warning at sreg_IF_ID.sv(33): created implicit net for "addr_out" File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/pipeline/sreg_IF_ID.sv Line: 33
-Warning (10236): Verilog HDL Implicit Net warning at ID.sv(23): created implicit net for "load_regfile_h" File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/pipeline/ID.sv Line: 23
+    Info (12023): Found entity 1: arbiter File: /home/scottl4/hydration_is_key/mp4/hdl/cache/arbiter.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file hdl/cache/line_adapter.sv
+    Info (12023): Found entity 1: line_adapter File: /home/scottl4/hydration_is_key/mp4/hdl/cache/line_adapter.sv Line: 1
+Info (12021): Found 1 design units, including 0 entities, in source file hdl/rv32i_types.sv
+    Info (12022): Found design unit 1: rv32i_types (SystemVerilog) File: /home/scottl4/hydration_is_key/mp4/hdl/rv32i_types.sv Line: 3
+Info (12021): Found 5 design units, including 0 entities, in source file hdl/rv32i_mux_types.sv
+    Info (12022): Found design unit 1: pcmux (SystemVerilog) File: /home/scottl4/hydration_is_key/mp4/hdl/rv32i_mux_types.sv Line: 3
+    Info (12022): Found design unit 2: marmux (SystemVerilog) File: /home/scottl4/hydration_is_key/mp4/hdl/rv32i_mux_types.sv Line: 11
+    Info (12022): Found design unit 3: cmpmux (SystemVerilog) File: /home/scottl4/hydration_is_key/mp4/hdl/rv32i_mux_types.sv Line: 18
+    Info (12022): Found design unit 4: alumux (SystemVerilog) File: /home/scottl4/hydration_is_key/mp4/hdl/rv32i_mux_types.sv Line: 25
+    Info (12022): Found design unit 5: regfilemux (SystemVerilog) File: /home/scottl4/hydration_is_key/mp4/hdl/rv32i_mux_types.sv Line: 41
+Info (12021): Found 1 design units, including 1 entities, in source file hdl/mp4.sv
+    Info (12023): Found entity 1: mp4 File: /home/scottl4/hydration_is_key/mp4/hdl/mp4.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file hdl/pipeline/WB.sv
+    Info (12023): Found entity 1: WB File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/WB.sv Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file hdl/pipeline/sreg_MEM_WB.sv
+    Info (12023): Found entity 1: sreg_MEM_WB File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/sreg_MEM_WB.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file hdl/pipeline/sreg_IF_ID.sv
+    Info (12023): Found entity 1: sreg_IF_ID File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/sreg_IF_ID.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file hdl/pipeline/sreg_ID_EX.sv
+    Info (12023): Found entity 1: sreg_ID_EX File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/sreg_ID_EX.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file hdl/pipeline/sreg_EX_MEM.sv
+    Info (12023): Found entity 1: sreg_EX_MEM File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/sreg_EX_MEM.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file hdl/pipeline/MEM.sv
+    Info (12023): Found entity 1: MEM File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/MEM.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file hdl/pipeline/IF.sv
+    Info (12023): Found entity 1: IF File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/IF.sv Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file hdl/pipeline/ID.sv
+    Info (12023): Found entity 1: ID File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/ID.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file hdl/pipeline/hazard_detection.sv
+    Info (12023): Found entity 1: hazard_detection File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/hazard_detection.sv Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file hdl/pipeline/EX.sv
+    Info (12023): Found entity 1: EX File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/EX.sv Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file hdl/pipeline/control_rom.sv
+    Info (12023): Found entity 1: control_rom File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/control_rom.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file hdl/cpu/register.sv
+    Info (12023): Found entity 1: register File: /home/scottl4/hydration_is_key/mp4/hdl/cpu/register.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file hdl/cpu/regfile.sv
+    Info (12023): Found entity 1: regfile File: /home/scottl4/hydration_is_key/mp4/hdl/cpu/regfile.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file hdl/cpu/pc_reg.sv
+    Info (12023): Found entity 1: pc_register File: /home/scottl4/hydration_is_key/mp4/hdl/cpu/pc_reg.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file hdl/cpu/cpu_datapath.sv
+    Info (12023): Found entity 1: cpu_datapath File: /home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file hdl/cpu/cmp.sv
+    Info (12023): Found entity 1: cmp File: /home/scottl4/hydration_is_key/mp4/hdl/cpu/cmp.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file hdl/cpu/alu.sv
+    Info (12023): Found entity 1: alu File: /home/scottl4/hydration_is_key/mp4/hdl/cpu/alu.sv Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file hdl/cache/data_array.sv
+    Info (12023): Found entity 1: data_array File: /home/scottl4/hydration_is_key/mp4/hdl/cache/data_array.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file hdl/cache/cache_datapath.sv
+    Info (12023): Found entity 1: cache_datapath File: /home/scottl4/hydration_is_key/mp4/hdl/cache/cache_datapath.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file hdl/cache/cache_control.sv
+    Info (12023): Found entity 1: cache_control File: /home/scottl4/hydration_is_key/mp4/hdl/cache/cache_control.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file hdl/cache/cache.sv
+    Info (12023): Found entity 1: cache File: /home/scottl4/hydration_is_key/mp4/hdl/cache/cache.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file hdl/cache/array.sv
+    Info (12023): Found entity 1: array File: /home/scottl4/hydration_is_key/mp4/hdl/cache/array.sv Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at mp4.sv(81): created implicit net for "i_mem_write" File: /home/scottl4/hydration_is_key/mp4/hdl/mp4.sv Line: 81
+Warning (10236): Verilog HDL Implicit Net warning at sreg_IF_ID.sv(33): created implicit net for "addr_out" File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/sreg_IF_ID.sv Line: 33
+Warning (10236): Verilog HDL Implicit Net warning at ID.sv(23): created implicit net for "load_regfile_h" File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/ID.sv Line: 23
 Info (12127): Elaborating entity "mp4" for the top level hierarchy
-Info (12128): Elaborating entity "cpu_datapath" for hierarchy "cpu_datapath:cpu_datapath" File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/mp4.sv Line: 63
-Info (12128): Elaborating entity "IF" for hierarchy "cpu_datapath:cpu_datapath|IF:stage_IF" File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/cpu/cpu_datapath.sv Line: 85
-Info (12128): Elaborating entity "pc_register" for hierarchy "cpu_datapath:cpu_datapath|IF:stage_IF|pc_register:PC" File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/pipeline/IF.sv Line: 28
-Info (12128): Elaborating entity "sreg_IF_ID" for hierarchy "cpu_datapath:cpu_datapath|sreg_IF_ID:sreg_IF_ID" File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/cpu/cpu_datapath.sv Line: 103
-Warning (10036): Verilog HDL or VHDL warning at sreg_IF_ID.sv(33): object "addr_out" assigned a value but never read File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/pipeline/sreg_IF_ID.sv Line: 33
-Warning (10230): Verilog HDL assignment warning at sreg_IF_ID.sv(33): truncated value with size 32 to match size of target (1) File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/pipeline/sreg_IF_ID.sv Line: 33
-Info (12128): Elaborating entity "ID" for hierarchy "cpu_datapath:cpu_datapath|ID:stage_ID" File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/cpu/cpu_datapath.sv Line: 122
-Info (12128): Elaborating entity "control_rom" for hierarchy "cpu_datapath:cpu_datapath|ID:stage_ID|control_rom:control_rom" File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/pipeline/ID.sv Line: 30
-Warning (10036): Verilog HDL or VHDL warning at control_rom.sv(9): object "i_imm" assigned a value but never read File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/pipeline/control_rom.sv Line: 9
-Warning (10036): Verilog HDL or VHDL warning at control_rom.sv(9): object "s_imm" assigned a value but never read File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/pipeline/control_rom.sv Line: 9
-Warning (10036): Verilog HDL or VHDL warning at control_rom.sv(9): object "b_imm" assigned a value but never read File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/pipeline/control_rom.sv Line: 9
-Warning (10036): Verilog HDL or VHDL warning at control_rom.sv(9): object "u_imm" assigned a value but never read File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/pipeline/control_rom.sv Line: 9
-Warning (10036): Verilog HDL or VHDL warning at control_rom.sv(9): object "j_imm" assigned a value but never read File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/pipeline/control_rom.sv Line: 9
-Warning (10036): Verilog HDL or VHDL warning at control_rom.sv(9): object "ir_out" assigned a value but never read File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/pipeline/control_rom.sv Line: 9
-Warning (10036): Verilog HDL or VHDL warning at control_rom.sv(10): object "rd" assigned a value but never read File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/pipeline/control_rom.sv Line: 10
-Warning (10036): Verilog HDL or VHDL warning at control_rom.sv(10): object "rs1" assigned a value but never read File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/pipeline/control_rom.sv Line: 10
-Warning (10036): Verilog HDL or VHDL warning at control_rom.sv(10): object "rs2" assigned a value but never read File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/pipeline/control_rom.sv Line: 10
-Warning (10036): Verilog HDL or VHDL warning at control_rom.sv(11): object "cmpop" assigned a value but never read File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/pipeline/control_rom.sv Line: 11
-Warning (10036): Verilog HDL or VHDL warning at control_rom.sv(12): object "aluop" assigned a value but never read File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/pipeline/control_rom.sv Line: 12
-Warning (10036): Verilog HDL or VHDL warning at control_rom.sv(13): object "opcode" assigned a value but never read File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/pipeline/control_rom.sv Line: 13
-Warning (10036): Verilog HDL or VHDL warning at control_rom.sv(15): object "funct7" assigned a value but never read File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/pipeline/control_rom.sv Line: 15
-Info (12128): Elaborating entity "regfile" for hierarchy "cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile" File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/pipeline/ID.sv Line: 43
-Info (12128): Elaborating entity "sreg_ID_EX" for hierarchy "cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX" File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/cpu/cpu_datapath.sv Line: 141
-Info (12128): Elaborating entity "EX" for hierarchy "cpu_datapath:cpu_datapath|EX:stage_EX" File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/cpu/cpu_datapath.sv Line: 164
-Info (12128): Elaborating entity "alu" for hierarchy "cpu_datapath:cpu_datapath|EX:stage_EX|alu:ALU" File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/pipeline/EX.sv Line: 38
-Info (12128): Elaborating entity "cmp" for hierarchy "cpu_datapath:cpu_datapath|EX:stage_EX|cmp:CMP" File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/pipeline/EX.sv Line: 47
-Info (12128): Elaborating entity "sreg_EX_MEM" for hierarchy "cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM" File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/cpu/cpu_datapath.sv Line: 186
-Info (12128): Elaborating entity "MEM" for hierarchy "cpu_datapath:cpu_datapath|MEM:stage_MEM" File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/cpu/cpu_datapath.sv Line: 207
-Info (12128): Elaborating entity "sreg_MEM_WB" for hierarchy "cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB" File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/cpu/cpu_datapath.sv Line: 231
-Info (12128): Elaborating entity "WB" for hierarchy "cpu_datapath:cpu_datapath|WB:stage_WB" File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/cpu/cpu_datapath.sv Line: 250
-Info (10264): Verilog HDL Case Statement information at WB.sv(35): all case item expressions in this case statement are onehot File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/pipeline/WB.sv Line: 35
-Info (10264): Verilog HDL Case Statement information at WB.sv(44): all case item expressions in this case statement are onehot File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/pipeline/WB.sv Line: 44
-Info (12128): Elaborating entity "hazard_detection" for hierarchy "cpu_datapath:cpu_datapath|hazard_detection:hazard" File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/cpu/cpu_datapath.sv Line: 273
-Warning (10036): Verilog HDL or VHDL warning at hazard_detection.sv(26): object "stall" assigned a value but never read File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/pipeline/hazard_detection.sv Line: 26
-Info (10264): Verilog HDL Case Statement information at hazard_detection.sv(72): all case item expressions in this case statement are onehot File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/pipeline/hazard_detection.sv Line: 72
-Info (10264): Verilog HDL Case Statement information at hazard_detection.sv(81): all case item expressions in this case statement are onehot File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/pipeline/hazard_detection.sv Line: 81
-Info (12128): Elaborating entity "cache" for hierarchy "cache:i_cache" File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/mp4.sv Line: 81
-Info (12128): Elaborating entity "cache_control" for hierarchy "cache:i_cache|cache_control:control" File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/cache/cache.sv Line: 35
-Info (12128): Elaborating entity "cache_datapath" for hierarchy "cache:i_cache|cache_datapath:datapath" File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/cache/cache.sv Line: 36
-Info (12128): Elaborating entity "data_array" for hierarchy "cache:i_cache|cache_datapath:datapath|data_array:DM_cache" File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/cache/cache_datapath.sv Line: 56
-Info (12128): Elaborating entity "array" for hierarchy "cache:i_cache|cache_datapath:datapath|array:tag" File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/cache/cache_datapath.sv Line: 57
-Info (12128): Elaborating entity "array" for hierarchy "cache:i_cache|cache_datapath:datapath|array:valid" File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/cache/cache_datapath.sv Line: 58
-Info (12128): Elaborating entity "line_adapter" for hierarchy "cache:i_cache|line_adapter:bus" File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/cache/cache.sv Line: 46
-Info (12128): Elaborating entity "arbiter" for hierarchy "arbiter:arbiter" File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/mp4.sv Line: 121
+Info (12128): Elaborating entity "cpu_datapath" for hierarchy "cpu_datapath:cpu_datapath" File: /home/scottl4/hydration_is_key/mp4/hdl/mp4.sv Line: 65
+Info (12128): Elaborating entity "IF" for hierarchy "cpu_datapath:cpu_datapath|IF:stage_IF" File: /home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv Line: 87
+Info (12128): Elaborating entity "pc_register" for hierarchy "cpu_datapath:cpu_datapath|IF:stage_IF|pc_register:PC" File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/IF.sv Line: 28
+Info (12128): Elaborating entity "sreg_IF_ID" for hierarchy "cpu_datapath:cpu_datapath|sreg_IF_ID:sreg_IF_ID" File: /home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv Line: 105
+Warning (10036): Verilog HDL or VHDL warning at sreg_IF_ID.sv(33): object "addr_out" assigned a value but never read File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/sreg_IF_ID.sv Line: 33
+Warning (10230): Verilog HDL assignment warning at sreg_IF_ID.sv(33): truncated value with size 32 to match size of target (1) File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/sreg_IF_ID.sv Line: 33
+Info (12128): Elaborating entity "ID" for hierarchy "cpu_datapath:cpu_datapath|ID:stage_ID" File: /home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv Line: 124
+Info (12128): Elaborating entity "control_rom" for hierarchy "cpu_datapath:cpu_datapath|ID:stage_ID|control_rom:control_rom" File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/ID.sv Line: 30
+Warning (10036): Verilog HDL or VHDL warning at control_rom.sv(9): object "i_imm" assigned a value but never read File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/control_rom.sv Line: 9
+Warning (10036): Verilog HDL or VHDL warning at control_rom.sv(9): object "s_imm" assigned a value but never read File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/control_rom.sv Line: 9
+Warning (10036): Verilog HDL or VHDL warning at control_rom.sv(9): object "b_imm" assigned a value but never read File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/control_rom.sv Line: 9
+Warning (10036): Verilog HDL or VHDL warning at control_rom.sv(9): object "u_imm" assigned a value but never read File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/control_rom.sv Line: 9
+Warning (10036): Verilog HDL or VHDL warning at control_rom.sv(9): object "j_imm" assigned a value but never read File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/control_rom.sv Line: 9
+Warning (10036): Verilog HDL or VHDL warning at control_rom.sv(9): object "ir_out" assigned a value but never read File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/control_rom.sv Line: 9
+Warning (10036): Verilog HDL or VHDL warning at control_rom.sv(10): object "rd" assigned a value but never read File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/control_rom.sv Line: 10
+Warning (10036): Verilog HDL or VHDL warning at control_rom.sv(10): object "rs1" assigned a value but never read File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/control_rom.sv Line: 10
+Warning (10036): Verilog HDL or VHDL warning at control_rom.sv(10): object "rs2" assigned a value but never read File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/control_rom.sv Line: 10
+Warning (10036): Verilog HDL or VHDL warning at control_rom.sv(11): object "cmpop" assigned a value but never read File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/control_rom.sv Line: 11
+Warning (10036): Verilog HDL or VHDL warning at control_rom.sv(12): object "aluop" assigned a value but never read File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/control_rom.sv Line: 12
+Warning (10036): Verilog HDL or VHDL warning at control_rom.sv(13): object "opcode" assigned a value but never read File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/control_rom.sv Line: 13
+Warning (10036): Verilog HDL or VHDL warning at control_rom.sv(15): object "funct7" assigned a value but never read File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/control_rom.sv Line: 15
+Info (12128): Elaborating entity "regfile" for hierarchy "cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile" File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/ID.sv Line: 43
+Info (12128): Elaborating entity "sreg_ID_EX" for hierarchy "cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX" File: /home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv Line: 143
+Info (12128): Elaborating entity "EX" for hierarchy "cpu_datapath:cpu_datapath|EX:stage_EX" File: /home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv Line: 166
+Info (12128): Elaborating entity "alu" for hierarchy "cpu_datapath:cpu_datapath|EX:stage_EX|alu:ALU" File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/EX.sv Line: 38
+Info (12128): Elaborating entity "cmp" for hierarchy "cpu_datapath:cpu_datapath|EX:stage_EX|cmp:CMP" File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/EX.sv Line: 47
+Info (12128): Elaborating entity "sreg_EX_MEM" for hierarchy "cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM" File: /home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv Line: 188
+Info (12128): Elaborating entity "MEM" for hierarchy "cpu_datapath:cpu_datapath|MEM:stage_MEM" File: /home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv Line: 209
+Info (12128): Elaborating entity "sreg_MEM_WB" for hierarchy "cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB" File: /home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv Line: 233
+Info (12128): Elaborating entity "WB" for hierarchy "cpu_datapath:cpu_datapath|WB:stage_WB" File: /home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv Line: 252
+Info (10264): Verilog HDL Case Statement information at WB.sv(35): all case item expressions in this case statement are onehot File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/WB.sv Line: 35
+Info (10264): Verilog HDL Case Statement information at WB.sv(44): all case item expressions in this case statement are onehot File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/WB.sv Line: 44
+Info (12128): Elaborating entity "hazard_detection" for hierarchy "cpu_datapath:cpu_datapath|hazard_detection:hazard" File: /home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv Line: 275
+Warning (10036): Verilog HDL or VHDL warning at hazard_detection.sv(28): object "stall" assigned a value but never read File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/hazard_detection.sv Line: 28
+Info (10264): Verilog HDL Case Statement information at hazard_detection.sv(74): all case item expressions in this case statement are onehot File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/hazard_detection.sv Line: 74
+Info (10264): Verilog HDL Case Statement information at hazard_detection.sv(83): all case item expressions in this case statement are onehot File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/hazard_detection.sv Line: 83
+Info (12128): Elaborating entity "cache" for hierarchy "cache:i_cache" File: /home/scottl4/hydration_is_key/mp4/hdl/mp4.sv Line: 84
+Info (12128): Elaborating entity "cache_control" for hierarchy "cache:i_cache|cache_control:control" File: /home/scottl4/hydration_is_key/mp4/hdl/cache/cache.sv Line: 36
+Info (12128): Elaborating entity "cache_datapath" for hierarchy "cache:i_cache|cache_datapath:datapath" File: /home/scottl4/hydration_is_key/mp4/hdl/cache/cache.sv Line: 37
+Info (12128): Elaborating entity "data_array" for hierarchy "cache:i_cache|cache_datapath:datapath|data_array:DM_cache" File: /home/scottl4/hydration_is_key/mp4/hdl/cache/cache_datapath.sv Line: 56
+Info (12128): Elaborating entity "array" for hierarchy "cache:i_cache|cache_datapath:datapath|array:tag" File: /home/scottl4/hydration_is_key/mp4/hdl/cache/cache_datapath.sv Line: 57
+Info (12128): Elaborating entity "array" for hierarchy "cache:i_cache|cache_datapath:datapath|array:valid" File: /home/scottl4/hydration_is_key/mp4/hdl/cache/cache_datapath.sv Line: 58
+Info (12128): Elaborating entity "line_adapter" for hierarchy "cache:i_cache|line_adapter:bus" File: /home/scottl4/hydration_is_key/mp4/hdl/cache/cache.sv Line: 47
+Info (12128): Elaborating entity "arbiter" for hierarchy "arbiter:arbiter" File: /home/scottl4/hydration_is_key/mp4/hdl/mp4.sv Line: 125
 Warning (276020): Inferred RAM node "cache:d_cache|cache_datapath:datapath|array:tag|data_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
 Warning (276020): Inferred RAM node "cache:i_cache|cache_datapath:datapath|array:tag|data_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
 Info (276014): Found 4 instances of uninferred RAM logic
-    Info (276004): RAM logic "cache:d_cache|cache_datapath:datapath|array:dirty|data" is uninferred due to inappropriate RAM size File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/cache/array.sv Line: 12
-    Info (276004): RAM logic "cache:d_cache|cache_datapath:datapath|array:valid|data" is uninferred due to inappropriate RAM size File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/cache/array.sv Line: 12
-    Info (276004): RAM logic "cache:i_cache|cache_datapath:datapath|array:dirty|data" is uninferred due to inappropriate RAM size File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/cache/array.sv Line: 12
-    Info (276004): RAM logic "cache:i_cache|cache_datapath:datapath|array:valid|data" is uninferred due to inappropriate RAM size File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/cache/array.sv Line: 12
+    Info (276004): RAM logic "cache:d_cache|cache_datapath:datapath|array:dirty|data" is uninferred due to inappropriate RAM size File: /home/scottl4/hydration_is_key/mp4/hdl/cache/array.sv Line: 12
+    Info (276004): RAM logic "cache:d_cache|cache_datapath:datapath|array:valid|data" is uninferred due to inappropriate RAM size File: /home/scottl4/hydration_is_key/mp4/hdl/cache/array.sv Line: 12
+    Info (276004): RAM logic "cache:i_cache|cache_datapath:datapath|array:dirty|data" is uninferred due to inappropriate RAM size File: /home/scottl4/hydration_is_key/mp4/hdl/cache/array.sv Line: 12
+    Info (276004): RAM logic "cache:i_cache|cache_datapath:datapath|array:valid|data" is uninferred due to inappropriate RAM size File: /home/scottl4/hydration_is_key/mp4/hdl/cache/array.sv Line: 12
 Info (19000): Inferred 2 megafunctions from design logic
     Info (276029): Inferred altsyncram megafunction from the following design logic: "cache:d_cache|cache_datapath:datapath|array:tag|data_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
@@ -1436,27 +1438,27 @@ Info (12133): Instantiated megafunction "cache:d_cache|cache_datapath:datapath|a
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
     Info (12134): Parameter "INIT_FILE" = "db/mp4.ram0_array_32a7bb4d.hdl.mif"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_5km1.tdf
-    Info (12023): Found entity 1: altsyncram_5km1 File: /home/beo2/ece411/Hydration_is_Key/mp4/db/altsyncram_5km1.tdf Line: 27
+    Info (12023): Found entity 1: altsyncram_5km1 File: /home/scottl4/hydration_is_key/mp4/db/altsyncram_5km1.tdf Line: 27
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 94 registers lost all their fanouts during netlist optimizations.
-Info (144001): Generated suppressed messages file /home/beo2/ece411/Hydration_is_Key/mp4/output_files/mp4.map.smsg
+Info (144001): Generated suppressed messages file /home/scottl4/hydration_is_key/mp4/output_files/mp4.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 9948 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 9959 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 67 input pins
     Info (21059): Implemented 98 output pins
-    Info (21061): Implemented 9735 logic cells
+    Info (21061): Implemented 9746 logic cells
     Info (21064): Implemented 48 RAM segments
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 22 warnings
-    Info: Peak virtual memory: 1275 megabytes
-    Info: Processing ended: Fri Nov 20 19:13:25 2020
+    Info: Peak virtual memory: 1274 megabytes
+    Info: Processing ended: Fri Nov 20 22:50:37 2020
     Info: Elapsed time: 00:00:40
-    Info: Total CPU time (on all processors): 00:01:01
+    Info: Total CPU time (on all processors): 00:01:00
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in /home/beo2/ece411/Hydration_is_Key/mp4/output_files/mp4.map.smsg.
+The suppressed messages can be found in /home/scottl4/hydration_is_key/mp4/output_files/mp4.map.smsg.
 
 

@@ -23,7 +23,9 @@ module cpu_datapath
     output logic data_write,
     output logic [3:0] data_mbe,
     output logic [31:0] data_addr,
-    output logic [31:0] data_wdata
+    output logic [31:0] data_wdata,
+
+	input stall_c
 
     /* CPU <-- I-Cache */
     // input i_cache_hit,
@@ -95,7 +97,7 @@ sreg_IF_ID sreg_IF_ID(
 	.inst_rdata,
 	.inst_resp,
 	.br_mispredict,
-	.stall,
+	.stall			(stall_c),
 
 	// outputs
 	.pc_out			(IF_ID_pc_out),
@@ -112,7 +114,7 @@ ID stage_ID (
     .inst_resp		(inst_resp),
     .inst_rdata		(IF_ID_data_out),
 	.rd,
-	.stall,
+	.stall			(stall_c),
 	
 	// outputs
 	.inst_read		(inst_read),
@@ -131,7 +133,7 @@ sreg_ID_EX sreg_ID_EX(
 	.br_mispredict,
 	.rs1_in			(ID_rs1_out),
 	.rs2_in			(ID_rs2_out),
-	.stall,
+	.stall			(stall_c),
 
 	// outputs
 	.ctrl_out		(ID_EX_ctrl),
@@ -173,7 +175,7 @@ sreg_EX_MEM sreg_EX_MEM (
 	.ctrl_in		(ID_EX_ctrl),
 	.rs2_in			(EX_rs2_out),
 	.pc_in			(ID_EX_pc_out),
-	.stall,
+	.stall			(stall_c),
 	.br_mispredict,
 
     //outputs
@@ -219,7 +221,7 @@ sreg_MEM_WB sreg_MEM_WB(
 	.pc_in 			(EX_MEM_pc_out),
 	.mem_byte_en_in	(d_mem_byte),
 	.data_resp,
-	.stall,
+	.stall			(stall_c),
 
 	// outputs
     .alu_out		(MEM_WB_alu_out),
@@ -269,7 +271,7 @@ hazard_detection hazard(
 
 	.hazard_MEM_data,
 	.hazard_WB_data
-//	.stall
+	// .stall			(stall_c)
 );
 
 endmodule : cpu_datapath

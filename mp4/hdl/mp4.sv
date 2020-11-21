@@ -31,6 +31,7 @@ module mp4(
 logic inst_resp, inst_read, data_resp, data_read, data_write;
 logic [31:0] inst_addr, inst_rdata, data_addr, data_rdata, data_wdata;
 logic [3:0] data_mbe;
+logic i_stall_cache, d_stall_cache;
 /*** Cache <--> Arbiter Variables ***/
 logic i_mem_resp, i_mem_read, d_mem_resp, d_mem_read, d_mem_write;
 logic [3:0] i_mem_byte_en, d_mem_byte_en;
@@ -59,7 +60,8 @@ cpu_datapath cpu_datapath
     .data_write,
     .data_mbe,
     .data_addr,
-    .data_wdata
+    .data_wdata,
+    .stall_c        (i_stall_cache || d_stall_cache)
 );
 
 cache i_cache
@@ -77,7 +79,8 @@ cache i_cache
     .pmem_resp          (i_mem_resp),
     .pmem_read          (i_mem_read), // Maybe connect directly to cacheline adapter
     .pmem_write         (i_mem_write),
-    .pmem_address       (i_mem_address) // You could also connect the CPU address directly to the cacheline_adapter
+    .pmem_address       (i_mem_address), // You could also connect the CPU address directly to the cacheline_adapter
+    .stall_cache        (i_stall_cache)
 );
 
 cache d_cache
@@ -95,7 +98,8 @@ cache d_cache
     .pmem_resp          (d_mem_resp),
     .pmem_read          (d_mem_read),
     .pmem_write         (d_mem_write),
-    .pmem_address       (d_mem_address) 
+    .pmem_address       (d_mem_address),
+    .stall_cache        (d_stall_cache)
 );
 
 arbiter arbiter(

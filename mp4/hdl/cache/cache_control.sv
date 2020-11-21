@@ -5,6 +5,7 @@ module cache_control (
   input  logic mem_read,
 	input  logic mem_write,
 	output logic mem_resp,
+  output logic stall_cache,
 
   /* Physical memory data signals */
   input  logic pmem_resp,
@@ -43,6 +44,8 @@ always_comb begin : state_actions
 	pmem_write = 1'b0;
 	pmem_read = 1'b0;
 
+  stall_cache = 1'b0;
+
 	case(state)
     check_hit: begin
       if (mem_read || mem_write) begin
@@ -54,6 +57,7 @@ always_comb begin : state_actions
             writing = 2'b01;
           end
         end else begin
+          stall_cache = 1'b1;
           if (dirty_out)
             pmem_write = 1'b1;
         end
@@ -61,6 +65,7 @@ always_comb begin : state_actions
     end
 
     read_mem: begin
+      stall_cache = 1'b1;
       pmem_read = 1'b1;
       writing = 2'b00;
       if (pmem_resp) begin

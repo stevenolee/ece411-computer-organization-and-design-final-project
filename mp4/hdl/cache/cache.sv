@@ -16,7 +16,8 @@ module cache (
   input logic [31:0] mem_address,
   input logic [31:0] mem_wdata_cpu,
   output logic mem_resp,
-  output logic [31:0] mem_rdata_cpu
+  output logic [31:0] mem_rdata_cpu,
+  output logic stall_cache
 );
 
 logic tag_load;
