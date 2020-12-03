@@ -127,13 +127,13 @@ begin: next_state_logic
     case(state)
 		IDLE :	begin
             if(d_write_i || d_read_i || i_read_i) begin
-                next_state = CACHE2;
+                next = CACHE2;
             end
         end
 
         CACHE2: begin
             if (resp_i)
-                next_state = IDLE;
+                next = IDLE;
         end
     endcase
 end

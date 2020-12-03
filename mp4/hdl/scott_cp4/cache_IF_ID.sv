@@ -22,7 +22,7 @@ module cache_IF_ID(
     output logic hit_o,
     output logic load_lru
 );
-logic read, write, dirty, hit, 
+logic read, write, dirty, hit;
 logic [1:0] hit_index;
 logic [31:0] address;
 logic [255:0] cpu_data, cache_data;
@@ -54,14 +54,14 @@ end
 always_comb begin
     load = 1'b0;
     load_lru = 1'b1;
-    pmem_read = 1'b0;
-    pmem_write = 1'b0;
+    read_o = 1'b0;
+    write_o = 1'b0;
     access_sel = 1'b0;
 
     if(read) begin
         load_lru = 1'b1;
         if(!hit) begin
-            pmem_read = 1'b1;
+            read_o = 1'b1;
             access_sel = 1'b1;
             load = 1'b1;
         end
@@ -72,7 +72,7 @@ always_comb begin
         load = 1'b1;
         access_sel = 1'b0;
         if(dirty) begin
-            pmem_write = 1'b1;
+            write_o = 1'b1;
         end
     end
 end

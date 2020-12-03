@@ -5,7 +5,7 @@ logic gates and other supporting logic. */
 
 import rv32i_types::*;
 
-module cache_datapath #(
+module cache_p_datapath #(
     parameter s_offset = 5,
     parameter s_index  = 3,
     parameter s_tag    = 32 - s_offset - s_index,
@@ -36,14 +36,15 @@ module cache_datapath #(
     output logic [31:0] pmem_address
 );
 /***** Variables *****/
-logic IF_ID_read, IF_ID_write, IF_ID_hit, dirty, hit, load_lru, load;
+logic load, load_lru, dirty, hit, access_sel;
+logic IF_ID_read, IF_ID_write, IF_ID_hit;
 logic load_0, load_1, load_2, load_3, hit_0, hit_1, hit_2, hit_3;
-logic valid_0, valid_1, valid_2, valid_3;
+logic valid_0, valid_1, valid_2, valid_3, dirty_0, dirty_1, dirty_2, dirty_3;
 logic [s_index-1:0] index, IF_ID_index;
-logic [s_tag-1:0] tag, IF_ID_tag;
+logic [s_tag-1:0] tag, tag_0, tag_1, tag_2, tag_3, IF_ID_tag;
 logic [s_line-1:0] cache_data_i, cache_data_o, IF_ID_data;
 logic [s_line-1:0] data_out_0, data_out_1, data_out_2, data_out_3;
-logic [31:0] IF_ID_addr;
+logic [31:0] IF_ID_addr, write_mask;
 logic [1:0] lru, lru_in, hit_ind_i, hit_ind_o;
 
 /***** Assign *****/
@@ -58,9 +59,9 @@ assign hit_3 = valid_3 && tag == tag_3;
 
 /***** Muxes *****/
 always_comb begin
-    pmem_read = 1'b0;
-    pmem_write = 1'b0;
+    mem_resp = 1'b0;
     cache_data_i = mem_wdata;
+    cache_data_o = data_out_0;
     mem_rdata = pmem_wdata;
     write_mask = mem_byte_enable;
     hit = hit_0 || hit_1 || hit_2 || hit_3;
@@ -124,15 +125,15 @@ always_comb begin
             dirty = dirty_2;
         end
         4'b1000: begin
-            hit_ind_i = 2'b11
+            hit_ind_i = 2'b11;
             cache_data_o = data_out_3;
             dirty = dirty_3;
         end
-        default: $display('ERROR: More than one cache way hits!');
+        default: $display("ERROR: More than one cache way hits!");
     endcase
     /********** CACHE LOAD **********/
     if(IF_ID_hit) begin
-    `   mem_resp = 1'b1;
+        mem_resp = 1'b1;
         unique case(hit_ind_o)
             2'b00: begin
                 lru_in = 2'b00;
@@ -193,12 +194,12 @@ always_comb begin
 end
 
 /***** State Registers *****/
-module cache_IF_ID(
+cache_IF_ID cache_IF_ID(
     .clk,
     .rst,
-    .hit_i,
+    .hit_i          (hit),
     .hit_ind_i,
-    .dirty_i,
+    .dirty_i        (dirty),
     .read_i         (mem_read),
     .write_i        (mem_write),
     .address_i      (mem_address),
@@ -206,8 +207,8 @@ module cache_IF_ID(
     .cache_data_i   (cache_data_o),
     .stall,
     .address_o      (IF_ID_addr),
-    .cpu_data_out   (IF_ID_cpu_data),
-    .cache_data_out (pmem_wdata),
+    .cpu_data_o     (IF_ID_cpu_data),
+    .cache_data_o   (pmem_wdata),
     .read_o         (pmem_read),
     .write_o        (pmem_write),
     .load,
@@ -218,7 +219,7 @@ module cache_IF_ID(
 );
 
 /***** Cache Ways *****/
-cache_way cache_way_0
+cache_p_way cache_way_0
 (
     .*,
     .load           (load_0),
@@ -235,7 +236,7 @@ cache_way cache_way_0
     .dataout        (data_out_0)
 );
 
-cache_way cache_way_1
+cache_p_way cache_way_1
 (
     .*,
     .load           (load_1),
@@ -252,7 +253,7 @@ cache_way cache_way_1
     .dataout        (data_out_1)
 );
 
-cache_way cache_way_2
+cache_p_way cache_way_2
 (
     .*,
     .load           (load_2),
@@ -269,7 +270,7 @@ cache_way cache_way_2
     .dataout        (data_out_2)
 );
 
-cache_way cache_way_3
+cache_p_way cache_way_3
 (
     .*,
     .load           (load_3),
@@ -297,3 +298,5 @@ lru_array lru_array
     .datain     (lru_in),
     .dataout    (lru)
 );
+
+endmodule : cache_p_datapath

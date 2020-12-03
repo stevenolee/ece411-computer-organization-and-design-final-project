@@ -9,29 +9,79 @@
 # Copying /software/quartus-std-18.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/cache {/home/scottl4/hydration_is_key/mp4/hdl/cache/arbiter.sv}
+# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/scott_cp4 {/home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/data_array_p.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:13:59 on Nov 21,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/cache" /home/scottl4/hydration_is_key/mp4/hdl/cache/arbiter.sv 
+# Start time: 02:50:06 on Dec 03,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/scott_cp4" /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/data_array_p.sv 
+# -- Compiling module data_array_p
+# 
+# Top level modules:
+# 	data_array_p
+# End time: 02:50:06 on Dec 03,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/scott_cp4 {/home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_IF_ID.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 02:50:06 on Dec 03,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/scott_cp4" /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_IF_ID.sv 
+# -- Compiling module cache_IF_ID
+# 
+# Top level modules:
+# 	cache_IF_ID
+# End time: 02:50:06 on Dec 03,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/scott_cp4 {/home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 02:50:06 on Dec 03,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/scott_cp4" /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv 
+# -- Compiling module array_p
+# 
+# Top level modules:
+# 	array_p
+# End time: 02:50:06 on Dec 03,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/scott_cp4 {/home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/arbiter.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 02:50:06 on Dec 03,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/scott_cp4" /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/arbiter.sv 
 # -- Compiling module arbiter
 # 
 # Top level modules:
 # 	arbiter
-# End time: 21:14:00 on Nov 21,2020, Elapsed time: 0:00:01
+# End time: 02:50:06 on Dec 03,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/scott_cp4 {/home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/lru_array.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 02:50:06 on Dec 03,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/scott_cp4" /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/lru_array.sv 
+# -- Compiling module lru_array
+# 
+# Top level modules:
+# 	lru_array
+# End time: 02:50:06 on Dec 03,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/cache {/home/scottl4/hydration_is_key/mp4/hdl/cache/cacheline_adapter.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 02:50:07 on Dec 03,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/cache" /home/scottl4/hydration_is_key/mp4/hdl/cache/cacheline_adapter.sv 
+# -- Compiling module cacheline_adaptor
+# 
+# Top level modules:
+# 	cacheline_adaptor
+# End time: 02:50:07 on Dec 03,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/cache {/home/scottl4/hydration_is_key/mp4/hdl/cache/line_adapter.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:14:00 on Nov 21,2020
+# Start time: 02:50:07 on Dec 03,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/cache" /home/scottl4/hydration_is_key/mp4/hdl/cache/line_adapter.sv 
 # -- Compiling module line_adapter
 # 
 # Top level modules:
 # 	line_adapter
-# End time: 21:14:00 on Nov 21,2020, Elapsed time: 0:00:00
+# End time: 02:50:07 on Dec 03,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl {/home/scottl4/hydration_is_key/mp4/hdl/rv32i_mux_types.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:14:00 on Nov 21,2020
+# Start time: 02:50:07 on Dec 03,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl" /home/scottl4/hydration_is_key/mp4/hdl/rv32i_mux_types.sv 
 # -- Compiling package pcmux
 # -- Compiling package marmux
@@ -41,81 +91,91 @@
 # 
 # Top level modules:
 # 	--none--
-# End time: 21:14:00 on Nov 21,2020, Elapsed time: 0:00:00
+# End time: 02:50:07 on Dec 03,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline {/home/scottl4/hydration_is_key/mp4/hdl/pipeline/sreg_IF_ID.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:14:00 on Nov 21,2020
+# Start time: 02:50:07 on Dec 03,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline" /home/scottl4/hydration_is_key/mp4/hdl/pipeline/sreg_IF_ID.sv 
 # -- Compiling module sreg_IF_ID
 # 
 # Top level modules:
 # 	sreg_IF_ID
-# End time: 21:14:00 on Nov 21,2020, Elapsed time: 0:00:00
+# End time: 02:50:07 on Dec 03,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/cpu {/home/scottl4/hydration_is_key/mp4/hdl/cpu/regfile.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:14:00 on Nov 21,2020
+# Start time: 02:50:07 on Dec 03,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/cpu" /home/scottl4/hydration_is_key/mp4/hdl/cpu/regfile.sv 
 # -- Compiling module regfile
 # 
 # Top level modules:
 # 	regfile
-# End time: 21:14:00 on Nov 21,2020, Elapsed time: 0:00:00
+# End time: 02:50:07 on Dec 03,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/cpu {/home/scottl4/hydration_is_key/mp4/hdl/cpu/pc_reg.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:14:00 on Nov 21,2020
+# Start time: 02:50:07 on Dec 03,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/cpu" /home/scottl4/hydration_is_key/mp4/hdl/cpu/pc_reg.sv 
 # -- Compiling module pc_register
 # 
 # Top level modules:
 # 	pc_register
-# End time: 21:14:00 on Nov 21,2020, Elapsed time: 0:00:00
+# End time: 02:50:07 on Dec 03,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/cache {/home/scottl4/hydration_is_key/mp4/hdl/cache/data_array.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:14:00 on Nov 21,2020
+# Start time: 02:50:07 on Dec 03,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/cache" /home/scottl4/hydration_is_key/mp4/hdl/cache/data_array.sv 
 # -- Compiling module data_array
 # 
 # Top level modules:
 # 	data_array
-# End time: 21:14:00 on Nov 21,2020, Elapsed time: 0:00:00
+# End time: 02:50:07 on Dec 03,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/cache {/home/scottl4/hydration_is_key/mp4/hdl/cache/cache_datapath.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:14:00 on Nov 21,2020
+# Start time: 02:50:07 on Dec 03,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/cache" /home/scottl4/hydration_is_key/mp4/hdl/cache/cache_datapath.sv 
 # -- Compiling module cache_datapath
 # 
 # Top level modules:
 # 	cache_datapath
-# End time: 21:14:00 on Nov 21,2020, Elapsed time: 0:00:00
+# End time: 02:50:07 on Dec 03,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/cache {/home/scottl4/hydration_is_key/mp4/hdl/cache/cache_control.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:14:00 on Nov 21,2020
+# Start time: 02:50:07 on Dec 03,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/cache" /home/scottl4/hydration_is_key/mp4/hdl/cache/cache_control.sv 
 # -- Compiling module cache_control
 # 
 # Top level modules:
 # 	cache_control
-# End time: 21:14:01 on Nov 21,2020, Elapsed time: 0:00:01
+# End time: 02:50:08 on Dec 03,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/cache {/home/scottl4/hydration_is_key/mp4/hdl/cache/array.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:14:01 on Nov 21,2020
+# Start time: 02:50:08 on Dec 03,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/cache" /home/scottl4/hydration_is_key/mp4/hdl/cache/array.sv 
 # -- Compiling module array
 # 
 # Top level modules:
 # 	array
-# End time: 21:14:01 on Nov 21,2020, Elapsed time: 0:00:00
+# End time: 02:50:08 on Dec 03,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/scott_cp4 {/home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 02:50:08 on Dec 03,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/scott_cp4" /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv 
+# -- Compiling module cache_p_way
+# 
+# Top level modules:
+# 	cache_p_way
+# End time: 02:50:08 on Dec 03,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl {/home/scottl4/hydration_is_key/mp4/hdl/rv32i_types.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:14:01 on Nov 21,2020
+# Start time: 02:50:08 on Dec 03,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl" /home/scottl4/hydration_is_key/mp4/hdl/rv32i_types.sv 
 # -- Compiling package rv32i_types
 # -- Importing package pcmux
@@ -126,38 +186,39 @@
 # 
 # Top level modules:
 # 	--none--
-# End time: 21:14:01 on Nov 21,2020, Elapsed time: 0:00:00
+# End time: 02:50:08 on Dec 03,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/cache {/home/scottl4/hydration_is_key/mp4/hdl/cache/cache.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:14:01 on Nov 21,2020
+# Start time: 02:50:08 on Dec 03,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/cache" /home/scottl4/hydration_is_key/mp4/hdl/cache/cache.sv 
 # -- Compiling module cache
 # 
 # Top level modules:
 # 	cache
-# End time: 21:14:01 on Nov 21,2020, Elapsed time: 0:00:00
+# End time: 02:50:08 on Dec 03,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline {/home/scottl4/hydration_is_key/mp4/hdl/pipeline/WB.sv}
+# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/scott_cp4 {/home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_datapath.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:14:01 on Nov 21,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline" /home/scottl4/hydration_is_key/mp4/hdl/pipeline/WB.sv 
-# -- Compiling package WB_sv_unit
+# Start time: 02:50:08 on Dec 03,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/scott_cp4" /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_datapath.sv 
+# -- Compiling package cache_p_datapath_sv_unit
 # -- Importing package rv32i_types
 # -- Importing package pcmux
 # -- Importing package marmux
 # -- Importing package cmpmux
 # -- Importing package alumux
 # -- Importing package regfilemux
-# -- Compiling module WB
+# -- Compiling module cache_p_datapath
+# ** Warning: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_datapath.sv(181): (vlog-2584) there is a matching case item hence not unique 
 # 
 # Top level modules:
-# 	WB
-# End time: 21:14:01 on Nov 21,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
+# 	cache_p_datapath
+# End time: 02:50:08 on Dec 03,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
 # vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline {/home/scottl4/hydration_is_key/mp4/hdl/pipeline/sreg_MEM_WB.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:14:01 on Nov 21,2020
+# Start time: 02:50:08 on Dec 03,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline" /home/scottl4/hydration_is_key/mp4/hdl/pipeline/sreg_MEM_WB.sv 
 # -- Compiling package sreg_MEM_WB_sv_unit
 # -- Importing package rv32i_types
@@ -170,11 +231,11 @@
 # 
 # Top level modules:
 # 	sreg_MEM_WB
-# End time: 21:14:01 on Nov 21,2020, Elapsed time: 0:00:00
+# End time: 02:50:08 on Dec 03,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline {/home/scottl4/hydration_is_key/mp4/hdl/pipeline/sreg_ID_EX.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:14:01 on Nov 21,2020
+# Start time: 02:50:08 on Dec 03,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline" /home/scottl4/hydration_is_key/mp4/hdl/pipeline/sreg_ID_EX.sv 
 # -- Compiling package sreg_ID_EX_sv_unit
 # -- Importing package rv32i_types
@@ -187,11 +248,11 @@
 # 
 # Top level modules:
 # 	sreg_ID_EX
-# End time: 21:14:01 on Nov 21,2020, Elapsed time: 0:00:00
+# End time: 02:50:08 on Dec 03,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline {/home/scottl4/hydration_is_key/mp4/hdl/pipeline/sreg_EX_MEM.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:14:01 on Nov 21,2020
+# Start time: 02:50:08 on Dec 03,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline" /home/scottl4/hydration_is_key/mp4/hdl/pipeline/sreg_EX_MEM.sv 
 # -- Compiling package sreg_EX_MEM_sv_unit
 # -- Importing package rv32i_types
@@ -204,11 +265,11 @@
 # 
 # Top level modules:
 # 	sreg_EX_MEM
-# End time: 21:14:02 on Nov 21,2020, Elapsed time: 0:00:01
+# End time: 02:50:08 on Dec 03,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline {/home/scottl4/hydration_is_key/mp4/hdl/pipeline/MEM.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:14:02 on Nov 21,2020
+# Start time: 02:50:08 on Dec 03,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline" /home/scottl4/hydration_is_key/mp4/hdl/pipeline/MEM.sv 
 # -- Compiling package MEM_sv_unit
 # -- Importing package rv32i_types
@@ -221,11 +282,11 @@
 # 
 # Top level modules:
 # 	MEM
-# End time: 21:14:02 on Nov 21,2020, Elapsed time: 0:00:00
+# End time: 02:50:08 on Dec 03,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline {/home/scottl4/hydration_is_key/mp4/hdl/pipeline/ID.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:14:02 on Nov 21,2020
+# Start time: 02:50:08 on Dec 03,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline" /home/scottl4/hydration_is_key/mp4/hdl/pipeline/ID.sv 
 # -- Compiling package ID_sv_unit
 # -- Importing package rv32i_types
@@ -238,11 +299,11 @@
 # 
 # Top level modules:
 # 	ID
-# End time: 21:14:02 on Nov 21,2020, Elapsed time: 0:00:00
+# End time: 02:50:09 on Dec 03,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline {/home/scottl4/hydration_is_key/mp4/hdl/pipeline/control_rom.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:14:02 on Nov 21,2020
+# Start time: 02:50:09 on Dec 03,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline" /home/scottl4/hydration_is_key/mp4/hdl/pipeline/control_rom.sv 
 # -- Compiling package control_rom_sv_unit
 # -- Importing package rv32i_types
@@ -255,11 +316,11 @@
 # 
 # Top level modules:
 # 	control_rom
-# End time: 21:14:02 on Nov 21,2020, Elapsed time: 0:00:00
+# End time: 02:50:09 on Dec 03,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/cpu {/home/scottl4/hydration_is_key/mp4/hdl/cpu/cmp.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:14:02 on Nov 21,2020
+# Start time: 02:50:09 on Dec 03,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/cpu" /home/scottl4/hydration_is_key/mp4/hdl/cpu/cmp.sv 
 # -- Compiling package cmp_sv_unit
 # -- Importing package rv32i_types
@@ -272,11 +333,11 @@
 # 
 # Top level modules:
 # 	cmp
-# End time: 21:14:02 on Nov 21,2020, Elapsed time: 0:00:00
+# End time: 02:50:09 on Dec 03,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/cpu {/home/scottl4/hydration_is_key/mp4/hdl/cpu/alu.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:14:02 on Nov 21,2020
+# Start time: 02:50:09 on Dec 03,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/cpu" /home/scottl4/hydration_is_key/mp4/hdl/cpu/alu.sv 
 # -- Compiling package alu_sv_unit
 # -- Importing package rv32i_types
@@ -289,11 +350,38 @@
 # 
 # Top level modules:
 # 	alu
-# End time: 21:14:02 on Nov 21,2020, Elapsed time: 0:00:00
+# End time: 02:50:09 on Dec 03,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/scott_cp4 {/home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 02:50:09 on Dec 03,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/scott_cp4" /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p.sv 
+# -- Compiling module cache_p
+# 
+# Top level modules:
+# 	cache_p
+# End time: 02:50:09 on Dec 03,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline {/home/scottl4/hydration_is_key/mp4/hdl/pipeline/WB.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 02:50:09 on Dec 03,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline" /home/scottl4/hydration_is_key/mp4/hdl/pipeline/WB.sv 
+# -- Compiling package WB_sv_unit
+# -- Importing package rv32i_types
+# -- Importing package pcmux
+# -- Importing package marmux
+# -- Importing package cmpmux
+# -- Importing package alumux
+# -- Importing package regfilemux
+# -- Compiling module WB
+# 
+# Top level modules:
+# 	WB
+# End time: 02:50:09 on Dec 03,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline {/home/scottl4/hydration_is_key/mp4/hdl/pipeline/IF.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:14:02 on Nov 21,2020
+# Start time: 02:50:09 on Dec 03,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline" /home/scottl4/hydration_is_key/mp4/hdl/pipeline/IF.sv 
 # -- Compiling package IF_sv_unit
 # -- Importing package rv32i_types
@@ -306,11 +394,11 @@
 # 
 # Top level modules:
 # 	IF
-# End time: 21:14:02 on Nov 21,2020, Elapsed time: 0:00:00
+# End time: 02:50:09 on Dec 03,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline {/home/scottl4/hydration_is_key/mp4/hdl/pipeline/hazard_detection.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:14:02 on Nov 21,2020
+# Start time: 02:50:09 on Dec 03,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline" /home/scottl4/hydration_is_key/mp4/hdl/pipeline/hazard_detection.sv 
 # -- Compiling package hazard_detection_sv_unit
 # -- Importing package rv32i_types
@@ -323,11 +411,11 @@
 # 
 # Top level modules:
 # 	hazard_detection
-# End time: 21:14:02 on Nov 21,2020, Elapsed time: 0:00:00
+# End time: 02:50:09 on Dec 03,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline {/home/scottl4/hydration_is_key/mp4/hdl/pipeline/EX.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:14:03 on Nov 21,2020
+# Start time: 02:50:09 on Dec 03,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline" /home/scottl4/hydration_is_key/mp4/hdl/pipeline/EX.sv 
 # -- Compiling package EX_sv_unit
 # -- Importing package rv32i_types
@@ -340,11 +428,11 @@
 # 
 # Top level modules:
 # 	EX
-# End time: 21:14:03 on Nov 21,2020, Elapsed time: 0:00:00
+# End time: 02:50:09 on Dec 03,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/cpu {/home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:14:03 on Nov 21,2020
+# Start time: 02:50:09 on Dec 03,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/cpu" /home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv 
 # -- Compiling package cpu_datapath_sv_unit
 # -- Importing package rv32i_types
@@ -357,11 +445,11 @@
 # 
 # Top level modules:
 # 	cpu_datapath
-# End time: 21:14:03 on Nov 21,2020, Elapsed time: 0:00:00
+# End time: 02:50:09 on Dec 03,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl {/home/scottl4/hydration_is_key/mp4/hdl/mp4.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:14:03 on Nov 21,2020
+# Start time: 02:50:09 on Dec 03,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl" /home/scottl4/hydration_is_key/mp4/hdl/mp4.sv 
 # -- Compiling package mp4_sv_unit
 # -- Importing package rv32i_types
@@ -374,32 +462,32 @@
 # 
 # Top level modules:
 # 	mp4
-# End time: 21:14:03 on Nov 21,2020, Elapsed time: 0:00:00
+# End time: 02:50:10 on Dec 03,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hvl {/home/scottl4/hydration_is_key/mp4/hvl/top.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:14:03 on Nov 21,2020
+# Start time: 02:50:10 on Dec 03,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hvl" /home/scottl4/hydration_is_key/mp4/hvl/top.sv 
 # -- Compiling module mp3_tb
 # 
 # Top level modules:
 # 	mp3_tb
-# End time: 21:14:03 on Nov 21,2020, Elapsed time: 0:00:00
+# End time: 02:50:10 on Dec 03,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hvl {/home/scottl4/hydration_is_key/mp4/hvl/magic_dual_port.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:14:03 on Nov 21,2020
+# Start time: 02:50:10 on Dec 03,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hvl" /home/scottl4/hydration_is_key/mp4/hvl/magic_dual_port.sv 
 # -- Compiling module magic_memory_dp
 # 
 # Top level modules:
 # 	magic_memory_dp
-# End time: 21:14:03 on Nov 21,2020, Elapsed time: 0:00:00
+# End time: 02:50:10 on Dec 03,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hvl {/home/scottl4/hydration_is_key/mp4/hvl/param_memory.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:14:03 on Nov 21,2020
+# Start time: 02:50:10 on Dec 03,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hvl" /home/scottl4/hydration_is_key/mp4/hvl/param_memory.sv 
 # -- Compiling module ParamMemory
 # ** Warning: /home/scottl4/hydration_is_key/mp4/hvl/param_memory.sv(25): (vlog-2244) Variable 'iteration' is implicitly static. You must either explicitly declare it as static or automatic
@@ -407,21 +495,21 @@
 # 
 # Top level modules:
 # 	ParamMemory
-# End time: 21:14:03 on Nov 21,2020, Elapsed time: 0:00:00
+# End time: 02:50:10 on Dec 03,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 1
 # vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hvl {/home/scottl4/hydration_is_key/mp4/hvl/rvfi_itf.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:14:03 on Nov 21,2020
+# Start time: 02:50:10 on Dec 03,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hvl" /home/scottl4/hydration_is_key/mp4/hvl/rvfi_itf.sv 
 # -- Compiling interface rvfi_itf
 # 
 # Top level modules:
 # 	--none--
-# End time: 21:14:03 on Nov 21,2020, Elapsed time: 0:00:00
+# End time: 02:50:10 on Dec 03,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+/home/scottl4/hydration_is_key/mp4/hvl {/home/scottl4/hydration_is_key/mp4/hvl/rvfimon.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:14:03 on Nov 21,2020
+# Start time: 02:50:10 on Dec 03,2020
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hvl" /home/scottl4/hydration_is_key/mp4/hvl/rvfimon.v 
 # -- Compiling module riscv_formal_monitor_rv32imc
 # -- Compiling module riscv_formal_monitor_rv32imc_rob
@@ -499,42 +587,42 @@
 # 
 # Top level modules:
 # 	riscv_formal_monitor_rv32imc
-# End time: 21:14:04 on Nov 21,2020, Elapsed time: 0:00:01
+# End time: 02:50:10 on Dec 03,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hvl {/home/scottl4/hydration_is_key/mp4/hvl/shadow_memory.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:14:04 on Nov 21,2020
+# Start time: 02:50:10 on Dec 03,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hvl" /home/scottl4/hydration_is_key/mp4/hvl/shadow_memory.sv 
 # -- Compiling module shadow_memory
 # 
 # Top level modules:
 # 	shadow_memory
-# End time: 21:14:04 on Nov 21,2020, Elapsed time: 0:00:00
+# End time: 02:50:10 on Dec 03,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hvl {/home/scottl4/hydration_is_key/mp4/hvl/source_tb.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:14:04 on Nov 21,2020
+# Start time: 02:50:10 on Dec 03,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hvl" /home/scottl4/hydration_is_key/mp4/hvl/source_tb.sv 
 # -- Compiling module source_tb
 # 
 # Top level modules:
 # 	source_tb
-# End time: 21:14:04 on Nov 21,2020, Elapsed time: 0:00:00
+# End time: 02:50:11 on Dec 03,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hvl {/home/scottl4/hydration_is_key/mp4/hvl/tb_itf.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:14:04 on Nov 21,2020
+# Start time: 02:50:11 on Dec 03,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hvl" /home/scottl4/hydration_is_key/mp4/hvl/tb_itf.sv 
 # -- Compiling interface tb_itf
 # 
 # Top level modules:
 # 	--none--
-# End time: 21:14:04 on Nov 21,2020, Elapsed time: 0:00:00
+# End time: 02:50:11 on Dec 03,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L arriaii_hssi_ver -L arriaii_pcie_hip_ver -L arriaii_ver -L rtl_work -L work -voptargs="+acc"  mp3_tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L arriaii_hssi_ver -L arriaii_pcie_hip_ver -L arriaii_ver -L rtl_work -L work -voptargs=""+acc"" mp3_tb 
-# Start time: 21:14:04 on Nov 21,2020
+# Start time: 02:50:11 on Dec 03,2020
 # Loading sv_std.std
 # Loading work.mp3_tb
 # Loading work.tb_itf
@@ -577,18 +665,164 @@
 # Loading work.WB
 # Loading work.hazard_detection_sv_unit
 # Loading work.hazard_detection
+# Loading work.cache_p
+# Loading work.cache_p_datapath_sv_unit
+# Loading work.cache_p_datapath
+# Loading work.cache_IF_ID
+# Loading work.cache_p_way
+# Loading work.data_array_p
+# Loading work.array_p
+# Loading work.lru_array
+# Loading work.line_adapter
+# Loading work.arbiter
 # Loading work.cache
 # Loading work.cache_control
 # Loading work.cache_datapath
 # Loading work.data_array
 # Loading work.array
-# Loading work.line_adapter
-# Loading work.arbiter
+# Loading work.cacheline_adaptor
 # Loading work.ParamMemory
 # ** Warning: (vsim-3017) /home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv(258): [TFMPC] - Too few port connections. Expected 22, found 20.
 #    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/cpu_datapath/hazard File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/hazard_detection.sv
 # ** Warning: (vsim-3722) /home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv(258): [TFMPC] - Missing connection for port 'MEM_WB_wdata'.
 # ** Warning: (vsim-3722) /home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv(258): [TFMPC] - Missing connection for port 'MEM_WB_alu_out'.
+# ** Warning: (vsim-3015) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_datapath.sv(197): [PCDPC] - Port size (256) does not match connection size (1) for port 'cpu_data_o'. The port definition is at: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_IF_ID.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/i_cache/cache_p_datapath/cache_IF_ID File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_IF_ID.sv
+# ** Warning: (vsim-3015) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_datapath.sv(222): [PCDPC] - Port size (256) does not match connection size (1) for port 'datain'. The port definition is at: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv(14).
+#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/i_cache/cache_p_datapath/cache_way_0 File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv
+# ** Warning: (vsim-3015) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv(26): [PCDPC] - Port size (32) does not match connection size (1) for port 'write_en'. The port definition is at: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/data_array_p.sv(14).
+#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/i_cache/cache_p_datapath/cache_way_0/data_array File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/data_array_p.sv
+# ** Warning: (vsim-3015) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv(38): [PCDPC] - Port size (3) does not match connection size (1) for port 'rindex'. The port definition is at: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv(12).
+#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/i_cache/cache_p_datapath/cache_way_0/tag_array File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv
+# ** Warning: (vsim-3015) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv(38): [PCDPC] - Port size (3) does not match connection size (1) for port 'windex'. The port definition is at: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv(13).
+#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/i_cache/cache_p_datapath/cache_way_0/tag_array File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv
+# ** Warning: (vsim-3015) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv(50): [PCDPC] - Port size (3) does not match connection size (1) for port 'rindex'. The port definition is at: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv(12).
+#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/i_cache/cache_p_datapath/cache_way_0/valid_array File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv
+# ** Warning: (vsim-3015) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv(50): [PCDPC] - Port size (3) does not match connection size (1) for port 'windex'. The port definition is at: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv(13).
+#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/i_cache/cache_p_datapath/cache_way_0/valid_array File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv
+# ** Warning: (vsim-3015) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv(62): [PCDPC] - Port size (3) does not match connection size (1) for port 'rindex'. The port definition is at: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv(12).
+#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/i_cache/cache_p_datapath/cache_way_0/dirty_array File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv
+# ** Warning: (vsim-3015) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv(62): [PCDPC] - Port size (3) does not match connection size (1) for port 'windex'. The port definition is at: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv(13).
+#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/i_cache/cache_p_datapath/cache_way_0/dirty_array File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv
+# ** Warning: (vsim-3015) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_datapath.sv(239): [PCDPC] - Port size (256) does not match connection size (1) for port 'datain'. The port definition is at: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv(14).
+#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/i_cache/cache_p_datapath/cache_way_1 File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv
+# ** Warning: (vsim-3015) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv(26): [PCDPC] - Port size (32) does not match connection size (1) for port 'write_en'. The port definition is at: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/data_array_p.sv(14).
+#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/i_cache/cache_p_datapath/cache_way_1/data_array File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/data_array_p.sv
+# ** Warning: (vsim-3015) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv(38): [PCDPC] - Port size (3) does not match connection size (1) for port 'rindex'. The port definition is at: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv(12).
+#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/i_cache/cache_p_datapath/cache_way_1/tag_array File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv
+# ** Warning: (vsim-3015) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv(38): [PCDPC] - Port size (3) does not match connection size (1) for port 'windex'. The port definition is at: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv(13).
+#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/i_cache/cache_p_datapath/cache_way_1/tag_array File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv
+# ** Warning: (vsim-3015) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv(50): [PCDPC] - Port size (3) does not match connection size (1) for port 'rindex'. The port definition is at: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv(12).
+#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/i_cache/cache_p_datapath/cache_way_1/valid_array File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv
+# ** Warning: (vsim-3015) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv(50): [PCDPC] - Port size (3) does not match connection size (1) for port 'windex'. The port definition is at: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv(13).
+#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/i_cache/cache_p_datapath/cache_way_1/valid_array File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv
+# ** Warning: (vsim-3015) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv(62): [PCDPC] - Port size (3) does not match connection size (1) for port 'rindex'. The port definition is at: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv(12).
+#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/i_cache/cache_p_datapath/cache_way_1/dirty_array File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv
+# ** Warning: (vsim-3015) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv(62): [PCDPC] - Port size (3) does not match connection size (1) for port 'windex'. The port definition is at: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv(13).
+#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/i_cache/cache_p_datapath/cache_way_1/dirty_array File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv
+# ** Warning: (vsim-3015) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_datapath.sv(256): [PCDPC] - Port size (256) does not match connection size (1) for port 'datain'. The port definition is at: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv(14).
+#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/i_cache/cache_p_datapath/cache_way_2 File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv
+# ** Warning: (vsim-3015) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv(26): [PCDPC] - Port size (32) does not match connection size (1) for port 'write_en'. The port definition is at: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/data_array_p.sv(14).
+#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/i_cache/cache_p_datapath/cache_way_2/data_array File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/data_array_p.sv
+# ** Warning: (vsim-3015) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv(38): [PCDPC] - Port size (3) does not match connection size (1) for port 'rindex'. The port definition is at: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv(12).
+#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/i_cache/cache_p_datapath/cache_way_2/tag_array File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv
+# ** Warning: (vsim-3015) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv(38): [PCDPC] - Port size (3) does not match connection size (1) for port 'windex'. The port definition is at: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv(13).
+#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/i_cache/cache_p_datapath/cache_way_2/tag_array File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv
+# ** Warning: (vsim-3015) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv(50): [PCDPC] - Port size (3) does not match connection size (1) for port 'rindex'. The port definition is at: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv(12).
+#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/i_cache/cache_p_datapath/cache_way_2/valid_array File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv
+# ** Warning: (vsim-3015) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv(50): [PCDPC] - Port size (3) does not match connection size (1) for port 'windex'. The port definition is at: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv(13).
+#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/i_cache/cache_p_datapath/cache_way_2/valid_array File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv
+# ** Warning: (vsim-3015) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv(62): [PCDPC] - Port size (3) does not match connection size (1) for port 'rindex'. The port definition is at: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv(12).
+#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/i_cache/cache_p_datapath/cache_way_2/dirty_array File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv
+# ** Warning: (vsim-3015) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv(62): [PCDPC] - Port size (3) does not match connection size (1) for port 'windex'. The port definition is at: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv(13).
+#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/i_cache/cache_p_datapath/cache_way_2/dirty_array File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv
+# ** Warning: (vsim-3015) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_datapath.sv(273): [PCDPC] - Port size (256) does not match connection size (1) for port 'datain'. The port definition is at: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv(14).
+#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/i_cache/cache_p_datapath/cache_way_3 File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv
+# ** Warning: (vsim-3015) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv(26): [PCDPC] - Port size (32) does not match connection size (1) for port 'write_en'. The port definition is at: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/data_array_p.sv(14).
+#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/i_cache/cache_p_datapath/cache_way_3/data_array File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/data_array_p.sv
+# ** Warning: (vsim-3015) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv(38): [PCDPC] - Port size (3) does not match connection size (1) for port 'rindex'. The port definition is at: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv(12).
+#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/i_cache/cache_p_datapath/cache_way_3/tag_array File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv
+# ** Warning: (vsim-3015) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv(38): [PCDPC] - Port size (3) does not match connection size (1) for port 'windex'. The port definition is at: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv(13).
+#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/i_cache/cache_p_datapath/cache_way_3/tag_array File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv
+# ** Warning: (vsim-3015) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv(50): [PCDPC] - Port size (3) does not match connection size (1) for port 'rindex'. The port definition is at: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv(12).
+#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/i_cache/cache_p_datapath/cache_way_3/valid_array File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv
+# ** Warning: (vsim-3015) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv(50): [PCDPC] - Port size (3) does not match connection size (1) for port 'windex'. The port definition is at: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv(13).
+#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/i_cache/cache_p_datapath/cache_way_3/valid_array File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv
+# ** Warning: (vsim-3015) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv(62): [PCDPC] - Port size (3) does not match connection size (1) for port 'rindex'. The port definition is at: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv(12).
+#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/i_cache/cache_p_datapath/cache_way_3/dirty_array File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv
+# ** Warning: (vsim-3015) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv(62): [PCDPC] - Port size (3) does not match connection size (1) for port 'windex'. The port definition is at: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv(13).
+#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/i_cache/cache_p_datapath/cache_way_3/dirty_array File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv
+# ** Warning: (vsim-3015) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_datapath.sv(197): [PCDPC] - Port size (256) does not match connection size (1) for port 'cpu_data_o'. The port definition is at: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_IF_ID.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/d_cache/cache_p_datapath/cache_IF_ID File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_IF_ID.sv
+# ** Warning: (vsim-3015) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_datapath.sv(222): [PCDPC] - Port size (256) does not match connection size (1) for port 'datain'. The port definition is at: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv(14).
+#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/d_cache/cache_p_datapath/cache_way_0 File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv
+# ** Warning: (vsim-3015) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv(26): [PCDPC] - Port size (32) does not match connection size (1) for port 'write_en'. The port definition is at: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/data_array_p.sv(14).
+#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/d_cache/cache_p_datapath/cache_way_0/data_array File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/data_array_p.sv
+# ** Warning: (vsim-3015) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv(38): [PCDPC] - Port size (3) does not match connection size (1) for port 'rindex'. The port definition is at: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv(12).
+#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/d_cache/cache_p_datapath/cache_way_0/tag_array File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv
+# ** Warning: (vsim-3015) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv(38): [PCDPC] - Port size (3) does not match connection size (1) for port 'windex'. The port definition is at: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv(13).
+#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/d_cache/cache_p_datapath/cache_way_0/tag_array File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv
+# ** Warning: (vsim-3015) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv(50): [PCDPC] - Port size (3) does not match connection size (1) for port 'rindex'. The port definition is at: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv(12).
+#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/d_cache/cache_p_datapath/cache_way_0/valid_array File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv
+# ** Warning: (vsim-3015) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv(50): [PCDPC] - Port size (3) does not match connection size (1) for port 'windex'. The port definition is at: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv(13).
+#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/d_cache/cache_p_datapath/cache_way_0/valid_array File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv
+# ** Warning: (vsim-3015) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv(62): [PCDPC] - Port size (3) does not match connection size (1) for port 'rindex'. The port definition is at: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv(12).
+#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/d_cache/cache_p_datapath/cache_way_0/dirty_array File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv
+# ** Warning: (vsim-3015) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv(62): [PCDPC] - Port size (3) does not match connection size (1) for port 'windex'. The port definition is at: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv(13).
+#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/d_cache/cache_p_datapath/cache_way_0/dirty_array File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv
+# ** Warning: (vsim-3015) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_datapath.sv(239): [PCDPC] - Port size (256) does not match connection size (1) for port 'datain'. The port definition is at: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv(14).
+#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/d_cache/cache_p_datapath/cache_way_1 File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv
+# ** Warning: (vsim-3015) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv(26): [PCDPC] - Port size (32) does not match connection size (1) for port 'write_en'. The port definition is at: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/data_array_p.sv(14).
+#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/d_cache/cache_p_datapath/cache_way_1/data_array File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/data_array_p.sv
+# ** Warning: (vsim-3015) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv(38): [PCDPC] - Port size (3) does not match connection size (1) for port 'rindex'. The port definition is at: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv(12).
+#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/d_cache/cache_p_datapath/cache_way_1/tag_array File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv
+# ** Warning: (vsim-3015) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv(38): [PCDPC] - Port size (3) does not match connection size (1) for port 'windex'. The port definition is at: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv(13).
+#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/d_cache/cache_p_datapath/cache_way_1/tag_array File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv
+# ** Warning: (vsim-3015) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv(50): [PCDPC] - Port size (3) does not match connection size (1) for port 'rindex'. The port definition is at: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv(12).
+#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/d_cache/cache_p_datapath/cache_way_1/valid_array File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv
+# ** Warning: (vsim-3015) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv(50): [PCDPC] - Port size (3) does not match connection size (1) for port 'windex'. The port definition is at: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv(13).
+#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/d_cache/cache_p_datapath/cache_way_1/valid_array File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv
+# ** Warning: (vsim-3015) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv(62): [PCDPC] - Port size (3) does not match connection size (1) for port 'rindex'. The port definition is at: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv(12).
+#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/d_cache/cache_p_datapath/cache_way_1/dirty_array File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv
+# ** Warning: (vsim-3015) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv(62): [PCDPC] - Port size (3) does not match connection size (1) for port 'windex'. The port definition is at: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv(13).
+#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/d_cache/cache_p_datapath/cache_way_1/dirty_array File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv
+# ** Warning: (vsim-3015) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_datapath.sv(256): [PCDPC] - Port size (256) does not match connection size (1) for port 'datain'. The port definition is at: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv(14).
+#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/d_cache/cache_p_datapath/cache_way_2 File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv
+# ** Warning: (vsim-3015) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv(26): [PCDPC] - Port size (32) does not match connection size (1) for port 'write_en'. The port definition is at: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/data_array_p.sv(14).
+#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/d_cache/cache_p_datapath/cache_way_2/data_array File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/data_array_p.sv
+# ** Warning: (vsim-3015) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv(38): [PCDPC] - Port size (3) does not match connection size (1) for port 'rindex'. The port definition is at: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv(12).
+#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/d_cache/cache_p_datapath/cache_way_2/tag_array File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv
+# ** Warning: (vsim-3015) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv(38): [PCDPC] - Port size (3) does not match connection size (1) for port 'windex'. The port definition is at: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv(13).
+#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/d_cache/cache_p_datapath/cache_way_2/tag_array File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv
+# ** Warning: (vsim-3015) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv(50): [PCDPC] - Port size (3) does not match connection size (1) for port 'rindex'. The port definition is at: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv(12).
+#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/d_cache/cache_p_datapath/cache_way_2/valid_array File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv
+# ** Warning: (vsim-3015) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv(50): [PCDPC] - Port size (3) does not match connection size (1) for port 'windex'. The port definition is at: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv(13).
+#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/d_cache/cache_p_datapath/cache_way_2/valid_array File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv
+# ** Warning: (vsim-3015) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv(62): [PCDPC] - Port size (3) does not match connection size (1) for port 'rindex'. The port definition is at: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv(12).
+#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/d_cache/cache_p_datapath/cache_way_2/dirty_array File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv
+# ** Warning: (vsim-3015) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv(62): [PCDPC] - Port size (3) does not match connection size (1) for port 'windex'. The port definition is at: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv(13).
+#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/d_cache/cache_p_datapath/cache_way_2/dirty_array File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv
+# ** Warning: (vsim-3015) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_datapath.sv(273): [PCDPC] - Port size (256) does not match connection size (1) for port 'datain'. The port definition is at: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv(14).
+#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/d_cache/cache_p_datapath/cache_way_3 File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv
+# ** Warning: (vsim-3015) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv(26): [PCDPC] - Port size (32) does not match connection size (1) for port 'write_en'. The port definition is at: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/data_array_p.sv(14).
+#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/d_cache/cache_p_datapath/cache_way_3/data_array File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/data_array_p.sv
+# ** Warning: (vsim-3015) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv(38): [PCDPC] - Port size (3) does not match connection size (1) for port 'rindex'. The port definition is at: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv(12).
+#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/d_cache/cache_p_datapath/cache_way_3/tag_array File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv
+# ** Warning: (vsim-3015) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv(38): [PCDPC] - Port size (3) does not match connection size (1) for port 'windex'. The port definition is at: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv(13).
+#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/d_cache/cache_p_datapath/cache_way_3/tag_array File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv
+# ** Warning: (vsim-3015) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv(50): [PCDPC] - Port size (3) does not match connection size (1) for port 'rindex'. The port definition is at: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv(12).
+#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/d_cache/cache_p_datapath/cache_way_3/valid_array File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv
+# ** Warning: (vsim-3015) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv(50): [PCDPC] - Port size (3) does not match connection size (1) for port 'windex'. The port definition is at: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv(13).
+#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/d_cache/cache_p_datapath/cache_way_3/valid_array File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv
+# ** Warning: (vsim-3015) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv(62): [PCDPC] - Port size (3) does not match connection size (1) for port 'rindex'. The port definition is at: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv(12).
+#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/d_cache/cache_p_datapath/cache_way_3/dirty_array File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv
+# ** Warning: (vsim-3015) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv(62): [PCDPC] - Port size (3) does not match connection size (1) for port 'windex'. The port definition is at: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv(13).
+#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/d_cache/cache_p_datapath/cache_way_3/dirty_array File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv
+# ** Warning: (vsim-3017) /home/scottl4/hydration_is_key/mp4/hdl/mp4.sv(95): [TFMPC] - Too few port connections. Expected 21, found 18.
+#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/arbiter File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/arbiter.sv
+# ** Warning: (vsim-3722) /home/scottl4/hydration_is_key/mp4/hdl/mp4.sv(95): [TFMPC] - Missing connection for port 'd_mem_byte_en'.
+# ** Warning: (vsim-3722) /home/scottl4/hydration_is_key/mp4/hdl/mp4.sv(95): [TFMPC] - Missing connection for port 'i_mem_byte_en'.
+# ** Warning: (vsim-3722) /home/scottl4/hydration_is_key/mp4/hdl/mp4.sv(95): [TFMPC] - Missing connection for port 'data_in'.
 # 
 # add wave *
 # view structure
@@ -597,1362 +831,65 @@
 # .main_pane.objects.interior.cs.body.tree
 # run -all
 # Compilation Successful
+# ** Warning: (vsim-8315) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_datapath.sv(81): No condition is true in the unique/priority if/case statement.
+#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/d_cache/cache_p_datapath
+# ERROR: More than one cache way hits!
+# ** Warning: (vsim-8315) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_datapath.sv(160): No condition is true in the unique/priority if/case statement.
+#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/d_cache/cache_p_datapath
+# ** Warning: (vsim-8315) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_datapath.sv(81): No condition is true in the unique/priority if/case statement.
+#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/i_cache/cache_p_datapath
+# ERROR: More than one cache way hits!
+# ** Warning: (vsim-8315) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_datapath.sv(160): No condition is true in the unique/priority if/case statement.
+#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/i_cache/cache_p_datapath
+# ERROR: More than one cache way hits!
+# ** Warning: (vsim-8315) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_datapath.sv(160): No condition is true in the unique/priority if/case statement.
+#    Time: 0 ps  Iteration: 1  Instance: /mp3_tb/dut/d_cache/cache_p_datapath
+# ** Warning: (vsim-8315) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_datapath.sv(178): No condition is true in the unique/priority if/case statement.
+#    Time: 0 ps  Iteration: 1  Instance: /mp3_tb/dut/d_cache/cache_p_datapath
+# ERROR: More than one cache way hits!
+# ** Warning: (vsim-8315) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_datapath.sv(160): No condition is true in the unique/priority if/case statement.
+#    Time: 0 ps  Iteration: 1  Instance: /mp3_tb/dut/i_cache/cache_p_datapath
+# ** Warning: (vsim-8315) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_datapath.sv(178): No condition is true in the unique/priority if/case statement.
+#    Time: 0 ps  Iteration: 1  Instance: /mp3_tb/dut/i_cache/cache_p_datapath
+# ERROR: More than one cache way hits!
+# ** Warning: (vsim-8315) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_datapath.sv(160): No condition is true in the unique/priority if/case statement.
+#    Time: 0 ps  Iteration: 4  Instance: /mp3_tb/dut/d_cache/cache_p_datapath
+# ** Warning: (vsim-8315) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_datapath.sv(178): No condition is true in the unique/priority if/case statement.
+#    Time: 0 ps  Iteration: 4  Instance: /mp3_tb/dut/d_cache/cache_p_datapath
+# ERROR: More than one cache way hits!
+# ** Warning: (vsim-8315) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_datapath.sv(160): No condition is true in the unique/priority if/case statement.
+#    Time: 0 ps  Iteration: 4  Instance: /mp3_tb/dut/i_cache/cache_p_datapath
+# ** Warning: (vsim-8315) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_datapath.sv(178): No condition is true in the unique/priority if/case statement.
+#    Time: 0 ps  Iteration: 4  Instance: /mp3_tb/dut/i_cache/cache_p_datapath
+# ERROR: More than one cache way hits!
+# ** Warning: (vsim-8315) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_datapath.sv(160): No condition is true in the unique/priority if/case statement.
+#    Time: 5 ns  Iteration: 2  Instance: /mp3_tb/dut/d_cache/cache_p_datapath
+# ** Warning: (vsim-8315) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_datapath.sv(178): No condition is true in the unique/priority if/case statement.
+#    Time: 5 ns  Iteration: 2  Instance: /mp3_tb/dut/d_cache/cache_p_datapath
+# ERROR: More than one cache way hits!
+# ** Warning: (vsim-8315) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_datapath.sv(160): No condition is true in the unique/priority if/case statement.
+#    Time: 5 ns  Iteration: 2  Instance: /mp3_tb/dut/i_cache/cache_p_datapath
+# ** Warning: (vsim-8315) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_datapath.sv(178): No condition is true in the unique/priority if/case statement.
+#    Time: 5 ns  Iteration: 2  Instance: /mp3_tb/dut/i_cache/cache_p_datapath
+# ERROR: More than one cache way hits!
+# ** Warning: (vsim-8315) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_datapath.sv(160): No condition is true in the unique/priority if/case statement.
+#    Time: 5 ns  Iteration: 3  Instance: /mp3_tb/dut/d_cache/cache_p_datapath
+# ** Warning: (vsim-8315) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_datapath.sv(178): No condition is true in the unique/priority if/case statement.
+#    Time: 5 ns  Iteration: 3  Instance: /mp3_tb/dut/d_cache/cache_p_datapath
+# ERROR: More than one cache way hits!
+# ** Warning: (vsim-8315) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_datapath.sv(160): No condition is true in the unique/priority if/case statement.
+#    Time: 5 ns  Iteration: 3  Instance: /mp3_tb/dut/i_cache/cache_p_datapath
+# ** Warning: (vsim-8315) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_datapath.sv(178): No condition is true in the unique/priority if/case statement.
+#    Time: 5 ns  Iteration: 3  Instance: /mp3_tb/dut/i_cache/cache_p_datapath
+# ERROR: More than one cache way hits!
+# ** Warning: (vsim-8315) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_datapath.sv(160): No condition is true in the unique/priority if/case statement.
+#    Time: 5 ns  Iteration: 4  Instance: /mp3_tb/dut/d_cache/cache_p_datapath
+# ** Warning: (vsim-8315) /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_datapath.sv(178): No condition is true in the unique/priority if/case statement.
+#    Time: 5 ns  Iteration: 4  Instance: /mp3_tb/dut/d_cache/cache_p_datapath
 # Reset Memory
-# ** Note: $finish    : /home/scottl4/hydration_is_key/mp4/hvl/source_tb.sv(33)
-#    Time: 4075 ns  Iteration: 1  Instance: /mp3_tb/tb
-# 1
-# Break in Module source_tb at /home/scottl4/hydration_is_key/mp4/hvl/source_tb.sv line 33
-do wave.do
-write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/scottl4/hydration_is_key/mp4/simulation/modelsim/wave.do
-add wave -position end  sim:/mp3_tb/dut/arbiter/burst_i
-add wave -position end  sim:/mp3_tb/dut/arbiter/d_line_o
-add wave -position end  sim:/mp3_tb/dut/arbiter/address_o
-restart -f; run 5000ns
-# ** Warning: (vsim-3017) /home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv(258): [TFMPC] - Too few port connections. Expected 22, found 20.
-#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/cpu_datapath/hazard File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/hazard_detection.sv
-# ** Warning: (vsim-3722) /home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv(258): [TFMPC] - Missing connection for port 'MEM_WB_wdata'.
-# ** Warning: (vsim-3722) /home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv(258): [TFMPC] - Missing connection for port 'MEM_WB_alu_out'.
-# Compilation Successful
-# Reset Memory
-# ** Note: $finish    : /home/scottl4/hydration_is_key/mp4/hvl/source_tb.sv(33)
-#    Time: 4075 ns  Iteration: 1  Instance: /mp3_tb/tb
-# 1
-# Break in Module source_tb at /home/scottl4/hydration_is_key/mp4/hvl/source_tb.sv line 33
-add wave -position 16  sim:/mp3_tb/dut/d_cache/control/hit
-add wave -position 17  sim:/mp3_tb/dut/d_cache/control/state
-restart -f; run 5000ns
-# ** Warning: (vsim-3017) /home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv(258): [TFMPC] - Too few port connections. Expected 22, found 20.
-#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/cpu_datapath/hazard File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/hazard_detection.sv
-# ** Warning: (vsim-3722) /home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv(258): [TFMPC] - Missing connection for port 'MEM_WB_wdata'.
-# ** Warning: (vsim-3722) /home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv(258): [TFMPC] - Missing connection for port 'MEM_WB_alu_out'.
-# Compilation Successful
-# Reset Memory
-# ** Note: $finish    : /home/scottl4/hydration_is_key/mp4/hvl/source_tb.sv(33)
-#    Time: 4075 ns  Iteration: 1  Instance: /mp3_tb/tb
-# 1
-# Break in Module source_tb at /home/scottl4/hydration_is_key/mp4/hvl/source_tb.sv line 33
-add wave -position 21  sim:/mp3_tb/dut/d_cache/datapath/line_out
-add wave -position 22  sim:/mp3_tb/dut/d_cache/datapath/address_tag
-restart -f; run 5000ns
-# ** Warning: (vsim-3017) /home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv(258): [TFMPC] - Too few port connections. Expected 22, found 20.
-#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/cpu_datapath/hazard File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/hazard_detection.sv
-# ** Warning: (vsim-3722) /home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv(258): [TFMPC] - Missing connection for port 'MEM_WB_wdata'.
-# ** Warning: (vsim-3722) /home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv(258): [TFMPC] - Missing connection for port 'MEM_WB_alu_out'.
-# Compilation Successful
-# Reset Memory
-# ** Note: $finish    : /home/scottl4/hydration_is_key/mp4/hvl/source_tb.sv(33)
-#    Time: 4075 ns  Iteration: 1  Instance: /mp3_tb/tb
-# 1
-# Break in Module source_tb at /home/scottl4/hydration_is_key/mp4/hvl/source_tb.sv line 33
-add wave -position 22  sim:/mp3_tb/dut/d_cache/datapath/index
-restart -f; run 5000ns
-# ** Warning: (vsim-3017) /home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv(258): [TFMPC] - Too few port connections. Expected 22, found 20.
-#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/cpu_datapath/hazard File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/hazard_detection.sv
-# ** Warning: (vsim-3722) /home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv(258): [TFMPC] - Missing connection for port 'MEM_WB_wdata'.
-# ** Warning: (vsim-3722) /home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv(258): [TFMPC] - Missing connection for port 'MEM_WB_alu_out'.
-# Compilation Successful
-# Reset Memory
-# ** Note: $finish    : /home/scottl4/hydration_is_key/mp4/hvl/source_tb.sv(33)
-#    Time: 4075 ns  Iteration: 1  Instance: /mp3_tb/tb
-# 1
-# Break in Module source_tb at /home/scottl4/hydration_is_key/mp4/hvl/source_tb.sv line 33
-restart -f; run 5000ns
-# ** Warning: (vsim-3017) /home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv(258): [TFMPC] - Too few port connections. Expected 22, found 20.
-#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/cpu_datapath/hazard File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/hazard_detection.sv
-# ** Warning: (vsim-3722) /home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv(258): [TFMPC] - Missing connection for port 'MEM_WB_wdata'.
-# ** Warning: (vsim-3722) /home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv(258): [TFMPC] - Missing connection for port 'MEM_WB_alu_out'.
-# Compilation Successful
-# Reset Memory
-# ** Note: $finish    : /home/scottl4/hydration_is_key/mp4/hvl/source_tb.sv(33)
-#    Time: 4075 ns  Iteration: 1  Instance: /mp3_tb/tb
-# 1
-# Break in Module source_tb at /home/scottl4/hydration_is_key/mp4/hvl/source_tb.sv line 33
-do mp4_run_msim_rtl_verilog.do
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
-# }
-# vlib rtl_work
-# vmap work rtl_work
-# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
-# vmap work rtl_work 
-# Modifying modelsim.ini
-# 
-# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/cache {/home/scottl4/hydration_is_key/mp4/hdl/cache/arbiter.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:46:49 on Nov 21,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/cache" /home/scottl4/hydration_is_key/mp4/hdl/cache/arbiter.sv 
-# -- Compiling module arbiter
-# 
-# Top level modules:
-# 	arbiter
-# End time: 22:46:49 on Nov 21,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/cache {/home/scottl4/hydration_is_key/mp4/hdl/cache/line_adapter.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:46:50 on Nov 21,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/cache" /home/scottl4/hydration_is_key/mp4/hdl/cache/line_adapter.sv 
-# -- Compiling module line_adapter
-# 
-# Top level modules:
-# 	line_adapter
-# End time: 22:46:50 on Nov 21,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl {/home/scottl4/hydration_is_key/mp4/hdl/rv32i_mux_types.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:46:50 on Nov 21,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl" /home/scottl4/hydration_is_key/mp4/hdl/rv32i_mux_types.sv 
-# -- Compiling package pcmux
-# -- Compiling package marmux
-# -- Compiling package cmpmux
-# -- Compiling package alumux
-# -- Compiling package regfilemux
-# 
-# Top level modules:
-# 	--none--
-# End time: 22:46:50 on Nov 21,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline {/home/scottl4/hydration_is_key/mp4/hdl/pipeline/sreg_IF_ID.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:46:50 on Nov 21,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline" /home/scottl4/hydration_is_key/mp4/hdl/pipeline/sreg_IF_ID.sv 
-# -- Compiling module sreg_IF_ID
-# 
-# Top level modules:
-# 	sreg_IF_ID
-# End time: 22:46:50 on Nov 21,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/cpu {/home/scottl4/hydration_is_key/mp4/hdl/cpu/regfile.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:46:50 on Nov 21,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/cpu" /home/scottl4/hydration_is_key/mp4/hdl/cpu/regfile.sv 
-# -- Compiling module regfile
-# 
-# Top level modules:
-# 	regfile
-# End time: 22:46:50 on Nov 21,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/cpu {/home/scottl4/hydration_is_key/mp4/hdl/cpu/pc_reg.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:46:50 on Nov 21,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/cpu" /home/scottl4/hydration_is_key/mp4/hdl/cpu/pc_reg.sv 
-# -- Compiling module pc_register
-# 
-# Top level modules:
-# 	pc_register
-# End time: 22:46:50 on Nov 21,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/cache {/home/scottl4/hydration_is_key/mp4/hdl/cache/data_array.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:46:50 on Nov 21,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/cache" /home/scottl4/hydration_is_key/mp4/hdl/cache/data_array.sv 
-# -- Compiling module data_array
-# 
-# Top level modules:
-# 	data_array
-# End time: 22:46:50 on Nov 21,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/cache {/home/scottl4/hydration_is_key/mp4/hdl/cache/cache_datapath.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:46:50 on Nov 21,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/cache" /home/scottl4/hydration_is_key/mp4/hdl/cache/cache_datapath.sv 
-# -- Compiling module cache_datapath
-# 
-# Top level modules:
-# 	cache_datapath
-# End time: 22:46:50 on Nov 21,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/cache {/home/scottl4/hydration_is_key/mp4/hdl/cache/cache_control.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:46:50 on Nov 21,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/cache" /home/scottl4/hydration_is_key/mp4/hdl/cache/cache_control.sv 
-# -- Compiling module cache_control
-# 
-# Top level modules:
-# 	cache_control
-# End time: 22:46:50 on Nov 21,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/cache {/home/scottl4/hydration_is_key/mp4/hdl/cache/array.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:46:50 on Nov 21,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/cache" /home/scottl4/hydration_is_key/mp4/hdl/cache/array.sv 
-# -- Compiling module array
-# 
-# Top level modules:
-# 	array
-# End time: 22:46:51 on Nov 21,2020, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl {/home/scottl4/hydration_is_key/mp4/hdl/rv32i_types.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:46:51 on Nov 21,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl" /home/scottl4/hydration_is_key/mp4/hdl/rv32i_types.sv 
-# -- Compiling package rv32i_types
-# -- Importing package pcmux
-# -- Importing package marmux
-# -- Importing package cmpmux
-# -- Importing package alumux
-# -- Importing package regfilemux
-# 
-# Top level modules:
-# 	--none--
-# End time: 22:46:51 on Nov 21,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/cache {/home/scottl4/hydration_is_key/mp4/hdl/cache/cache.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:46:51 on Nov 21,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/cache" /home/scottl4/hydration_is_key/mp4/hdl/cache/cache.sv 
-# -- Compiling module cache
-# 
-# Top level modules:
-# 	cache
-# End time: 22:46:51 on Nov 21,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline {/home/scottl4/hydration_is_key/mp4/hdl/pipeline/WB.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:46:51 on Nov 21,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline" /home/scottl4/hydration_is_key/mp4/hdl/pipeline/WB.sv 
-# -- Compiling package WB_sv_unit
-# -- Importing package rv32i_types
-# -- Importing package pcmux
-# -- Importing package marmux
-# -- Importing package cmpmux
-# -- Importing package alumux
-# -- Importing package regfilemux
-# -- Compiling module WB
-# 
-# Top level modules:
-# 	WB
-# End time: 22:46:51 on Nov 21,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline {/home/scottl4/hydration_is_key/mp4/hdl/pipeline/sreg_MEM_WB.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:46:51 on Nov 21,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline" /home/scottl4/hydration_is_key/mp4/hdl/pipeline/sreg_MEM_WB.sv 
-# -- Compiling package sreg_MEM_WB_sv_unit
-# -- Importing package rv32i_types
-# -- Importing package pcmux
-# -- Importing package marmux
-# -- Importing package cmpmux
-# -- Importing package alumux
-# -- Importing package regfilemux
-# -- Compiling module sreg_MEM_WB
-# 
-# Top level modules:
-# 	sreg_MEM_WB
-# End time: 22:46:51 on Nov 21,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline {/home/scottl4/hydration_is_key/mp4/hdl/pipeline/sreg_ID_EX.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:46:51 on Nov 21,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline" /home/scottl4/hydration_is_key/mp4/hdl/pipeline/sreg_ID_EX.sv 
-# -- Compiling package sreg_ID_EX_sv_unit
-# -- Importing package rv32i_types
-# -- Importing package pcmux
-# -- Importing package marmux
-# -- Importing package cmpmux
-# -- Importing package alumux
-# -- Importing package regfilemux
-# -- Compiling module sreg_ID_EX
-# 
-# Top level modules:
-# 	sreg_ID_EX
-# End time: 22:46:51 on Nov 21,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline {/home/scottl4/hydration_is_key/mp4/hdl/pipeline/sreg_EX_MEM.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:46:51 on Nov 21,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline" /home/scottl4/hydration_is_key/mp4/hdl/pipeline/sreg_EX_MEM.sv 
-# -- Compiling package sreg_EX_MEM_sv_unit
-# -- Importing package rv32i_types
-# -- Importing package pcmux
-# -- Importing package marmux
-# -- Importing package cmpmux
-# -- Importing package alumux
-# -- Importing package regfilemux
-# -- Compiling module sreg_EX_MEM
-# 
-# Top level modules:
-# 	sreg_EX_MEM
-# End time: 22:46:51 on Nov 21,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline {/home/scottl4/hydration_is_key/mp4/hdl/pipeline/MEM.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:46:51 on Nov 21,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline" /home/scottl4/hydration_is_key/mp4/hdl/pipeline/MEM.sv 
-# -- Compiling package MEM_sv_unit
-# -- Importing package rv32i_types
-# -- Importing package pcmux
-# -- Importing package marmux
-# -- Importing package cmpmux
-# -- Importing package alumux
-# -- Importing package regfilemux
-# -- Compiling module MEM
-# 
-# Top level modules:
-# 	MEM
-# End time: 22:46:51 on Nov 21,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline {/home/scottl4/hydration_is_key/mp4/hdl/pipeline/ID.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:46:51 on Nov 21,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline" /home/scottl4/hydration_is_key/mp4/hdl/pipeline/ID.sv 
-# -- Compiling package ID_sv_unit
-# -- Importing package rv32i_types
-# -- Importing package pcmux
-# -- Importing package marmux
-# -- Importing package cmpmux
-# -- Importing package alumux
-# -- Importing package regfilemux
-# -- Compiling module ID
-# 
-# Top level modules:
-# 	ID
-# End time: 22:46:52 on Nov 21,2020, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline {/home/scottl4/hydration_is_key/mp4/hdl/pipeline/control_rom.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:46:52 on Nov 21,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline" /home/scottl4/hydration_is_key/mp4/hdl/pipeline/control_rom.sv 
-# -- Compiling package control_rom_sv_unit
-# -- Importing package rv32i_types
-# -- Importing package pcmux
-# -- Importing package marmux
-# -- Importing package cmpmux
-# -- Importing package alumux
-# -- Importing package regfilemux
-# -- Compiling module control_rom
-# 
-# Top level modules:
-# 	control_rom
-# End time: 22:46:52 on Nov 21,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/cpu {/home/scottl4/hydration_is_key/mp4/hdl/cpu/cmp.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:46:52 on Nov 21,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/cpu" /home/scottl4/hydration_is_key/mp4/hdl/cpu/cmp.sv 
-# -- Compiling package cmp_sv_unit
-# -- Importing package rv32i_types
-# -- Importing package pcmux
-# -- Importing package marmux
-# -- Importing package cmpmux
-# -- Importing package alumux
-# -- Importing package regfilemux
-# -- Compiling module cmp
-# 
-# Top level modules:
-# 	cmp
-# End time: 22:46:52 on Nov 21,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/cpu {/home/scottl4/hydration_is_key/mp4/hdl/cpu/alu.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:46:52 on Nov 21,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/cpu" /home/scottl4/hydration_is_key/mp4/hdl/cpu/alu.sv 
-# -- Compiling package alu_sv_unit
-# -- Importing package rv32i_types
-# -- Importing package pcmux
-# -- Importing package marmux
-# -- Importing package cmpmux
-# -- Importing package alumux
-# -- Importing package regfilemux
-# -- Compiling module alu
-# 
-# Top level modules:
-# 	alu
-# End time: 22:46:52 on Nov 21,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline {/home/scottl4/hydration_is_key/mp4/hdl/pipeline/IF.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:46:52 on Nov 21,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline" /home/scottl4/hydration_is_key/mp4/hdl/pipeline/IF.sv 
-# -- Compiling package IF_sv_unit
-# -- Importing package rv32i_types
-# -- Importing package pcmux
-# -- Importing package marmux
-# -- Importing package cmpmux
-# -- Importing package alumux
-# -- Importing package regfilemux
-# -- Compiling module IF
-# 
-# Top level modules:
-# 	IF
-# End time: 22:46:52 on Nov 21,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline {/home/scottl4/hydration_is_key/mp4/hdl/pipeline/hazard_detection.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:46:52 on Nov 21,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline" /home/scottl4/hydration_is_key/mp4/hdl/pipeline/hazard_detection.sv 
-# -- Compiling package hazard_detection_sv_unit
-# -- Importing package rv32i_types
-# -- Importing package pcmux
-# -- Importing package marmux
-# -- Importing package cmpmux
-# -- Importing package alumux
-# -- Importing package regfilemux
-# -- Compiling module hazard_detection
-# 
-# Top level modules:
-# 	hazard_detection
-# End time: 22:46:52 on Nov 21,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline {/home/scottl4/hydration_is_key/mp4/hdl/pipeline/EX.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:46:52 on Nov 21,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline" /home/scottl4/hydration_is_key/mp4/hdl/pipeline/EX.sv 
-# -- Compiling package EX_sv_unit
-# -- Importing package rv32i_types
-# -- Importing package pcmux
-# -- Importing package marmux
-# -- Importing package cmpmux
-# -- Importing package alumux
-# -- Importing package regfilemux
-# -- Compiling module EX
-# 
-# Top level modules:
-# 	EX
-# End time: 22:46:52 on Nov 21,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/cpu {/home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:46:52 on Nov 21,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/cpu" /home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv 
-# -- Compiling package cpu_datapath_sv_unit
-# -- Importing package rv32i_types
-# -- Importing package pcmux
-# -- Importing package marmux
-# -- Importing package cmpmux
-# -- Importing package alumux
-# -- Importing package regfilemux
-# -- Compiling module cpu_datapath
-# 
-# Top level modules:
-# 	cpu_datapath
-# End time: 22:46:53 on Nov 21,2020, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl {/home/scottl4/hydration_is_key/mp4/hdl/mp4.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:46:53 on Nov 21,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl" /home/scottl4/hydration_is_key/mp4/hdl/mp4.sv 
-# -- Compiling package mp4_sv_unit
-# -- Importing package rv32i_types
-# -- Importing package pcmux
-# -- Importing package marmux
-# -- Importing package cmpmux
-# -- Importing package alumux
-# -- Importing package regfilemux
-# -- Compiling module mp4
-# 
-# Top level modules:
-# 	mp4
-# End time: 22:46:53 on Nov 21,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# 
-# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hvl {/home/scottl4/hydration_is_key/mp4/hvl/top.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:46:53 on Nov 21,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hvl" /home/scottl4/hydration_is_key/mp4/hvl/top.sv 
-# -- Compiling module mp3_tb
-# 
-# Top level modules:
-# 	mp3_tb
-# End time: 22:46:53 on Nov 21,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hvl {/home/scottl4/hydration_is_key/mp4/hvl/magic_dual_port.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:46:53 on Nov 21,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hvl" /home/scottl4/hydration_is_key/mp4/hvl/magic_dual_port.sv 
-# -- Compiling module magic_memory_dp
-# 
-# Top level modules:
-# 	magic_memory_dp
-# End time: 22:46:53 on Nov 21,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hvl {/home/scottl4/hydration_is_key/mp4/hvl/param_memory.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:46:53 on Nov 21,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hvl" /home/scottl4/hydration_is_key/mp4/hvl/param_memory.sv 
-# -- Compiling module ParamMemory
-# ** Warning: /home/scottl4/hydration_is_key/mp4/hvl/param_memory.sv(25): (vlog-2244) Variable 'iteration' is implicitly static. You must either explicitly declare it as static or automatic
-# or remove the initialization in the declaration of variable.
-# 
-# Top level modules:
-# 	ParamMemory
-# End time: 22:46:53 on Nov 21,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 1
-# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hvl {/home/scottl4/hydration_is_key/mp4/hvl/rvfi_itf.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:46:53 on Nov 21,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hvl" /home/scottl4/hydration_is_key/mp4/hvl/rvfi_itf.sv 
-# -- Compiling interface rvfi_itf
-# 
-# Top level modules:
-# 	--none--
-# End time: 22:46:53 on Nov 21,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+/home/scottl4/hydration_is_key/mp4/hvl {/home/scottl4/hydration_is_key/mp4/hvl/rvfimon.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:46:53 on Nov 21,2020
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hvl" /home/scottl4/hydration_is_key/mp4/hvl/rvfimon.v 
-# -- Compiling module riscv_formal_monitor_rv32imc
-# -- Compiling module riscv_formal_monitor_rv32imc_rob
-# -- Compiling module riscv_formal_monitor_rv32imc_isa_spec
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_add
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_addi
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_and
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_andi
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_auipc
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_beq
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_bge
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_bgeu
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_blt
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_bltu
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_bne
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_c_add
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_c_addi
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_c_addi16sp
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_c_addi4spn
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_c_and
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_c_andi
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_c_beqz
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_c_bnez
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_c_j
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_c_jal
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_c_jalr
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_c_jr
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_c_li
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_c_lui
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_c_lw
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_c_lwsp
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_c_mv
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_c_or
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_c_slli
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_c_srai
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_c_srli
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_c_sub
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_c_sw
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_c_swsp
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_c_xor
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_div
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_divu
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_jal
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_jalr
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_lb
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_lbu
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_lh
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_lhu
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_lui
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_lw
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_mul
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_mulh
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_mulhsu
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_mulhu
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_or
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_ori
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_rem
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_remu
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_sb
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_sh
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_sll
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_slli
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_slt
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_slti
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_sltiu
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_sltu
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_sra
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_srai
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_srl
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_srli
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_sub
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_sw
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_xor
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_xori
-# 
-# Top level modules:
-# 	riscv_formal_monitor_rv32imc
-# End time: 22:46:54 on Nov 21,2020, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hvl {/home/scottl4/hydration_is_key/mp4/hvl/shadow_memory.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:46:54 on Nov 21,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hvl" /home/scottl4/hydration_is_key/mp4/hvl/shadow_memory.sv 
-# -- Compiling module shadow_memory
-# 
-# Top level modules:
-# 	shadow_memory
-# End time: 22:46:54 on Nov 21,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hvl {/home/scottl4/hydration_is_key/mp4/hvl/source_tb.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:46:54 on Nov 21,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hvl" /home/scottl4/hydration_is_key/mp4/hvl/source_tb.sv 
-# -- Compiling module source_tb
-# 
-# Top level modules:
-# 	source_tb
-# End time: 22:46:54 on Nov 21,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hvl {/home/scottl4/hydration_is_key/mp4/hvl/tb_itf.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:46:54 on Nov 21,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hvl" /home/scottl4/hydration_is_key/mp4/hvl/tb_itf.sv 
-# -- Compiling interface tb_itf
-# 
-# Top level modules:
-# 	--none--
-# End time: 22:46:54 on Nov 21,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L arriaii_hssi_ver -L arriaii_pcie_hip_ver -L arriaii_ver -L rtl_work -L work -voptargs="+acc"  mp3_tb
-# End time: 22:46:56 on Nov 21,2020, Elapsed time: 1:32:52
-# Errors: 0, Warnings: 19
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L arriaii_hssi_ver -L arriaii_pcie_hip_ver -L arriaii_ver -L rtl_work -L work -voptargs=""+acc"" mp3_tb 
-# Start time: 22:46:56 on Nov 21,2020
-# Loading sv_std.std
-# Loading work.mp3_tb
-# Loading work.tb_itf
-# Loading work.rvfi_itf
-# Loading work.source_tb
-# Loading work.regfilemux
-# Loading work.alumux
-# Loading work.cmpmux
-# Loading work.marmux
-# Loading work.pcmux
-# Loading work.rv32i_types
-# Loading work.mp4_sv_unit
-# Loading work.mp4
-# Loading work.cpu_datapath_sv_unit
-# Loading work.cpu_datapath
-# Loading work.IF_sv_unit
-# Loading work.IF
-# Loading work.pc_register
-# Loading work.sreg_IF_ID
-# Loading work.ID_sv_unit
-# Loading work.ID
-# Loading work.control_rom_sv_unit
-# Loading work.control_rom
-# Loading work.regfile
-# Loading work.sreg_ID_EX_sv_unit
-# Loading work.sreg_ID_EX
-# Loading work.EX_sv_unit
-# Loading work.EX
-# Loading work.alu_sv_unit
-# Loading work.alu
-# Loading work.cmp_sv_unit
-# Loading work.cmp
-# Loading work.sreg_EX_MEM_sv_unit
-# Loading work.sreg_EX_MEM
-# Loading work.MEM_sv_unit
-# Loading work.MEM
-# Loading work.sreg_MEM_WB_sv_unit
-# Loading work.sreg_MEM_WB
-# Loading work.WB_sv_unit
-# Loading work.WB
-# Loading work.hazard_detection_sv_unit
-# Loading work.hazard_detection
-# Loading work.cache
-# Loading work.cache_control
-# Loading work.cache_datapath
-# Loading work.data_array
-# Loading work.array
-# Loading work.line_adapter
-# Loading work.arbiter
-# Loading work.ParamMemory
-# ** Warning: (vsim-3017) /home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv(258): [TFMPC] - Too few port connections. Expected 22, found 20.
-#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/cpu_datapath/hazard File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/hazard_detection.sv
-# ** Warning: (vsim-3722) /home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv(258): [TFMPC] - Missing connection for port 'MEM_WB_wdata'.
-# ** Warning: (vsim-3722) /home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv(258): [TFMPC] - Missing connection for port 'MEM_WB_alu_out'.
-# 
-# add wave *
-# view structure
-# .main_pane.structure.interior.cs.body.struct
-# view signals
-# .main_pane.objects.interior.cs.body.tree
-# run -all
-# Compilation Successful
-# Reset Memory
-# Grading Error: PMEM Read Error: Address changed
-# Address 000000bc != addr 00000228
-# Grading Error: PMEM Read Error: Address changed
-# Address 00000138 != addr 00000218
-# ** Note: $finish    : /home/scottl4/hydration_is_key/mp4/hvl/source_tb.sv(33)
-#    Time: 4615 ns  Iteration: 1  Instance: /mp3_tb/tb
-# 1
-# Break in Module source_tb at /home/scottl4/hydration_is_key/mp4/hvl/source_tb.sv line 33
-do save.do
-# Cannot open macro file: save.do
-do wave.do
-restart -f; run 6000ns
-# ** Warning: (vsim-3017) /home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv(258): [TFMPC] - Too few port connections. Expected 22, found 20.
-#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/cpu_datapath/hazard File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/hazard_detection.sv
-# ** Warning: (vsim-3722) /home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv(258): [TFMPC] - Missing connection for port 'MEM_WB_wdata'.
-# ** Warning: (vsim-3722) /home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv(258): [TFMPC] - Missing connection for port 'MEM_WB_alu_out'.
-# Compilation Successful
-# Reset Memory
-# Grading Error: PMEM Read Error: Address changed
-# Address 000000bc != addr 00000228
-# Grading Error: PMEM Read Error: Address changed
-# Address 00000138 != addr 00000218
-# ** Note: $finish    : /home/scottl4/hydration_is_key/mp4/hvl/source_tb.sv(33)
-#    Time: 4615 ns  Iteration: 1  Instance: /mp3_tb/tb
-# 1
-# Break in Module source_tb at /home/scottl4/hydration_is_key/mp4/hvl/source_tb.sv line 33
-add wave -position 23  sim:/mp3_tb/dut/arbiter/address_o
-restart -f; run 6000ns
-# ** Warning: (vsim-3017) /home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv(258): [TFMPC] - Too few port connections. Expected 22, found 20.
-#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/cpu_datapath/hazard File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/hazard_detection.sv
-# ** Warning: (vsim-3722) /home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv(258): [TFMPC] - Missing connection for port 'MEM_WB_wdata'.
-# ** Warning: (vsim-3722) /home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv(258): [TFMPC] - Missing connection for port 'MEM_WB_alu_out'.
-# Compilation Successful
-# Reset Memory
-# Grading Error: PMEM Read Error: Address changed
-# Address 000000bc != addr 00000228
-# Grading Error: PMEM Read Error: Address changed
-# Address 00000138 != addr 00000218
-# ** Note: $finish    : /home/scottl4/hydration_is_key/mp4/hvl/source_tb.sv(33)
-#    Time: 4615 ns  Iteration: 1  Instance: /mp3_tb/tb
-# 1
-# Break in Module source_tb at /home/scottl4/hydration_is_key/mp4/hvl/source_tb.sv line 33
-add wave -position 22  sim:/mp3_tb/dut/d_cache/hit
-restart -f; run 6000ns
-# ** Warning: (vsim-3017) /home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv(258): [TFMPC] - Too few port connections. Expected 22, found 20.
-#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/cpu_datapath/hazard File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/hazard_detection.sv
-# ** Warning: (vsim-3722) /home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv(258): [TFMPC] - Missing connection for port 'MEM_WB_wdata'.
-# ** Warning: (vsim-3722) /home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv(258): [TFMPC] - Missing connection for port 'MEM_WB_alu_out'.
-# Compilation Successful
-# Reset Memory
-# Grading Error: PMEM Read Error: Address changed
-# Address 000000bc != addr 00000228
-# Grading Error: PMEM Read Error: Address changed
-# Address 00000138 != addr 00000218
-# ** Note: $finish    : /home/scottl4/hydration_is_key/mp4/hvl/source_tb.sv(33)
-#    Time: 4615 ns  Iteration: 1  Instance: /mp3_tb/tb
-# 1
-# Break in Module source_tb at /home/scottl4/hydration_is_key/mp4/hvl/source_tb.sv line 33
-do mp4_run_msim_rtl_verilog.do
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
-# }
-# vlib rtl_work
-# vmap work rtl_work
-# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
-# vmap work rtl_work 
-# Modifying modelsim.ini
-# 
-# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/cache {/home/scottl4/hydration_is_key/mp4/hdl/cache/arbiter.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:08:32 on Nov 21,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/cache" /home/scottl4/hydration_is_key/mp4/hdl/cache/arbiter.sv 
-# -- Compiling module arbiter
-# 
-# Top level modules:
-# 	arbiter
-# End time: 23:08:33 on Nov 21,2020, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/cache {/home/scottl4/hydration_is_key/mp4/hdl/cache/line_adapter.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:08:33 on Nov 21,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/cache" /home/scottl4/hydration_is_key/mp4/hdl/cache/line_adapter.sv 
-# -- Compiling module line_adapter
-# 
-# Top level modules:
-# 	line_adapter
-# End time: 23:08:33 on Nov 21,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl {/home/scottl4/hydration_is_key/mp4/hdl/rv32i_mux_types.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:08:33 on Nov 21,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl" /home/scottl4/hydration_is_key/mp4/hdl/rv32i_mux_types.sv 
-# -- Compiling package pcmux
-# -- Compiling package marmux
-# -- Compiling package cmpmux
-# -- Compiling package alumux
-# -- Compiling package regfilemux
-# 
-# Top level modules:
-# 	--none--
-# End time: 23:08:33 on Nov 21,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline {/home/scottl4/hydration_is_key/mp4/hdl/pipeline/sreg_IF_ID.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:08:33 on Nov 21,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline" /home/scottl4/hydration_is_key/mp4/hdl/pipeline/sreg_IF_ID.sv 
-# -- Compiling module sreg_IF_ID
-# 
-# Top level modules:
-# 	sreg_IF_ID
-# End time: 23:08:33 on Nov 21,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/cpu {/home/scottl4/hydration_is_key/mp4/hdl/cpu/regfile.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:08:33 on Nov 21,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/cpu" /home/scottl4/hydration_is_key/mp4/hdl/cpu/regfile.sv 
-# -- Compiling module regfile
-# 
-# Top level modules:
-# 	regfile
-# End time: 23:08:34 on Nov 21,2020, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/cpu {/home/scottl4/hydration_is_key/mp4/hdl/cpu/pc_reg.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:08:34 on Nov 21,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/cpu" /home/scottl4/hydration_is_key/mp4/hdl/cpu/pc_reg.sv 
-# -- Compiling module pc_register
-# 
-# Top level modules:
-# 	pc_register
-# End time: 23:08:34 on Nov 21,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/cache {/home/scottl4/hydration_is_key/mp4/hdl/cache/data_array.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:08:34 on Nov 21,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/cache" /home/scottl4/hydration_is_key/mp4/hdl/cache/data_array.sv 
-# -- Compiling module data_array
-# 
-# Top level modules:
-# 	data_array
-# End time: 23:08:34 on Nov 21,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/cache {/home/scottl4/hydration_is_key/mp4/hdl/cache/cache_datapath.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:08:34 on Nov 21,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/cache" /home/scottl4/hydration_is_key/mp4/hdl/cache/cache_datapath.sv 
-# -- Compiling module cache_datapath
-# 
-# Top level modules:
-# 	cache_datapath
-# End time: 23:08:34 on Nov 21,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/cache {/home/scottl4/hydration_is_key/mp4/hdl/cache/cache_control.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:08:34 on Nov 21,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/cache" /home/scottl4/hydration_is_key/mp4/hdl/cache/cache_control.sv 
-# -- Compiling module cache_control
-# 
-# Top level modules:
-# 	cache_control
-# End time: 23:08:34 on Nov 21,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/cache {/home/scottl4/hydration_is_key/mp4/hdl/cache/array.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:08:34 on Nov 21,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/cache" /home/scottl4/hydration_is_key/mp4/hdl/cache/array.sv 
-# -- Compiling module array
-# 
-# Top level modules:
-# 	array
-# End time: 23:08:34 on Nov 21,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl {/home/scottl4/hydration_is_key/mp4/hdl/rv32i_types.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:08:34 on Nov 21,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl" /home/scottl4/hydration_is_key/mp4/hdl/rv32i_types.sv 
-# -- Compiling package rv32i_types
-# -- Importing package pcmux
-# -- Importing package marmux
-# -- Importing package cmpmux
-# -- Importing package alumux
-# -- Importing package regfilemux
-# 
-# Top level modules:
-# 	--none--
-# End time: 23:08:34 on Nov 21,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/cache {/home/scottl4/hydration_is_key/mp4/hdl/cache/cache.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:08:34 on Nov 21,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/cache" /home/scottl4/hydration_is_key/mp4/hdl/cache/cache.sv 
-# -- Compiling module cache
-# 
-# Top level modules:
-# 	cache
-# End time: 23:08:34 on Nov 21,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline {/home/scottl4/hydration_is_key/mp4/hdl/pipeline/WB.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:08:35 on Nov 21,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline" /home/scottl4/hydration_is_key/mp4/hdl/pipeline/WB.sv 
-# -- Compiling package WB_sv_unit
-# -- Importing package rv32i_types
-# -- Importing package pcmux
-# -- Importing package marmux
-# -- Importing package cmpmux
-# -- Importing package alumux
-# -- Importing package regfilemux
-# -- Compiling module WB
-# 
-# Top level modules:
-# 	WB
-# End time: 23:08:35 on Nov 21,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline {/home/scottl4/hydration_is_key/mp4/hdl/pipeline/sreg_MEM_WB.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:08:35 on Nov 21,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline" /home/scottl4/hydration_is_key/mp4/hdl/pipeline/sreg_MEM_WB.sv 
-# -- Compiling package sreg_MEM_WB_sv_unit
-# -- Importing package rv32i_types
-# -- Importing package pcmux
-# -- Importing package marmux
-# -- Importing package cmpmux
-# -- Importing package alumux
-# -- Importing package regfilemux
-# -- Compiling module sreg_MEM_WB
-# 
-# Top level modules:
-# 	sreg_MEM_WB
-# End time: 23:08:35 on Nov 21,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline {/home/scottl4/hydration_is_key/mp4/hdl/pipeline/sreg_ID_EX.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:08:35 on Nov 21,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline" /home/scottl4/hydration_is_key/mp4/hdl/pipeline/sreg_ID_EX.sv 
-# -- Compiling package sreg_ID_EX_sv_unit
-# -- Importing package rv32i_types
-# -- Importing package pcmux
-# -- Importing package marmux
-# -- Importing package cmpmux
-# -- Importing package alumux
-# -- Importing package regfilemux
-# -- Compiling module sreg_ID_EX
-# 
-# Top level modules:
-# 	sreg_ID_EX
-# End time: 23:08:35 on Nov 21,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline {/home/scottl4/hydration_is_key/mp4/hdl/pipeline/sreg_EX_MEM.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:08:35 on Nov 21,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline" /home/scottl4/hydration_is_key/mp4/hdl/pipeline/sreg_EX_MEM.sv 
-# -- Compiling package sreg_EX_MEM_sv_unit
-# -- Importing package rv32i_types
-# -- Importing package pcmux
-# -- Importing package marmux
-# -- Importing package cmpmux
-# -- Importing package alumux
-# -- Importing package regfilemux
-# -- Compiling module sreg_EX_MEM
-# 
-# Top level modules:
-# 	sreg_EX_MEM
-# End time: 23:08:35 on Nov 21,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline {/home/scottl4/hydration_is_key/mp4/hdl/pipeline/MEM.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:08:35 on Nov 21,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline" /home/scottl4/hydration_is_key/mp4/hdl/pipeline/MEM.sv 
-# -- Compiling package MEM_sv_unit
-# -- Importing package rv32i_types
-# -- Importing package pcmux
-# -- Importing package marmux
-# -- Importing package cmpmux
-# -- Importing package alumux
-# -- Importing package regfilemux
-# -- Compiling module MEM
-# 
-# Top level modules:
-# 	MEM
-# End time: 23:08:36 on Nov 21,2020, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline {/home/scottl4/hydration_is_key/mp4/hdl/pipeline/ID.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:08:36 on Nov 21,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline" /home/scottl4/hydration_is_key/mp4/hdl/pipeline/ID.sv 
-# -- Compiling package ID_sv_unit
-# -- Importing package rv32i_types
-# -- Importing package pcmux
-# -- Importing package marmux
-# -- Importing package cmpmux
-# -- Importing package alumux
-# -- Importing package regfilemux
-# -- Compiling module ID
-# 
-# Top level modules:
-# 	ID
-# End time: 23:08:36 on Nov 21,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline {/home/scottl4/hydration_is_key/mp4/hdl/pipeline/control_rom.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:08:36 on Nov 21,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline" /home/scottl4/hydration_is_key/mp4/hdl/pipeline/control_rom.sv 
-# -- Compiling package control_rom_sv_unit
-# -- Importing package rv32i_types
-# -- Importing package pcmux
-# -- Importing package marmux
-# -- Importing package cmpmux
-# -- Importing package alumux
-# -- Importing package regfilemux
-# -- Compiling module control_rom
-# 
-# Top level modules:
-# 	control_rom
-# End time: 23:08:36 on Nov 21,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/cpu {/home/scottl4/hydration_is_key/mp4/hdl/cpu/cmp.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:08:36 on Nov 21,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/cpu" /home/scottl4/hydration_is_key/mp4/hdl/cpu/cmp.sv 
-# -- Compiling package cmp_sv_unit
-# -- Importing package rv32i_types
-# -- Importing package pcmux
-# -- Importing package marmux
-# -- Importing package cmpmux
-# -- Importing package alumux
-# -- Importing package regfilemux
-# -- Compiling module cmp
-# 
-# Top level modules:
-# 	cmp
-# End time: 23:08:36 on Nov 21,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/cpu {/home/scottl4/hydration_is_key/mp4/hdl/cpu/alu.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:08:36 on Nov 21,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/cpu" /home/scottl4/hydration_is_key/mp4/hdl/cpu/alu.sv 
-# -- Compiling package alu_sv_unit
-# -- Importing package rv32i_types
-# -- Importing package pcmux
-# -- Importing package marmux
-# -- Importing package cmpmux
-# -- Importing package alumux
-# -- Importing package regfilemux
-# -- Compiling module alu
-# 
-# Top level modules:
-# 	alu
-# End time: 23:08:36 on Nov 21,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline {/home/scottl4/hydration_is_key/mp4/hdl/pipeline/IF.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:08:36 on Nov 21,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline" /home/scottl4/hydration_is_key/mp4/hdl/pipeline/IF.sv 
-# -- Compiling package IF_sv_unit
-# -- Importing package rv32i_types
-# -- Importing package pcmux
-# -- Importing package marmux
-# -- Importing package cmpmux
-# -- Importing package alumux
-# -- Importing package regfilemux
-# -- Compiling module IF
-# 
-# Top level modules:
-# 	IF
-# End time: 23:08:36 on Nov 21,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline {/home/scottl4/hydration_is_key/mp4/hdl/pipeline/hazard_detection.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:08:36 on Nov 21,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline" /home/scottl4/hydration_is_key/mp4/hdl/pipeline/hazard_detection.sv 
-# -- Compiling package hazard_detection_sv_unit
-# -- Importing package rv32i_types
-# -- Importing package pcmux
-# -- Importing package marmux
-# -- Importing package cmpmux
-# -- Importing package alumux
-# -- Importing package regfilemux
-# -- Compiling module hazard_detection
-# 
-# Top level modules:
-# 	hazard_detection
-# End time: 23:08:37 on Nov 21,2020, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline {/home/scottl4/hydration_is_key/mp4/hdl/pipeline/EX.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:08:37 on Nov 21,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline" /home/scottl4/hydration_is_key/mp4/hdl/pipeline/EX.sv 
-# -- Compiling package EX_sv_unit
-# -- Importing package rv32i_types
-# -- Importing package pcmux
-# -- Importing package marmux
-# -- Importing package cmpmux
-# -- Importing package alumux
-# -- Importing package regfilemux
-# -- Compiling module EX
-# 
-# Top level modules:
-# 	EX
-# End time: 23:08:37 on Nov 21,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/cpu {/home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:08:37 on Nov 21,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl/cpu" /home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv 
-# -- Compiling package cpu_datapath_sv_unit
-# -- Importing package rv32i_types
-# -- Importing package pcmux
-# -- Importing package marmux
-# -- Importing package cmpmux
-# -- Importing package alumux
-# -- Importing package regfilemux
-# -- Compiling module cpu_datapath
-# 
-# Top level modules:
-# 	cpu_datapath
-# End time: 23:08:37 on Nov 21,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl {/home/scottl4/hydration_is_key/mp4/hdl/mp4.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:08:37 on Nov 21,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hdl" /home/scottl4/hydration_is_key/mp4/hdl/mp4.sv 
-# -- Compiling package mp4_sv_unit
-# -- Importing package rv32i_types
-# -- Importing package pcmux
-# -- Importing package marmux
-# -- Importing package cmpmux
-# -- Importing package alumux
-# -- Importing package regfilemux
-# -- Compiling module mp4
-# 
-# Top level modules:
-# 	mp4
-# End time: 23:08:38 on Nov 21,2020, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# 
-# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hvl {/home/scottl4/hydration_is_key/mp4/hvl/top.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:08:38 on Nov 21,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hvl" /home/scottl4/hydration_is_key/mp4/hvl/top.sv 
-# -- Compiling module mp3_tb
-# 
-# Top level modules:
-# 	mp3_tb
-# End time: 23:08:38 on Nov 21,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hvl {/home/scottl4/hydration_is_key/mp4/hvl/magic_dual_port.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:08:38 on Nov 21,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hvl" /home/scottl4/hydration_is_key/mp4/hvl/magic_dual_port.sv 
-# -- Compiling module magic_memory_dp
-# 
-# Top level modules:
-# 	magic_memory_dp
-# End time: 23:08:38 on Nov 21,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hvl {/home/scottl4/hydration_is_key/mp4/hvl/param_memory.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:08:38 on Nov 21,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hvl" /home/scottl4/hydration_is_key/mp4/hvl/param_memory.sv 
-# -- Compiling module ParamMemory
-# ** Warning: /home/scottl4/hydration_is_key/mp4/hvl/param_memory.sv(25): (vlog-2244) Variable 'iteration' is implicitly static. You must either explicitly declare it as static or automatic
-# or remove the initialization in the declaration of variable.
-# 
-# Top level modules:
-# 	ParamMemory
-# End time: 23:08:38 on Nov 21,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 1
-# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hvl {/home/scottl4/hydration_is_key/mp4/hvl/rvfi_itf.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:08:38 on Nov 21,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hvl" /home/scottl4/hydration_is_key/mp4/hvl/rvfi_itf.sv 
-# -- Compiling interface rvfi_itf
-# 
-# Top level modules:
-# 	--none--
-# End time: 23:08:38 on Nov 21,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+/home/scottl4/hydration_is_key/mp4/hvl {/home/scottl4/hydration_is_key/mp4/hvl/rvfimon.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:08:38 on Nov 21,2020
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hvl" /home/scottl4/hydration_is_key/mp4/hvl/rvfimon.v 
-# -- Compiling module riscv_formal_monitor_rv32imc
-# -- Compiling module riscv_formal_monitor_rv32imc_rob
-# -- Compiling module riscv_formal_monitor_rv32imc_isa_spec
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_add
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_addi
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_and
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_andi
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_auipc
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_beq
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_bge
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_bgeu
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_blt
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_bltu
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_bne
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_c_add
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_c_addi
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_c_addi16sp
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_c_addi4spn
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_c_and
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_c_andi
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_c_beqz
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_c_bnez
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_c_j
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_c_jal
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_c_jalr
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_c_jr
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_c_li
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_c_lui
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_c_lw
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_c_lwsp
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_c_mv
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_c_or
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_c_slli
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_c_srai
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_c_srli
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_c_sub
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_c_sw
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_c_swsp
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_c_xor
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_div
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_divu
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_jal
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_jalr
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_lb
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_lbu
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_lh
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_lhu
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_lui
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_lw
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_mul
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_mulh
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_mulhsu
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_mulhu
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_or
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_ori
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_rem
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_remu
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_sb
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_sh
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_sll
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_slli
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_slt
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_slti
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_sltiu
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_sltu
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_sra
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_srai
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_srl
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_srli
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_sub
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_sw
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_xor
-# -- Compiling module riscv_formal_monitor_rv32imc_insn_xori
-# 
-# Top level modules:
-# 	riscv_formal_monitor_rv32imc
-# End time: 23:08:39 on Nov 21,2020, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hvl {/home/scottl4/hydration_is_key/mp4/hvl/shadow_memory.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:08:39 on Nov 21,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hvl" /home/scottl4/hydration_is_key/mp4/hvl/shadow_memory.sv 
-# -- Compiling module shadow_memory
-# 
-# Top level modules:
-# 	shadow_memory
-# End time: 23:08:39 on Nov 21,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hvl {/home/scottl4/hydration_is_key/mp4/hvl/source_tb.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:08:39 on Nov 21,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hvl" /home/scottl4/hydration_is_key/mp4/hvl/source_tb.sv 
-# -- Compiling module source_tb
-# 
-# Top level modules:
-# 	source_tb
-# End time: 23:08:40 on Nov 21,2020, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hvl {/home/scottl4/hydration_is_key/mp4/hvl/tb_itf.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:08:40 on Nov 21,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/scottl4/hydration_is_key/mp4/hvl" /home/scottl4/hydration_is_key/mp4/hvl/tb_itf.sv 
-# -- Compiling interface tb_itf
-# 
-# Top level modules:
-# 	--none--
-# End time: 23:08:40 on Nov 21,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L arriaii_hssi_ver -L arriaii_pcie_hip_ver -L arriaii_ver -L rtl_work -L work -voptargs="+acc"  mp3_tb
-# End time: 23:08:41 on Nov 21,2020, Elapsed time: 0:21:45
-# Errors: 1, Warnings: 13
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L arriaii_hssi_ver -L arriaii_pcie_hip_ver -L arriaii_ver -L rtl_work -L work -voptargs=""+acc"" mp3_tb 
-# Start time: 23:08:41 on Nov 21,2020
-# Loading sv_std.std
-# Loading work.mp3_tb
-# Loading work.tb_itf
-# Loading work.rvfi_itf
-# Loading work.source_tb
-# Loading work.regfilemux
-# Loading work.alumux
-# Loading work.cmpmux
-# Loading work.marmux
-# Loading work.pcmux
-# Loading work.rv32i_types
-# Loading work.mp4_sv_unit
-# Loading work.mp4
-# Loading work.cpu_datapath_sv_unit
-# Loading work.cpu_datapath
-# Loading work.IF_sv_unit
-# Loading work.IF
-# Loading work.pc_register
-# Loading work.sreg_IF_ID
-# Loading work.ID_sv_unit
-# Loading work.ID
-# Loading work.control_rom_sv_unit
-# Loading work.control_rom
-# Loading work.regfile
-# Loading work.sreg_ID_EX_sv_unit
-# Loading work.sreg_ID_EX
-# Loading work.EX_sv_unit
-# Loading work.EX
-# Loading work.alu_sv_unit
-# Loading work.alu
-# Loading work.cmp_sv_unit
-# Loading work.cmp
-# Loading work.sreg_EX_MEM_sv_unit
-# Loading work.sreg_EX_MEM
-# Loading work.MEM_sv_unit
-# Loading work.MEM
-# Loading work.sreg_MEM_WB_sv_unit
-# Loading work.sreg_MEM_WB
-# Loading work.WB_sv_unit
-# Loading work.WB
-# Loading work.hazard_detection_sv_unit
-# Loading work.hazard_detection
-# Loading work.cache
-# Loading work.cache_control
-# Loading work.cache_datapath
-# Loading work.data_array
-# Loading work.array
-# Loading work.line_adapter
-# Loading work.arbiter
-# Loading work.ParamMemory
-# ** Warning: (vsim-3017) /home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv(258): [TFMPC] - Too few port connections. Expected 22, found 20.
-#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/cpu_datapath/hazard File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/hazard_detection.sv
-# ** Warning: (vsim-3722) /home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv(258): [TFMPC] - Missing connection for port 'MEM_WB_wdata'.
-# ** Warning: (vsim-3722) /home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv(258): [TFMPC] - Missing connection for port 'MEM_WB_alu_out'.
-# 
-# add wave *
-# view structure
-# .main_pane.structure.interior.cs.body.struct
-# view signals
-# .main_pane.objects.interior.cs.body.tree
-# run -all
-# Compilation Successful
-# Reset Memory
-# ** Note: $finish    : /home/scottl4/hydration_is_key/mp4/hvl/source_tb.sv(33)
-#    Time: 4825 ns  Iteration: 1  Instance: /mp3_tb/tb
-# 1
-# Break in Module source_tb at /home/scottl4/hydration_is_key/mp4/hvl/source_tb.sv line 33
-restart -f; run 5000ns
-# ** Warning: (vsim-3017) /home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv(258): [TFMPC] - Too few port connections. Expected 22, found 20.
-#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/cpu_datapath/hazard File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/hazard_detection.sv
-# ** Warning: (vsim-3722) /home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv(258): [TFMPC] - Missing connection for port 'MEM_WB_wdata'.
-# ** Warning: (vsim-3722) /home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv(258): [TFMPC] - Missing connection for port 'MEM_WB_alu_out'.
-# Compilation Successful
-# Reset Memory
-# ** Note: $finish    : /home/scottl4/hydration_is_key/mp4/hvl/source_tb.sv(33)
-#    Time: 4825 ns  Iteration: 1  Instance: /mp3_tb/tb
-# 1
-# Break in Module source_tb at /home/scottl4/hydration_is_key/mp4/hvl/source_tb.sv line 33
-do wave.do
-restart -f; run 5000ns
-# ** Warning: (vsim-3017) /home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv(258): [TFMPC] - Too few port connections. Expected 22, found 20.
-#    Time: 0 ps  Iteration: 0  Instance: /mp3_tb/dut/cpu_datapath/hazard File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/hazard_detection.sv
-# ** Warning: (vsim-3722) /home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv(258): [TFMPC] - Missing connection for port 'MEM_WB_wdata'.
-# ** Warning: (vsim-3722) /home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv(258): [TFMPC] - Missing connection for port 'MEM_WB_alu_out'.
-# Compilation Successful
-# Reset Memory
-# ** Note: $finish    : /home/scottl4/hydration_is_key/mp4/hvl/source_tb.sv(33)
-#    Time: 4825 ns  Iteration: 1  Instance: /mp3_tb/tb
-# 1
-# Break in Module source_tb at /home/scottl4/hydration_is_key/mp4/hvl/source_tb.sv line 33
-# End time: 23:11:35 on Nov 21,2020, Elapsed time: 0:02:54
-# Errors: 0, Warnings: 9
+# ERROR: More than one cache way hits!
+# ERROR: More than one cache way hits!
+# ERROR: More than one cache way hits!
+# ERROR: More than one cache way hits!
+# ERROR: More than one cache way hits!
+# ERROR: More than one cache way hits!

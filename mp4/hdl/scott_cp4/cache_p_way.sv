@@ -1,13 +1,13 @@
 // import rv32i_types::*;
 
-module cache_way
+module cache_p_way
 (
     input clk,
     input rst,
     input load,
     input read,
     input access_sel,
-    input [31:0] mem_byte_sel,
+    input [31:0] mem_byte_enable,
     input [23:0] tag_in,
     input [2:0] index_r,
     input [2:0] index_w,
@@ -18,13 +18,12 @@ module cache_way
     output logic dirty,
     output logic [255:0] dataout
 );
-logic valid;
 
 /** HIT **/
 // assign hit = valid && (tag_in == tag_out); // MIGHT WANT TO CHANGE IT TO JUST READ INSTEAD OF READ || LOAD
 
 /** DATA ARRAY **/
-data_array data_array
+data_array_p data_array
 (
     .*,
     .read,
@@ -36,7 +35,7 @@ data_array data_array
     .dataout
 );
 /** TAG ARRAY **/
-array #(.width(24)) tag_array
+array_p #(.width(24)) tag_array
 (
     .clk,
     .rst,
@@ -48,7 +47,7 @@ array #(.width(24)) tag_array
     .dataout(tag_out)
 );
 /** VALID ARRAY **/
-array #(.width(1)) valid_array
+array_p #(.width(1)) valid_array
 ( 
     .clk,
     .rst,
@@ -60,7 +59,7 @@ array #(.width(1)) valid_array
     .dataout(valid)
 );
 /** DIRTY ARRAY **/
-array #(.width(1)) dirty_array
+array_p #(.width(1)) dirty_array
 (
     .clk,
     .rst,
@@ -72,4 +71,4 @@ array #(.width(1)) dirty_array
     .dataout(dirty)
 );
 
-endmodule : cache_way
+endmodule : cache_p_way

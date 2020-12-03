@@ -54,7 +54,7 @@ cpu_datapath cpu_datapath
     .stall_c        (i_stall_cache || d_stall_cache)
 );
 
-cache i_cache
+cache_p i_cache
 (
     .*,
     .mem_read           (inst_read),
@@ -73,7 +73,7 @@ cache i_cache
     .stall_cache        (i_stall_cache)
 );
 
-cache d_cache
+cache_p d_cache
 (
     .*,
     .mem_read           (data_read),

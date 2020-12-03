@@ -1,5 +1,5 @@
 Flow report for mp4
-Sat Nov 21 21:02:32 2020
+Thu Dec  3 02:49:50 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -40,21 +40,21 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------------+
 ; Flow Summary                                                                        ;
 +-----------------------------------+-------------------------------------------------+
-; Flow Status                       ; Successful - Sat Nov 21 21:02:32 2020           ;
+; Flow Status                       ; Successful - Thu Dec  3 02:49:50 2020           ;
 ; Quartus Prime Version             ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                     ; mp4                                             ;
 ; Top-level Entity Name             ; mp4                                             ;
 ; Family                            ; Arria II GX                                     ;
 ; Device                            ; EP2AGX45DF25I3                                  ;
 ; Timing Models                     ; Final                                           ;
-; Logic utilization                 ; 22 %                                            ;
-;     Combinational ALUTs           ; 4,131 / 36,100 ( 11 % )                         ;
+; Logic utilization                 ; 2 %                                             ;
+;     Combinational ALUTs           ; 406 / 36,100 ( 1 % )                            ;
 ;     Memory ALUTs                  ; 0 / 18,050 ( 0 % )                              ;
-;     Dedicated logic registers     ; 6,006 / 36,100 ( 17 % )                         ;
-; Total registers                   ; 6006                                            ;
+;     Dedicated logic registers     ; 538 / 36,100 ( 1 % )                            ;
+; Total registers                   ; 538                                             ;
 ; Total pins                        ; 165 / 292 ( 57 % )                              ;
 ; Total virtual pins                ; 0                                               ;
-; Total block memory bits           ; 384 / 2,939,904 ( < 1 % )                       ;
+; Total block memory bits           ; 0 / 2,939,904 ( 0 % )                           ;
 ; DSP block 18-bit elements         ; 0 / 232 ( 0 % )                                 ;
 ; Total GXB Receiver Channel PCS    ; 0 / 8 ( 0 % )                                   ;
 ; Total GXB Receiver Channel PMA    ; 0 / 8 ( 0 % )                                   ;
@@ -70,7 +70,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/21/2020 20:59:20 ;
+; Start date & time ; 12/03/2020 02:48:18 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; mp4                 ;
 +-------------------+---------------------+
@@ -81,7 +81,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 233845176318067.160601396031461        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 233845176318067.160698529817424        ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; mp3_tb         ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; mp3_tb                                 ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Systemverilog Hdl                      ; --            ; --          ; eda_simulation ;
@@ -114,12 +114,12 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:40     ; 1.0                     ; 1325 MB             ; 00:01:00                           ;
-; Fitter               ; 00:01:46     ; 1.4                     ; 2529 MB             ; 00:03:32                           ;
-; Assembler            ; 00:00:07     ; 1.0                     ; 1066 MB             ; 00:00:07                           ;
-; Timing Analyzer      ; 00:00:11     ; 2.3                     ; 1295 MB             ; 00:00:13                           ;
-; EDA Netlist Writer   ; 00:00:17     ; 1.0                     ; 1325 MB             ; 00:00:16                           ;
-; Total                ; 00:03:01     ; --                      ; --                  ; 00:05:08                           ;
+; Analysis & Synthesis ; 00:00:42     ; 1.0                     ; 1360 MB             ; 00:01:04                           ;
+; Fitter               ; 00:00:29     ; 1.1                     ; 2443 MB             ; 00:00:41                           ;
+; Assembler            ; 00:00:05     ; 1.0                     ; 1046 MB             ; 00:00:04                           ;
+; Timing Analyzer      ; 00:00:05     ; 1.1                     ; 1199 MB             ; 00:00:04                           ;
+; EDA Netlist Writer   ; 00:00:03     ; 1.0                     ; 1261 MB             ; 00:00:03                           ;
+; Total                ; 00:01:24     ; --                      ; --                  ; 00:01:56                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

@@ -1,1 +1,2 @@
+Warning (10268): Verilog HDL information at lru_array.sv(38): always construct contains both blocking and non-blocking assignments File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/lru_array.sv Line: 38
 Warning (10268): Verilog HDL information at sreg_IF_ID.sv(16): always construct contains both blocking and non-blocking assignments File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/sreg_IF_ID.sv Line: 16

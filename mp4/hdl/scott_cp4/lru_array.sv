@@ -30,10 +30,10 @@ logic [width-1:0] data [num_sets-1:0] /* synthesis ramstyle = "logic" */;
 logic [width-1:0] _dataout;
 assign dataout = _dataout;
 
-initial begin
-    for (int i = 0; i < num_sets; ++i)
-        data[i] <= 8'b11100100;
-end
+// initial begin
+//     for (int i = 0; i < num_sets; ++i)
+//         data[i] <= 8'b11100100;
+// end
 
 always_ff @(posedge clk)
 begin
@@ -62,4 +62,4 @@ begin
     end
 end
 
-endmodule : array
+endmodule : lru_array
