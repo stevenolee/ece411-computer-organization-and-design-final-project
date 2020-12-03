@@ -65,6 +65,7 @@ pcmux::pcmux_sel_t pcmux_sel;
 logic br_mispredict, MEM_BW_br_en, load_regfile;
 logic hazard_ID_EX_rs1, hazard_ID_EX_rs2, hazard_ID_MEM_rs1, hazard_ID_MEM_rs2, hazard_MEM_WB;
 rv32i_word hazard_MEM_data, hazard_WB_data;
+logic EX_MEM_trap_out, MEM_WB_trap_out;
 
 /*****************************************************************************/
 /* * * NEED TO SET D MEM ADDRESS FROM STATE REGISTER (SUB CONTROL ROM) * * */
@@ -184,7 +185,8 @@ sreg_EX_MEM sreg_EX_MEM (
 	.br_en_out			(EX_MEM_br_en),
 	.ctrl_out			(EX_MEM_ctrl),
 	.rs2_out			(EX_MEM_rs2_out),
-	.pc_out				(EX_MEM_pc_out)
+	.pc_out				(EX_MEM_pc_out),
+	.trap_out			(EX_MEM_trap_out)
 );
 
 /*** MEM ***/
@@ -225,6 +227,7 @@ sreg_MEM_WB sreg_MEM_WB(
 	.wdata_in		(data_wdata),
 	.hazard_MEM_WB,
 	.MEM_WB_data,
+	.trap_in		(EX_MEM_trap_out),
 
 	// outputs
     .alu_out		(MEM_WB_alu_out),
@@ -233,7 +236,8 @@ sreg_MEM_WB sreg_MEM_WB(
 	.br_en_out		(MEM_BW_br_en),
 	.pc_out			(MEM_WB_pc_out),
 	.mem_byte_en_o	(MEM_WB_mbe),
-	.wdata_out		(MEM_WB_wdata)
+	.wdata_out		(MEM_WB_wdata),
+	.trap_out		(MEM_WB_trap_out)
 );
 
 /*** WB ***/

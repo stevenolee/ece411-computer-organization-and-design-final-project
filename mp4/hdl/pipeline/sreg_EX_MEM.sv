@@ -16,7 +16,8 @@ module sreg_EX_MEM (
     output logic br_en_out,
     output rv32i_control_word ctrl_out,
     output logic [31:0] rs2_out,
-    output rv32i_word pc_out
+    output rv32i_word pc_out,
+    output logic trap_out
 );
 /*** Variables ***/
 rv32i_word pc, alu;
@@ -24,6 +25,7 @@ logic [3:0] mem_byte_enable;
 logic br_en;
 rv32i_control_word ctrl;
 logic [31:0] rs2;
+logic trap;
 
 always_ff @(posedge clk) begin
     if (rst || br_mispredict) begin
@@ -32,6 +34,7 @@ always_ff @(posedge clk) begin
         ctrl <= 0;
         rs2 <= 0;
         pc <= 0;
+        trap <= 0;
     end 
     else if (!stall) begin
         alu <= alu_in;
@@ -51,6 +54,7 @@ always_comb begin
     alu_out = alu;
     rs2_out = rs2;
     pc_out = pc;
+    trap_out = trap;
 
     unique case (ctrl.opcode)
         op_load: begin
@@ -73,7 +77,7 @@ always_comb begin
                             default: mem_byte_enable_out = 4'b0001;
                         endcase
                     end
-                default: ;
+                default: trap_out = 1;
             endcase 
         end
 
@@ -97,7 +101,7 @@ always_comb begin
                         default: mem_byte_enable_out = 4'b0001;
                     endcase
                 end
-                default: ;
+                default: trap_out = 1;
             endcase
         end
 
@@ -106,6 +110,10 @@ always_comb begin
             ctrl_out.pcmux_sel = pcmux::pc_plus4;
             if(br_en)
                 ctrl_out.pcmux_sel = pcmux::alu_out;
+            case (branch_funct3_t'(ctrl.funct3))
+                beq, bne, blt, bge, bltu, bgeu:;
+                default: trap_out = 1;
+            endcase
         end
 
         op_jal: begin
@@ -120,6 +128,7 @@ always_comb begin
 
         default: begin
             mem_byte_enable_out = 4'b1111;
+            trap_out = 1;
         end
     endcase
 end
