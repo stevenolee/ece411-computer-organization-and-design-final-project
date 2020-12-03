@@ -17,7 +17,6 @@ add wave -noupdate -radix hexadecimal -childformat {{{/mp3_tb/dut/cpu_datapath/s
 add wave -noupdate -radix hexadecimal /mp3_tb/dut/cpu_datapath/stage_EX/rs1
 add wave -noupdate -radix hexadecimal /mp3_tb/dut/cpu_datapath/stage_EX/cmp_mux_out
 add wave -noupdate /mp3_tb/dut/cpu_datapath/sreg_EX_MEM/cmp_in
-add wave -noupdate /mp3_tb/dut/cpu_datapath/sreg_EX_MEM/br_en
 add wave -noupdate /mp3_tb/dut/cpu_datapath/br_mispredict
 add wave -noupdate /mp3_tb/dut/stall
 add wave -noupdate -radix hexadecimal /mp3_tb/dut/cpu_datapath/hazard/data_in

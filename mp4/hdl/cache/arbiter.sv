@@ -81,18 +81,18 @@ always_comb begin
 
 	case(state)
 		IDLE :	begin
-				if (d_read_i || i_read_i || d_write_i)
-					stall = 1'b1;
-
 				if(d_read_i) begin
-					address_o = i_address;
+					stall = 1'b1;
+					address_o = d_address;
 					read_o = 1'b1;
 				end
 				else if(d_write_i) begin
+					stall = 1'b1;
 					address_o = d_address;
 					write_o = 1'b0;
 				end
 				else if(i_read_i) begin
+					stall = 1'b1;
 					address_o = i_address;
 					read_o = 1'b1;
 				end
@@ -100,6 +100,8 @@ always_comb begin
 		READ0 :	begin
                     stall = 1'b1;
 					read_o = 1'b1;
+					if(d_read_i)
+						address_o = d_address;
 					if(resp_i) begin
 						next_read_out[63:0] = burst_i;
 					end
@@ -107,6 +109,8 @@ always_comb begin
 		READ1 :	begin
                     stall = 1'b1;
 					read_o = 1'b1;
+					if(d_read_i)
+						address_o = d_address;
 					if(resp_i) begin
 						next_read_out[127:64] = burst_i;
 					end
@@ -114,6 +118,8 @@ always_comb begin
 		READ2 :	begin
                     stall = 1'b1;
 					read_o = 1'b1;
+					if(d_read_i)
+						address_o = d_address;
 					if(resp_i) begin
 						next_read_out[191:128] = burst_i;
 					end
@@ -121,6 +127,8 @@ always_comb begin
 		READ3 :	begin
 					stall = 1'b1;
 					read_o = 1'b1;
+					if(d_read_i)
+						address_o = d_address;
 					if(resp_i) begin
 						next_read_out[255:192] = burst_i;
 					end
@@ -140,21 +148,25 @@ always_comb begin
                     stall = 1'b1;
 					write_o = 1'b1;
 					burst_o = d_line_i[63:0];
+					address_o = d_address;
 				end
 		WRITE1: begin
                     stall = 1'b1;
 					write_o = 1'b1;
 					burst_o = d_line_i[127:64];
+					address_o = d_address;
 				end
 		WRITE2: begin
                     stall = 1'b1;
 					write_o = 1'b1;
 					burst_o = d_line_i[191:128];
+					address_o = d_address;
 				end
 		WRITE3: begin
                     stall = 1'b1;
 					write_o = 1'b1;
 					burst_o = d_line_i[255:192];
+					address_o = d_address;
 				end
 		WRITE4: begin
                     stall = 1'b1;

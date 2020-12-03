@@ -1,5 +1,5 @@
 Analysis & Synthesis report for mp4
-Sat Nov 21 04:42:09 2020
+Sat Nov 21 21:00:01 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -40,11 +40,10 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
  32. Port Connectivity Checks: "cpu_datapath:cpu_datapath|hazard_detection:hazard"
  33. Port Connectivity Checks: "cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB"
  34. Port Connectivity Checks: "cpu_datapath:cpu_datapath|EX:stage_EX|cmp:CMP"
- 35. Port Connectivity Checks: "cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile"
- 36. Post-Synthesis Netlist Statistics for Top Partition
- 37. Elapsed Time Per Partition
- 38. Analysis & Synthesis Messages
- 39. Analysis & Synthesis Suppressed Messages
+ 35. Post-Synthesis Netlist Statistics for Top Partition
+ 36. Elapsed Time Per Partition
+ 37. Analysis & Synthesis Messages
+ 38. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -70,16 +69,16 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +-----------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status       ; Successful - Sat Nov 21 04:42:09 2020           ;
+; Analysis & Synthesis Status       ; Successful - Sat Nov 21 21:00:01 2020           ;
 ; Quartus Prime Version             ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                     ; mp4                                             ;
 ; Top-level Entity Name             ; mp4                                             ;
 ; Family                            ; Arria II GX                                     ;
 ; Logic utilization                 ; N/A                                             ;
-;     Combinational ALUTs           ; 3,400                                           ;
+;     Combinational ALUTs           ; 3,980                                           ;
 ;     Memory ALUTs                  ; 0                                               ;
-;     Dedicated logic registers     ; 5,174                                           ;
-; Total registers                   ; 5174                                            ;
+;     Dedicated logic registers     ; 6,006                                           ;
+; Total registers                   ; 6006                                            ;
 ; Total pins                        ; 165                                             ;
 ; Total virtual pins                ; 0                                               ;
 ; Total block memory bits           ; 384                                             ;
@@ -193,14 +192,15 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.1%      ;
+;     Processor 2            ;   0.2%      ;
 ;     Processor 3            ;   0.1%      ;
-;     Processor 4            ;   0.1%      ;
-;     Processor 5            ;   0.1%      ;
-;     Processor 6            ;   0.1%      ;
+;     Processor 4            ;   0.0%      ;
+;     Processor 5            ;   0.0%      ;
+;     Processor 6            ;   0.0%      ;
 ;     Processor 7            ;   0.0%      ;
 ;     Processor 8            ;   0.0%      ;
-;     Processors 9-12        ;   0.0%      ;
+;     Processor 9            ;   0.0%      ;
+;     Processors 10-12       ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -254,34 +254,34 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------+-----------+
 ; Resource                                      ; Usage     ;
 +-----------------------------------------------+-----------+
-; Estimated ALUTs Used                          ; 3400      ;
-;     -- Combinational ALUTs                    ; 3400      ;
+; Estimated ALUTs Used                          ; 3980      ;
+;     -- Combinational ALUTs                    ; 3980      ;
 ;     -- Memory ALUTs                           ; 0         ;
 ;     -- LUT_REGs                               ; 0         ;
-; Dedicated logic registers                     ; 5174      ;
+; Dedicated logic registers                     ; 6006      ;
 ;                                               ;           ;
 ; Estimated ALUTs Unavailable                   ; 39        ;
 ;     -- Due to unpartnered combinational logic ; 39        ;
 ;     -- Due to Memory ALUTs                    ; 0         ;
 ;                                               ;           ;
-; Total combinational functions                 ; 3400      ;
+; Total combinational functions                 ; 3980      ;
 ; Combinational ALUT usage by number of inputs  ;           ;
 ;     -- 7 input functions                      ; 39        ;
-;     -- 6 input functions                      ; 1936      ;
-;     -- 5 input functions                      ; 750       ;
-;     -- 4 input functions                      ; 288       ;
-;     -- <=3 input functions                    ; 387       ;
+;     -- 6 input functions                      ; 2405      ;
+;     -- 5 input functions                      ; 864       ;
+;     -- 4 input functions                      ; 290       ;
+;     -- <=3 input functions                    ; 382       ;
 ;                                               ;           ;
 ; Combinational ALUTs by mode                   ;           ;
-;     -- normal mode                            ; 3238      ;
+;     -- normal mode                            ; 3818      ;
 ;     -- extended LUT mode                      ; 39        ;
 ;     -- arithmetic mode                        ; 123       ;
 ;     -- shared arithmetic mode                 ; 0         ;
 ;                                               ;           ;
-; Estimated ALUT/register pairs used            ; 7491      ;
+; Estimated ALUT/register pairs used            ; 8852      ;
 ;                                               ;           ;
-; Total registers                               ; 5174      ;
-;     -- Dedicated logic registers              ; 5174      ;
+; Total registers                               ; 6006      ;
+;     -- Dedicated logic registers              ; 6006      ;
 ;     -- I/O registers                          ; 0         ;
 ;     -- LUT_REGs                               ; 0         ;
 ;                                               ;           ;
@@ -293,9 +293,9 @@ refer to the applicable agreement for further details.
 ; DSP block 18-bit elements                     ; 0         ;
 ;                                               ;           ;
 ; Maximum fan-out node                          ; clk~input ;
-; Maximum fan-out                               ; 5222      ;
-; Total fan-out                                 ; 34601     ;
-; Average fan-out                               ; 3.87      ;
+; Maximum fan-out                               ; 6054      ;
+; Total fan-out                                 ; 41478     ;
+; Average fan-out                               ; 4.00      ;
 +-----------------------------------------------+-----------+
 
 
@@ -304,10 +304,10 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------+---------------------+---------------------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------+------------------+--------------+
 ; Compilation Hierarchy Node                      ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 12x12 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                       ; Entity Name      ; Library Name ;
 +-------------------------------------------------+---------------------+---------------------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------+------------------+--------------+
-; |mp4                                            ; 3400 (0)            ; 5174 (0)                  ; 384               ; 0            ; 0       ; 0         ; 0         ; 0         ; 165  ; 0            ; |mp4                                                                                                      ; mp4              ; work         ;
+; |mp4                                            ; 3980 (0)            ; 6006 (0)                  ; 384               ; 0            ; 0       ; 0         ; 0         ; 0         ; 165  ; 0            ; |mp4                                                                                                      ; mp4              ; work         ;
 ;    |arbiter:arbiter|                            ; 174 (174)           ; 267 (267)                 ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|arbiter:arbiter                                                                                      ; arbiter          ; work         ;
-;    |cache:d_cache|                              ; 1059 (0)            ; 2120 (0)                  ; 192               ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cache:d_cache                                                                                        ; cache            ; work         ;
-;       |cache_control:control|                   ; 27 (27)             ; 1 (1)                     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cache:d_cache|cache_control:control                                                                  ; cache_control    ; work         ;
+;    |cache:d_cache|                              ; 1058 (0)            ; 2120 (0)                  ; 192               ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cache:d_cache                                                                                        ; cache            ; work         ;
+;       |cache_control:control|                   ; 26 (26)             ; 1 (1)                     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cache:d_cache|cache_control:control                                                                  ; cache_control    ; work         ;
 ;       |cache_datapath:datapath|                 ; 913 (60)            ; 2119 (0)                  ; 192               ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cache:d_cache|cache_datapath:datapath                                                                ; cache_datapath   ; work         ;
 ;          |array:dirty|                          ; 17 (17)             ; 8 (8)                     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cache:d_cache|cache_datapath:datapath|array:dirty                                                    ; array            ; work         ;
 ;          |array:tag|                            ; 26 (26)             ; 55 (55)                   ; 192               ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cache:d_cache|cache_datapath:datapath|array:tag                                                      ; array            ; work         ;
@@ -325,21 +325,21 @@ refer to the applicable agreement for further details.
 ;                |altsyncram_5km1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 192               ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cache:i_cache|cache_datapath:datapath|array:tag|altsyncram:data_rtl_0|altsyncram_5km1:auto_generated ; altsyncram_5km1  ; work         ;
 ;          |array:valid|                          ; 10 (10)             ; 8 (8)                     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cache:i_cache|cache_datapath:datapath|array:valid                                                    ; array            ; work         ;
 ;          |data_array:DM_cache|                  ; 768 (768)           ; 2048 (2048)               ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cache:i_cache|cache_datapath:datapath|data_array:DM_cache                                            ; data_array       ; work         ;
-;    |cpu_datapath:cpu_datapath|                  ; 1339 (0)            ; 675 (0)                   ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cpu_datapath:cpu_datapath                                                                            ; cpu_datapath     ; work         ;
+;    |cpu_datapath:cpu_datapath|                  ; 1920 (0)            ; 1507 (0)                  ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cpu_datapath:cpu_datapath                                                                            ; cpu_datapath     ; work         ;
 ;       |EX:stage_EX|                             ; 432 (196)           ; 0 (0)                     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cpu_datapath:cpu_datapath|EX:stage_EX                                                                ; EX               ; work         ;
 ;          |alu:ALU|                              ; 180 (180)           ; 0 (0)                     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cpu_datapath:cpu_datapath|EX:stage_EX|alu:ALU                                                        ; alu              ; work         ;
 ;          |cmp:CMP|                              ; 56 (56)             ; 0 (0)                     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cpu_datapath:cpu_datapath|EX:stage_EX|cmp:CMP                                                        ; cmp              ; work         ;
-;       |ID:stage_ID|                             ; 97 (6)              ; 160 (0)                   ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID                                                                ; ID               ; work         ;
+;       |ID:stage_ID|                             ; 90 (6)              ; 992 (0)                   ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID                                                                ; ID               ; work         ;
 ;          |control_rom:control_rom|              ; 20 (20)             ; 0 (0)                     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|control_rom:control_rom                                        ; control_rom      ; work         ;
-;          |regfile:regfile|                      ; 71 (71)             ; 160 (160)                 ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile                                                ; regfile          ; work         ;
+;          |regfile:regfile|                      ; 64 (64)             ; 992 (992)                 ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile                                                ; regfile          ; work         ;
 ;       |IF:stage_IF|                             ; 56 (47)             ; 32 (0)                    ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cpu_datapath:cpu_datapath|IF:stage_IF                                                                ; IF               ; work         ;
 ;          |pc_register:PC|                       ; 9 (9)               ; 32 (32)                   ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cpu_datapath:cpu_datapath|IF:stage_IF|pc_register:PC                                                 ; pc_register      ; work         ;
 ;       |MEM:stage_MEM|                           ; 36 (36)             ; 0 (0)                     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cpu_datapath:cpu_datapath|MEM:stage_MEM                                                              ; MEM              ; work         ;
-;       |WB:stage_WB|                             ; 134 (134)           ; 0 (0)                     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cpu_datapath:cpu_datapath|WB:stage_WB                                                                ; WB               ; work         ;
+;       |WB:stage_WB|                             ; 132 (132)           ; 0 (0)                     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cpu_datapath:cpu_datapath|WB:stage_WB                                                                ; WB               ; work         ;
 ;       |hazard_detection:hazard|                 ; 202 (202)           ; 0 (0)                     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cpu_datapath:cpu_datapath|hazard_detection:hazard                                                    ; hazard_detection ; work         ;
 ;       |sreg_EX_MEM:sreg_EX_MEM|                 ; 150 (150)           ; 138 (138)                 ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM                                                    ; sreg_EX_MEM      ; work         ;
-;       |sreg_ID_EX:sreg_ID_EX|                   ; 131 (131)           ; 148 (148)                 ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX                                                      ; sreg_ID_EX       ; work         ;
-;       |sreg_IF_ID:sreg_IF_ID|                   ; 98 (98)             ; 64 (64)                   ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cpu_datapath:cpu_datapath|sreg_IF_ID:sreg_IF_ID                                                      ; sreg_IF_ID       ; work         ;
+;       |sreg_ID_EX:sreg_ID_EX|                   ; 720 (720)           ; 148 (148)                 ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX                                                      ; sreg_ID_EX       ; work         ;
+;       |sreg_IF_ID:sreg_IF_ID|                   ; 99 (99)             ; 64 (64)                   ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cpu_datapath:cpu_datapath|sreg_IF_ID:sreg_IF_ID                                                      ; sreg_IF_ID       ; work         ;
 ;       |sreg_MEM_WB:sreg_MEM_WB|                 ; 3 (3)               ; 133 (133)                 ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp4|cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB                                                    ; sreg_MEM_WB      ; work         ;
 +-------------------------------------------------+---------------------+---------------------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------+------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -582,18 +582,62 @@ Encoding Type:  One-Hot
 ; cache:i_cache|cache_datapath:datapath|array:dirty|data~5            ; Stuck at GND due to stuck port data_in                                       ;
 ; cache:i_cache|cache_datapath:datapath|array:dirty|data~6            ; Stuck at GND due to stuck port data_in                                       ;
 ; cache:i_cache|cache_datapath:datapath|array:dirty|data~7            ; Stuck at GND due to stuck port data_in                                       ;
-; Total Number of Removed Registers = 280                             ;                                                                              ;
+; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][4]    ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][6]    ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][5]    ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][3]    ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][2]    ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][1]    ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][0]    ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][22]   ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][23]   ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][24]   ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][25]   ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][26]   ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][27]   ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][28]   ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][29]   ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][30]   ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][31]   ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][7]    ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][8]    ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][9]    ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][10]   ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][11]   ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][12]   ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][13]   ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][14]   ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][15]   ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][16]   ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][17]   ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][18]   ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][19]   ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][20]   ; Stuck at GND due to stuck port data_in                                       ;
+; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][21]   ; Stuck at GND due to stuck port data_in                                       ;
+; Total Number of Removed Registers = 312                             ;                                                                              ;
 +---------------------------------------------------------------------+------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                                  ;
-+---------------------------------------------------------------+---------------------------+------------------------------------------------------------------+
-; Register name                                                 ; Reason for Removal        ; Registers Removed due to This Register                           ;
-+---------------------------------------------------------------+---------------------------+------------------------------------------------------------------+
-; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[0] ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.u_imm[0], ;
-;                                                               ; due to stuck port data_in ; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|ctrl.u_imm[0]  ;
-+---------------------------------------------------------------+---------------------------+------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                    ;
++---------------------------------------------------------------+---------------------------+--------------------------------------------------------------------+
+; Register name                                                 ; Reason for Removal        ; Registers Removed due to This Register                             ;
++---------------------------------------------------------------+---------------------------+--------------------------------------------------------------------+
+; cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[0] ; Stuck at GND              ; cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|ctrl.u_imm[0],   ;
+;                                                               ; due to stuck port data_in ; cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|ctrl.u_imm[0],   ;
+;                                                               ;                           ; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][4],  ;
+;                                                               ;                           ; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][6],  ;
+;                                                               ;                           ; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][5],  ;
+;                                                               ;                           ; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][3],  ;
+;                                                               ;                           ; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][2],  ;
+;                                                               ;                           ; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][1],  ;
+;                                                               ;                           ; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][0],  ;
+;                                                               ;                           ; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][7],  ;
+;                                                               ;                           ; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][8],  ;
+;                                                               ;                           ; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][9],  ;
+;                                                               ;                           ; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][10], ;
+;                                                               ;                           ; cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][11]  ;
++---------------------------------------------------------------+---------------------------+--------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -601,12 +645,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 5174  ;
-; Number of registers using Synchronous Clear  ; 486   ;
+; Total registers                              ; 6006  ;
+; Number of registers using Synchronous Clear  ; 1488  ;
 ; Number of registers using Synchronous Load   ; 27    ;
 ; Number of registers using Asynchronous Clear ; 267   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 5023  ;
+; Number of registers using Clock Enable       ; 5855  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -791,121 +835,119 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------+
-; 3:1                ; 5 bits    ; 10 ALUTs      ; 5 ALUTs              ; 5 ALUTs                ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][4]       ;
-; 3:1                ; 5 bits    ; 10 ALUTs      ; 5 ALUTs              ; 5 ALUTs                ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[1][4]       ;
-; 3:1                ; 5 bits    ; 10 ALUTs      ; 5 ALUTs              ; 5 ALUTs                ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[2][4]       ;
-; 3:1                ; 5 bits    ; 10 ALUTs      ; 5 ALUTs              ; 5 ALUTs                ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[3][1]       ;
-; 3:1                ; 5 bits    ; 10 ALUTs      ; 5 ALUTs              ; 5 ALUTs                ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[4][0]       ;
-; 3:1                ; 5 bits    ; 10 ALUTs      ; 5 ALUTs              ; 5 ALUTs                ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[5][2]       ;
-; 3:1                ; 5 bits    ; 10 ALUTs      ; 5 ALUTs              ; 5 ALUTs                ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[6][0]       ;
-; 3:1                ; 5 bits    ; 10 ALUTs      ; 5 ALUTs              ; 5 ALUTs                ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[7][0]       ;
-; 3:1                ; 5 bits    ; 10 ALUTs      ; 5 ALUTs              ; 5 ALUTs                ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[8][2]       ;
-; 3:1                ; 5 bits    ; 10 ALUTs      ; 5 ALUTs              ; 5 ALUTs                ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[9][0]       ;
-; 3:1                ; 5 bits    ; 10 ALUTs      ; 5 ALUTs              ; 5 ALUTs                ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[10][3]      ;
-; 3:1                ; 5 bits    ; 10 ALUTs      ; 5 ALUTs              ; 5 ALUTs                ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[11][2]      ;
-; 3:1                ; 5 bits    ; 10 ALUTs      ; 5 ALUTs              ; 5 ALUTs                ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[12][1]      ;
-; 3:1                ; 5 bits    ; 10 ALUTs      ; 5 ALUTs              ; 5 ALUTs                ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[13][3]      ;
-; 3:1                ; 5 bits    ; 10 ALUTs      ; 5 ALUTs              ; 5 ALUTs                ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[14][3]      ;
-; 3:1                ; 5 bits    ; 10 ALUTs      ; 5 ALUTs              ; 5 ALUTs                ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[15][4]      ;
-; 3:1                ; 5 bits    ; 10 ALUTs      ; 5 ALUTs              ; 5 ALUTs                ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[16][3]      ;
-; 3:1                ; 5 bits    ; 10 ALUTs      ; 5 ALUTs              ; 5 ALUTs                ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[17][3]      ;
-; 3:1                ; 5 bits    ; 10 ALUTs      ; 5 ALUTs              ; 5 ALUTs                ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[18][4]      ;
-; 3:1                ; 5 bits    ; 10 ALUTs      ; 5 ALUTs              ; 5 ALUTs                ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[19][1]      ;
-; 3:1                ; 5 bits    ; 10 ALUTs      ; 5 ALUTs              ; 5 ALUTs                ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[20][1]      ;
-; 3:1                ; 5 bits    ; 10 ALUTs      ; 5 ALUTs              ; 5 ALUTs                ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[21][2]      ;
-; 3:1                ; 5 bits    ; 10 ALUTs      ; 5 ALUTs              ; 5 ALUTs                ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[22][2]      ;
-; 3:1                ; 5 bits    ; 10 ALUTs      ; 5 ALUTs              ; 5 ALUTs                ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[23][4]      ;
-; 3:1                ; 5 bits    ; 10 ALUTs      ; 5 ALUTs              ; 5 ALUTs                ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[24][4]      ;
-; 3:1                ; 5 bits    ; 10 ALUTs      ; 5 ALUTs              ; 5 ALUTs                ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[25][1]      ;
-; 3:1                ; 5 bits    ; 10 ALUTs      ; 5 ALUTs              ; 5 ALUTs                ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[26][2]      ;
-; 3:1                ; 5 bits    ; 10 ALUTs      ; 5 ALUTs              ; 5 ALUTs                ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[27][0]      ;
-; 3:1                ; 5 bits    ; 10 ALUTs      ; 5 ALUTs              ; 5 ALUTs                ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[28][2]      ;
-; 3:1                ; 5 bits    ; 10 ALUTs      ; 5 ALUTs              ; 5 ALUTs                ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[29][2]      ;
-; 3:1                ; 5 bits    ; 10 ALUTs      ; 5 ALUTs              ; 5 ALUTs                ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[30][1]      ;
-; 3:1                ; 5 bits    ; 10 ALUTs      ; 5 ALUTs              ; 5 ALUTs                ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[31][1]      ;
-; 3:1                ; 101 bits  ; 202 ALUTs     ; 0 ALUTs              ; 202 ALUTs              ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|pc[1]                ;
-; 3:1                ; 212 bits  ; 424 ALUTs     ; 0 ALUTs              ; 424 ALUTs              ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.b_imm[4]          ;
-; 4:1                ; 27 bits   ; 54 ALUTs      ; 0 ALUTs              ; 54 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|rs2[11]                ;
-; 4:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|data[1]              ;
-; 4:1                ; 27 bits   ; 54 ALUTs      ; 0 ALUTs              ; 54 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|rs1[8]                 ;
-; 4:1                ; 27 bits   ; 54 ALUTs      ; 0 ALUTs              ; 54 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|IF:stage_IF|pc_register:PC|data[20]          ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[0][5]       ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[1][8]       ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[2][29]      ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[3][6]       ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[4][27]      ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[5][9]       ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[6][24]      ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[7][21]      ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[8][11]      ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[9][4]       ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[10][14]     ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[11][5]      ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[12][5]      ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[13][28]     ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[14][18]     ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[15][18]     ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[16][7]      ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[17][27]     ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[18][14]     ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[19][1]      ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[20][16]     ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[21][11]     ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[22][28]     ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[23][5]      ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[24][13]     ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[25][11]     ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[26][4]      ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[27][4]      ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[28][20]     ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[29][8]      ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[30][2]      ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile|data[31][9]      ;
+; 3:1                ; 101 bits  ; 202 ALUTs     ; 0 ALUTs              ; 202 ALUTs              ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|pc[9]                ;
+; 3:1                ; 212 bits  ; 424 ALUTs     ; 0 ALUTs              ; 424 ALUTs              ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_IF_ID:sreg_IF_ID|pc[22]                 ;
+; 4:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB|data[30]             ;
+; 4:1                ; 27 bits   ; 54 ALUTs      ; 0 ALUTs              ; 54 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|IF:stage_IF|pc_register:PC|data[26]          ;
 ; 5:1                ; 2 bits    ; 6 ALUTs       ; 4 ALUTs              ; 2 ALUTs                ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.cmpop[0]          ;
-; 10:1               ; 32 bits   ; 192 ALUTs     ; 160 ALUTs            ; 32 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_IF_ID:sreg_IF_ID|rdata[31]              ;
+; 10:1               ; 32 bits   ; 192 ALUTs     ; 160 ALUTs            ; 32 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_IF_ID:sreg_IF_ID|rdata[4]               ;
 ; 10:1               ; 2 bits    ; 12 ALUTs      ; 10 ALUTs             ; 2 ALUTs                ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|ctrl.aluop[1]          ;
-; 36:1               ; 5 bits    ; 120 ALUTs     ; 115 ALUTs            ; 5 ALUTs                ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|rs2[2]                 ;
-; 36:1               ; 5 bits    ; 120 ALUTs     ; 115 ALUTs            ; 5 ALUTs                ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|rs1[2]                 ;
+; 36:1               ; 32 bits   ; 768 ALUTs     ; 704 ALUTs            ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|rs2[0]                 ;
+; 36:1               ; 32 bits   ; 768 ALUTs     ; 704 ALUTs            ; 64 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_ID_EX:sreg_ID_EX|rs1[29]                ;
 ; 15:1               ; 2 bits    ; 20 ALUTs      ; 16 ALUTs             ; 4 ALUTs                ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|alu[8]               ;
-; 16:1               ; 8 bits    ; 80 ALUTs      ; 64 ALUTs             ; 16 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|alu[18]              ;
-; 15:1               ; 3 bits    ; 30 ALUTs      ; 24 ALUTs             ; 6 ALUTs                ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|alu[14]              ;
-; 17:1               ; 2 bits    ; 22 ALUTs      ; 18 ALUTs             ; 4 ALUTs                ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|alu[9]               ;
-; 18:1               ; 3 bits    ; 36 ALUTs      ; 30 ALUTs             ; 6 ALUTs                ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|alu[3]               ;
-; 18:1               ; 2 bits    ; 24 ALUTs      ; 20 ALUTs             ; 4 ALUTs                ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|alu[26]              ;
-; 19:1               ; 3 bits    ; 36 ALUTs      ; 33 ALUTs             ; 3 ALUTs                ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|alu[28]              ;
+; 16:1               ; 8 bits    ; 80 ALUTs      ; 64 ALUTs             ; 16 ALUTs               ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|alu[17]              ;
+; 15:1               ; 3 bits    ; 30 ALUTs      ; 24 ALUTs             ; 6 ALUTs                ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|alu[12]              ;
+; 17:1               ; 2 bits    ; 22 ALUTs      ; 18 ALUTs             ; 4 ALUTs                ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|alu[10]              ;
+; 18:1               ; 3 bits    ; 36 ALUTs      ; 30 ALUTs             ; 6 ALUTs                ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|alu[2]               ;
+; 18:1               ; 2 bits    ; 24 ALUTs      ; 20 ALUTs             ; 4 ALUTs                ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|alu[25]              ;
+; 19:1               ; 3 bits    ; 36 ALUTs      ; 33 ALUTs             ; 3 ALUTs                ; Yes        ; |mp4|cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|alu[29]              ;
 ; 3:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_control:control|stall_cache                        ;
 ; 3:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; No         ; |mp4|cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|Mux1                 ;
-; 4:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; No         ; |mp4|cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|Mux3                 ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 64 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cpu_datapath:cpu_datapath|EX:stage_EX|rs1[11]                          ;
+; 4:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; No         ; |mp4|cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|Mux2                 ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 64 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cpu_datapath:cpu_datapath|EX:stage_EX|rs1[3]                           ;
 ; 3:1                ; 32 bits   ; 64 ALUTs      ; 64 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cpu_datapath:cpu_datapath|EX:stage_EX|alumux2_out                      ;
-; 4:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; No         ; |mp4|cpu_datapath:cpu_datapath|EX:stage_EX|alu:ALU|ShiftRight1              ;
-; 4:1                ; 49 bits   ; 98 ALUTs      ; 98 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cpu_datapath:cpu_datapath|EX:stage_EX|alu:ALU|ShiftLeft0               ;
+; 4:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; No         ; |mp4|cpu_datapath:cpu_datapath|EX:stage_EX|alu:ALU|ShiftLeft0               ;
+; 4:1                ; 49 bits   ; 98 ALUTs      ; 98 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cpu_datapath:cpu_datapath|EX:stage_EX|alu:ALU|ShiftRight1              ;
 ; 4:1                ; 4 bits    ; 8 ALUTs       ; 8 ALUTs              ; 0 ALUTs                ; No         ; |mp4|cpu_datapath:cpu_datapath|EX:stage_EX|alu:ALU|ShiftRight1              ;
 ; 4:1                ; 4 bits    ; 8 ALUTs       ; 8 ALUTs              ; 0 ALUTs                ; No         ; |mp4|cpu_datapath:cpu_datapath|EX:stage_EX|alu:ALU|ShiftRight0              ;
 ; 4:1                ; 4 bits    ; 8 ALUTs       ; 8 ALUTs              ; 0 ALUTs                ; No         ; |mp4|cpu_datapath:cpu_datapath|EX:stage_EX|alu:ALU|ShiftLeft0               ;
 ; 4:1                ; 4 bits    ; 8 ALUTs       ; 8 ALUTs              ; 0 ALUTs                ; No         ; |mp4|cpu_datapath:cpu_datapath|EX:stage_EX|alu:ALU|ShiftLeft0               ;
 ; 4:1                ; 4 bits    ; 8 ALUTs       ; 8 ALUTs              ; 0 ALUTs                ; No         ; |mp4|cpu_datapath:cpu_datapath|EX:stage_EX|alu:ALU|ShiftLeft0               ;
 ; 3:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; No         ; |mp4|arbiter:arbiter|next                                                   ;
-; 8:1                ; 32 bits   ; 160 ALUTs     ; 160 ALUTs            ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|line_adapter:bus|Mux22                                   ;
-; 4:1                ; 24 bits   ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|arbiter:arbiter|address_o[14]                                          ;
+; 8:1                ; 32 bits   ; 160 ALUTs     ; 160 ALUTs            ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|line_adapter:bus|Mux9                                    ;
+; 4:1                ; 24 bits   ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|arbiter:arbiter|address_o[29]                                          ;
 ; 4:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; No         ; |mp4|cpu_datapath:cpu_datapath|IF:stage_IF|pc_register:PC|data              ;
 ; 5:1                ; 2 bits    ; 6 ALUTs       ; 4 ALUTs              ; 2 ALUTs                ; No         ; |mp4|cache:d_cache|cache_control:control|next_state.check_hit               ;
-; 9:1                ; 256 bits  ; 1536 ALUTs    ; 1536 ALUTs           ; 0 ALUTs                ; No         ; |mp4|cache:i_cache|cache_datapath:datapath|data_array:DM_cache|dataout[64]  ;
+; 9:1                ; 256 bits  ; 1536 ALUTs    ; 1536 ALUTs           ; 0 ALUTs                ; No         ; |mp4|cache:i_cache|cache_datapath:datapath|data_array:DM_cache|dataout[100] ;
 ; 5:1                ; 2 bits    ; 6 ALUTs       ; 4 ALUTs              ; 2 ALUTs                ; No         ; |mp4|cache:i_cache|cache_control:control|next_state.check_hit               ;
-; 5:1                ; 64 bits   ; 192 ALUTs     ; 192 ALUTs            ; 0 ALUTs                ; No         ; |mp4|arbiter:arbiter|Selector45                                             ;
-; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[199] ;
-; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[132] ;
-; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[68]  ;
+; 5:1                ; 64 bits   ; 192 ALUTs     ; 192 ALUTs            ; 0 ALUTs                ; No         ; |mp4|arbiter:arbiter|Selector17                                             ;
+; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[192] ;
+; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[128] ;
+; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[67]  ;
 ; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[7]   ;
-; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[202] ;
-; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[142] ;
-; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[74]  ;
-; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[11]  ;
-; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[212] ;
-; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[144] ;
-; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[82]  ;
-; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[21]  ;
-; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[223] ;
+; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[200] ;
+; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[140] ;
+; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[76]  ;
+; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[14]  ;
+; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[214] ;
+; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[151] ;
+; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[80]  ;
+; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[17]  ;
+; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[220] ;
 ; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[154] ;
-; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[92]  ;
-; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[27]  ;
+; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[94]  ;
+; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[31]  ;
 ; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[226] ;
-; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[160] ;
-; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[100] ;
-; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[32]  ;
-; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[233] ;
-; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[173] ;
-; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[108] ;
-; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[41]  ;
-; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[245] ;
-; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[182] ;
-; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[118] ;
+; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[164] ;
+; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[102] ;
+; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[33]  ;
+; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[232] ;
+; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[168] ;
+; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[110] ;
+; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[40]  ;
+; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[243] ;
+; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[183] ;
+; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[112] ;
 ; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[49]  ;
-; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[249] ;
-; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[188] ;
-; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[127] ;
-; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[57]  ;
-; 6:1                ; 6 bits    ; 24 ALUTs      ; 12 ALUTs             ; 12 ALUTs               ; No         ; |mp4|cpu_datapath:cpu_datapath|EX:stage_EX|Selector23                       ;
-; 6:1                ; 11 bits   ; 44 ALUTs      ; 22 ALUTs             ; 22 ALUTs               ; No         ; |mp4|cpu_datapath:cpu_datapath|EX:stage_EX|Selector8                        ;
+; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[252] ;
+; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[186] ;
+; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[124] ;
+; 10:1               ; 8 bits    ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cache:d_cache|cache_datapath:datapath|data_array:DM_cache|dataout[62]  ;
+; 6:1                ; 6 bits    ; 24 ALUTs      ; 12 ALUTs             ; 12 ALUTs               ; No         ; |mp4|cpu_datapath:cpu_datapath|EX:stage_EX|Selector22                       ;
+; 6:1                ; 11 bits   ; 44 ALUTs      ; 22 ALUTs             ; 22 ALUTs               ; No         ; |mp4|cpu_datapath:cpu_datapath|EX:stage_EX|Selector4                        ;
 ; 6:1                ; 4 bits    ; 16 ALUTs      ; 8 ALUTs              ; 8 ALUTs                ; No         ; |mp4|cpu_datapath:cpu_datapath|EX:stage_EX|Selector28                       ;
 ; 6:1                ; 8 bits    ; 32 ALUTs      ; 16 ALUTs             ; 16 ALUTs               ; No         ; |mp4|cpu_datapath:cpu_datapath|EX:stage_EX|Selector19                       ;
-; 7:1                ; 16 bits   ; 64 ALUTs      ; 64 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cpu_datapath:cpu_datapath|WB:stage_WB|Selector15                       ;
-; 8:1                ; 16 bits   ; 80 ALUTs      ; 80 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cpu_datapath:cpu_datapath|hazard_detection:hazard|hazard_MEM_data[21]  ;
-; 8:1                ; 4 bits    ; 20 ALUTs      ; 16 ALUTs             ; 4 ALUTs                ; No         ; |mp4|cpu_datapath:cpu_datapath|WB:stage_WB|Selector20                       ;
-; 8:1                ; 3 bits    ; 15 ALUTs      ; 12 ALUTs             ; 3 ALUTs                ; No         ; |mp4|cpu_datapath:cpu_datapath|WB:stage_WB|Selector17                       ;
+; 7:1                ; 16 bits   ; 64 ALUTs      ; 64 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cpu_datapath:cpu_datapath|WB:stage_WB|Selector14                       ;
+; 8:1                ; 16 bits   ; 80 ALUTs      ; 80 ALUTs             ; 0 ALUTs                ; No         ; |mp4|cpu_datapath:cpu_datapath|hazard_detection:hazard|hazard_MEM_data[25]  ;
+; 8:1                ; 4 bits    ; 20 ALUTs      ; 16 ALUTs             ; 4 ALUTs                ; No         ; |mp4|cpu_datapath:cpu_datapath|WB:stage_WB|Selector23                       ;
+; 8:1                ; 3 bits    ; 15 ALUTs      ; 12 ALUTs             ; 3 ALUTs                ; No         ; |mp4|cpu_datapath:cpu_datapath|WB:stage_WB|Selector19                       ;
 ; 9:1                ; 4 bits    ; 24 ALUTs      ; 20 ALUTs             ; 4 ALUTs                ; No         ; |mp4|cpu_datapath:cpu_datapath|hazard_detection:hazard|hazard_MEM_data[8]   ;
-; 9:1                ; 3 bits    ; 18 ALUTs      ; 15 ALUTs             ; 3 ALUTs                ; No         ; |mp4|cpu_datapath:cpu_datapath|hazard_detection:hazard|hazard_MEM_data[14]  ;
+; 9:1                ; 3 bits    ; 18 ALUTs      ; 15 ALUTs             ; 3 ALUTs                ; No         ; |mp4|cpu_datapath:cpu_datapath|hazard_detection:hazard|hazard_MEM_data[12]  ;
 ; 15:1               ; 3 bits    ; 30 ALUTs      ; 27 ALUTs             ; 3 ALUTs                ; No         ; |mp4|cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM|alu                  ;
-; 23:1               ; 6 bits    ; 90 ALUTs      ; 30 ALUTs             ; 60 ALUTs               ; No         ; |mp4|cpu_datapath:cpu_datapath|WB:stage_WB|Selector29                       ;
-; 24:1               ; 6 bits    ; 96 ALUTs      ; 36 ALUTs             ; 60 ALUTs               ; No         ; |mp4|cpu_datapath:cpu_datapath|hazard_detection:hazard|hazard_MEM_data[4]   ;
+; 23:1               ; 6 bits    ; 90 ALUTs      ; 30 ALUTs             ; 60 ALUTs               ; No         ; |mp4|cpu_datapath:cpu_datapath|WB:stage_WB|Selector27                       ;
+; 24:1               ; 6 bits    ; 96 ALUTs      ; 36 ALUTs             ; 60 ALUTs               ; No         ; |mp4|cpu_datapath:cpu_datapath|hazard_detection:hazard|hazard_MEM_data[2]   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------+
 
 
@@ -1200,47 +1242,37 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+-------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "cpu_datapath:cpu_datapath|ID:stage_ID|regfile:regfile"                                                                      ;
-+-------+--------+----------+----------------------------------------------------------------------------------------------------------------------------+
-; Port  ; Type   ; Severity ; Details                                                                                                                    ;
-+-------+--------+----------+----------------------------------------------------------------------------------------------------------------------------+
-; reg_a ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (5 bits) it drives; bit(s) "reg_a[31..5]" have no fanouts ;
-; reg_b ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (5 bits) it drives; bit(s) "reg_b[31..5]" have no fanouts ;
-+-------+--------+----------+----------------------------------------------------------------------------------------------------------------------------+
-
-
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriaii_ff            ; 5174                        ;
+; arriaii_ff            ; 6006                        ;
 ;     CLR               ; 5                           ;
-;     ENA               ; 4278                        ;
+;     ENA               ; 4108                        ;
 ;     ENA CLR           ; 262                         ;
-;     ENA SCLR          ; 456                         ;
+;     ENA SCLR          ; 1458                        ;
 ;     ENA SCLR SLD      ; 27                          ;
 ;     SCLR              ; 3                           ;
 ;     plain             ; 143                         ;
 ; boundary_port         ; 165                         ;
-; stratixiv_lcell_comb  ; 3400                        ;
+; stratixiv_lcell_comb  ; 3980                        ;
 ;     arith             ; 123                         ;
 ;         1 data inputs ; 91                          ;
 ;         4 data inputs ; 6                           ;
 ;         5 data inputs ; 26                          ;
 ;     extend            ; 39                          ;
 ;         7 data inputs ; 39                          ;
-;     normal            ; 3238                        ;
-;         2 data inputs ; 113                         ;
-;         3 data inputs ; 183                         ;
-;         4 data inputs ; 282                         ;
-;         5 data inputs ; 724                         ;
-;         6 data inputs ; 1936                        ;
+;     normal            ; 3818                        ;
+;         2 data inputs ; 111                         ;
+;         3 data inputs ; 180                         ;
+;         4 data inputs ; 284                         ;
+;         5 data inputs ; 838                         ;
+;         6 data inputs ; 2405                        ;
 ; stratixiv_ram_block   ; 48                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 16.00                       ;
-; Average LUT depth     ; 8.63                        ;
+; Average LUT depth     ; 7.87                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1249,7 +1281,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:15     ;
+; Top            ; 00:00:19     ;
 +----------------+--------------+
 
 
@@ -1259,7 +1291,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
-    Info: Processing started: Sat Nov 21 04:41:34 2020
+    Info: Processing started: Sat Nov 21 20:59:19 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mp4 -c mp4
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -1427,22 +1459,22 @@ Info (12133): Instantiated megafunction "cache:d_cache|cache_datapath:datapath|a
     Info (12134): Parameter "INIT_FILE" = "db/mp4.ram0_array_32a7bb4d.hdl.mif"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_5km1.tdf
     Info (12023): Found entity 1: altsyncram_5km1 File: /home/scottl4/hydration_is_key/mp4/db/altsyncram_5km1.tdf Line: 27
-Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 94 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file /home/scottl4/hydration_is_key/mp4/output_files/mp4.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 8622 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 9980 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 67 input pins
     Info (21059): Implemented 98 output pins
-    Info (21061): Implemented 8409 logic cells
+    Info (21061): Implemented 9767 logic cells
     Info (21064): Implemented 48 RAM segments
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 22 warnings
-    Info: Peak virtual memory: 1266 megabytes
-    Info: Processing ended: Sat Nov 21 04:42:09 2020
-    Info: Elapsed time: 00:00:35
-    Info: Total CPU time (on all processors): 00:00:57
+    Info: Peak virtual memory: 1325 megabytes
+    Info: Processing ended: Sat Nov 21 21:00:01 2020
+    Info: Elapsed time: 00:00:42
+    Info: Total CPU time (on all processors): 00:01:02
 
 
 +------------------------------------------+
