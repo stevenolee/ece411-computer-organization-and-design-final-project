@@ -28,9 +28,9 @@ data_array_p data_array
     .*,
     .read,
     .load,
-    .write_en(mem_byte_sel),
-    .rindex(index_r),
-    .windex(index_w),
+    .write_en   (mem_byte_sel),
+    .rindex     (index_r),
+    .windex     (index_w),
     .datain,
     .dataout
 );
@@ -41,10 +41,10 @@ array_p #(.width(24)) tag_array
     .rst,
     .read,
     .load,
-    .rindex(index),
-    .windex(index),
-    .datain(tag_in),
-    .dataout(tag_out)
+    .rindex     (index_r),
+    .windex     (index_w),
+    .datain     (tag_in),
+    .dataout    (tag_out)
 );
 /** VALID ARRAY **/
 array_p #(.width(1)) valid_array
@@ -53,22 +53,22 @@ array_p #(.width(1)) valid_array
     .rst,
     .read,
     .load,
-    .rindex(index),
-    .windex(index),
-    .datain(1'b1),
-    .dataout(valid)
+    .rindex     (index_r),
+    .windex     (index_w),
+    .datain     (1'b1),
+    .dataout        (valid)
 );
 /** DIRTY ARRAY **/
 array_p #(.width(1)) dirty_array
 (
     .clk,
     .rst,
-    .read(1'b1),
+    .read       (1'b1),
     .load,
-    .rindex(index),
-    .windex(index),
-    .datain(~access_sel), // REMEMBER THIS ONLY LOADS 1 IF DATA IS FROM THE CPU, IF FROM MEMORY THEN 0
-    .dataout(dirty)
+    .rindex     (index_r),
+    .windex     (index_w),
+    .datain     (~access_sel), // REMEMBER THIS ONLY LOADS 1 IF DATA IS FROM THE CPU, IF FROM MEMORY THEN 0
+    .dataout    (dirty)
 );
 
 endmodule : cache_p_way

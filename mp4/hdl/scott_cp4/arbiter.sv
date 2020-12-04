@@ -94,9 +94,9 @@ always_comb begin
             end
             next_read_out = data_in;
         end
-
+ 
         CACHE2 : begin
-            stall = 1'b1;
+            // stall = 1'b1;
             if(d_read_i) begin
                 d_line_o = read_out;
                 d_resp_o = 1'b1;
@@ -126,14 +126,15 @@ begin: next_state_logic
 
     case(state)
 		IDLE :	begin
-            if(d_write_i || d_read_i || i_read_i) begin
+            // if(d_write_i || d_read_i || i_read_i) begin
+            if(resp_i) begin
                 next = CACHE2;
             end
         end
 
         CACHE2: begin
-            if (resp_i)
-                next = IDLE;
+            // if (resp_i)
+            next = IDLE;
         end
     endcase
 end

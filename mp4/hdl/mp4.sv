@@ -115,8 +115,8 @@ arbiter arbiter(
 
 cache l2_cache(
     .*,
-    .mem_read,
-    .mem_write,
+    .mem_read           (l2_read_i),
+    .mem_write          (l2_write_i),
     .mem_address        (ar_addr_o),
     .mem_resp           (l2_resp_o),
     .mem_rdata_cpu      (l2_rdata_o),
@@ -143,12 +143,12 @@ cacheline_adaptor cacheline_adaptor
     .write_i    (l2_write_o),
     .resp_o     (l2_resp_i),
 
+    .resp_i     (mem_resp),
     .burst_i    (mem_rdata),
     .burst_o    (mem_wdata),
     .address_o  (mem_addr),
     .read_o     (mem_read),
-    .write_o    (mem_write),
-    .resp_i     (mem_resp)
+    .write_o    (mem_write)
 );
 
 endmodule : mp4

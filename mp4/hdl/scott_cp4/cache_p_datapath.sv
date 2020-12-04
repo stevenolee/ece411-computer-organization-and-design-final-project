@@ -66,6 +66,7 @@ always_comb begin
     write_mask = mem_byte_enable;
     hit = hit_0 || hit_1 || hit_2 || hit_3;
     hit_ind_i = 2'b00;
+    pmem_address = IF_ID_addr;
     dirty = 1'b0;
     load_0 = 1'b0;
     load_1 = 1'b0;

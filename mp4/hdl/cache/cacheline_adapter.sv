@@ -12,12 +12,12 @@ module cacheline_adaptor
     output logic resp_o,
 
     // Port to memory
+    input resp_i,
     input logic [63:0] burst_i,
     output logic [63:0] burst_o,
     output logic [31:0] address_o,
     output logic read_o,
-    output logic write_o,
-    input resp_i
+    output logic write_o
 );
 logic [255:0] read_out, next_read_out;
 enum int unsigned {
