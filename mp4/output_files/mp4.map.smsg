@@ -1,1 +1,2 @@
-Warning (10268): Verilog HDL information at sreg_IF_ID.sv(16): always construct contains both blocking and non-blocking assignments File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/sreg_IF_ID.sv Line: 16
+Info (10281): Verilog HDL Declaration information at arbiter.sv(33): object "prefetch" differs only in case from object "PREFETCH" in the same scope File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/cache/arbiter.sv Line: 33
+Warning (10268): Verilog HDL information at sreg_IF_ID.sv(16): always construct contains both blocking and non-blocking assignments File: /home/beo2/ece411/Hydration_is_Key/mp4/hdl/pipeline/sreg_IF_ID.sv Line: 16

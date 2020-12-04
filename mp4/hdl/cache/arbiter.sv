@@ -30,6 +30,10 @@ module arbiter
 );
 logic [255:0] read_out, next_read_out;
 
+logic prefetch;
+logic [31:0] p_address;
+
+
 /***** States *****/
 enum int unsigned {
     /* List of states */
@@ -39,6 +43,11 @@ enum int unsigned {
 	READ2,  
 	READ3, 
 	READ4, 
+	PREFETCH0, 
+	PREFETCH1, 
+	PREFETCH2,  
+	PREFETCH3, 
+	PREFETCH4, 
 	WRITE0,
 	WRITE1,
 	WRITE2,
@@ -78,6 +87,14 @@ always_comb begin
 	next_read_out = read_out;
 	i_line_o = read_out;
 	d_line_o = read_out;
+	prefetch = 1'b0;
+
+	if (i_read_i)
+		p_address = i_address + 4;
+	else if (d_read_i)
+		p_address = d_address + 4;
+	else
+		p_address = 32'hffffffff;
 
 	case(state)
 		IDLE :	begin
@@ -130,11 +147,50 @@ always_comb begin
                     if(d_read_i) begin
 						d_line_o = read_out;
                         d_resp_o = 1'b1;
+						address_o = p_address;
 					end
                     else if (i_read_i) begin
 						i_line_o = read_out;
                         i_resp_o  = 1'b1;
 					end
+				end
+		// PREFETCH : begin
+		// 		address_o = p_address;
+		// 		read_o = 1'b1;
+		// 		prefetch = 1'b1;
+		// 	end
+		PREFETCH0 :	begin
+                    stall = 1'b1;
+					read_o = 1'b1;
+					if(resp_i) begin
+						next_read_out[63:0] = burst_i;
+					end
+				end
+		PREFETCH1 :	begin
+                    stall = 1'b1;
+					read_o = 1'b1;
+					if(resp_i) begin
+						next_read_out[127:64] = burst_i;
+					end
+				end
+		PREFETCH2 :	begin
+                    stall = 1'b1;
+					read_o = 1'b1;
+					if(resp_i) begin
+						next_read_out[191:128] = burst_i;
+					end
+				end
+		PREFETCH3 :	begin
+					stall = 1'b1;
+					read_o = 1'b1;
+					if(resp_i) begin
+						next_read_out[255:192] = burst_i;
+					end
+				end
+		PREFETCH4 :	begin
+                    stall = 1'b1;
+					d_line_o = read_out;
+					d_resp_o = 1'b1;
 				end
 		WRITE0: begin
                     stall = 1'b1;
@@ -187,7 +243,7 @@ begin: next_state_logic
                     next = READ0;
                 end
                 else
-                    next = IDLE;
+					next = IDLE;
             end
 		READ0 :	begin
 					if(resp_i) begin
@@ -222,6 +278,44 @@ begin: next_state_logic
 					end
 				end
 		READ4 :	begin
+					if (d_read_i)
+						next = PREFETCH0;
+					else
+						next = IDLE;
+				end
+		PREFETCH0 :	begin
+					if(resp_i) begin
+						next = PREFETCH1;
+					end
+					else begin
+						next = PREFETCH0;
+					end
+				end
+		PREFETCH1 :	begin
+					if(resp_i) begin
+						next = PREFETCH2;
+					end
+					else begin
+						next = PREFETCH1;
+					end
+				end
+		PREFETCH2 :	begin
+					if(resp_i) begin
+						next = PREFETCH3;
+					end
+					else begin
+						next = PREFETCH2;
+					end
+				end
+		PREFETCH3 :	begin
+					if(resp_i) begin
+						next = PREFETCH4;
+					end
+					else begin
+						next = PREFETCH3;
+					end
+				end
+		PREFETCH4 :	begin
 					next = IDLE;
 				end
 		WRITE0: begin

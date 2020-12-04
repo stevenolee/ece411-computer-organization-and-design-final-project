@@ -76,120 +76,120 @@ CHIP  "mp4"  ASSIGNED TO AN: EP2AGX45DF25I3
 
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
 -------------------------------------------------------------------------------------------------------------
-mem_rdata[9]                 : A2        : input  : 2.5 V             :         : 7A        : N              
-mem_rdata[8]                 : A3        : input  : 2.5 V             :         : 7A        : N              
-mem_rdata[23]                : A4        : input  : 2.5 V             :         : 7A        : N              
-mem_rdata[59]                : A5        : input  : 2.5 V             :         : 7A        : N              
-mem_addr[1]                  : A6        : output : 2.5 V             :         : 7A        : N              
-mem_rdata[36]                : A7        : input  : 2.5 V             :         : 7A        : N              
-mem_rdata[48]                : A8        : input  : 2.5 V             :         : 7A        : N              
-mem_rdata[32]                : A9        : input  : 2.5 V             :         : 7A        : N              
-mem_rdata[5]                 : A10       : input  : 2.5 V             :         : 7A        : N              
-mem_wdata[7]                 : A11       : output : 2.5 V             :         : 8A        : N              
-mem_wdata[34]                : A12       : output : 2.5 V             :         : 8A        : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : A13       :        :                   :         : 8A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : A14       :        :                   :         : 8A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : A15       :        :                   :         : 8A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : A16       :        :                   :         : 8A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : A17       :        :                   :         : 8A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : A18       :        :                   :         : 8A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : A19       :        :                   :         : 8A        :                
+mem_rdata[43]                : A2        : input  : 2.5 V             :         : 7A        : N              
+mem_rdata[2]                 : A3        : input  : 2.5 V             :         : 7A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : A4        :        :                   :         : 7A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : A5        :        :                   :         : 7A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : A6        :        :                   :         : 7A        :                
+mem_rdata[28]                : A7        : input  : 2.5 V             :         : 7A        : N              
+mem_rdata[57]                : A8        : input  : 2.5 V             :         : 7A        : N              
+mem_wdata[33]                : A9        : output : 2.5 V             :         : 7A        : N              
+mem_rdata[58]                : A10       : input  : 2.5 V             :         : 7A        : N              
+mem_rdata[4]                 : A11       : input  : 2.5 V             :         : 8A        : N              
+mem_rdata[7]                 : A12       : input  : 2.5 V             :         : 8A        : N              
+mem_wdata[36]                : A13       : output : 2.5 V             :         : 8A        : N              
+mem_rdata[60]                : A14       : input  : 2.5 V             :         : 8A        : N              
+mem_wdata[3]                 : A15       : output : 2.5 V             :         : 8A        : N              
+mem_wdata[58]                : A16       : output : 2.5 V             :         : 8A        : N              
+mem_wdata[1]                 : A17       : output : 2.5 V             :         : 8A        : N              
+mem_write                    : A18       : output : 2.5 V             :         : 8A        : N              
+mem_wdata[57]                : A19       : output : 2.5 V             :         : 8A        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : A20       :        :                   :         : 8A        :                
 GND                          : A21       : gnd    :                   :         :           :                
 GND                          : A22       : gnd    :                   :         :           :                
 GND                          : A23       : gnd    :                   :         :           :                
-mem_wdata[21]                : AA1       : output : 2.5 V             :         : 5A        : N              
+mem_wdata[42]                : AA1       : output : 2.5 V             :         : 5A        : N              
 VCCIO5A                      : AA2       : power  :                   : 2.5V    : 5A        :                
-mem_wdata[18]                : AA3       : output : 2.5 V             :         : 5A        : N              
-mem_wdata[61]                : AA4       : output : 2.5 V             :         : 5A        : N              
+mem_addr[1]                  : AA3       : output : 2.5 V             :         : 5A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA4       :        :                   :         : 5A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA5       :        :                   :         : 5A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA6       :        :                   :         : 4A        :                
-mem_wdata[30]                : AA7       : output : 2.5 V             :         : 4A        : N              
-mem_wdata[11]                : AA8       : output : 2.5 V             :         : 4A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA7       :        :                   :         : 4A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA8       :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA9       :        :                   :         : 4A        :                
-mem_wdata[31]                : AA10      : output : 2.5 V             :         : 4A        : N              
-mem_rdata[41]                : AA11      : input  : 2.5 V             :         : 4A        : N              
-mem_wdata[63]                : AA12      : output : 2.5 V             :         : 4A        : N              
+mem_read                     : AA10      : output : 2.5 V             :         : 4A        : N              
+mem_addr[5]                  : AA11      : output : 2.5 V             :         : 4A        : N              
+mem_addr[2]                  : AA12      : output : 2.5 V             :         : 4A        : N              
 rst                          : AA13      : input  : 2.5 V             :         : 3A        : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AA14      :        :                   :         : 3A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AA15      :        :                   :         : 3A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AA16      :        :                   :         : 3A        :                
+mem_addr[16]                 : AA14      : output : 2.5 V             :         : 3A        : N              
+mem_wdata[54]                : AA15      : output : 2.5 V             :         : 3A        : N              
+mem_wdata[50]                : AA16      : output : 2.5 V             :         : 3A        : N              
 VCCIO3A                      : AA17      : power  :                   : 2.5V    : 3A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AA18      :        :                   :         : 3A        :                
+mem_wdata[31]                : AA18      : output : 2.5 V             :         : 3A        : N              
 ~ALTERA_nCEO~ / RESERVED_OUTPUT_OPEN_DRAIN : AA19      : output : 2.5 V             :         : 3A        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA20      :        :                   :         : 3A        :                
 GND                          : AA21      : gnd    :                   :         :           :                
 GND                          : AA22      : gnd    :                   :         :           :                
 GXB_GND*                     : AA23      :        :                   :         : QL0       :                
 GXB_GND*                     : AA24      :        :                   :         : QL0       :                
-mem_wdata[54]                : AB1       : output : 2.5 V             :         : 5A        : N              
-mem_wdata[56]                : AB2       : output : 2.5 V             :         : 5A        : N              
-mem_wdata[59]                : AB3       : output : 2.5 V             :         : 5A        : N              
-mem_rdata[10]                : AB4       : input  : 2.5 V             :         : 5A        : N              
+mem_wdata[14]                : AB1       : output : 2.5 V             :         : 5A        : N              
+mem_wdata[48]                : AB2       : output : 2.5 V             :         : 5A        : N              
+mem_wdata[16]                : AB3       : output : 2.5 V             :         : 5A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB4       :        :                   :         : 5A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB5       :        :                   :         : 5A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB6       :        :                   :         : 4A        :                
-mem_wdata[57]                : AB7       : output : 2.5 V             :         : 4A        : N              
-mem_wdata[47]                : AB8       : output : 2.5 V             :         : 4A        : N              
-mem_wdata[6]                 : AB9       : output : 2.5 V             :         : 4A        : N              
-mem_wdata[41]                : AB10      : output : 2.5 V             :         : 4A        : N              
-mem_wdata[9]                 : AB11      : output : 2.5 V             :         : 4A        : N              
-mem_wdata[4]                 : AB12      : output : 2.5 V             :         : 4A        : N              
-mem_wdata[5]                 : AB13      : output : 2.5 V             :         : 4A        : N              
-mem_rdata[2]                 : AB14      : input  : 2.5 V             :         : 3A        : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AB15      :        :                   :         : 3A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB7       :        :                   :         : 4A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB8       :        :                   :         : 4A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB9       :        :                   :         : 4A        :                
+mem_addr[4]                  : AB10      : output : 2.5 V             :         : 4A        : N              
+mem_addr[23]                 : AB11      : output : 2.5 V             :         : 4A        : N              
+mem_addr[14]                 : AB12      : output : 2.5 V             :         : 4A        : N              
+mem_addr[12]                 : AB13      : output : 2.5 V             :         : 4A        : N              
+mem_addr[9]                  : AB14      : output : 2.5 V             :         : 3A        : N              
+mem_addr[10]                 : AB15      : output : 2.5 V             :         : 3A        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB16      :        :                   :         : 3A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AB17      :        :                   :         : 3A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AB18      :        :                   :         : 3A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AB19      :        :                   :         : 3A        :                
+mem_addr[21]                 : AB17      : output : 2.5 V             :         : 3A        : N              
+mem_wdata[24]                : AB18      : output : 2.5 V             :         : 3A        : N              
+mem_wdata[25]                : AB19      : output : 2.5 V             :         : 3A        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB20      :        :                   :         : 3A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AB21      :        :                   :         : 3A        :                
+mem_wdata[22]                : AB21      : output : 2.5 V             :         : 3A        : N              
 GND                          : AB22      : gnd    :                   :         :           :                
 GND                          : AB23      : gnd    :                   :         :           :                
 GND                          : AB24      : gnd    :                   :         :           :                
-mem_wdata[13]                : AC1       : output : 2.5 V             :         : 5A        : N              
+mem_wdata[53]                : AC1       : output : 2.5 V             :         : 5A        : N              
 GND                          : AC2       : gnd    :                   :         :           :                
-mem_rdata[56]                : AC3       : input  : 2.5 V             :         : 5A        : N              
-mem_wdata[42]                : AC4       : output : 2.5 V             :         : 5A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AC3       :        :                   :         : 5A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AC4       :        :                   :         : 5A        :                
 GND                          : AC5       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AC6       :        :                   :         : 4A        :                
 VCCIO4A                      : AC7       : power  :                   : 2.5V    : 4A        :                
 GND                          : AC8       : gnd    :                   :         :           :                
-mem_wdata[32]                : AC9       : output : 2.5 V             :         : 4A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AC9       :        :                   :         : 4A        :                
 VCCIO4A                      : AC10      : power  :                   : 2.5V    : 4A        :                
 GND                          : AC11      : gnd    :                   :         :           :                
-mem_rdata[7]                 : AC12      : input  : 2.5 V             :         : 4A        : N              
-mem_addr[27]                 : AC13      : output : 2.5 V             :         : 4A        : N              
+mem_addr[11]                 : AC12      : output : 2.5 V             :         : 4A        : N              
+mem_addr[7]                  : AC13      : output : 2.5 V             :         : 4A        : N              
 GND                          : AC14      : gnd    :                   :         :           :                
-mem_addr[19]                 : AC15      : output : 2.5 V             :         : 3A        : N              
+mem_rdata[19]                : AC15      : input  : 2.5 V             :         : 3A        : N              
 VCCIO3A                      : AC16      : power  :                   : 2.5V    : 3A        :                
 GND                          : AC17      : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AC18      :        :                   :         : 3A        :                
+mem_wdata[62]                : AC18      : output : 2.5 V             :         : 3A        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AC19      :        :                   :         : 3A        :                
 GND                          : AC20      : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AC21      :        :                   :         : 3A        :                
+mem_wdata[23]                : AC21      : output : 2.5 V             :         : 3A        : N              
 NC                           : AC22      :        :                   :         :           :                
 GND                          : AC23      : gnd    :                   :         :           :                
 RREF                         : AC24      :        :                   :         :           :                
-mem_wdata[29]                : AD2       : output : 2.5 V             :         : 5A        : N              
-mem_wdata[44]                : AD3       : output : 2.5 V             :         : 5A        : N              
-mem_wdata[45]                : AD4       : output : 2.5 V             :         : 5A        : N              
-mem_wdata[39]                : AD5       : output : 2.5 V             :         : 5A        : N              
+mem_wdata[55]                : AD2       : output : 2.5 V             :         : 5A        : N              
+mem_wdata[63]                : AD3       : output : 2.5 V             :         : 5A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AD4       :        :                   :         : 5A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AD5       :        :                   :         : 5A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AD6       :        :                   :         : 4A        :                
-mem_wdata[46]                : AD7       : output : 2.5 V             :         : 4A        : N              
-mem_wdata[10]                : AD8       : output : 2.5 V             :         : 4A        : N              
-mem_wdata[26]                : AD9       : output : 2.5 V             :         : 4A        : N              
-mem_wdata[38]                : AD10      : output : 2.5 V             :         : 4A        : N              
-mem_wdata[36]                : AD11      : output : 2.5 V             :         : 4A        : N              
-mem_rdata[40]                : AD12      : input  : 2.5 V             :         : 4A        : N              
+mem_wdata[52]                : AD7       : output : 2.5 V             :         : 4A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AD8       :        :                   :         : 4A        :                
+mem_addr[3]                  : AD9       : output : 2.5 V             :         : 4A        : N              
+mem_addr[8]                  : AD10      : output : 2.5 V             :         : 4A        : N              
+mem_addr[6]                  : AD11      : output : 2.5 V             :         : 4A        : N              
+mem_addr[19]                 : AD12      : output : 2.5 V             :         : 4A        : N              
 GND+                         : AD13      :        :                   :         : 4A        :                
 GND+                         : AD14      :        :                   :         : 4A        :                
-mem_rdata[12]                : AD15      : input  : 2.5 V             :         : 3A        : N              
-mem_rdata[31]                : AD16      : input  : 2.5 V             :         : 3A        : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AD17      :        :                   :         : 3A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AD18      :        :                   :         : 3A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AD19      :        :                   :         : 3A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AD20      :        :                   :         : 3A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AD21      :        :                   :         : 3A        :                
+mem_addr[18]                 : AD15      : output : 2.5 V             :         : 3A        : N              
+mem_addr[20]                 : AD16      : output : 2.5 V             :         : 3A        : N              
+mem_rdata[23]                : AD17      : input  : 2.5 V             :         : 3A        : N              
+mem_addr[29]                 : AD18      : output : 2.5 V             :         : 3A        : N              
+mem_addr[31]                 : AD19      : output : 2.5 V             :         : 3A        : N              
+mem_wdata[60]                : AD20      : output : 2.5 V             :         : 3A        : N              
+mem_wdata[61]                : AD21      : output : 2.5 V             :         : 3A        : N              
 NC                           : AD22      :        :                   :         :           :                
 GND                          : AD23      : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : B1        :        :                   :         : 6A        :                
@@ -197,17 +197,17 @@ GND                          : B2        : gnd    :                   :         
 RESERVED_INPUT_WITH_WEAK_PULLUP : B3        :        :                   :         : 7A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : B4        :        :                   :         : 7A        :                
 GND                          : B5        : gnd    :                   :         :           :                
-mem_rdata[38]                : B6        : input  : 2.5 V             :         : 7A        : N              
-mem_rdata[29]                : B7        : input  : 2.5 V             :         : 7A        : N              
+mem_rdata[3]                 : B6        : input  : 2.5 V             :         : 7A        : N              
+mem_rdata[37]                : B7        : input  : 2.5 V             :         : 7A        : N              
 GND                          : B8        : gnd    :                   :         :           :                
-mem_rdata[50]                : B9        : input  : 2.5 V             :         : 7A        : N              
-mem_rdata[30]                : B10       : input  : 2.5 V             :         : 7A        : N              
+mem_rdata[20]                : B9        : input  : 2.5 V             :         : 7A        : N              
+mem_wdata[12]                : B10       : output : 2.5 V             :         : 7A        : N              
 GND                          : B11       : gnd    :                   :         :           :                
-mem_wdata[62]                : B12       : output : 2.5 V             :         : 8A        : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : B13       :        :                   :         : 8A        :                
+mem_wdata[21]                : B12       : output : 2.5 V             :         : 8A        : N              
+mem_wdata[39]                : B13       : output : 2.5 V             :         : 8A        : N              
 GND                          : B14       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : B15       :        :                   :         : 8A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : B16       :        :                   :         : 8A        :                
+mem_wdata[38]                : B15       : output : 2.5 V             :         : 8A        : N              
+mem_wdata[37]                : B16       : output : 2.5 V             :         : 8A        : N              
 GND                          : B17       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : B18       :        :                   :         : 8A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : B19       :        :                   :         : 8A        :                
@@ -216,45 +216,45 @@ GXB_NC                       : B21       :        :                   :         
 GXB_NC                       : B22       :        :                   :         : QL1       :                
 GND                          : B23       : gnd    :                   :         :           :                
 GND                          : B24       : gnd    :                   :         :           :                
-mem_rdata[6]                 : C1        : input  : 2.5 V             :         : 6A        : N              
-mem_addr[5]                  : C2        : output : 2.5 V             :         : 6A        : N              
-mem_wdata[33]                : C3        : output : 2.5 V             :         : 6A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : C1        :        :                   :         : 6A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : C2        :        :                   :         : 6A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : C3        :        :                   :         : 6A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C4        :        :                   :         : 7A        :                
 VCCIO7A                      : C5        : power  :                   : 2.5V    : 7A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C6        :        :                   :         : 7A        :                
-mem_rdata[49]                : C7        : input  : 2.5 V             :         : 7A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : C7        :        :                   :         : 7A        :                
 VCCIO7A                      : C8        : power  :                   : 2.5V    : 7A        :                
-mem_rdata[34]                : C9        : input  : 2.5 V             :         : 7A        : N              
-mem_rdata[33]                : C10       : input  : 2.5 V             :         : 7A        : N              
+mem_rdata[41]                : C9        : input  : 2.5 V             :         : 7A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : C10       :        :                   :         : 7A        :                
 GND+                         : C11       :        :                   :         : 8A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : C12       :        :                   :         : 8A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : C13       :        :                   :         : 8A        :                
+mem_wdata[7]                 : C12       : output : 2.5 V             :         : 8A        : N              
+mem_wdata[2]                 : C13       : output : 2.5 V             :         : 8A        : N              
 VCCIO8A                      : C14       : power  :                   : 2.5V    : 8A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : C15       :        :                   :         : 8A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : C16       :        :                   :         : 8A        :                
+mem_wdata[32]                : C15       : output : 2.5 V             :         : 8A        : N              
+mem_wdata[34]                : C16       : output : 2.5 V             :         : 8A        : N              
 VCCIO8A                      : C17       : power  :                   : 2.5V    : 8A        :                
 NC                           : C18       :        :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : C19       :        :                   :         : 8A        :                
+mem_wdata[17]                : C19       : output : 2.5 V             :         : 8A        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : C20       :        :                   :         : 8A        :                
 GND                          : C21       : gnd    :                   :         :           :                
 GND                          : C22       : gnd    :                   :         :           :                
 GXB_GND*                     : C23       :        :                   :         : QL1       :                
 GXB_GND*                     : C24       :        :                   :         : QL1       :                
-mem_write                    : D1        : output : 2.5 V             :         : 6A        : N              
-mem_rdata[53]                : D2        : input  : 2.5 V             :         : 6A        : N              
-mem_rdata[44]                : D3        : input  : 2.5 V             :         : 6A        : N              
-mem_rdata[58]                : D4        : input  : 2.5 V             :         : 6A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : D1        :        :                   :         : 6A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : D2        :        :                   :         : 6A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : D3        :        :                   :         : 6A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : D4        :        :                   :         : 6A        :                
 DNU                          : D5        :        :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : D6        :        :                   :         : 7A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : D7        :        :                   :         : 7A        :                
-mem_addr[6]                  : D8        : output : 2.5 V             :         : 7A        : N              
-mem_rdata[4]                 : D9        : input  : 2.5 V             :         : 7A        : N              
-mem_addr[7]                  : D10       : output : 2.5 V             :         : 7A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : D8        :        :                   :         : 7A        :                
+mem_rdata[42]                : D9        : input  : 2.5 V             :         : 7A        : N              
+mem_rdata[63]                : D10       : input  : 2.5 V             :         : 7A        : N              
 GND+                         : D11       :        :                   :         : 8A        :                
-mem_rdata[35]                : D12       : input  : 2.5 V             :         : 8A        : N              
-mem_rdata[55]                : D13       : input  : 2.5 V             :         : 8A        : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : D14       :        :                   :         : 8A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : D15       :        :                   :         : 8A        :                
+mem_rdata[21]                : D12       : input  : 2.5 V             :         : 8A        : N              
+mem_wdata[6]                 : D13       : output : 2.5 V             :         : 8A        : N              
+mem_wdata[40]                : D14       : output : 2.5 V             :         : 8A        : N              
+mem_wdata[35]                : D15       : output : 2.5 V             :         : 8A        : N              
 VCCIO8A                      : D16       : power  :                   : 2.5V    : 8A        :                
 NC                           : D17       :        :                   :         :           :                
 TCK                          : D18       : input  :                   :         : 8C        :                
@@ -264,21 +264,21 @@ GXB_NC                       : D21       :        :                   :         
 GXB_NC                       : D22       :        :                   :         : QL1       :                
 GND                          : D23       : gnd    :                   :         :           :                
 GND                          : D24       : gnd    :                   :         :           :                
-mem_rdata[60]                : E1        : input  : 2.5 V             :         : 6A        : N              
+mem_rdata[45]                : E1        : input  : 2.5 V             :         : 6A        : N              
 GND                          : E2        : gnd    :                   :         :           :                
-mem_read                     : E3        : output : 2.5 V             :         : 6A        : N              
-mem_rdata[20]                : E4        : input  : 2.5 V             :         : 6A        : N              
+mem_rdata[44]                : E3        : input  : 2.5 V             :         : 6A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : E4        :        :                   :         : 6A        :                
 GND                          : E5        : gnd    :                   :         :           :                
 VCCA_PLL_2                   : E6        : power  :                   : 2.5V    :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : E7        :        :                   :         : 7A        :                
 GND                          : E8        : gnd    :                   :         :           :                
-mem_addr[3]                  : E9        : output : 2.5 V             :         : 7A        : N              
-mem_rdata[37]                : E10       : input  : 2.5 V             :         : 7A        : N              
+mem_rdata[34]                : E9        : input  : 2.5 V             :         : 7A        : N              
+mem_rdata[38]                : E10       : input  : 2.5 V             :         : 7A        : N              
 GND                          : E11       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : E12       :        :                   :         : 8A        :                
-mem_rdata[54]                : E13       : input  : 2.5 V             :         : 8A        : N              
+mem_wdata[5]                 : E12       : output : 2.5 V             :         : 8A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : E13       :        :                   :         : 8A        :                
 GND                          : E14       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : E15       :        :                   :         : 8A        :                
+mem_wdata[59]                : E15       : output : 2.5 V             :         : 8A        : N              
 NC                           : E16       :        :                   :         :           :                
 GND                          : E17       : gnd    :                   :         :           :                
 VCCD_PLL_1                   : E18       : power  :                   : 0.9V    :           :                
@@ -288,21 +288,21 @@ GND                          : E21       : gnd    :                   :         
 GND                          : E22       : gnd    :                   :         :           :                
 GXB_GND*                     : E23       :        :                   :         : QL1       :                
 GXB_GND*                     : E24       :        :                   :         : QL1       :                
-mem_addr[26]                 : F1        : output : 2.5 V             :         : 6A        : N              
+mem_rdata[26]                : F1        : input  : 2.5 V             :         : 6A        : N              
 VCCIO6A                      : F2        : power  :                   : 2.5V    : 6A        :                
-mem_addr[13]                 : F3        : output : 2.5 V             :         : 6A        : N              
-mem_rdata[61]                : F4        : input  : 2.5 V             :         : 6A        : N              
+mem_rdata[39]                : F3        : input  : 2.5 V             :         : 6A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : F4        :        :                   :         : 6A        :                
 VCCD_PLL_2                   : F5        : power  :                   : 0.9V    :           :                
 GND                          : F6        : gnd    :                   :         :           :                
-mem_rdata[42]                : F7        : input  : 2.5 V             :         : 6A        : N              
-mem_addr[0]                  : F8        : output : 2.5 V             :         : 7A        : N              
-mem_addr[28]                 : F9        : output : 2.5 V             :         : 7A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : F7        :        :                   :         : 6A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : F8        :        :                   :         : 7A        :                
+mem_rdata[36]                : F9        : input  : 2.5 V             :         : 7A        : N              
 mem_rdata[0]                 : F10       : input  : 2.5 V             :         : 7A        : N              
 GND+                         : F11       :        :                   :         : 7A        :                
 GND+                         : F12       :        :                   :         : 7A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : F13       :        :                   :         : 8A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : F14       :        :                   :         : 8A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : F15       :        :                   :         : 8A        :                
+mem_rdata[61]                : F13       : input  : 2.5 V             :         : 8A        : N              
+mem_wdata[30]                : F14       : output : 2.5 V             :         : 8A        : N              
+mem_wdata[18]                : F15       : output : 2.5 V             :         : 8A        : N              
 NC                           : F16       :        :                   :         :           :                
 VCCA_PLL_1                   : F17       : power  :                   : 2.5V    :           :                
 GND                          : F18       : gnd    :                   :         :           :                
@@ -312,20 +312,20 @@ GXB_GND*                     : F21       :        :                   :         
 GXB_GND*                     : F22       :        :                   :         : QL1       :                
 GND                          : F23       : gnd    :                   :         :           :                
 GND                          : F24       : gnd    :                   :         :           :                
-mem_addr[20]                 : G1        : output : 2.5 V             :         : 6A        : N              
-mem_addr[14]                 : G2        : output : 2.5 V             :         : 6A        : N              
-mem_rdata[26]                : G3        : input  : 2.5 V             :         : 6A        : N              
-mem_addr[21]                 : G4        : output : 2.5 V             :         : 6A        : N              
-mem_addr[12]                 : G5        : output : 2.5 V             :         : 6A        : N              
-mem_rdata[47]                : G6        : input  : 2.5 V             :         : 6A        : N              
-mem_rdata[27]                : G7        : input  : 2.5 V             :         : 6A        : N              
+mem_rdata[9]                 : G1        : input  : 2.5 V             :         : 6A        : N              
+mem_rdata[6]                 : G2        : input  : 2.5 V             :         : 6A        : N              
+mem_rdata[12]                : G3        : input  : 2.5 V             :         : 6A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : G4        :        :                   :         : 6A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : G5        :        :                   :         : 6A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : G6        :        :                   :         : 6A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : G7        :        :                   :         : 6A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : G8        :        :                   :         : 7A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : G9        :        :                   :         : 7A        :                
-mem_rdata[39]                : G10       : input  : 2.5 V             :         : 7A        : N              
-mem_rdata[1]                 : G11       : input  : 2.5 V             :         : 7A        : N              
+mem_rdata[29]                : G10       : input  : 2.5 V             :         : 7A        : N              
+mem_rdata[33]                : G11       : input  : 2.5 V             :         : 7A        : N              
 VCCCB                        : G12       : power  :                   : 1.5V    :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : G13       :        :                   :         : 8A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : G14       :        :                   :         : 8A        :                
+mem_wdata[20]                : G13       : output : 2.5 V             :         : 8A        : N              
+mem_wdata[19]                : G14       : output : 2.5 V             :         : 8A        : N              
 VREFB8AN0                    : G15       : power  :                   :         : 8A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : G16       :        :                   :         : 8A        :                
 TMS                          : G17       : input  :                   :         : 8C        :                
@@ -336,15 +336,15 @@ GND                          : G21       : gnd    :                   :         
 GND                          : G22       : gnd    :                   :         :           :                
 GXB_GND*                     : G23       :        :                   :         : QL1       :                
 GXB_GND*                     : G24       :        :                   :         : QL1       :                
-mem_addr[4]                  : H1        : output : 2.5 V             :         : 6A        : N              
+mem_rdata[10]                : H1        : input  : 2.5 V             :         : 6A        : N              
 GND                          : H2        : gnd    :                   :         :           :                
-mem_addr[31]                 : H3        : output : 2.5 V             :         : 6A        : N              
-mem_rdata[17]                : H4        : input  : 2.5 V             :         : 6A        : N              
+mem_rdata[18]                : H3        : input  : 2.5 V             :         : 6A        : N              
+mem_rdata[31]                : H4        : input  : 2.5 V             :         : 6A        : N              
 GND                          : H5        : gnd    :                   :         :           :                
-mem_addr[11]                 : H6        : output : 2.5 V             :         : 6A        : N              
-mem_rdata[46]                : H7        : input  : 2.5 V             :         : 6A        : N              
+mem_rdata[22]                : H6        : input  : 2.5 V             :         : 6A        : N              
+mem_rdata[32]                : H7        : input  : 2.5 V             :         : 6A        : N              
 GND                          : H8        : gnd    :                   :         :           :                
-mem_addr[2]                  : H9        : output : 2.5 V             :         : 7A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : H9        :        :                   :         : 7A        :                
 VCCPD7A                      : H10       : power  :                   : 2.5V    : 7A        :                
 GND                          : H11       : gnd    :                   :         :           :                
 VREFB7AN0                    : H12       : power  :                   :         : 7A        :                
@@ -360,12 +360,12 @@ GXB_NC                       : H21       :        :                   :         
 GXB_NC                       : H22       :        :                   :         : QL1       :                
 GND                          : H23       : gnd    :                   :         :           :                
 GND                          : H24       : gnd    :                   :         :           :                
-mem_addr[16]                 : J1        : output : 2.5 V             :         : 6A        : N              
+mem_rdata[24]                : J1        : input  : 2.5 V             :         : 6A        : N              
 VCCIO6A                      : J2        : power  :                   : 2.5V    : 6A        :                
-mem_addr[15]                 : J3        : output : 2.5 V             :         : 6A        : N              
-mem_rdata[62]                : J4        : input  : 2.5 V             :         : 6A        : N              
-mem_addr[30]                 : J5        : output : 2.5 V             :         : 6A        : N              
-mem_addr[24]                 : J6        : output : 2.5 V             :         : 6A        : N              
+mem_rdata[11]                : J3        : input  : 2.5 V             :         : 6A        : N              
+mem_rdata[35]                : J4        : input  : 2.5 V             :         : 6A        : N              
+mem_rdata[1]                 : J5        : input  : 2.5 V             :         : 6A        : N              
+mem_rdata[13]                : J6        : input  : 2.5 V             :         : 6A        : N              
 VREFB6AN0                    : J7        : power  :                   :         : 6A        :                
 VCC                          : J8        : power  :                   : 0.9V    :           :                
 GND                          : J9        : gnd    :                   :         :           :                
@@ -384,11 +384,11 @@ GND                          : J21       : gnd    :                   :         
 GND                          : J22       : gnd    :                   :         :           :                
 GXB_GND*                     : J23       :        :                   :         : QL1       :                
 GXB_GND*                     : J24       :        :                   :         : QL1       :                
-mem_addr[9]                  : K1        : output : 2.5 V             :         : 6A        : N              
-mem_addr[23]                 : K2        : output : 2.5 V             :         : 6A        : N              
-mem_wdata[53]                : K3        : output : 2.5 V             :         : 6A        : N              
-mem_addr[22]                 : K4        : output : 2.5 V             :         : 6A        : N              
-mem_rdata[15]                : K5        : input  : 2.5 V             :         : 6A        : N              
+mem_rdata[59]                : K1        : input  : 2.5 V             :         : 6A        : N              
+mem_rdata[40]                : K2        : input  : 2.5 V             :         : 6A        : N              
+mem_rdata[8]                 : K3        : input  : 2.5 V             :         : 6A        : N              
+mem_rdata[46]                : K4        : input  : 2.5 V             :         : 6A        : N              
+mem_rdata[27]                : K5        : input  : 2.5 V             :         : 6A        : N              
 VCCPD6A                      : K6        : power  :                   : 2.5V    : 6A        :                
 VCCPD6A                      : K7        : power  :                   : 2.5V    : 6A        :                
 GND                          : K8        : gnd    :                   :         :           :                
@@ -408,13 +408,13 @@ GXB_NC                       : K21       :        :                   :         
 GXB_NC                       : K22       :        :                   :         : QL1       :                
 GND                          : K23       : gnd    :                   :         :           :                
 GND                          : K24       : gnd    :                   :         :           :                
-mem_wdata[1]                 : L1        : output : 2.5 V             :         : 6A        : N              
+mem_rdata[14]                : L1        : input  : 2.5 V             :         : 6A        : N              
 GND                          : L2        : gnd    :                   :         :           :                
-mem_wdata[49]                : L3        : output : 2.5 V             :         : 6A        : N              
-mem_addr[25]                 : L4        : output : 2.5 V             :         : 6A        : N              
+mem_rdata[5]                 : L3        : input  : 2.5 V             :         : 6A        : N              
+mem_rdata[52]                : L4        : input  : 2.5 V             :         : 6A        : N              
 GND                          : L5        : gnd    :                   :         :           :                
 NC                           : L6        :        :                   :         :           :                
-mem_rdata[51]                : L7        : input  : 2.5 V             :         : 6A        : N              
+mem_wdata[8]                 : L7        : output : 2.5 V             :         : 6A        : N              
 VCC                          : L8        : power  :                   : 0.9V    :           :                
 GND                          : L9        : gnd    :                   :         :           :                
 VCC                          : L10       : power  :                   : 0.9V    :           :                
@@ -432,13 +432,13 @@ GND                          : L21       : gnd    :                   :         
 GND                          : L22       : gnd    :                   :         :           :                
 GXB_GND*                     : L23       :        :                   :         : QL1       :                
 GXB_GND*                     : L24       :        :                   :         : QL1       :                
-mem_wdata[51]                : M1        : output : 2.5 V             :         : 6A        : N              
+mem_rdata[62]                : M1        : input  : 2.5 V             :         : 6A        : N              
 VCCIO6A                      : M2        : power  :                   : 2.5V    : 6A        :                
-mem_addr[8]                  : M3        : output : 2.5 V             :         : 6A        : N              
-mem_addr[17]                 : M4        : output : 2.5 V             :         : 6A        : N              
+mem_rdata[16]                : M3        : input  : 2.5 V             :         : 6A        : N              
+mem_rdata[30]                : M4        : input  : 2.5 V             :         : 6A        : N              
 NC                           : M5        :        :                   :         :           :                
 VCCCB                        : M6        : power  :                   : 1.5V    :           :                
-mem_addr[18]                 : M7        : output : 2.5 V             :         : 6A        : N              
+mem_wdata[9]                 : M7        : output : 2.5 V             :         : 6A        : N              
 GND                          : M8        : gnd    :                   :         :           :                
 VCC                          : M9        : power  :                   : 0.9V    :           :                
 GND                          : M10       : gnd    :                   :         :           :                
@@ -456,13 +456,13 @@ GXB_NC                       : M21       :        :                   :         
 GXB_NC                       : M22       :        :                   :         : QL0       :                
 GND                          : M23       : gnd    :                   :         :           :                
 GND                          : M24       : gnd    :                   :         :           :                
-mem_addr[10]                 : N1        : output : 2.5 V             :         : 6A        : N              
-mem_rdata[19]                : N2        : input  : 2.5 V             :         : 6A        : N              
+mem_rdata[17]                : N1        : input  : 2.5 V             :         : 6A        : N              
+mem_rdata[49]                : N2        : input  : 2.5 V             :         : 6A        : N              
 GND+                         : N3        :        :                   :         : 6A        :                
 GND+                         : N4        :        :                   :         : 6A        :                
 NC                           : N5        :        :                   :         :           :                
-mem_rdata[63]                : N6        : input  : 2.5 V             :         : 5A        : N              
-mem_rdata[52]                : N7        : input  : 2.5 V             :         : 5A        : N              
+mem_wdata[10]                : N6        : output : 2.5 V             :         : 5A        : N              
+mem_rdata[50]                : N7        : input  : 2.5 V             :         : 5A        : N              
 VCC                          : N8        : power  :                   : 0.9V    :           :                
 GND                          : N9        : gnd    :                   :         :           :                
 VCC                          : N10       : power  :                   : 0.9V    :           :                
@@ -480,13 +480,13 @@ GND                          : N21       : gnd    :                   :         
 GND                          : N22       : gnd    :                   :         :           :                
 GXB_GND*                     : N23       :        :                   :         : QL0       :                
 GXB_GND*                     : N24       :        :                   :         : QL0       :                
-mem_addr[29]                 : P1        : output : 2.5 V             :         : 6A        : N              
+mem_rdata[25]                : P1        : input  : 2.5 V             :         : 6A        : N              
 GND                          : P2        : gnd    :                   :         :           :                
 GND+                         : P3        :        :                   :         : 5A        :                
 GND+                         : P4        :        :                   :         : 5A        :                
 GND                          : P5        : gnd    :                   :         :           :                
 NC                           : P6        :        :                   :         :           :                
-mem_wdata[14]                : P7        : output : 2.5 V             :         : 5A        : N              
+mem_rdata[56]                : P7        : input  : 2.5 V             :         : 5A        : N              
 GND                          : P8        : gnd    :                   :         :           :                
 VCC                          : P9        : power  :                   : 0.9V    :           :                
 GND                          : P10       : gnd    :                   :         :           :                
@@ -504,13 +504,13 @@ GXB_NC                       : P21       :        :                   :         
 GXB_NC                       : P22       :        :                   :         : QL0       :                
 GND                          : P23       : gnd    :                   :         :           :                
 GND                          : P24       : gnd    :                   :         :           :                
-mem_rdata[16]                : R1        : input  : 2.5 V             :         : 5A        : N              
+mem_wdata[13]                : R1        : output : 2.5 V             :         : 5A        : N              
 VCCIO5A                      : R2        : power  :                   : 2.5V    : 5A        :                
-mem_wdata[52]                : R3        : output : 2.5 V             :         : 5A        : N              
-mem_wdata[0]                 : R4        : output : 2.5 V             :         : 5A        : N              
-mem_wdata[19]                : R5        : output : 2.5 V             :         : 5A        : N              
-mem_wdata[60]                : R6        : output : 2.5 V             :         : 5A        : N              
-mem_rdata[28]                : R7        : input  : 2.5 V             :         : 5A        : N              
+mem_wdata[11]                : R3        : output : 2.5 V             :         : 5A        : N              
+mem_rdata[55]                : R4        : input  : 2.5 V             :         : 5A        : N              
+mem_rdata[54]                : R5        : input  : 2.5 V             :         : 5A        : N              
+mem_wdata[41]                : R6        : output : 2.5 V             :         : 5A        : N              
+mem_wdata[47]                : R7        : output : 2.5 V             :         : 5A        : N              
 VCC                          : R8        : power  :                   : 0.9V    :           :                
 GND                          : R9        : gnd    :                   :         :           :                
 VCC                          : R10       : power  :                   : 0.9V    :           :                
@@ -528,12 +528,12 @@ GND                          : R21       : gnd    :                   :         
 GND                          : R22       : gnd    :                   :         :           :                
 GXB_GND*                     : R23       :        :                   :         : QL0       :                
 GXB_GND*                     : R24       :        :                   :         : QL0       :                
-mem_wdata[2]                 : T1        : output : 2.5 V             :         : 5A        : N              
-mem_wdata[16]                : T2        : output : 2.5 V             :         : 5A        : N              
-mem_rdata[11]                : T3        : input  : 2.5 V             :         : 5A        : N              
-mem_wdata[23]                : T4        : output : 2.5 V             :         : 5A        : N              
-mem_wdata[37]                : T5        : output : 2.5 V             :         : 5A        : N              
-mem_wdata[50]                : T6        : output : 2.5 V             :         : 5A        : N              
+mem_rdata[51]                : T1        : input  : 2.5 V             :         : 5A        : N              
+mem_wdata[46]                : T2        : output : 2.5 V             :         : 5A        : N              
+mem_wdata[51]                : T3        : output : 2.5 V             :         : 5A        : N              
+mem_wdata[4]                 : T4        : output : 2.5 V             :         : 5A        : N              
+mem_wdata[43]                : T5        : output : 2.5 V             :         : 5A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : T6        :        :                   :         : 5A        :                
 VCCPD5A                      : T7        : power  :                   : 2.5V    : 5A        :                
 VCCPD5A                      : T8        : power  :                   : 2.5V    : 5A        :                
 VCC                          : T9        : power  :                   : 0.9V    :           :                
@@ -552,22 +552,22 @@ GXB_GND*                     : T21       :        :                   :         
 GXB_GND*                     : T22       :        :                   :         : QL0       :                
 GND                          : T23       : gnd    :                   :         :           :                
 GND                          : T24       : gnd    :                   :         :           :                
-mem_wdata[22]                : U1        : output : 2.5 V             :         : 5A        : N              
+mem_rdata[47]                : U1        : input  : 2.5 V             :         : 5A        : N              
 GND                          : U2        : gnd    :                   :         :           :                
-mem_wdata[15]                : U3        : output : 2.5 V             :         : 5A        : N              
-mem_wdata[28]                : U4        : output : 2.5 V             :         : 5A        : N              
+mem_resp                     : U3        : input  : 2.5 V             :         : 5A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : U4        :        :                   :         : 5A        :                
 GND                          : U5        : gnd    :                   :         :           :                
-mem_wdata[3]                 : U6        : output : 2.5 V             :         : 5A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : U6        :        :                   :         : 5A        :                
 VREFB5AN0                    : U7        : power  :                   :         : 5A        :                
 GND                          : U8        : gnd    :                   :         :           :                
-mem_wdata[24]                : U9        : output : 2.5 V             :         : 4A        : N              
+mem_rdata[53]                : U9        : input  : 2.5 V             :         : 4A        : N              
 VCCPD4A                      : U10       : power  :                   : 2.5V    : 4A        :                
 GND                          : U11       : gnd    :                   :         :           :                
 VCC                          : U12       : power  :                   : 0.9V    :           :                
 VCCCB                        : U13       : power  :                   : 1.5V    :           :                
 GND                          : U14       : gnd    :                   :         :           :                
 VCCPD3A                      : U15       : power  :                   : 2.5V    : 3A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : U16       :        :                   :         : 3A        :                
+mem_wdata[28]                : U16       : output : 2.5 V             :         : 3A        : N              
 GND                          : U17       : gnd    :                   :         :           :                
 nSTATUS                      : U18       :        :                   :         : 3C        :                
 nIO_PULLUP                   : U19       :        :                   :         : 3C        :                
@@ -576,22 +576,22 @@ GND                          : U21       : gnd    :                   :         
 GND                          : U22       : gnd    :                   :         :           :                
 GXB_GND*                     : U23       :        :                   :         : QL0       :                
 GXB_GND*                     : U24       :        :                   :         : QL0       :                
-mem_rdata[57]                : V1        : input  : 2.5 V             :         : 5A        : N              
+mem_wdata[44]                : V1        : output : 2.5 V             :         : 5A        : N              
 VCCIO5A                      : V2        : power  :                   : 2.5V    : 5A        :                
-mem_wdata[20]                : V3        : output : 2.5 V             :         : 5A        : N              
-mem_rdata[25]                : V4        : input  : 2.5 V             :         : 5A        : N              
-mem_rdata[18]                : V5        : input  : 2.5 V             :         : 5A        : N              
-mem_rdata[22]                : V6        : input  : 2.5 V             :         : 5A        : N              
-mem_wdata[12]                : V7        : output : 2.5 V             :         : 5A        : N              
+mem_wdata[49]                : V3        : output : 2.5 V             :         : 5A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : V4        :        :                   :         : 5A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : V5        :        :                   :         : 5A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : V6        :        :                   :         : 5A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : V7        :        :                   :         : 5A        :                
 NC                           : V8        :        :                   :         :           :                
-mem_wdata[43]                : V9        : output : 2.5 V             :         : 4A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : V9        :        :                   :         : 4A        :                
 VREFB4AN0                    : V10       : power  :                   :         : 4A        :                
-mem_wdata[25]                : V11       : output : 2.5 V             :         : 4A        : N              
-mem_wdata[35]                : V12       : output : 2.5 V             :         : 4A        : N              
-mem_resp                     : V13       : input  : 2.5 V             :         : 3A        : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : V14       :        :                   :         : 3A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : V15       :        :                   :         : 3A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : V16       :        :                   :         : 3A        :                
+mem_addr[0]                  : V11       : output : 2.5 V             :         : 4A        : N              
+mem_addr[13]                 : V12       : output : 2.5 V             :         : 4A        : N              
+mem_addr[15]                 : V13       : output : 2.5 V             :         : 3A        : N              
+mem_addr[28]                 : V14       : output : 2.5 V             :         : 3A        : N              
+mem_wdata[56]                : V15       : output : 2.5 V             :         : 3A        : N              
+mem_wdata[26]                : V16       : output : 2.5 V             :         : 3A        : N              
 VCCPD3C                      : V17       : power  :                   : 2.5V    : 3C        :                
 nCE                          : V18       :        :                   :         : 3C        :                
 VCCIO3C                      : V19       : power  :                   : 2.5V    : 3C        :                
@@ -600,22 +600,22 @@ GXB_NC                       : V21       :        :                   :         
 GXB_NC                       : V22       :        :                   :         : QL0       :                
 GND                          : V23       : gnd    :                   :         :           :                
 GND                          : V24       : gnd    :                   :         :           :                
-mem_rdata[24]                : W1        : input  : 2.5 V             :         : 5A        : N              
-mem_wdata[48]                : W2        : output : 2.5 V             :         : 5A        : N              
-mem_rdata[45]                : W3        : input  : 2.5 V             :         : 5A        : N              
-mem_wdata[27]                : W4        : output : 2.5 V             :         : 5A        : N              
+mem_wdata[45]                : W1        : output : 2.5 V             :         : 5A        : N              
+mem_wdata[15]                : W2        : output : 2.5 V             :         : 5A        : N              
+mem_addr[27]                 : W3        : output : 2.5 V             :         : 5A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : W4        :        :                   :         : 5A        :                
 VCCD_PLL_3                   : W5        : power  :                   : 0.9V    :           :                
 GND                          : W6        : gnd    :                   :         :           :                
 NC                           : W7        :        :                   :         :           :                
 NC                           : W8        :        :                   :         :           :                
-mem_rdata[14]                : W9        : input  : 2.5 V             :         : 4A        : N              
-mem_wdata[55]                : W10       : output : 2.5 V             :         : 4A        : N              
-mem_wdata[8]                 : W11       : output : 2.5 V             :         : 4A        : N              
-mem_rdata[43]                : W12       : input  : 2.5 V             :         : 4A        : N              
-mem_rdata[3]                 : W13       : input  : 2.5 V             :         : 3A        : N              
-mem_rdata[21]                : W14       : input  : 2.5 V             :         : 3A        : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : W15       :        :                   :         : 3A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : W16       :        :                   :         : 3A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : W9        :        :                   :         : 4A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : W10       :        :                   :         : 4A        :                
+mem_addr[25]                 : W11       : output : 2.5 V             :         : 4A        : N              
+mem_addr[26]                 : W12       : output : 2.5 V             :         : 4A        : N              
+mem_addr[24]                 : W13       : output : 2.5 V             :         : 3A        : N              
+mem_addr[30]                 : W14       : output : 2.5 V             :         : 3A        : N              
+mem_wdata[0]                 : W15       : output : 2.5 V             :         : 3A        : N              
+mem_wdata[27]                : W16       : output : 2.5 V             :         : 3A        : N              
 VCCA_PLL_4                   : W17       : power  :                   : 2.5V    :           :                
 GND                          : W18       : gnd    :                   :         :           :                
 CONF_DONE                    : W19       :        :                   :         : 3C        :                
@@ -624,10 +624,10 @@ GND                          : W21       : gnd    :                   :         
 GND                          : W22       : gnd    :                   :         :           :                
 GXB_GND*                     : W23       :        :                   :         : QL0       :                
 GXB_GND*                     : W24       :        :                   :         : QL0       :                
-mem_rdata[13]                : Y1        : input  : 2.5 V             :         : 5A        : N              
+mem_rdata[15]                : Y1        : input  : 2.5 V             :         : 5A        : N              
 GND                          : Y2        : gnd    :                   :         :           :                
-mem_wdata[17]                : Y3        : output : 2.5 V             :         : 5A        : N              
-mem_wdata[58]                : Y4        : output : 2.5 V             :         : 5A        : N              
+mem_rdata[48]                : Y3        : input  : 2.5 V             :         : 5A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y4        :        :                   :         : 5A        :                
 GND                          : Y5        : gnd    :                   :         :           :                
 VCCA_PLL_3                   : Y6        : power  :                   : 2.5V    :           :                
 NC                           : Y7        :        :                   :         :           :                
@@ -635,11 +635,11 @@ GND                          : Y8        : gnd    :                   :         
 RESERVED_INPUT_WITH_WEAK_PULLUP : Y9        :        :                   :         : 4A        :                
 VCCIO4A                      : Y10       : power  :                   : 2.5V    : 4A        :                
 GND                          : Y11       : gnd    :                   :         :           :                
-mem_wdata[40]                : Y12       : output : 2.5 V             :         : 4A        : N              
+mem_addr[22]                 : Y12       : output : 2.5 V             :         : 4A        : N              
 clk                          : Y13       : input  : 2.5 V             :         : 3A        : N              
 GND                          : Y14       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : Y15       :        :                   :         : 3A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : Y16       :        :                   :         : 3A        :                
+mem_addr[17]                 : Y15       : output : 2.5 V             :         : 3A        : N              
+mem_wdata[29]                : Y16       : output : 2.5 V             :         : 3A        : N              
 GND                          : Y17       : gnd    :                   :         :           :                
 VCCD_PLL_4                   : Y18       : power  :                   : 0.9V    :           :                
 MSEL0                        : Y19       :        :                   :         : 3C        :                
