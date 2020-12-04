@@ -30,10 +30,6 @@ module arbiter
 );
 logic [255:0] read_out, next_read_out;
 
-logic prefetch;
-logic [31:0] p_address;
-
-
 /***** States *****/
 enum int unsigned {
     /* List of states */
@@ -87,14 +83,6 @@ always_comb begin
 	next_read_out = read_out;
 	i_line_o = read_out;
 	d_line_o = read_out;
-	prefetch = 1'b0;
-
-	if (i_read_i)
-		p_address = i_address + 4;
-	else if (d_read_i)
-		p_address = d_address + 4;
-	else
-		p_address = 32'hffffffff;
 
 	case(state)
 		IDLE :	begin
@@ -144,21 +132,16 @@ always_comb begin
 				end
 		READ4 :	begin
                     stall = 1'b1;
+					address_o = (i_read_i) ? i_address + 4 : d_address + 4;
                     if(d_read_i) begin
 						d_line_o = read_out;
                         d_resp_o = 1'b1;
-						address_o = p_address;
 					end
                     else if (i_read_i) begin
 						i_line_o = read_out;
                         i_resp_o  = 1'b1;
 					end
 				end
-		// PREFETCH : begin
-		// 		address_o = p_address;
-		// 		read_o = 1'b1;
-		// 		prefetch = 1'b1;
-		// 	end
 		PREFETCH0 :	begin
                     stall = 1'b1;
 					read_o = 1'b1;
@@ -278,10 +261,7 @@ begin: next_state_logic
 					end
 				end
 		READ4 :	begin
-					if (d_read_i)
-						next = PREFETCH0;
-					else
-						next = IDLE;
+					next = PREFETCH0;
 				end
 		PREFETCH0 :	begin
 					if(resp_i) begin
