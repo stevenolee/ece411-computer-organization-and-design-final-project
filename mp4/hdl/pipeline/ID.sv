@@ -10,12 +10,15 @@ module ID (
 	input inst_resp,
 	input logic [31:0] inst_rdata,
 	input logic stall,
+	input logic br_predict,
+	input logic [31:0] pc_in,
 
     // output
 	output logic inst_read,
 	output rv32i_word rs1_out,
 	output rv32i_word rs2_out,
-	output rv32i_control_word ctrl_word
+	output rv32i_control_word ctrl_word,
+	output logic [31:0] pc_out
 ); 
 /***************************** Variables *****************************/
 rv32i_control_word ctrl;
@@ -51,7 +54,11 @@ always_comb begin
 		rs1_out = regfilemux_in;
 	if (ctrl_word.rs2 == rd)
 		rs2_out = regfilemux_in;
-
+	if (br_predict) begin
+		pc_out = pc_in + ctrl_word.b_imm;
+	end else begin
+		pc_out = pc_in;
+	end
 end
 
 endmodule : ID

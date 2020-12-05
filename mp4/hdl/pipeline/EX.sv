@@ -16,19 +16,23 @@ module EX (
 	input logic stall,
     input logic [31:0] hazard_MEM_data,
 	input logic [31:0] hazard_WB_data,
+    input logic br_predict,
 
 
 	// outputs
 	output rv32i_word alu_out,
 	output logic cmp_out,
-    output rv32i_word rs2_out
+    output rv32i_word rs2_out,
+    output logic br_mispredict
 );
 assign rs2_out = rs2_in;
+assign br_mispredict = !(cmp_out & br_predict);
 
 rv32i_word rs1;
 rv32i_word alumux1_out;
 rv32i_word alumux2_out;
 rv32i_word cmp_mux_out;
+logic bht_out;
 
 alu ALU(
 	.aluop	(ctrl_in.aluop),
@@ -45,6 +49,19 @@ cmp CMP(
 	.b		(cmp_mux_out),
     .br_en	(cmp_out)
 );
+
+/*** branch predictor module ***/
+branch_history_table branch_history_table(
+    .clk,
+    // .rst,
+    .pc             (pc_in),
+    .read           (1'b0),
+    .write          (1'b1),
+    .taken          (cmp_out),
+
+    .prediction     (bht_out)
+);
+
 
 /*** MUXES ***/
 

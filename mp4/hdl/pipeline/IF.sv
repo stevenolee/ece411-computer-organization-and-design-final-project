@@ -6,17 +6,19 @@ module IF (
     // inputs
     input clk,
     input rst,
-    input br_take,
+    input br_mispredict,
     input inst_resp,
     input pcmux::pcmux_sel_t pcmux_sel,
     input logic [31:0] alu_in,
     input logic stall,
     // output
-    output logic br_mispredict,
-    output logic [31:0] pc_out
+    // output logic br_mispredict,
+    output logic [31:0] pc_out,
+    output logic br_predict
 );
 logic load_pc;
 logic [31:0] pcmux_out;
+//logic br_predict;
 
 /*** PC REGISTER ***/
 pc_register PC(
@@ -27,15 +29,28 @@ pc_register PC(
     .out  	(pc_out)
 ); 
 
+
+/*** branch predictor module ***/
+branch_history_table branch_history_table(
+    .clk,
+    // .rst,
+    .pc             (pc_out),
+    .read           (1'b1),
+    .write          (1'b0),
+    .taken          (1'b0),
+
+    .prediction     (br_predict)
+);
+
+
 /*** PC MUX ***/
 always_comb
 begin
-    br_mispredict = br_take;
     load_pc = inst_resp & !stall;
 
     if(!stall) begin
         if(!inst_resp) begin
-            if(br_take) load_pc = 1'b1;
+            if(br_mispredict) load_pc = 1'b1;
         end
     end
     

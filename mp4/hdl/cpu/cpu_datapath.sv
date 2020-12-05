@@ -57,7 +57,7 @@ rv32i_word rs1_out, rs2_out, EX_alu_out, MEM_WB_alu_out, EX_MEM_alu_out, EX_MEM_
 logic [3:0] d_mem_byte, MEM_WB_mbe;
 logic EX_cmp_out, EX_MEM_br_en, EX_MEM_data_read;
 logic [31:0] IF_pc_out, IF_ID_data_out;
-logic [31:0] IF_ID_pc_out, IF_ID_inst_addr, ID_EX_pc_out;
+logic [31:0] IF_ID_pc_out, IF_ID_inst_addr, ID_pc_out, ID_EX_pc_out;
 rv32i_word ID_rs1_out, ID_rs2_out, ID_EX_rs1_out, ID_EX_rs2_out, EX_rs2_out, EX_MEM_rs2_out;
 logic [31:0] MEM_WB_data_out, MEM_WB_wdata, MEM_WB_data;
 rv32i_control_word ID_ctrl, ID_EX_ctrl, EX_MEM_ctrl, MEM_WB_ctrl;
@@ -65,6 +65,8 @@ pcmux::pcmux_sel_t pcmux_sel;
 logic br_mispredict, MEM_BW_br_en, load_regfile;
 logic hazard_ID_EX_rs1, hazard_ID_EX_rs2, hazard_ID_MEM_rs1, hazard_ID_MEM_rs2, hazard_MEM_WB;
 rv32i_word hazard_MEM_data, hazard_WB_data;
+logic EX_MEM_trap_out, MEM_WB_trap_out;
+logic IF_br_predict_out;
 
 /*****************************************************************************/
 /* * * NEED TO SET D MEM ADDRESS FROM STATE REGISTER (SUB CONTROL ROM) * * */
@@ -77,13 +79,15 @@ IF stage_IF (
 	.clk			(clk),
 	.rst			(rst),
 	.pcmux_sel		(EX_MEM_ctrl.pcmux_sel), // This is here b/c we need to implement branch
-	.br_take		(EX_MEM_br_en),
+	// .br_take		(EX_MEM_br_en),
 	.inst_resp,
 	.alu_in			(EX_MEM_alu_out),
 	.stall			(stall_c), 
-	// outputs
 	.br_mispredict,
-	.pc_out			(IF_pc_out)
+	// outputs
+	// .br_mispredict,
+	.pc_out			(IF_pc_out),
+	.br_predict		(IF_br_predict_out)
 );
 
 /*** IF -> ID ***/
@@ -115,12 +119,15 @@ ID stage_ID (
     .inst_rdata		(IF_ID_data_out),
 	.rd,
 	.stall			(stall_c),
+	.br_predict		(IF_br_predict_out),
+	.pc_in    		(IF_ID_pc_out),
 	
 	// outputs
 	.inst_read		(inst_read),
 	.ctrl_word		(ID_ctrl),
 	.rs1_out		(ID_rs1_out),
-	.rs2_out		(ID_rs2_out)
+	.rs2_out		(ID_rs2_out),
+	.pc_out			(ID_pc_out)
 );
 
 /*** ID -> EX ***/
@@ -129,15 +136,15 @@ sreg_ID_EX sreg_ID_EX(
 	.clk			(clk),
 	.rst			(rst),
 	.ctrl_in		(ID_ctrl),
-	.pc_in			(IF_ID_pc_out),
-	.br_mispredict,
+	// .pc_in			(ID_pc_out),
+	// .br_mispredict,	
 	.rs1_in			(ID_rs1_out),
 	.rs2_in			(ID_rs2_out),
 	.stall			(stall_c),
 
 	// outputs
 	.ctrl_out		(ID_EX_ctrl),
-	.pc_out			(ID_EX_pc_out),
+	// .pc_out			(ID_EX_pc_out),
 	.rs1_out		(ID_EX_rs1_out),
 	.rs2_out		(ID_EX_rs2_out)
 );
@@ -149,7 +156,8 @@ EX stage_EX (
 	.ctrl_in		(ID_EX_ctrl),
 	.rs1_in			(ID_EX_rs1_out),
 	.rs2_in			(ID_EX_rs2_out),
-	.pc_in			(ID_EX_pc_out),
+	.pc_in			(ID_pc_out),
+	.br_predict		(IF_br_predict_out),
 
 	.hazard_ID_EX_rs1,
 	.hazard_ID_EX_rs2,
@@ -162,7 +170,8 @@ EX stage_EX (
 	// outputs
 	.alu_out		(EX_alu_out),
 	.cmp_out		(EX_cmp_out),
-	.rs2_out		(EX_rs2_out)
+	.rs2_out		(EX_rs2_out),
+	.br_mispredict	(br_mispredict)
 );
 
 /*** EX -> MEM ***/
@@ -176,7 +185,7 @@ sreg_EX_MEM sreg_EX_MEM (
 	.rs2_in			(EX_rs2_out),
 	.pc_in			(ID_EX_pc_out),
 	.stall			(stall_c),
-	.br_mispredict,
+	.br_mispredict	(br_mispredict),
 
     //outputs
 	.alu_out			(EX_MEM_alu_out),

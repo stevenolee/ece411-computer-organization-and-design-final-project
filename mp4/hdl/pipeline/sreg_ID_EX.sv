@@ -5,7 +5,7 @@ module sreg_ID_EX(
 	input rst,		
 	input rv32i_control_word ctrl_in,
 	input [31:0] pc_in,	
-    input logic br_mispredict,
+    // input logic br_mispredict,
     input rv32i_word rs1_in,
 	input rv32i_word rs2_in,
     input logic stall,
@@ -20,7 +20,7 @@ rv32i_control_word ctrl;
 
 always_ff @(posedge clk)
 begin
-    if (rst || br_mispredict)
+    if (rst)
     begin
         ctrl <= 0;
         pc <= 0;
