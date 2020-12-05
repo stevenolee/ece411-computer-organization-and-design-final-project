@@ -12,11 +12,11 @@ module cache (
   /* CPU memory signals */
   input logic mem_read,
   input logic mem_write,
-  input logic [3:0] mem_byte_enable_cpu,
+  input logic [31:0] mem_byte_enable_l1,
   input logic [31:0] mem_address,
-  input logic [31:0] mem_wdata_cpu,
+  input logic [255:0] mem_wdata_l1,
   output logic mem_resp,
-  output logic [31:0] mem_rdata_cpu,
+  output logic [255:0] mem_rdata_l1,
   output logic stall_cache
 );
 
@@ -33,17 +33,25 @@ logic [255:0] mem_wdata;
 logic [255:0] mem_rdata;
 logic [31:0] mem_byte_enable;
 
-cache_control control(.*);
-cache_datapath datapath(.*);
+/*** Convert the mem_byte_enable ***/
+// assign mem_byte_enable = {28'h0, mem_byte_enable_l1} << (mem_address[4:2]*4);
 
-line_adapter bus (
-    .mem_wdata_line(mem_wdata),
-    .mem_rdata_line(mem_rdata),
-    .mem_wdata(mem_wdata_cpu),
-    .mem_rdata(mem_rdata_cpu),
-    .mem_byte_enable(mem_byte_enable_cpu),
-    .mem_byte_enable_line(mem_byte_enable),
-    .address(mem_address)
+cache_control control(.*);
+cache_datapath datapath(
+  .*,
+  .mem_byte_enable  (mem_byte_enable_l1),
+  .mem_wdata        (mem_wdata_l1),
+  .mem_rdata        (mem_rdata_l1)
 );
+
+// line_adapter bus (
+//     .mem_wdata_line(mem_wdata),
+//     .mem_rdata_line(mem_rdata),
+//     .mem_wdata(mem_wdata_cpu),
+//     .mem_rdata(mem_rdata_cpu),
+//     .mem_byte_enable(mem_byte_enable_cpu),
+//     .mem_byte_enable_line(mem_byte_enable),
+//     .address(mem_address)
+// );
 
 endmodule : cache

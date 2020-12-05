@@ -19,16 +19,15 @@ logic [3:0] data_mbe;
 logic i_stall_cache, d_stall_cache;
 /*** Cache <--> Arbiter Variables ***/
 logic i_mem_resp, i_mem_read, d_mem_resp, d_mem_read, d_mem_write;
-logic [3:0] i_mem_byte_en, d_mem_byte_en;
-logic [31:0] i_mem_address, d_mem_address;
+logic [31:0] i_mem_address, d_mem_address, i_mem_byte_en, d_mem_byte_en;
 logic [255:0] i_mem_rdata, i_mem_wdata, d_mem_rdata, d_mem_wdata;
 /*** CPU <--> Arbiter Variables ***/
 logic stall;
 /*** arbiter <--> L2 ***/
 logic l2_resp_o, l2_resp_i, l2_stall, l2_read_o, l2_write_o, l2_read_i, l2_write_i;
 logic [3:0] l2_mem_byte_en;
-logic [31:0] ar_addr_o, l2_rdata_o, l2_wdata_i, l2_addr_o;
-logic [255:0] l2_mem_rdata, l2_mem_wdata;
+logic [31:0] ar_addr_o, l2_addr_o;
+logic [255:0] l2_mem_rdata, l2_mem_wdata, l2_rdata_o, l2_wdata_i;
 
 cpu_datapath cpu_datapath
 (
@@ -67,9 +66,10 @@ cache_p i_cache
     .pmem_rdata         (i_mem_rdata),
     .pmem_wdata         (i_mem_wdata),
     .pmem_resp          (i_mem_resp),
-    .pmem_read          (i_mem_read), // Maybe connect directly to cacheline adapter
+    .pmem_read          (i_mem_read),
     .pmem_write         (i_mem_write),
-    .pmem_address       (i_mem_address), // You could also connect the CPU address directly to the cacheline_adapter
+    .pmem_address       (i_mem_address),
+    .mem_byte_enable    (i_mem_byte_en),
     .stall_cache        (i_stall_cache)
 );
 
@@ -89,6 +89,7 @@ cache_p d_cache
     .pmem_read          (d_mem_read),
     .pmem_write         (d_mem_write),
     .pmem_address       (d_mem_address),
+    .mem_byte_enable    (d_mem_byte_en),
     .stall_cache        (d_stall_cache)
 );
 
@@ -100,15 +101,19 @@ arbiter arbiter(
     .d_address          (d_mem_address),
     .d_read_i           (d_mem_read),
     .d_write_i          (d_mem_write),
+    .d_mem_byte_en      (32'hFFFFFFFF),     // L1 <--> L2 should have all 1 mask right?
     .d_resp_o           (d_mem_resp),
     .i_line_o           (i_mem_rdata),
     .i_address          (i_mem_address),
     .i_read_i           (i_mem_read),
+    .i_mem_byte_en      (32'hFFFFFFFF),     // L1 <--> L2 should have all 1 mask right?
     .i_resp_o           (i_mem_resp),
     .resp_i             (l2_resp_o),
+    .data_i             (l2_rdata_o),
     .address_o          (ar_addr_o),
     .read_o             (l2_read_i),
     .write_o            (l2_write_i),
+    .data_o             (l2_wdata_i),
     .mem_byte_en        (l2_mem_byte_en),
     .stall
 );
@@ -119,9 +124,9 @@ cache l2_cache(
     .mem_write          (l2_write_i),
     .mem_address        (ar_addr_o),
     .mem_resp           (l2_resp_o),
-    .mem_rdata_cpu      (l2_rdata_o),
-    .mem_wdata_cpu      (l2_wdata_i),
-    .mem_byte_enable_cpu(l2_mem_byte_en),
+    .mem_rdata_l1       (l2_rdata_o),
+    .mem_wdata_l1       (l2_wdata_i),
+    .mem_byte_enable_l1 (l2_mem_byte_en),
     .pmem_rdata         (l2_mem_rdata),
     .pmem_wdata         (l2_mem_wdata),
     .pmem_resp          (l2_resp_i),

@@ -28,7 +28,7 @@ data_array_p data_array
     .*,
     .read,
     .load,
-    .write_en   (mem_byte_sel),
+    .write_en   (mem_byte_enable),
     .rindex     (index_r),
     .windex     (index_w),
     .datain,
@@ -56,7 +56,7 @@ array_p #(.width(1)) valid_array
     .rindex     (index_r),
     .windex     (index_w),
     .datain     (1'b1),
-    .dataout        (valid)
+    .dataout    (valid)
 );
 /** DIRTY ARRAY **/
 array_p #(.width(1)) dirty_array

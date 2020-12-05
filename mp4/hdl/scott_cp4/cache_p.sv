@@ -5,6 +5,7 @@ module cache_p (
     input logic pmem_resp,
     input logic [255:0] pmem_rdata,
     output logic [31:0] pmem_address,
+    output logic [31:0] mem_byte_enable,
     output logic [255:0] pmem_wdata,
     output logic pmem_read,
     output logic pmem_write,
@@ -21,7 +22,7 @@ module cache_p (
 );
 logic [255:0] mem_wdata;
 logic [255:0] mem_rdata;
-logic [31:0] mem_byte_enable;
+// logic [31:0] mem_byte_enable;
 
 cache_p_datapath cache_p_datapath(
     .*,

@@ -27,8 +27,8 @@ input [1:0] datain;
 output logic [1:0] dataout;
 
 logic [width-1:0] data [num_sets-1:0] /* synthesis ramstyle = "logic" */;
-logic [width-1:0] _dataout;
-assign dataout = _dataout;
+// logic [width-1:0] _dataout;
+// assign dataout = _dataout;
 
 // initial begin
 //     for (int i = 0; i < num_sets; ++i)
@@ -42,8 +42,8 @@ begin
             data[i] <= 8'b11100100;
     end
     else begin
-        if (read)
-            _dataout <= (load  & (rindex == windex)) ? datain : data[rindex][1:0];
+        // if (read)
+        //     _dataout <= (load  & (rindex == windex)) ? datain : data[rindex][1:0];
 
         if(load)
             if(data[windex][1:0] == datain) begin
@@ -60,6 +60,10 @@ begin
             end
             data[windex][7:6] = datain;
     end
+end
+
+always_comb begin
+    dataout <= (load  & (rindex == windex)) ? datain : data[rindex][1:0];
 end
 
 endmodule : lru_array

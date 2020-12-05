@@ -37,12 +37,12 @@ module cache_p_datapath #(
 );
 /***** Variables *****/
 logic load, load_lru, dirty, hit, access_sel;
-logic IF_ID_read, IF_ID_write, IF_ID_hit;
+logic IF_ID_hit;
 logic load_0, load_1, load_2, load_3, hit_0, hit_1, hit_2, hit_3;
 logic valid_0, valid_1, valid_2, valid_3, dirty_0, dirty_1, dirty_2, dirty_3;
 logic [s_index-1:0] index, IF_ID_index;
 logic [s_tag-1:0] tag, tag_0, tag_1, tag_2, tag_3, IF_ID_tag;
-logic [s_line-1:0] cache_data_i, cache_data_o, IF_ID_data;
+logic [s_line-1:0] cache_data_i, cache_data_o;
 logic [s_line-1:0] data_out_0, data_out_1, data_out_2, data_out_3;
 logic [31:0] IF_ID_addr, write_mask;
 logic [1:0] lru, lru_in, hit_ind_i, hit_ind_o;
@@ -75,22 +75,24 @@ always_comb begin
     stall = 1'b0;
 
     /********** STALL **********/
-    if((pmem_read || pmem_write) && !pmem_resp) begin
-        stall = 1'b1;
-    end
+    // if((pmem_read || pmem_write) && !pmem_resp) begin
+    //     stall = 1'b1;
+    // end
     /********** CPU DATA OUT **********/
     unique case (pmem_read) // Use pmem_read because we want post IF_ID register logic,
     // could change to IF_ID_hit, but would need to reverse the logic
-        1'b0: begin
+        1'b1: begin
             mem_rdata = pmem_rdata;
         end
-        1'b1: begin
+        1'b0: begin
             mem_rdata = pmem_wdata; // pmem_wdata is the same as cache_data_o read from ID stage
         end
     endcase
     /********** HIT **********/
     unique case ({hit_3, hit_2, hit_1, hit_0})
         4'b0000: begin
+            if(mem_read || mem_write)
+                stall = 1'b1;
             unique case(lru) 
                 2'b00: begin
                     cache_data_o = data_out_0;
@@ -182,7 +184,7 @@ always_comb begin
                 2'b01: pmem_address = {{tag_2}, {index}, 5'b0};
                 2'b01: pmem_address = {{tag_3}, {index}, 5'b0};
             endcase
-            cache_data_i = IF_ID_data;
+            cache_data_i = pmem_wdata;
             write_mask = mem_byte_enable;
         end
         1'b1: begin
@@ -223,7 +225,7 @@ cache_IF_ID cache_IF_ID(
 cache_p_way cache_way_0
 (
     .*,
-    .load           (load_0),
+    .load           (load_0 && (!stall || pmem_resp)),
     .read           (1'b1),
     .access_sel,
     .mem_byte_enable(write_mask),
@@ -231,7 +233,7 @@ cache_p_way cache_way_0
     .tag_out        (tag_0),
     .index_r        (index),
     .index_w        (IF_ID_index),
-    .datain         (data_in),
+    .datain         (cache_data_i),
     .valid          (valid_0),
     .dirty          (dirty_0),
     .dataout        (data_out_0)
@@ -240,7 +242,7 @@ cache_p_way cache_way_0
 cache_p_way cache_way_1
 (
     .*,
-    .load           (load_1),
+    .load           (load_1 && (!stall || pmem_resp)),
     .read           (1'b1),
     .access_sel,
     .mem_byte_enable(write_mask),
@@ -248,7 +250,7 @@ cache_p_way cache_way_1
     .tag_out        (tag_1),
     .index_r        (index),
     .index_w        (IF_ID_index),
-    .datain         (data_in),
+    .datain         (cache_data_i),
     .valid          (valid_1),
     .dirty          (dirty_1),
     .dataout        (data_out_1)
@@ -257,7 +259,7 @@ cache_p_way cache_way_1
 cache_p_way cache_way_2
 (
     .*,
-    .load           (load_2),
+    .load           (load_2 && (!stall || pmem_resp)),
     .read           (1'b1),
     .access_sel,
     .mem_byte_enable(write_mask),
@@ -265,7 +267,7 @@ cache_p_way cache_way_2
     .tag_out        (tag_2),
     .index_r        (index),
     .index_w        (IF_ID_index),
-    .datain         (data_in),
+    .datain         (cache_data_i),
     .valid          (valid_2),
     .dirty          (dirty_2),
     .dataout        (data_out_2)
@@ -274,7 +276,7 @@ cache_p_way cache_way_2
 cache_p_way cache_way_3
 (
     .*,
-    .load           (load_3),
+    .load           (load_3 && (!stall || pmem_resp)),
     .read           (1'b1),
     .access_sel,
     .mem_byte_enable(write_mask),
@@ -282,7 +284,7 @@ cache_p_way cache_way_3
     .tag_out        (tag_3),
     .index_r        (index),
     .index_w        (IF_ID_index),
-    .datain         (data_in),
+    .datain         (cache_data_i),
     .valid          (valid_3),
     .dirty          (dirty_3),
     .dataout        (data_out_3)
@@ -293,7 +295,7 @@ lru_array lru_array
     .clk,
     .rst,
     .read       (1'b1),
-    .load       (load_lru  && (IF_ID_hit || pmem_resp)), // KEEP AN EYE ON THIS LOGIC
+    .load       (load_lru && (!stall)), // KEEP AN EYE ON THIS LOGIC
     .rindex     (index),
     .windex     (IF_ID_index),
     .datain     (lru_in),

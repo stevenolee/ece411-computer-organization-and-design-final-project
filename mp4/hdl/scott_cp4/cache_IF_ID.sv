@@ -39,7 +39,8 @@ begin
         hit <= 1'b0;
         hit_index <= 1'b0;
     end
-    else if(!stall) begin
+    // else if(!stall) begin
+    else begin
         address <= address_i;
         cpu_data <= data_i;
         cache_data <= cache_data_i;

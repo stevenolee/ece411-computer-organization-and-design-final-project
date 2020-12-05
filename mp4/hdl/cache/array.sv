@@ -7,7 +7,7 @@ module array #(parameter width = 1)
   input logic [width-1:0] datain,
   output logic [width-1:0] dataout
 );
-
+ 
 //logic [width-1:0] data [2:0] = '{default: '0};
 logic [width-1:0] data [8];
 initial begin

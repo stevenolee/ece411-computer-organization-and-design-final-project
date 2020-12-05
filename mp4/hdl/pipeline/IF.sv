@@ -30,10 +30,11 @@ pc_register PC(
 /*** PC MUX ***/
 always_comb
 begin
-    br_mispredict = br_take;
+    br_mispredict = 1'b0;
     load_pc = inst_resp & !stall;
 
     if(!stall) begin
+        br_mispredict = br_take;
         if(!inst_resp) begin
             if(br_take) load_pc = 1'b1;
         end

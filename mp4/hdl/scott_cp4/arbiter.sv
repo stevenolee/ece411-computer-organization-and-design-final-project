@@ -6,7 +6,7 @@ module arbiter
     // Port to DATA CACHE (Lowest Level Cache)
 	input d_read_i,
     input d_write_i,
-    input logic [3:0] d_mem_byte_en,
+    input logic [31:0] d_mem_byte_en,
     input logic [255:0] d_line_i,
     input logic [31:0] d_address,
     output logic d_resp_o,
@@ -15,15 +15,16 @@ module arbiter
     // Port to INSTRUCTION CACHE (Lowest Level Cache)
 	input i_read_i,
 	input logic [31:0] i_address,
-    input logic [3:0] i_mem_byte_en,
+    input logic [31:0] i_mem_byte_en,
     output logic [255:0] i_line_o,
     output logic i_resp_o,
 
     // Port to L2 Cache
 	input resp_i,
-    input [255:0] data_in,
-    output logic [3:0] mem_byte_en,
+    input [255:0] data_i,
+    output logic [31:0] mem_byte_en,
     output logic [31:0] address_o,
+    output logic [255:0] data_o,
     output logic read_o,
     output logic write_o,
 
@@ -58,7 +59,7 @@ always_comb begin
 		address_o = 0;
         d_resp_o = 0;
         i_resp_o = 0;
-        mem_byte_en = 4'b1111;
+        mem_byte_en = 32'hFFFFFFFF;
     end
 
     /* Initialize Values */
@@ -71,6 +72,7 @@ always_comb begin
 	next_read_out = read_out;
 	i_line_o = read_out;
 	d_line_o = read_out;
+    data_o = d_line_i;
     mem_byte_en = i_mem_byte_en;
 
     case(state)
@@ -86,17 +88,17 @@ always_comb begin
                 address_o = d_address;
                 mem_byte_en = d_mem_byte_en;
                 write_o = 1'b0;
+                data_o = d_line_i;
             end
             else if(i_read_i) begin
                 stall = 1'b1;
                 address_o = i_address;
                 read_o = 1'b1;
             end
-            next_read_out = data_in;
+            next_read_out = data_i;
         end
  
         CACHE2 : begin
-            // stall = 1'b1;
             if(d_read_i) begin
                 d_line_o = read_out;
                 d_resp_o = 1'b1;
@@ -133,8 +135,8 @@ begin: next_state_logic
         end
 
         CACHE2: begin
-            // if (resp_i)
-            next = IDLE;
+            if (~resp_i)
+                next = IDLE;
         end
     endcase
 end

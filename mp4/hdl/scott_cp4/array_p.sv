@@ -27,8 +27,8 @@ input [width-1:0] datain;
 output logic [width-1:0] dataout;
 
 logic [width-1:0] data [num_sets-1:0] /* synthesis ramstyle = "logic" */;
-logic [width-1:0] _dataout;
-assign dataout = _dataout;
+// logic [width-1:0] _dataout;
+// assign dataout = _dataout;
 
 always_ff @(posedge clk)
 begin
@@ -37,12 +37,16 @@ begin
             data[i] <= '0;
     end
     else begin
-        if (read)
-            _dataout <= (load  & (rindex == windex)) ? datain : data[rindex];
+        // if (read)
+        //     _dataout <= (load  & (rindex == windex)) ? datain : data[rindex];
 
         if(load)
             data[windex] <= datain;
     end
+end
+
+always_comb begin
+    dataout = (load  & (rindex == windex)) ? datain : data[rindex];
 end
 
 endmodule : array_p
