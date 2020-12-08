@@ -123,7 +123,7 @@ always_comb begin
 
 		READ3 :	begin
             if(resp_i) begin
-                read_o = 1'b0;
+                read_o = 1'b1;
                 next_read_out[255:192] = burst_i;
                 next = READ4;
             end
@@ -134,9 +134,11 @@ always_comb begin
         end
 
 		READ4 :	begin
-            next = IDLE;
-            read_o = 1'b0;
-            resp_o = 1'b1;
+            if(!resp_i) begin
+                next = IDLE;
+                read_o = 1'b0;
+                resp_o = 1'b1;
+            end
         end
 
 		WRITE0: begin
@@ -182,9 +184,11 @@ always_comb begin
 		end
 
 		WRITE4: begin
-            next = IDLE;
-            write_o = 1'b0;
-            resp_o = 1'b1;
+            if(!resp_i) begin
+                next = IDLE;
+                write_o = 1'b0;
+                resp_o = 1'b1;
+            end
         end
         
 		default: begin

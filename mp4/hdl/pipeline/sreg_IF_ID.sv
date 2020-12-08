@@ -16,10 +16,10 @@ logic [31:0] addr, pc, rdata;
 always_ff @(posedge clk)
 begin
     if(!stall) begin
-        addr <= inst_addr;
-        pc <= pc_in;
         if(inst_resp) begin
             rdata = inst_rdata;
+            addr <= inst_addr;
+            pc <= pc_in;
         end
     end
     if (rst || br_mispredict) 

@@ -31,7 +31,8 @@ pc_register PC(
 always_comb
 begin
     br_mispredict = 1'b0;
-    load_pc = inst_resp & !stall;
+    // load_pc = inst_resp & !stall;
+    load_pc = !stall;
 
     if(!stall) begin
         br_mispredict = br_take;

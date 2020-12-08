@@ -49,13 +49,13 @@ cmp CMP(
 /*** MUXES ***/
 
 always_comb begin
-
     if (hazard_ID_EX_rs1 == 1'b1)
         rs1 = hazard_MEM_data;
     else if (hazard_ID_MEM_rs1 == 1'b1)
         rs1 = hazard_WB_data;
-    else
+    else begin
         rs1 = rs1_in;
+    end
 
     unique case (ctrl_in.alumux1_sel)
         alumux::rs1_out: alumux1_out = rs1;

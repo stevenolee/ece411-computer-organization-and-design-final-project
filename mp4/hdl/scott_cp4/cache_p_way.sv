@@ -14,7 +14,7 @@ module cache_p_way
     input [255:0] datain,
     output [23:0] tag_out,
     // output logic hit,
-    output valid,
+    output logic valid,
     output logic dirty,
     output logic [255:0] dataout
 );
@@ -63,7 +63,7 @@ array_p #(.width(1)) dirty_array
 (
     .clk,
     .rst,
-    .read       (1'b1),
+    .read,
     .load,
     .rindex     (index_r),
     .windex     (index_w),

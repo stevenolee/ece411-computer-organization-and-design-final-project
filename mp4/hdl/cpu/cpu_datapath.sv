@@ -13,8 +13,10 @@ module cpu_datapath
 	/* I Cache Ports */
     input inst_resp,
     input logic [31:0] inst_rdata,
+	input logic [31:0] inst_pc,
 	output inst_read,
     output logic [31:0] inst_addr,
+	output logic br_mispredict,
 
     /* D Cache Ports */
     input data_resp,
@@ -25,7 +27,8 @@ module cpu_datapath
     output logic [31:0] data_addr,
     output logic [31:0] data_wdata,
 
-	input stall_c
+	input stall_c,
+	output logic stall_EX
 
     /* CPU <-- I-Cache */
     // input i_cache_hit,
@@ -62,7 +65,7 @@ rv32i_word ID_rs1_out, ID_rs2_out, ID_EX_rs1_out, ID_EX_rs2_out, EX_rs2_out, EX_
 logic [31:0] MEM_WB_data_out, MEM_WB_wdata, MEM_WB_data;
 rv32i_control_word ID_ctrl, ID_EX_ctrl, EX_MEM_ctrl, MEM_WB_ctrl;
 pcmux::pcmux_sel_t pcmux_sel;
-logic br_mispredict, MEM_BW_br_en, load_regfile;
+logic MEM_BW_br_en, load_regfile;
 logic hazard_ID_EX_rs1, hazard_ID_EX_rs2, hazard_ID_MEM_rs1, hazard_ID_MEM_rs2, hazard_MEM_WB;
 rv32i_word hazard_MEM_data, hazard_WB_data;
 
@@ -80,7 +83,7 @@ IF stage_IF (
 	.br_take		(EX_MEM_br_en),
 	.inst_resp,
 	.alu_in			(EX_MEM_alu_out),
-	.stall			(stall_c), 
+	.stall			(stall_c || stall_EX), 
 	// outputs
 	.br_mispredict,
 	.pc_out			(IF_pc_out)
@@ -92,12 +95,12 @@ sreg_IF_ID sreg_IF_ID(
 	// inputs 
 	.clk			(clk),
 	.rst			(rst),
-	.inst_addr		(IF_pc_out),
-	.pc_in			(IF_pc_out),
+	.inst_addr		(inst_pc),
+	.pc_in			(inst_pc),
 	.inst_rdata,
 	.inst_resp,
 	.br_mispredict,
-	.stall			(stall_c),
+	.stall			(stall_c || stall_EX),
 
 	// outputs
 	.pc_out			(IF_ID_pc_out),
@@ -133,7 +136,7 @@ sreg_ID_EX sreg_ID_EX(
 	.br_mispredict,
 	.rs1_in			(ID_rs1_out),
 	.rs2_in			(ID_rs2_out),
-	.stall			(stall_c),
+	.stall			(stall_c || stall_EX),
 
 	// outputs
 	.ctrl_out		(ID_EX_ctrl),
@@ -175,16 +178,16 @@ sreg_EX_MEM sreg_EX_MEM (
 	.ctrl_in		(ID_EX_ctrl),
 	.rs2_in			(EX_rs2_out),
 	.pc_in			(ID_EX_pc_out),
-	.stall			(stall_c),
+	.stall			(stall_c || stall_EX),
 	.br_mispredict,
 
     //outputs
-	.alu_out			(EX_MEM_alu_out),
+	.alu_out				(EX_MEM_alu_out),
 	.mem_byte_enable_out	(d_mem_byte),
-	.br_en_out			(EX_MEM_br_en),
-	.ctrl_out			(EX_MEM_ctrl),
-	.rs2_out			(EX_MEM_rs2_out),
-	.pc_out				(EX_MEM_pc_out)
+	.br_en_out				(EX_MEM_br_en),
+	.ctrl_out				(EX_MEM_ctrl),
+	.rs2_out				(EX_MEM_rs2_out),
+	.pc_out					(EX_MEM_pc_out)
 );
 
 /*** MEM ***/
@@ -221,7 +224,7 @@ sreg_MEM_WB sreg_MEM_WB(
 	.pc_in 			(EX_MEM_pc_out),
 	.mem_byte_en_in	(d_mem_byte),
 	.data_resp,
-	.stall			(stall_c),
+	.stall			(stall_c || stall_EX),
 	.wdata_in		(data_wdata),
 	.hazard_MEM_WB,
 	.MEM_WB_data,
@@ -242,7 +245,7 @@ WB stage_WB (
 	.clk,
 	.rst,
 	// .data_in		(mem_read_data),
-	.data_in		(MEM_WB_data_out),	// there's no "mem_read_data" so i replaced it with data_rdata
+	.data_in		(data_rdata),	// there's no "mem_read_data" so i replaced it with data_rdata
 	.alu_in			(MEM_WB_alu_out),
 	.ctrl_in		(MEM_WB_ctrl),
 	.pc_in			(MEM_WB_pc_out),
@@ -267,8 +270,12 @@ hazard_detection hazard(
 	.data_mbe,
 	.WB_data		(regfilemux_out),
 	.data_read_in	(EX_MEM_data_read),
+	.MEM_WB_wdata,
+	.MEM_WB_alu_out,
+	.EX_alu_out,
 	.data_addr,
-	
+	.data_resp,
+	 
 	// outputs
 	.hazard_ID_EX_rs1,
 	.hazard_ID_EX_rs2,
@@ -278,8 +285,8 @@ hazard_detection hazard(
 	.hazard_MEM_data,
 	.hazard_WB_data,
 	.data_read,
-	.MEM_WB_data
-	// .stall			(stall_c)
+	.MEM_WB_data,
+	.stall_EX
 );
 
 endmodule : cpu_datapath

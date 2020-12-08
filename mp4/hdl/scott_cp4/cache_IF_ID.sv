@@ -1,87 +1,48 @@
 module cache_IF_ID(
     input clk,
     input rst,
-    input hit_i,
-    input dirty_i,
     input read_i,
     input write_i,
-    input [1:0] hit_ind_i,
     input logic [31:0] address_i,
+    input logic [31:0] mem_byte_en_i,
     input logic [255:0] data_i,
-    input logic [255:0] cache_data_i,
     input logic stall,
+    input logic branch_i,
 
-    output logic [1:0] hit_ind_o,
     output logic [31:0] address_o,
+    output logic [31:0] mem_byte_en_o,
     output logic [255:0] cpu_data_o,
-    output logic [255:0] cache_data_o,
-    output logic read_o,
     output logic write_o,
-    output logic load,
-    output logic access_sel,
-    output logic hit_o,
-    output logic load_lru
+    output logic read_o
 );
-logic read, write, dirty, hit;
+logic read, write;
 logic [1:0] hit_index;
-logic [31:0] address;
-logic [255:0] cpu_data, cache_data;
+logic [31:0] address, mem_byte_en;
+logic [255:0] cpu_data;
 
 always_ff @(posedge clk)
 begin
-    if(rst) begin
+    if(rst || branch_i) begin
         address <= 32'b0;
         cpu_data <= 256'b0;
-        cache_data <= 256'b0;
         read <= 1'b0;
         write <= 1'b0;
-        dirty <= 1'b0;
-        hit <= 1'b0;
-        hit_index <= 1'b0;
+        mem_byte_en <= 31'b0;
     end
-    // else if(!stall) begin
-    else begin
+    else if(!stall) begin
+    // else begin
         address <= address_i;
         cpu_data <= data_i;
-        cache_data <= cache_data_i;
         read <= read_i;
         write <= write_i;
-        dirty <= dirty_i;
-        hit <= hit_i;
-        hit_index <= hit_ind_i;
+        mem_byte_en <= mem_byte_en_i;
     end
 end 
 
-always_comb begin
-    load = 1'b0;
-    load_lru = 1'b1;
-    read_o = 1'b0;
-    write_o = 1'b0;
-    access_sel = 1'b0;
-
-    if(read) begin
-        load_lru = 1'b1;
-        if(!hit) begin
-            read_o = 1'b1;
-            access_sel = 1'b1;
-            load = 1'b1;
-        end
-    end
-    
-    if(write) begin
-        load_lru = 1'b1;
-        load = 1'b1;
-        access_sel = 1'b0;
-        if(dirty) begin
-            write_o = 1'b1;
-        end
-    end
-end
-
-assign address_o = address;
 assign cpu_data_o = cpu_data;
-assign cache_data_o = cache_data;
-assign hit_o = hit;
-assign hit_ind_o = hit_index;
+assign write_o = write;
+assign address_o = address;
+assign mem_byte_en_o = mem_byte_en;
+assign read_o = read;
 
 endmodule

@@ -13,20 +13,20 @@ module mp4(
     output logic [63:0] mem_wdata
 );
 /*** CPU <--> Cache Variables ***/
-logic inst_resp, inst_read, data_resp, data_read, data_write;
-logic [31:0] inst_addr, inst_rdata, data_addr, data_rdata, data_wdata;
+logic inst_resp, inst_read, data_resp, data_read, data_write, branch_i;
+logic [31:0] inst_addr, inst_rdata, inst_pc, data_addr, data_rdata, data_wdata;
 logic [3:0] data_mbe;
 logic i_stall_cache, d_stall_cache;
 /*** Cache <--> Arbiter Variables ***/
-logic i_mem_resp, i_mem_read, d_mem_resp, d_mem_read, d_mem_write;
+logic i_mem_resp, i_mem_read, i_mem_write, d_mem_resp, d_mem_read, d_mem_write;
 logic [31:0] i_mem_address, d_mem_address, i_mem_byte_en, d_mem_byte_en;
 logic [255:0] i_mem_rdata, i_mem_wdata, d_mem_rdata, d_mem_wdata;
 /*** CPU <--> Arbiter Variables ***/
-logic stall;
+logic stall, stall_EX;
 /*** arbiter <--> L2 ***/
 logic l2_resp_o, l2_resp_i, l2_stall, l2_read_o, l2_write_o, l2_read_i, l2_write_i;
-logic [3:0] l2_mem_byte_en;
-logic [31:0] ar_addr_o, l2_addr_o;
+logic [31:0] l2_mem_byte_en;
+logic [31:0] ar_addr_o, l2_addr_o, data_address_o;
 logic [255:0] l2_mem_rdata, l2_mem_wdata, l2_rdata_o, l2_wdata_i;
 
 cpu_datapath cpu_datapath
@@ -41,7 +41,9 @@ cpu_datapath cpu_datapath
     .inst_read,
     .inst_resp,
     .inst_rdata,
+    .inst_pc,
     .inst_addr,
+    .br_mispredict  (branch_i),
     /* D Cache Ports */
     .data_resp,
     .data_rdata,
@@ -50,7 +52,8 @@ cpu_datapath cpu_datapath
     .data_mbe,
     .data_addr,
     .data_wdata,
-    .stall_c        (i_stall_cache || d_stall_cache)
+    .stall_c        (i_stall_cache || d_stall_cache),
+    .stall_EX
 );
 
 cache_p i_cache
@@ -60,6 +63,8 @@ cache_p i_cache
     .mem_write          (1'b0),
     .mem_address        (inst_addr),
     .mem_resp           (inst_resp),
+    .stall_EX,
+    .branch_i,
     .mem_rdata_cpu      (inst_rdata),
     .mem_wdata_cpu      (32'b0),
     .mem_byte_enable_cpu(4'b1111),
@@ -70,12 +75,14 @@ cache_p i_cache
     .pmem_write         (i_mem_write),
     .pmem_address       (i_mem_address),
     .mem_byte_enable    (i_mem_byte_en),
-    .stall_cache        (i_stall_cache)
+    .stall_cache        (i_stall_cache),
+    .address_o          (inst_pc)
 );
 
 cache_p d_cache
 (
     .*,
+    .stall_EX           (1'b0),
     .mem_read           (data_read),
     .mem_write          (data_write),
     .mem_address        (data_addr),
@@ -90,7 +97,9 @@ cache_p d_cache
     .pmem_write         (d_mem_write),
     .pmem_address       (d_mem_address),
     .mem_byte_enable    (d_mem_byte_en),
-    .stall_cache        (d_stall_cache)
+    .stall_cache        (d_stall_cache),
+    .address_o          (data_address_o),
+    .branch_i           (1'b0)
 );
 
 arbiter arbiter(
