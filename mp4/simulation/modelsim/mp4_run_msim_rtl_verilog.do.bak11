@@ -5,7 +5,12 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
-vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/cache {/home/scottl4/hydration_is_key/mp4/hdl/cache/arbiter.sv}
+vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/scott_cp4 {/home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/data_array_p.sv}
+vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/scott_cp4 {/home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_IF_ID.sv}
+vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/scott_cp4 {/home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/array_p.sv}
+vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/scott_cp4 {/home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/arbiter.sv}
+vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/scott_cp4 {/home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/lru_array.sv}
+vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/cache {/home/scottl4/hydration_is_key/mp4/hdl/cache/cacheline_adapter.sv}
 vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/cache {/home/scottl4/hydration_is_key/mp4/hdl/cache/line_adapter.sv}
 vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl {/home/scottl4/hydration_is_key/mp4/hdl/rv32i_mux_types.sv}
 vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline {/home/scottl4/hydration_is_key/mp4/hdl/pipeline/sreg_IF_ID.sv}
@@ -15,9 +20,10 @@ vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/cache {/home/
 vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/cache {/home/scottl4/hydration_is_key/mp4/hdl/cache/cache_datapath.sv}
 vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/cache {/home/scottl4/hydration_is_key/mp4/hdl/cache/cache_control.sv}
 vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/cache {/home/scottl4/hydration_is_key/mp4/hdl/cache/array.sv}
+vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/scott_cp4 {/home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv}
 vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl {/home/scottl4/hydration_is_key/mp4/hdl/rv32i_types.sv}
 vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/cache {/home/scottl4/hydration_is_key/mp4/hdl/cache/cache.sv}
-vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline {/home/scottl4/hydration_is_key/mp4/hdl/pipeline/WB.sv}
+vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/scott_cp4 {/home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_datapath.sv}
 vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline {/home/scottl4/hydration_is_key/mp4/hdl/pipeline/sreg_MEM_WB.sv}
 vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline {/home/scottl4/hydration_is_key/mp4/hdl/pipeline/sreg_ID_EX.sv}
 vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline {/home/scottl4/hydration_is_key/mp4/hdl/pipeline/sreg_EX_MEM.sv}
@@ -26,6 +32,8 @@ vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline {/ho
 vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline {/home/scottl4/hydration_is_key/mp4/hdl/pipeline/control_rom.sv}
 vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/cpu {/home/scottl4/hydration_is_key/mp4/hdl/cpu/cmp.sv}
 vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/cpu {/home/scottl4/hydration_is_key/mp4/hdl/cpu/alu.sv}
+vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/scott_cp4 {/home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p.sv}
+vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline {/home/scottl4/hydration_is_key/mp4/hdl/pipeline/WB.sv}
 vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline {/home/scottl4/hydration_is_key/mp4/hdl/pipeline/IF.sv}
 vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline {/home/scottl4/hydration_is_key/mp4/hdl/pipeline/hazard_detection.sv}
 vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/pipeline {/home/scottl4/hydration_is_key/mp4/hdl/pipeline/EX.sv}
