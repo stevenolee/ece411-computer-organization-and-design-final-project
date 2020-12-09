@@ -38,7 +38,10 @@ logic [255:0] read_out, next_read_out;
 enum int unsigned {
     /* List of states */
     IDLE,
-	CACHE2
+	CACHE2,
+    PREFETCH_I,
+    PREFETCH_D,
+    PREFETCH_WAIT
 } state, next;
 
 always_ff @(posedge clk, posedge reset_n) begin
@@ -114,6 +117,25 @@ always_comb begin
                 mem_byte_en = d_mem_byte_en;
             end
         end
+
+        PREFETCH_I : begin
+            stall = 1'b1;
+            address_o = i_address + 4;
+            mem_byte_en = 32'hffffffff;
+            read_o = 1'b1;
+        end
+
+        PREFETCH_D : begin
+            stall = 1'b1;
+            address_o = d_address + 4;
+            mem_byte_en = 32'hffffffff;
+            read_o = 1'b1;
+        end
+
+        PREFETCH_WAIT : begin
+
+        end
+
     endcase
 end
 
@@ -135,6 +157,26 @@ begin: next_state_logic
         end
 
         CACHE2: begin
+            if (~resp_i)
+                if (d_read_i && 1'b1)
+                    next = PREFETCH_D;
+                else if (i_read_i && 1'b1)
+                    next = PREFETCH_I;
+                else
+                    next = IDLE;
+        end
+
+        PREFETCH_I: begin
+            if (resp_i)
+                next = PREFETCH_WAIT;
+        end
+
+        PREFETCH_D: begin
+            if (resp_i)
+                next = PREFETCH_WAIT;
+        end
+
+        PREFETCH_WAIT: begin
             if (~resp_i)
                 next = IDLE;
         end
