@@ -21,7 +21,7 @@ module cache_p_datapath #(
     input logic mem_read,
     input logic mem_write,
     input [31:0] mem_address,
-    input [31:0] mem_byte_enable,
+    input [31:0] mem_byte_en_i,
     input [255:0] mem_wdata,
     input logic branch_i,
     output logic [255:0] mem_rdata,
@@ -31,6 +31,7 @@ module cache_p_datapath #(
     output logic [255:0] pmem_wdata,
     output logic [31:0] pmem_address,
     output logic [31:0] address_o,
+    output logic [31:0] mem_byte_en_o,
 
     /***** Cache Control *****/
     input load,
@@ -44,7 +45,6 @@ module cache_p_datapath #(
     output logic read_o
 );
 /***** Variables *****/
-logic hit;
 logic IF_ID_write;
 logic load_0, load_1, load_2, load_3, hit_0, hit_1, hit_2, hit_3;
 logic valid_0, valid_1, valid_2, valid_3, dirty_0, dirty_1, dirty_2, dirty_3;
@@ -67,6 +67,7 @@ assign hit_3 = valid_3 && tag == tag_3;
 assign address_o = IF_ID_addr;
 assign mem_rdata = cache_data_o;
 assign pmem_wdata = cache_data_o;
+assign mem_byte_en_o = IF_ID_mbe;
 
 /***** Muxes *****/
 always_comb begin
@@ -175,7 +176,7 @@ cache_IF_ID cache_IF_ID(
     .write_i        (mem_write),
     .address_i      (mem_address),
     .data_i         (mem_wdata), 
-    .mem_byte_en_i  (mem_byte_enable),
+    .mem_byte_en_i,
     .stall,
     .branch_i,
 

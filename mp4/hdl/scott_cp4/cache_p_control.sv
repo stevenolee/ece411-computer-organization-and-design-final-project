@@ -24,7 +24,6 @@ enum int unsigned {
     /* List of states */
     IDLE,
     WRITE_BACK,
-    CHECK_HIT,
     MISS,
     BUFFER
 } state, next_state;

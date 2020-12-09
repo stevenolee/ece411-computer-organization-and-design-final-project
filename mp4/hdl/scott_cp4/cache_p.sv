@@ -25,6 +25,7 @@ module cache_p (
 );
 logic [255:0] mem_wdata;
 logic [255:0] mem_rdata;
+logic [31:0] mem_byte_en_i;
 logic load, load_lru, address_sel, access_sel, cache_hit, dirty;
 logic cache_read, cache_write;
 
@@ -56,17 +57,19 @@ cache_p_datapath cache_p_datapath(
     .cache_hit,
     .dirty,
     .write_o        (cache_write),
-    .read_o         (cache_read)
+    .read_o         (cache_read),
+    .mem_byte_en_o  (mem_byte_enable)
 );
 
-line_adapter bus (
-    .mem_wdata_line(mem_wdata),
-    .mem_rdata_line(mem_rdata),
-    .mem_wdata(mem_wdata_cpu),
-    .mem_rdata(mem_rdata_cpu),
-    .mem_byte_enable(mem_byte_enable_cpu),
-    .mem_byte_enable_line(mem_byte_enable),
-    .address(address_o)
+p_line_adapter bus (
+    .mem_wdata_line         (mem_wdata),            // Outputted to Cache
+    .mem_rdata_line         (mem_rdata),
+    .mem_wdata              (mem_wdata_cpu),
+    .mem_rdata              (mem_rdata_cpu),        // Outputted to the CPU
+    .mem_byte_enable        (mem_byte_enable_cpu),  // 4 bit mem_byte_enable
+    .mem_byte_enable_line   (mem_byte_en_i),        // Uses address to expand
+    .address                (mem_address),          // Sets mem_byte enable for reads and writes, but also for rdata
+    .address_rdata          (address_o)
 );
 
 endmodule : cache_p
