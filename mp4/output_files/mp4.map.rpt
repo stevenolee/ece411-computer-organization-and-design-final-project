@@ -1,5 +1,5 @@
 Analysis & Elaboration report for mp4
-Tue Dec  8 01:46:07 2020
+Wed Dec  9 03:02:14 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -51,18 +51,18 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
  43. Parameter Settings for User Entity Instance: cache:l2_cache|cache_datapath:datapath|array:dirty
  44. Analysis & Elaboration Settings
  45. Port Connectivity Checks: "cache:l2_cache|cache_datapath:datapath|array:valid"
- 46. Port Connectivity Checks: "cache:l2_cache"
- 47. Port Connectivity Checks: "arbiter:arbiter"
- 48. Port Connectivity Checks: "cache_p:d_cache"
- 49. Port Connectivity Checks: "cache_p:i_cache|cache_p_datapath:cache_p_datapath|lru_array:lru_array"
- 50. Port Connectivity Checks: "cache_p:i_cache|cache_p_datapath:cache_p_datapath|cache_p_way:cache_way_3"
- 51. Port Connectivity Checks: "cache_p:i_cache|cache_p_datapath:cache_p_datapath|cache_p_way:cache_way_2"
- 52. Port Connectivity Checks: "cache_p:i_cache|cache_p_datapath:cache_p_datapath|cache_p_way:cache_way_1"
- 53. Port Connectivity Checks: "cache_p:i_cache|cache_p_datapath:cache_p_datapath|cache_p_way:cache_way_0|array_p:valid_array"
- 54. Port Connectivity Checks: "cache_p:i_cache|cache_p_datapath:cache_p_datapath|cache_p_way:cache_way_0"
- 55. Port Connectivity Checks: "cache_p:i_cache"
- 56. Port Connectivity Checks: "cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB"
- 57. Port Connectivity Checks: "cpu_datapath:cpu_datapath|EX:stage_EX|cmp:CMP"
+ 46. Port Connectivity Checks: "arbiter:arbiter"
+ 47. Port Connectivity Checks: "cache_p:d_cache"
+ 48. Port Connectivity Checks: "cache_p:i_cache|cache_p_datapath:cache_p_datapath|lru_array:lru_array"
+ 49. Port Connectivity Checks: "cache_p:i_cache|cache_p_datapath:cache_p_datapath|cache_p_way:cache_way_3"
+ 50. Port Connectivity Checks: "cache_p:i_cache|cache_p_datapath:cache_p_datapath|cache_p_way:cache_way_2"
+ 51. Port Connectivity Checks: "cache_p:i_cache|cache_p_datapath:cache_p_datapath|cache_p_way:cache_way_1"
+ 52. Port Connectivity Checks: "cache_p:i_cache|cache_p_datapath:cache_p_datapath|cache_p_way:cache_way_0|array_p:valid_array"
+ 53. Port Connectivity Checks: "cache_p:i_cache|cache_p_datapath:cache_p_datapath|cache_p_way:cache_way_0"
+ 54. Port Connectivity Checks: "cache_p:i_cache"
+ 55. Port Connectivity Checks: "cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB"
+ 56. Port Connectivity Checks: "cpu_datapath:cpu_datapath|EX:stage_EX|cmp:CMP"
+ 57. Port Connectivity Checks: "cpu_datapath:cpu_datapath|ID:stage_ID"
  58. Analysis & Elaboration Messages
  59. Analysis & Elaboration Suppressed Messages
 
@@ -90,7 +90,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                      ;
 +-----------------------------------+-------------------------------------------------+
-; Analysis & Elaboration Status     ; Successful - Tue Dec  8 01:46:07 2020           ;
+; Analysis & Elaboration Status     ; Successful - Wed Dec  9 03:02:14 2020           ;
 ; Quartus Prime Version             ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                     ; mp4                                             ;
 ; Top-level Entity Name             ; mp4                                             ;
@@ -669,15 +669,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+-------+----------+----------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "cache:l2_cache"                                                                            ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port        ; Type   ; Severity ; Details                                                                             ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
-; stall_cache ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +-------------------------------------------------+
 ; Port Connectivity Checks: "arbiter:arbiter"     ;
 +---------------+-------+----------+--------------+
@@ -786,16 +777,27 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+-------------------------------------------------+
 
 
++-------------------------------------------------------------------+
+; Port Connectivity Checks: "cpu_datapath:cpu_datapath|ID:stage_ID" ;
++-------+-------+----------+----------------------------------------+
+; Port  ; Type  ; Severity ; Details                                ;
++-------+-------+----------+----------------------------------------+
+; stall ; Input ; Info     ; Stuck at GND                           ;
++-------+-------+----------+----------------------------------------+
+
+
 +---------------------------------+
 ; Analysis & Elaboration Messages ;
 +---------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
-    Info: Processing started: Tue Dec  8 01:45:40 2020
+    Info: Processing started: Wed Dec  9 03:01:48 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mp4 -c mp4 --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file hdl/scott_cp4/p_line_adaptor.sv
+    Info (12023): Found entity 1: p_line_adapter File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/p_line_adaptor.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file hdl/scott_cp4/cache_p_control.sv
     Info (12023): Found entity 1: cache_p_control File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_control.sv Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file hdl/scott_cp4/data_array_p.sv
@@ -904,36 +906,36 @@ Info (12128): Elaborating entity "cmp" for hierarchy "cpu_datapath:cpu_datapath|
 Info (12128): Elaborating entity "sreg_EX_MEM" for hierarchy "cpu_datapath:cpu_datapath|sreg_EX_MEM:sreg_EX_MEM" File: /home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv Line: 191
 Info (12128): Elaborating entity "MEM" for hierarchy "cpu_datapath:cpu_datapath|MEM:stage_MEM" File: /home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv Line: 212
 Info (12128): Elaborating entity "sreg_MEM_WB" for hierarchy "cpu_datapath:cpu_datapath|sreg_MEM_WB:sreg_MEM_WB" File: /home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv Line: 240
-Info (12128): Elaborating entity "WB" for hierarchy "cpu_datapath:cpu_datapath|WB:stage_WB" File: /home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv Line: 259
-Info (10264): Verilog HDL Case Statement information at WB.sv(35): all case item expressions in this case statement are onehot File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/WB.sv Line: 35
-Info (10264): Verilog HDL Case Statement information at WB.sv(44): all case item expressions in this case statement are onehot File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/WB.sv Line: 44
-Info (12128): Elaborating entity "hazard_detection" for hierarchy "cpu_datapath:cpu_datapath|hazard_detection:hazard" File: /home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv Line: 290
+Info (12128): Elaborating entity "WB" for hierarchy "cpu_datapath:cpu_datapath|WB:stage_WB" File: /home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv Line: 260
+Info (10264): Verilog HDL Case Statement information at WB.sv(48): all case item expressions in this case statement are onehot File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/WB.sv Line: 48
+Info (10264): Verilog HDL Case Statement information at WB.sv(57): all case item expressions in this case statement are onehot File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/WB.sv Line: 57
+Info (12128): Elaborating entity "hazard_detection" for hierarchy "cpu_datapath:cpu_datapath|hazard_detection:hazard" File: /home/scottl4/hydration_is_key/mp4/hdl/cpu/cpu_datapath.sv Line: 291
 Info (10264): Verilog HDL Case Statement information at hazard_detection.sv(87): all case item expressions in this case statement are onehot File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/hazard_detection.sv Line: 87
 Info (10264): Verilog HDL Case Statement information at hazard_detection.sv(96): all case item expressions in this case statement are onehot File: /home/scottl4/hydration_is_key/mp4/hdl/pipeline/hazard_detection.sv Line: 96
 Info (12128): Elaborating entity "cache_p" for hierarchy "cache_p:i_cache" File: /home/scottl4/hydration_is_key/mp4/hdl/mp4.sv Line: 80
-Info (12128): Elaborating entity "cache_p_control" for hierarchy "cache_p:i_cache|cache_p_control:cache_p_control" File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p.sv Line: 46
-Info (12128): Elaborating entity "cache_p_datapath" for hierarchy "cache_p:i_cache|cache_p_datapath:cache_p_datapath" File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p.sv Line: 60
-Info (12128): Elaborating entity "cache_IF_ID" for hierarchy "cache_p:i_cache|cache_p_datapath:cache_p_datapath|cache_IF_ID:cache_IF_ID" File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_datapath.sv Line: 187
-Info (12128): Elaborating entity "cache_p_way" for hierarchy "cache_p:i_cache|cache_p_datapath:cache_p_datapath|cache_p_way:cache_way_0" File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_datapath.sv Line: 205
+Info (12128): Elaborating entity "cache_p_control" for hierarchy "cache_p:i_cache|cache_p_control:cache_p_control" File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p.sv Line: 47
+Info (12128): Elaborating entity "cache_p_datapath" for hierarchy "cache_p:i_cache|cache_p_datapath:cache_p_datapath" File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p.sv Line: 62
+Info (12128): Elaborating entity "cache_IF_ID" for hierarchy "cache_p:i_cache|cache_p_datapath:cache_p_datapath|cache_IF_ID:cache_IF_ID" File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_datapath.sv Line: 188
+Info (12128): Elaborating entity "cache_p_way" for hierarchy "cache_p:i_cache|cache_p_datapath:cache_p_datapath|cache_p_way:cache_way_0" File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_datapath.sv Line: 206
 Info (12128): Elaborating entity "data_array_p" for hierarchy "cache_p:i_cache|cache_p_datapath:cache_p_datapath|cache_p_way:cache_way_0|data_array_p:data_array" File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv Line: 36
 Info (12128): Elaborating entity "array_p" for hierarchy "cache_p:i_cache|cache_p_datapath:cache_p_datapath|cache_p_way:cache_way_0|array_p:tag_array" File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv Line: 48
 Info (12128): Elaborating entity "array_p" for hierarchy "cache_p:i_cache|cache_p_datapath:cache_p_datapath|cache_p_way:cache_way_0|array_p:valid_array" File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_way.sv Line: 60
-Info (12128): Elaborating entity "lru_array" for hierarchy "cache_p:i_cache|cache_p_datapath:cache_p_datapath|lru_array:lru_array" File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_datapath.sv Line: 268
-Info (12128): Elaborating entity "line_adapter" for hierarchy "cache_p:i_cache|line_adapter:bus" File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p.sv Line: 70
+Info (12128): Elaborating entity "lru_array" for hierarchy "cache_p:i_cache|cache_p_datapath:cache_p_datapath|lru_array:lru_array" File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_datapath.sv Line: 269
+Info (12128): Elaborating entity "p_line_adapter" for hierarchy "cache_p:i_cache|p_line_adapter:bus" File: /home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p.sv Line: 73
 Info (12128): Elaborating entity "arbiter" for hierarchy "arbiter:arbiter" File: /home/scottl4/hydration_is_key/mp4/hdl/mp4.sv Line: 128
-Info (12128): Elaborating entity "cache" for hierarchy "cache:l2_cache" File: /home/scottl4/hydration_is_key/mp4/hdl/mp4.sv Line: 146
-Info (12128): Elaborating entity "cache_control" for hierarchy "cache:l2_cache|cache_control:control" File: /home/scottl4/hydration_is_key/mp4/hdl/cache/cache.sv Line: 39
-Info (12128): Elaborating entity "cache_datapath" for hierarchy "cache:l2_cache|cache_datapath:datapath" File: /home/scottl4/hydration_is_key/mp4/hdl/cache/cache.sv Line: 45
+Info (12128): Elaborating entity "cache" for hierarchy "cache:l2_cache" File: /home/scottl4/hydration_is_key/mp4/hdl/mp4.sv Line: 145
+Info (12128): Elaborating entity "cache_control" for hierarchy "cache:l2_cache|cache_control:control" File: /home/scottl4/hydration_is_key/mp4/hdl/cache/cache.sv Line: 38
+Info (12128): Elaborating entity "cache_datapath" for hierarchy "cache:l2_cache|cache_datapath:datapath" File: /home/scottl4/hydration_is_key/mp4/hdl/cache/cache.sv Line: 44
 Info (12128): Elaborating entity "data_array" for hierarchy "cache:l2_cache|cache_datapath:datapath|data_array:DM_cache" File: /home/scottl4/hydration_is_key/mp4/hdl/cache/cache_datapath.sv Line: 56
 Info (12128): Elaborating entity "array" for hierarchy "cache:l2_cache|cache_datapath:datapath|array:tag" File: /home/scottl4/hydration_is_key/mp4/hdl/cache/cache_datapath.sv Line: 57
 Info (12128): Elaborating entity "array" for hierarchy "cache:l2_cache|cache_datapath:datapath|array:valid" File: /home/scottl4/hydration_is_key/mp4/hdl/cache/cache_datapath.sv Line: 58
-Info (12128): Elaborating entity "cacheline_adaptor" for hierarchy "cacheline_adaptor:cacheline_adaptor" File: /home/scottl4/hydration_is_key/mp4/hdl/mp4.sv Line: 166
+Info (12128): Elaborating entity "cacheline_adaptor" for hierarchy "cacheline_adaptor:cacheline_adaptor" File: /home/scottl4/hydration_is_key/mp4/hdl/mp4.sv Line: 165
 Info (144001): Generated suppressed messages file /home/scottl4/hydration_is_key/mp4/output_files/mp4.map.smsg
 Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 18 warnings
-    Info: Peak virtual memory: 1492 megabytes
-    Info: Processing ended: Tue Dec  8 01:46:08 2020
-    Info: Elapsed time: 00:00:28
-    Info: Total CPU time (on all processors): 00:00:45
+    Info: Peak virtual memory: 1490 megabytes
+    Info: Processing ended: Wed Dec  9 03:02:14 2020
+    Info: Elapsed time: 00:00:26
+    Info: Total CPU time (on all processors): 00:00:43
 
 
 +--------------------------------------------+

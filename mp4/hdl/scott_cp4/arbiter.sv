@@ -107,14 +107,14 @@ always_comb begin
                 d_resp_o = 1'b1;
                 mem_byte_en = d_mem_byte_en;
             end
-            else if (i_read_i) begin
-                i_line_o = read_out;
-                i_resp_o  = 1'b1;
-            end
             else if (d_write_i) begin
                 stall = 1'b1;
 				d_resp_o = 1'b1;
                 mem_byte_en = d_mem_byte_en;
+            end
+            else if (i_read_i) begin
+                i_line_o = read_out;
+                i_resp_o  = 1'b1;
             end
         end
 

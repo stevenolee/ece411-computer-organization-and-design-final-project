@@ -67,6 +67,7 @@ set_global_assignment -name EDA_TEST_BENCH_FILE hvl/rvfimon.v -section_id mp3_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE hvl/shadow_memory.sv -section_id mp3_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE hvl/source_tb.sv -section_id mp3_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE hvl/tb_itf.sv -section_id mp3_tb
+set_global_assignment -name SYSTEMVERILOG_FILE hdl/scott_cp4/p_line_adaptor.sv
 set_global_assignment -name SYSTEMVERILOG_FILE hdl/scott_cp4/cache_p_control.sv
 set_global_assignment -name SYSTEMVERILOG_FILE hdl/scott_cp4/data_array_p.sv
 set_global_assignment -name SYSTEMVERILOG_FILE hdl/scott_cp4/cache_p_way.sv

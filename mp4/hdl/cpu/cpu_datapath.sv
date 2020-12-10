@@ -251,6 +251,7 @@ WB stage_WB (
 	.pc_in			(MEM_WB_pc_out),
 	.br_en			(MEM_BW_br_en),	
 	.mem_byte_enable(MEM_WB_mbe),
+	.data_resp,
 
 	// outputs 
 	.regfilemux_o	(regfilemux_out),

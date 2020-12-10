@@ -24,7 +24,7 @@ logic [255:0] i_mem_rdata, i_mem_wdata, d_mem_rdata, d_mem_wdata;
 /*** CPU <--> Arbiter Variables ***/
 logic stall, stall_EX;
 /*** arbiter <--> L2 ***/
-logic l2_resp_o, l2_resp_i, l2_stall, l2_read_o, l2_write_o, l2_read_i, l2_write_i;
+logic l2_resp_o, l2_resp_i, l2_read_o, l2_write_o, l2_read_i, l2_write_i;
 logic [31:0] l2_mem_byte_en;
 logic [31:0] ar_addr_o, l2_addr_o, data_address_o;
 logic [255:0] l2_mem_rdata, l2_mem_wdata, l2_rdata_o, l2_wdata_i;
@@ -63,7 +63,7 @@ cache_p i_cache
     .mem_write          (1'b0),
     .mem_address        (inst_addr),
     .mem_resp           (inst_resp),
-    .stall_EX,
+    .stall_EX           (stall_EX || d_stall_cache),
     .branch_i,
     .mem_rdata_cpu      (inst_rdata),
     .mem_wdata_cpu      (32'b0),
@@ -141,8 +141,7 @@ cache l2_cache(
     .pmem_resp          (l2_resp_i),
     .pmem_read          (l2_read_o),
     .pmem_write         (l2_write_o),
-    .pmem_address       (l2_addr_o),
-    .stall_cache        (l2_stall)      // Leads to nothing
+    .pmem_address       (l2_addr_o)
 );
 
 cacheline_adaptor cacheline_adaptor
