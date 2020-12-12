@@ -9,12 +9,13 @@ module cache_p_control (
     input mem_write,
     input dirty,
     input hit,
+    input prefetch,
     output logic load,
     output logic access_sel,
     output logic load_lru,
     output logic pmem_read,
     output logic pmem_write,
-    output logic address_sel, // If 0, then use CPU address, if 1, use cache_address
+    output logic [1:0] address_sel, // If 0, then use CPU address, if 1, use cache_address, if 2 use address + 32
     output logic mem_resp,
     output logic stall
 );
@@ -25,7 +26,10 @@ enum int unsigned {
     IDLE,
     WRITE_BACK,
     MISS,
-    BUFFER
+    BUFFER,
+    STALL,
+    PREFETCH,
+    PREFETCH_BUFFER
 } state, next_state;
 
 always_ff @(posedge clk)
@@ -45,7 +49,7 @@ always_comb begin: state_execute
     pmem_write = 1'b0;
     access_sel = 1'b0;
     mem_resp = 1'b0;
-    address_sel = 1'b0;
+    address_sel = 2'b00;
 
     unique case (state)
         IDLE: begin
@@ -63,7 +67,7 @@ always_comb begin: state_execute
         end
 
         WRITE_BACK: begin
-            address_sel = 1'b1;
+            address_sel = 2'b01;
             pmem_write = 1'b1;
             stall = 1'b1;
         end
@@ -84,6 +88,26 @@ always_comb begin: state_execute
             end
             load = 1'b1;
             stall = 1'b1;
+        end
+
+        STALL: begin
+            stall = 1'b1;
+            address_sel = 2'b10;
+        end
+
+        PREFETCH: begin
+            access_sel = 1'b1;
+            pmem_read = 1'b1;
+            load = 1'b1;
+            stall = 1'b1;
+            address_sel = 2'b10;
+        end
+
+        PREFETCH_BUFFER: begin
+            access_sel = 1'b1;
+            load = 1'b1;
+            stall = 1'b1;
+            address_sel = 2'b10;
         end
     endcase
 end
@@ -112,6 +136,24 @@ always_comb begin: next_state_assignment
         end
 
         BUFFER: begin
+            if(~pmem_resp) begin
+                if (prefetch == 1'b1)
+                    next_state = STALL;
+                else
+                    next_state = IDLE;
+            end
+        end
+
+        STALL: begin
+            next_state = PREFETCH;
+        end
+
+        PREFETCH: begin
+            if(pmem_resp)
+                next_state = PREFETCH_BUFFER;
+        end
+
+        PREFETCH_BUFFER: begin
             if(~pmem_resp)
                 next_state = IDLE;
         end

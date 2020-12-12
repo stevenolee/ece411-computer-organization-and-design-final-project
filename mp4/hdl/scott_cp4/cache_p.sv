@@ -18,6 +18,7 @@ module cache_p (
     input logic [31:0] mem_address,
     input logic [31:0] mem_wdata_cpu,
     input logic branch_i,
+    input logic prefetch,
     output logic mem_resp,
     output logic [31:0] mem_rdata_cpu,
     output logic [31:0] address_o,
@@ -26,7 +27,8 @@ module cache_p (
 logic [255:0] mem_wdata;
 logic [255:0] mem_rdata;
 logic [31:0] mem_byte_en_i;
-logic load, load_lru, address_sel, access_sel, cache_hit, dirty;
+logic load, load_lru, access_sel, cache_hit, dirty;
+logic [1:0] address_sel;
 logic cache_read, cache_write;
 
 cache_p_control cache_p_control (
@@ -43,7 +45,8 @@ cache_p_control cache_p_control (
     .pmem_read,
     .pmem_write,
     .address_sel,                       // If 0, then use CPU address, if 1, use cache_address
-    .mem_resp
+    .mem_resp,
+    .prefetch
 );
 
 cache_p_datapath cache_p_datapath(

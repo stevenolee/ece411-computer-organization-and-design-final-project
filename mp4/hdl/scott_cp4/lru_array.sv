@@ -63,7 +63,7 @@ begin
 end
 
 always_comb begin
-    dataout <= (load  & (rindex == windex)) ? datain : data[rindex][1:0];
+    dataout <= (load  & (rindex == windex) & data[windex][1:0] == datain) ? data[rindex][3:2] : data[rindex][1:0];
 end
 
 endmodule : lru_array

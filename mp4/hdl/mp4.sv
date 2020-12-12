@@ -76,7 +76,8 @@ cache_p i_cache
     .pmem_address       (i_mem_address),
     .mem_byte_enable    (i_mem_byte_en),
     .stall_cache        (i_stall_cache),
-    .address_o          (inst_pc)
+    .address_o          (inst_pc),
+    .prefetch           (1'b1)
 );
 
 cache_p d_cache
@@ -99,7 +100,8 @@ cache_p d_cache
     .mem_byte_enable    (d_mem_byte_en),
     .stall_cache        (d_stall_cache),
     .address_o          (data_address_o),
-    .branch_i           (1'b0)
+    .branch_i           (1'b0),
+    .prefetch           (1'b1)
 );
 
 arbiter arbiter(

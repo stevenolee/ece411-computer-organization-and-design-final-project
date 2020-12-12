@@ -36,7 +36,7 @@ module cache_p_datapath #(
     /***** Cache Control *****/
     input load,
     input load_lru,
-    input address_sel,
+    input logic [1:0] address_sel,
     input access_sel,
     input stall,
     output logic cache_hit,
@@ -85,7 +85,10 @@ always_comb begin
 
     /********** Reading and Writing from Memory **********/
     unique case(address_sel)
-        1'b1: begin
+        2'b00: begin
+            pmem_address = IF_ID_addr;
+        end
+        2'b01: begin
             unique case (lru)
                 2'b00: pmem_address = {{tag_0}, {IF_ID_index}, 5'b0};
                 2'b01: pmem_address = {{tag_1}, {IF_ID_index}, 5'b0};
@@ -94,8 +97,8 @@ always_comb begin
                 default: ;
             endcase
         end
-        1'b0: begin
-            pmem_address = IF_ID_addr;
+        2'b10: begin
+            pmem_address = IF_ID_addr + 32;
         end
         default: ;
     endcase
