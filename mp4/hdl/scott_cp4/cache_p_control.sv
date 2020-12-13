@@ -91,22 +91,28 @@ always_comb begin: state_execute
         end
 
         STALL: begin
-            stall = 1'b1;
+            if ((mem_read || mem_write)) begin 
+                stall = 1'b1;
+            end
             address_sel = 2'b10;
         end
 
         PREFETCH: begin
+            if ((mem_read || mem_write)) begin 
+                stall = 1'b1;
+            end
             access_sel = 1'b1;
             pmem_read = 1'b1;
             load = 1'b1;
-            stall = 1'b1;
             address_sel = 2'b10;
         end
 
         PREFETCH_BUFFER: begin
+            if ((mem_read || mem_write)) begin 
+                stall = 1'b1;
+            end
             access_sel = 1'b1;
             load = 1'b1;
-            stall = 1'b1;
             address_sel = 2'b10;
         end
     endcase
