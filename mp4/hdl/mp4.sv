@@ -22,7 +22,7 @@ logic i_mem_resp, i_mem_read, i_mem_write, d_mem_resp, d_mem_read, d_mem_write;
 logic [31:0] i_mem_address, d_mem_address, i_mem_byte_en, d_mem_byte_en;
 logic [255:0] i_mem_rdata, i_mem_wdata, d_mem_rdata, d_mem_wdata;
 /*** CPU <--> Arbiter Variables ***/
-logic stall, stall_EX;
+logic stall, stall_EX, stall_arb;
 /*** arbiter <--> L2 ***/
 logic l2_resp_o, l2_resp_i, l2_read_o, l2_write_o, l2_read_i, l2_write_i;
 logic [31:0] l2_mem_byte_en;
@@ -68,6 +68,7 @@ cache_p i_cache
     .mem_rdata_cpu      (inst_rdata),
     .mem_wdata_cpu      (32'b0),
     .mem_byte_enable_cpu(4'b1111),
+    .stall_arb          (1'b0),
     .pmem_rdata         (i_mem_rdata),
     .pmem_wdata         (i_mem_wdata),
     .pmem_resp          (i_mem_resp),
@@ -124,7 +125,7 @@ arbiter arbiter(
     .write_o            (l2_write_i),
     .data_o             (l2_wdata_i),
     .mem_byte_en        (l2_mem_byte_en),
-    .stall
+    .stall              (stall_arb)
 );
 
 cache l2_cache(

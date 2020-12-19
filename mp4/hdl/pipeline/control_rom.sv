@@ -51,10 +51,10 @@ function void set_defaults();
     ctrl.cmpop = branch_funct3_t'(instruction[14:12]);
     ctrl.cmpmux_sel = cmpmux::rs2_out;
     ctrl.aluop = alu_ops'(instruction[14:12]);
-    ctrl.load_regfile = 1'b1;
+    ctrl.load_regfile = 1'b0;
     ctrl.data_write = 1'b0;
     ctrl.data_read = 1'b0;
-    ctrl.load_pc = 1'b1;
+    ctrl.load_pc = 1'b0;
 
 endfunction
 
@@ -64,27 +64,30 @@ always_comb
 begin : state_actions
     set_defaults();
     unique case (ctrl.opcode)
-        op_imm:
-            unique case (ctrl.funct3)	
-                slt: 
-                    begin
-                        ctrl.cmpop = blt;
-                        ctrl.regfilemux_sel = regfilemux::br_en;
-                        ctrl.cmpmux_sel = cmpmux::i_imm;
-                    end 
-                sltu: 
-                    begin
-                        ctrl.cmpop = bltu;
-                        ctrl.regfilemux_sel = regfilemux::br_en;
-                        ctrl.cmpmux_sel = cmpmux::i_imm;
-                    end
-                sr:    //check bit30 for logical/arithmetic
-                    if (ctrl.funct7[5] == 0) 	// SRLI	
-                        ctrl.aluop = alu_ops'(ctrl.funct3);
-                    else 					// SRAI
-                        ctrl.aluop = alu_sra;
-                default: ;	
-            endcase
+        op_imm: 
+            begin
+                ctrl.load_regfile = 1'b1;
+                unique case (ctrl.funct3)	
+                    slt: 
+                        begin
+                            ctrl.cmpop = blt;
+                            ctrl.regfilemux_sel = regfilemux::br_en;
+                            ctrl.cmpmux_sel = cmpmux::i_imm;
+                        end 
+                    sltu: 
+                        begin
+                            ctrl.cmpop = bltu;
+                            ctrl.regfilemux_sel = regfilemux::br_en;
+                            ctrl.cmpmux_sel = cmpmux::i_imm;
+                        end
+                    sr:    //check bit30 for logical/arithmetic
+                        if (ctrl.funct7[5] == 0) 	// SRLI	
+                            ctrl.aluop = alu_ops'(ctrl.funct3);
+                        else 					// SRAI
+                            ctrl.aluop = alu_sra;
+                    default: ;	
+                endcase
+            end
         op_lui:
             begin
                 ctrl.load_regfile = 1'b1;

@@ -48,7 +48,7 @@ module cache_p_datapath #(
 logic IF_ID_write;
 logic load_0, load_1, load_2, load_3, hit_0, hit_1, hit_2, hit_3;
 logic valid_0, valid_1, valid_2, valid_3, dirty_0, dirty_1, dirty_2, dirty_3;
-logic [s_index-1:0] index, IF_ID_index;
+logic [s_index-1:0] IF_ID_index;
 logic [s_tag-1:0] tag, tag_0, tag_1, tag_2, tag_3, IF_ID_tag;
 logic [s_line-1:0] cache_data_i, cache_data_o, IF_data,  IF_ID_cpu_data;
 logic [s_line-1:0] data_out_0, data_out_1, data_out_2, data_out_3;
@@ -56,17 +56,16 @@ logic [31:0] IF_ID_addr, write_mask, IF_ID_mbe;
 logic [1:0] lru, lru_in;
 
 /***** Assign *****/
-assign index = IF_ID_addr[7:5];
 assign IF_ID_tag = IF_ID_addr[31:8];
 assign IF_ID_index = IF_ID_addr[7:5];
 assign tag = IF_ID_addr[31:8];
+assign address_o = IF_ID_addr;
 assign hit_0 = valid_0 && tag == tag_0;
 assign hit_1 = valid_1 && tag == tag_1;
 assign hit_2 = valid_2 && tag == tag_2;
 assign hit_3 = valid_3 && tag == tag_3;
-assign address_o = IF_ID_addr;
-assign mem_rdata = cache_data_o;
 assign pmem_wdata = cache_data_o;
+assign mem_rdata = cache_data_o;
 assign mem_byte_en_o = IF_ID_mbe;
 
 /***** Muxes *****/
@@ -164,7 +163,7 @@ always_comb begin
             lru_in = 2'b11;
             load_3 = load;
         end
-        default: $display("ERROR: More than one cache way hits!");
+        default: ;
     endcase
 end
 
@@ -197,7 +196,7 @@ cache_p_way cache_way_0
     .mem_byte_enable(write_mask),
     .tag_in         (IF_ID_tag),
     .tag_out        (tag_0),
-    .index_r        (index),
+    .index_r        (IF_ID_index),        // Same as IF_ID_index
     .index_w        (IF_ID_index),
     .datain         (cache_data_i),
     .valid          (valid_0),
@@ -214,7 +213,7 @@ cache_p_way cache_way_1
     .mem_byte_enable(write_mask),
     .tag_in         (IF_ID_tag),
     .tag_out        (tag_1),
-    .index_r        (index),
+    .index_r        (IF_ID_index),
     .index_w        (IF_ID_index),
     .datain         (cache_data_i),
     .valid          (valid_1),
@@ -231,7 +230,7 @@ cache_p_way cache_way_2
     .mem_byte_enable(write_mask),
     .tag_in         (IF_ID_tag),
     .tag_out        (tag_2),
-    .index_r        (index),
+    .index_r        (IF_ID_index),
     .index_w        (IF_ID_index),
     .datain         (cache_data_i),
     .valid          (valid_2),
@@ -248,7 +247,7 @@ cache_p_way cache_way_3
     .mem_byte_enable(write_mask),
     .tag_in         (IF_ID_tag),
     .tag_out        (tag_3),
-    .index_r        (index),
+    .index_r        (IF_ID_index),
     .index_w        (IF_ID_index),
     .datain         (cache_data_i),
     .valid          (valid_3),
@@ -261,8 +260,8 @@ lru_array lru_array
     .clk,
     .rst,
     .read       (1'b1),
-    .load       (load_lru && (!stall)), // KEEP AN EYE ON THIS LOGIC
-    .rindex     (index),
+    .load       (load_lru), // KEEP AN EYE ON THIS LOGIC
+    .rindex     (IF_ID_index),
     .windex     (IF_ID_index),
     .datain     (lru_in),
     .dataout    (lru)

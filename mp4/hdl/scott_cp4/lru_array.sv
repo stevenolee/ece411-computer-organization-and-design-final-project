@@ -42,10 +42,7 @@ begin
             data[i] <= 8'b11100100;
     end
     else begin
-        // if (read)
-        //     _dataout <= (load  & (rindex == windex)) ? datain : data[rindex][1:0];
-
-        if(load)
+        if(load) begin
             if(data[windex][1:0] == datain) begin
                 data[windex][1:0] = data[windex][3:2];
                 data[windex][3:2] = data[windex][5:4];
@@ -59,11 +56,13 @@ begin
                 data[windex][5:4] = data[windex][7:6];
             end
             data[windex][7:6] = datain;
+        end
     end
 end
 
 always_comb begin
-    dataout <= (load  & (rindex == windex)) ? datain : data[rindex][1:0];
+    // dataout <= (load & (rindex == windex)) ? datain : data[rindex][1:0];
+    dataout <= (load & (rindex == windex) & data[windex][1:0] == datain) ? data[rindex][3:2] : data[rindex][1:0];
 end
 
 endmodule : lru_array

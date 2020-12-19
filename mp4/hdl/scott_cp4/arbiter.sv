@@ -87,7 +87,7 @@ always_comb begin
                 stall = 1'b1;
                 address_o = d_address;
                 mem_byte_en = d_mem_byte_en;
-                write_o = 1'b0;
+                write_o = 1'b1;
                 data_o = d_line_i;
             end
             else if(i_read_i) begin
@@ -105,7 +105,6 @@ always_comb begin
                 mem_byte_en = d_mem_byte_en;
             end
             else if (d_write_i) begin
-                stall = 1'b1;
 				d_resp_o = 1'b1;
                 mem_byte_en = d_mem_byte_en;
             end

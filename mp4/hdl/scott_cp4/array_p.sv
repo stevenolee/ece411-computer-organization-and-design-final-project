@@ -46,7 +46,8 @@ begin
 end
 
 always_comb begin
-    dataout = (load  & (rindex == windex)) ? datain : data[rindex];
+    // dataout = (load  & (rindex == windex)) ? datain : data[rindex];
+    dataout = data[rindex];
 end
 
 endmodule : array_p

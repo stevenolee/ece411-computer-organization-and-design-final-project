@@ -4,6 +4,7 @@ module cache_p (
     /* Physical memory signals */
     input logic pmem_resp,
     input logic [255:0] pmem_rdata,
+    input logic stall_arb,
     output logic [31:0] pmem_address,
     output logic [31:0] mem_byte_enable,
     output logic [255:0] pmem_wdata,
@@ -48,7 +49,7 @@ cache_p_control cache_p_control (
 
 cache_p_datapath cache_p_datapath(
     .*,
-    .stall          (stall_cache || stall_EX),
+    .stall          (stall_cache || stall_EX || stall_arb),
     .load,
     .load_lru,
     .address_sel,
