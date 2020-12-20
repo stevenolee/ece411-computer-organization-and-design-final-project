@@ -29,27 +29,6 @@ module cpu_datapath
 
 	input stall_c,
 	output logic stall_EX
-
-    /* CPU <-- I-Cache */
-    // input i_cache_hit,
-    // input i_mem_resp,
-    // input rv32i_word i_mem_rdata,
-    // /* CPU <-- D-Cache */
-    // input d_cache_hit,
-    // input d_mem_resp,
-    // input rv32i_word d_mem_rdata,
-    // /* CPU --> I-Cache */
-    // // No need for writing into i_cache
-    // output logic i_mem_read,
-    // output logic [3:0] i_mem_byte_en,
-    // // output rv32i_word i_mem_wdata,
-    // output rv32i_word i_mem_address,
-    // /* CPU --> D-Cache */
-    // output logic d_mem_read,
-    // output logic d_mem_write,
-    // output logic [3:0] d_mem_byte_en,
-    // output rv32i_word d_mem_address,
-    // output rv32i_word d_mem_wdata
 );
 
 

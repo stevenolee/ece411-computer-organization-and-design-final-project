@@ -2,7 +2,7 @@
 data arrays. This module supports a write mask to
 help you update the values in the array. */
 
-module hit_counter(
+module hit_counter
 (
     input clk,
     input rst,
@@ -12,8 +12,7 @@ module hit_counter(
     input stall
 );
 int hit_count;
-
-logic [s_line-1:0] data [num_sets-1:0] /* synthesis ramstyle = "logic" */;
+/* synthesis ramstyle = "logic" */
 
 always_ff @(posedge clk)
 begin

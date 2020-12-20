@@ -18,6 +18,7 @@ module cache_p_control (
     output logic mem_resp,
     output logic stall
 );
+int miss_count, miss_count_next;
 
 /***** States *****/
 enum int unsigned {
@@ -31,10 +32,14 @@ enum int unsigned {
 always_ff @(posedge clk)
 begin
     /* Assignment of next state on clock edge */
-    if(rst)
+    if(rst) begin
         state <= IDLE;
-    else
+        miss_count <= 0;
+    end
+    else begin
         state <= next_state;
+        miss_count <= miss_count_next;
+    end
 end
 
 always_comb begin: state_execute
@@ -46,6 +51,7 @@ always_comb begin: state_execute
     access_sel = 1'b0;
     mem_resp = 1'b0;
     address_sel = 1'b0;
+    miss_count_next = miss_count;
 
     unique case (state)
         IDLE: begin
@@ -58,6 +64,7 @@ always_comb begin: state_execute
                 end
                 else begin 
                     stall = 1'b1;
+                    miss_count_next = miss_count + 1;
                 end
             end
         end

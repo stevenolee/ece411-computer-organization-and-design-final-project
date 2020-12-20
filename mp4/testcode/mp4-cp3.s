@@ -818,7 +818,7 @@ LoopRowsD:
     
     
     
-HALT:
+    HALT:
     beq x0, x0, HALT
 
 

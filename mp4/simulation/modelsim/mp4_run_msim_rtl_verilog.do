@@ -5,6 +5,7 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
+vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/scott_cp4 {/home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/hit_counter.sv}
 vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/scott_cp4 {/home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/p_line_adaptor.sv}
 vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/scott_cp4 {/home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/cache_p_control.sv}
 vlog -sv -work work +incdir+/home/scottl4/hydration_is_key/mp4/hdl/scott_cp4 {/home/scottl4/hydration_is_key/mp4/hdl/scott_cp4/data_array_p.sv}
